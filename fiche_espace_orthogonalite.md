@@ -18,6 +18,8 @@ où $\widehat{\vec{u}, \vec{v}}$ est l'angle entre les deux vecteurs (ils sont t
 
 ### Calcul à partir des coordonnées
 
+Dans un repère orthonormé :
+
 Pour $\vec{u}\begin{pmatrix} x \\ y \\ z \end{pmatrix}$ et $\vec{v}\begin{pmatrix} x' \\ y' \\ z' \end{pmatrix}$ :
 
 $$\vec{u} \cdot \vec{v} = x\,x' + y\,y' + z\,z'$$
