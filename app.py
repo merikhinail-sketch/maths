@@ -123,11 +123,49 @@ def prochain_diagnostic():
     return "1er " + MOIS[aujourd_hui.month] + " " + str(aujourd_hui.year)
 
 
+# ---------- Navigation ----------
+# Les boutons utilisent on_click : la fonction s'exécute AVANT que la page soit
+# redessinée, donc un seul passage du programme par clic (au lieu de deux avec st.rerun).
+
+def aller_a(page, **valeurs):
+    """Change de page, en modifiant au passage d'autres valeurs de la session."""
+    for cle, valeur in valeurs.items():
+        st.session_state[cle] = valeur
+    st.session_state.page = page
+
+
+def espace_eleve_ou_classe():
+    aller_a("choix_classe" if profil()["classe"] is None else "eleve")
+
+
+def choisir_classe(classe):
+    profil()["classe"] = classe
+    if classe in CLASSES_AVEC_DIAGNOSTIC and diagnostic_possible(classe):
+        aller_a("proposition_diagnostic")
+    else:
+        aller_a("eleve")
+
+
 def commencer_diagnostic():
-    st.session_state.question = 0
-    st.session_state.reponses = {}
-    st.session_state.page = "diagnostic"
-    st.rerun()
+    aller_a("diagnostic", question=0, reponses={}, diagnostic_alerte=False)
+
+
+def repondre_diagnostic(reponse):
+    st.session_state.reponses[st.session_state.question] = reponse
+
+
+def diagnostic_suivant():
+    if st.session_state.question not in st.session_state.reponses:
+        st.session_state.diagnostic_alerte = True
+    elif st.session_state.question < len(questions) - 1:
+        st.session_state.question += 1
+        st.session_state.diagnostic_alerte = False
+    else:
+        profil()["diagnostics"][profil()["classe"]] = {
+            "date": datetime.date.today().isoformat(),
+            "bilan": calculer_bilan(st.session_state.reponses),
+        }
+        aller_a("resultats")
 
 
 def calculer_bilan(reponses):
@@ -373,12 +411,7 @@ def jouer_quiz(quiz, cle):
             for partie in a_revoir:
                 st.write("- " + partie)
 
-        if st.button("Refaire le quiz", key=cle + "_refaire"):
-            # on efface aussi les anciennes réponses cochées
-            for k in list(st.session_state.keys()):
-                if k.startswith(cle):
-                    del st.session_state[k]
-            st.rerun()
+        st.button("Refaire le quiz", key=cle + "_refaire", on_click=refaire_quiz, args=(cle,))
         return
 
     q = questions[etat["i"]]
@@ -402,18 +435,10 @@ def jouer_quiz(quiz, cle):
     )
 
     if not etat["valide"]:
-        if st.button("Valider", key=cle + "_valider_" + str(etat["i"])):
-            if choix is None:
-                st.write("Choisis une réponse avant de valider.")
-            else:
-                etat["valide"] = True
-                etat["choix"] = choix
-                if options[choix]["correcte"]:
-                    etat["score"] += 1
-                else:
-                    etat["ratees"].append(q)
-                noter_suivi(quiz["titre"], q, options[choix])
-                st.rerun()
+        st.button("Valider", key=cle + "_valider_" + str(etat["i"]),
+                  on_click=valider_reponse, args=(cle, q, quiz["titre"]))
+        if etat.get("alerte"):
+            st.write("Choisis une réponse avant de valider.")
     else:
         choisie = options[etat["choix"]]
         if choisie["correcte"]:
@@ -436,21 +461,49 @@ def jouer_quiz(quiz, cle):
             texte_bouton = "Question suivante"
         else:
             texte_bouton = "Voir le résultat"
-        if st.button(texte_bouton, key=cle + "_suivante_" + str(etat["i"])):
-            etat["i"] += 1
-            etat["valide"] = False
-            etat["choix"] = None
-            st.rerun()
+        st.button(texte_bouton, key=cle + "_suivante_" + str(etat["i"]),
+                  on_click=question_suivante, args=(cle,))
+
+
+def valider_reponse(cle, q, titre_quiz):
+    etat = st.session_state[cle]
+    choix = st.session_state.get(cle + "_radio_" + str(etat["i"]))
+    if choix is None:
+        etat["alerte"] = True
+        return
+    choisie = next(o for o in q["options"] if o["id"] == choix)
+    etat["alerte"] = False
+    etat["valide"] = True
+    etat["choix"] = choix
+    if choisie["correcte"]:
+        etat["score"] += 1
+    else:
+        etat["ratees"].append(q)
+    noter_suivi(titre_quiz, q, choisie)
+
+
+def question_suivante(cle):
+    etat = st.session_state[cle]
+    etat["i"] += 1
+    etat["valide"] = False
+    etat["choix"] = None
+
+
+def refaire_quiz(cle):
+    # on efface aussi les anciennes réponses cochées
+    for k in list(st.session_state.keys()):
+        if k.startswith(cle):
+            del st.session_state[k]
 
 
 def ouvrir_fiche(identifiant):
     """Quitte la page du chapitre : leçon si elle existe, sinon directement le quiz de chapitre."""
+    st.session_state.fiche = identifiant
     st.session_state.page_chapitre = st.session_state.page
     if FICHES[identifiant][0] is not None:
         st.session_state.page = "lecon"
     else:
         st.session_state.page = "quiz"
-    st.rerun()
 
 
 # ---------- Banque de quiz ----------
@@ -484,7 +537,20 @@ def lancer_seance(chapitres, nb_questions):
         },
     }
     st.session_state.page = "seance"
-    st.rerun()
+
+
+def lancer_depuis_le_choix(nb_questions):
+    """Callback des boutons de format : lit le ou les chapitres choisis."""
+    if st.session_state.get("banque_mode", "Un chapitre") == "Un chapitre":
+        choisi = st.session_state.get("banque_un_chapitre")
+        selection = [choisi] if choisi else []
+    else:
+        selection = list(st.session_state.get("banque_plusieurs_chapitres", []))
+    if not selection:
+        st.session_state.banque_alerte = True
+        return
+    st.session_state.banque_alerte = False
+    lancer_seance(selection, nb_questions)
 
 
 def afficher_choix_quiz():
@@ -515,11 +581,10 @@ def afficher_choix_quiz():
         elif len(selection) > max_chapitres:
             disponible = False
             etiquette += " · Impossible pour plus de " + str(max_chapitres) + " chapitres"
-        if st.button(etiquette, disabled=not disponible, key="banque_format_" + format_quiz):
-            if not selection:
-                st.warning("Choisis au moins un chapitre.")
-            else:
-                lancer_seance(selection, nb_questions)
+        st.button(etiquette, disabled=not disponible, key="banque_format_" + format_quiz,
+                  on_click=lancer_depuis_le_choix, args=(nb_questions,))
+    if st.session_state.get("banque_alerte") and not selection:
+        st.warning("Choisis au moins un chapitre.")
 
 questions = [
     {
@@ -679,52 +744,108 @@ questions = [
     }
 ]
 
+# Boutons de chaque page de chapitre : (texte du bouton, identifiant dans FICHES)
+LECONS_PAR_CHAPITRE = {
+    "Suites": [
+        ("Rappels de Première : les suites", "suites_rappels_suites"),
+        ("Monotonie et suites bornées", "suites_monotonie"),
+        ("Convergence des suites", "suites_convergence"),
+        ("Limites de suites", "suites_limites_suites"),
+        ("Le raisonnement par récurrence", "suites_recurrence"),
+        ("Quiz de chapitre", "suites_chapitre"),
+    ],
+    "Limites de fonctions": [
+        ("Limite d'une fonction", "lim_limites_fonction"),
+        ("Limites d'une fonction composée", "lim_comp_limites"),
+        ("Calculs de limites", "lim_limites_calculs"),
+        ("Asymptotes", "lim_asymptotes"),
+        ("Quiz de chapitre", "lim_chapitre"),
+    ],
+    "Géométrie dans l’espace": [
+        ("Rappels : vecteurs, colinéarité et produit scalaire", "esp_esp_rappels"),
+        ("Vecteurs dans l'espace", "esp_esp_vecteurs"),
+        ("Représentations paramétriques d'une droite", "esp_esp_param"),
+        ("Orthogonalité dans l'espace", "esp_esp_ortho"),
+        ("Positions relatives", "esp_esp_positions"),
+        ("Quiz de chapitre", "esp_chapitre"),
+    ],
+    "Combinatoire et dénombrement": [
+        ("Principes additif et multiplicatif", "combi_principes"),
+        ("K-uplets et permutations", "combi_kuplets"),
+        ("Les combinaisons", "combi_combinaisons"),
+        ("Quelle méthode de dénombrement utiliser ?", "combi_methode_denomb"),
+        ("Quiz de chapitre", "combi_chapitre"),
+    ],
+    "Continuité/Théorème de la bijection": [
+        ("La continuité", "cont_continuite"),
+        ("Le théorème des valeurs intermédiaires et de la bijection", "cont_tvi"),
+        ("Quiz de chapitre", "cont_chapitre"),
+    ],
+    "Convexité": [
+        ("Convexité et concavité", "convexite_convexite"),
+        ("Étudier la convexité d'une fonction", "convexite_etudier_convexite"),
+        ("Quiz de chapitre", "convexite_chapitre"),
+    ],
+    "Fonction logarithme": [
+        ("Propriétés du logarithme népérien", "ln_ln_proprietes"),
+        ("Calcul avec la fonction logarithme", "ln_ln_equations"),
+        ("Étude de fonction logarithme", "ln_ln_etude"),
+        ("Quiz de chapitre", "ln_chapitre"),
+    ],
+    "Fonction exponentielle": [],
+    "Primitives": [
+        ("Comprendre les primitives", "prim_prim_comprendre"),
+        ("Déterminer une primitive", "prim_prim_determiner"),
+        ("Quiz de chapitre", "prim_chapitre"),
+    ],
+    "Fonctions composées": [
+        ("Reconnaître une fonction composée", "comp_comp_reconnaitre"),
+        ("Dériver une fonction composée", "comp_comp_deriver"),
+        ("Quiz de chapitre", "comp_chapitre"),
+    ],
+    "Équations différentielles": [
+        ("Comprendre ce qu'est une équation différentielle", "eqd_equadiff_comprendre"),
+        ("Résoudre une équation différentielle", "eqd_equadiff_resoudre"),
+        ("Résoudre une équation différentielle avec une condition initiale", "eqd_equadiff_ci"),
+        ("Quiz de chapitre", "eqd_chapitre"),
+    ],
+    "Intégrales": [
+        ("Comprendre l'intégrale", "int_int_comprendre"),
+        ("Calculer une intégrale", "int_int_calculer"),
+        ("Intégration par parties", "int_ipp"),
+        ("Quiz de chapitre", "int_chapitre"),
+    ],
+    "Probabilités": [
+        ("Rappels de Première : probabilités conditionnelles", "proba_probas_cond"),
+        ("Variables aléatoires", "proba_variables"),
+        ("La loi binomiale", "proba_binomiale"),
+        ("Quiz de chapitre", "proba_chapitre"),
+    ],
+}
+
 if "page" not in st.session_state:
     st.session_state.page = "accueil"
 
 if st.session_state.page == "accueil":
     st.title("Mon application de maths")
 
-    if st.button("Je suis élève"):
-        if profil()["classe"] is None:
-            st.session_state.page = "choix_classe"
-        else:
-            st.session_state.page = "eleve"
-        st.rerun()
-
-    if st.button("Je suis professeur"):
-        st.session_state.page = "professeur"
-        st.rerun()
+    st.button("Je suis élève", on_click=espace_eleve_ou_classe)
+    st.button("Je suis professeur", on_click=aller_a, args=("professeur",))
 
 elif st.session_state.page == "choix_classe":
     st.title("Choisis ta classe")
 
     for classe in CLASSES:
-        if st.button(classe):
-            profil()["classe"] = classe
-            if classe in CLASSES_AVEC_DIAGNOSTIC and diagnostic_possible(classe):
-                st.session_state.page = "proposition_diagnostic"
-            else:
-                st.session_state.page = "eleve"
-            st.rerun()
+        st.button(classe, on_click=choisir_classe, args=(classe,))
 
-    if st.button("Retour"):
-        if profil()["classe"] is None:
-            st.session_state.page = "accueil"
-        else:
-            st.session_state.page = "eleve"
-        st.rerun()
+    st.button("Retour", on_click=aller_a, args=("accueil" if profil()["classe"] is None else "eleve",))
 
 elif st.session_state.page == "proposition_diagnostic":
     st.title("Diagnostic du niveau")
     st.write("Pour évaluer ton niveau, tu vas passer un test de", len(questions), "questions, bon courage !")
 
-    if st.button("Commencer le diagnostic", type="primary"):
-        commencer_diagnostic()
-
-    if st.button("Passer"):
-        st.session_state.page = "eleve"
-        st.rerun()
+    st.button("Commencer le diagnostic", type="primary", on_click=commencer_diagnostic)
+    st.button("Passer", on_click=aller_a, args=("eleve",))
 
 elif st.session_state.page == "diagnostic":
     st.title("Diagnostic du niveau")
@@ -732,16 +853,18 @@ elif st.session_state.page == "diagnostic":
     question = questions[st.session_state.question]
     st.write("Question", st.session_state.question + 1, "/", len(questions))
     st.write(question["question"])
+
+    # Une fois la réponse choisie, elle est fixée : les boutons sont désactivés
     choisie = st.session_state.reponses.get(st.session_state.question)
 
     for reponse in question["reponses"]:
-        if st.button(
+        st.button(
             reponse,
             disabled=choisie is not None,
             type="primary" if reponse == choisie else "secondary",
-        ):
-            st.session_state.reponses[st.session_state.question] = reponse
-            st.rerun()
+            on_click=repondre_diagnostic,
+            args=(reponse,),
+        )
 
     if choisie is not None:
         if choisie == question["bonne_reponse"]:
@@ -754,29 +877,15 @@ elif st.session_state.page == "diagnostic":
     else:
         texte_bouton = "Voir les résultats"
 
-    if st.button(texte_bouton):
-        if st.session_state.question not in st.session_state.reponses:
-            st.write("Choisis une réponse avant de continuer.")
-
-        elif st.session_state.question < len(questions) - 1:
-            st.session_state.question += 1
-            st.rerun()
-
-        else:
-            profil()["diagnostics"][profil()["classe"]] = {
-                "date": datetime.date.today().isoformat(),
-                "bilan": calculer_bilan(st.session_state.reponses),
-            }
-            st.session_state.page = "resultats"
-            st.rerun()
+    st.button(texte_bouton, on_click=diagnostic_suivant)
+    if st.session_state.get("diagnostic_alerte") and choisie is None:
+        st.write("Choisis une réponse avant de continuer.")
 
 elif st.session_state.page == "resultats":
     st.title("Résultats du diagnostic")
     afficher_bilan(profil()["diagnostics"][profil()["classe"]]["bilan"])
 
-    if st.button("Aller à mon espace élève", type="primary"):
-        st.session_state.page = "eleve"
-        st.rerun()
+    st.button("Aller à mon espace élève", type="primary", on_click=aller_a, args=("eleve",))
 
 elif st.session_state.page == "eleve":
     classe = profil()["classe"]
@@ -787,9 +896,7 @@ elif st.session_state.page == "eleve":
     titre, bouton_classe = st.columns([3, 1])
     titre.title("Espace élève")
     with bouton_classe.popover(classe):
-        if st.button("Changer de classe ?"):
-            st.session_state.page = "choix_classe"
-            st.rerun()
+        st.button("Changer de classe ?", on_click=aller_a, args=("choix_classe",))
 
     lecons, quiz, diagnostic, a_revoir = st.tabs(["Leçons", "Quiz", "Diagnostic", "À revoir"])
 
@@ -797,9 +904,7 @@ elif st.session_state.page == "eleve":
         if classe == "Terminale":
             st.write("Choisis ton chapitre")
             for chapitre in CHAPITRES_TERMINALE:
-                if st.button(chapitre):
-                    st.session_state.page = chapitre
-                    st.rerun()
+                st.button(chapitre, on_click=aller_a, args=(chapitre,))
         else:
             st.write("Les leçons de cette classe seront bientôt disponibles.")
 
@@ -822,8 +927,7 @@ elif st.session_state.page == "eleve":
                 afficher_bilan(dernier["bilan"])
 
             possible = diagnostic_possible(classe)
-            if st.button("Faire un nouveau diagnostic", disabled=not possible):
-                commencer_diagnostic()
+            st.button("Faire un nouveau diagnostic", disabled=not possible, on_click=commencer_diagnostic)
             if not possible:
                 st.caption("Prochain diagnostic possible à partir du " + prochain_diagnostic() + ".")
 
@@ -831,9 +935,7 @@ elif st.session_state.page == "eleve":
         afficher_suivi()
 
     st.divider()
-    if st.button("Retour à l'accueil"):
-        st.session_state.page = "accueil"
-        st.rerun()
+    st.button("Retour à l'accueil", on_click=aller_a, args=("accueil",))
 
 elif st.session_state.page == "seance":
     seance = st.session_state.seance
@@ -844,344 +946,42 @@ elif st.session_state.page == "seance":
     jouer_quiz(seance["quiz"], seance["cle"])
 
     st.divider()
-    if st.button("Nouveau quiz sur les mêmes chapitres"):
-        lancer_seance(seance["chapitres"], seance["nb_questions"])
+    st.button("Nouveau quiz sur les mêmes chapitres", on_click=lancer_seance,
+              args=(seance["chapitres"], seance["nb_questions"]))
+    st.button("Retour à l'espace élève", on_click=aller_a, args=("eleve",))
+
+elif st.session_state.page in LECONS_PAR_CHAPITRE:
+    chapitre = st.session_state.page
+    st.title("Chapitre : " + chapitre)
+
+    if LECONS_PAR_CHAPITRE[chapitre]:
+        st.write("Choisis une leçon :")
+        for texte, identifiant in LECONS_PAR_CHAPITRE[chapitre]:
+            st.button(texte, on_click=ouvrir_fiche, args=(identifiant,))
+    else:
+        st.write("Les leçons de ce chapitre seront bientôt disponibles.")
+
+    st.button("Retour", on_click=aller_a, args=("eleve",), kwargs={"fiche": None})
 
-    if st.button("Retour à l'espace élève"):
-        st.session_state.page = "eleve"
-        st.rerun()
-
-elif st.session_state.page == "Suites":
-    st.title("Chapitre : Suites")
-    st.write("Choisis une leçon :")
-
-    if st.button("Rappels de Première : les suites"):
-        st.session_state.fiche = "suites_rappels_suites"
-
-    if st.button("Monotonie et suites bornées"):
-        st.session_state.fiche = "suites_monotonie"
-
-    if st.button("Convergence des suites"):
-        st.session_state.fiche = "suites_convergence"
-
-    if st.button("Limites de suites"):
-        st.session_state.fiche = "suites_limites_suites"
-
-    if st.button("Le raisonnement par récurrence"):
-        st.session_state.fiche = "suites_recurrence"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "suites_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("suites_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Limites de fonctions":
-    st.title("Chapitre : Limites de fonctions")
-    st.write("Choisis une leçon :")
-
-    if st.button("Limite d'une fonction"):
-        st.session_state.fiche = "lim_limites_fonction"
-
-    if st.button("Limites d'une fonction composée"):
-        st.session_state.fiche = "lim_comp_limites"
-
-    if st.button("Calculs de limites"):
-        st.session_state.fiche = "lim_limites_calculs"
-
-    if st.button("Asymptotes"):
-        st.session_state.fiche = "lim_asymptotes"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "lim_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("lim_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Géométrie dans l’espace":
-    st.title("Chapitre : Géométrie dans l’espace")
-    st.write("Choisis une leçon :")
-
-    if st.button("Rappels : vecteurs, colinéarité et produit scalaire"):
-        st.session_state.fiche = "esp_esp_rappels"
-
-    if st.button("Vecteurs dans l'espace"):
-        st.session_state.fiche = "esp_esp_vecteurs"
-
-    if st.button("Représentations paramétriques d'une droite"):
-        st.session_state.fiche = "esp_esp_param"
-
-    if st.button("Orthogonalité dans l'espace"):
-        st.session_state.fiche = "esp_esp_ortho"
-
-    if st.button("Positions relatives"):
-        st.session_state.fiche = "esp_esp_positions"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "esp_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("esp_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Combinatoire et dénombrement":
-    st.title("Chapitre : Combinatoire et dénombrement")
-    st.write("Choisis une leçon :")
-
-    if st.button("Principes additif et multiplicatif"):
-        st.session_state.fiche = "combi_principes"
-
-    if st.button("K-uplets et permutations"):
-        st.session_state.fiche = "combi_kuplets"
-
-    if st.button("Les combinaisons"):
-        st.session_state.fiche = "combi_combinaisons"
-
-    if st.button("Quelle méthode de dénombrement utiliser ?"):
-        st.session_state.fiche = "combi_methode_denomb"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "combi_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("combi_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Continuité/Théorème de la bijection":
-    st.title("Chapitre : Continuité/Théorème de la bijection")
-    st.write("Choisis une leçon :")
-
-    if st.button("La continuité"):
-        st.session_state.fiche = "cont_continuite"
-
-    if st.button("Le théorème des valeurs intermédiaires et de la bijection"):
-        st.session_state.fiche = "cont_tvi"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "cont_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("cont_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Convexité":
-    st.title("Chapitre : Convexité")
-    st.write("Choisis une leçon :")
-
-    if st.button("Convexité et concavité"):
-        st.session_state.fiche = "convexite_convexite"
-
-    if st.button("Étudier la convexité d'une fonction"):
-        st.session_state.fiche = "convexite_etudier_convexite"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "convexite_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("convexite_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Fonction logarithme":
-    st.title("Chapitre : Fonction logarithme")
-    st.write("Choisis une leçon :")
-
-    if st.button("Propriétés du logarithme népérien"):
-        st.session_state.fiche = "ln_ln_proprietes"
-
-    if st.button("Calcul avec la fonction logarithme"):
-        st.session_state.fiche = "ln_ln_equations"
-
-    if st.button("Étude de fonction logarithme"):
-        st.session_state.fiche = "ln_ln_etude"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "ln_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("ln_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Fonction exponentielle":
-    st.title("Chapitre : Fonction exponentielle")
-    st.write("Les leçons de ce chapitre seront bientôt disponibles.")
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Primitives":
-    st.title("Chapitre : Primitives")
-    st.write("Choisis une leçon :")
-
-    if st.button("Comprendre les primitives"):
-        st.session_state.fiche = "prim_prim_comprendre"
-
-    if st.button("Déterminer une primitive"):
-        st.session_state.fiche = "prim_prim_determiner"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "prim_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("prim_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Fonctions composées":
-    st.title("Chapitre : Fonctions composées")
-    st.write("Choisis une leçon :")
-
-    if st.button("Reconnaître une fonction composée"):
-        st.session_state.fiche = "comp_comp_reconnaitre"
-
-    if st.button("Dériver une fonction composée"):
-        st.session_state.fiche = "comp_comp_deriver"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "comp_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("comp_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Équations différentielles":
-    st.title("Chapitre : Équations différentielles")
-    st.write("Choisis une leçon :")
-
-    if st.button("Comprendre ce qu'est une équation différentielle"):
-        st.session_state.fiche = "eqd_equadiff_comprendre"
-
-    if st.button("Résoudre une équation différentielle"):
-        st.session_state.fiche = "eqd_equadiff_resoudre"
-
-    if st.button("Résoudre une équation différentielle avec une condition initiale"):
-        st.session_state.fiche = "eqd_equadiff_ci"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "eqd_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("eqd_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Intégrales":
-    st.title("Chapitre : Intégrales")
-    st.write("Choisis une leçon :")
-
-    if st.button("Comprendre l'intégrale"):
-        st.session_state.fiche = "int_int_comprendre"
-
-    if st.button("Calculer une intégrale"):
-        st.session_state.fiche = "int_int_calculer"
-
-    if st.button("Intégration par parties"):
-        st.session_state.fiche = "int_ipp"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "int_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("int_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
-elif st.session_state.page == "Probabilités":
-    st.title("Chapitre : Probabilités")
-    st.write("Choisis une leçon :")
-
-    if st.button("Rappels de Première : probabilités conditionnelles"):
-        st.session_state.fiche = "proba_probas_cond"
-
-    if st.button("Variables aléatoires"):
-        st.session_state.fiche = "proba_variables"
-
-    if st.button("La loi binomiale"):
-        st.session_state.fiche = "proba_binomiale"
-
-    if st.button("Quiz de chapitre"):
-        st.session_state.fiche = "proba_chapitre"
-
-    fiche = st.session_state.get("fiche")
-    if fiche is not None and fiche.startswith("proba_"):
-        ouvrir_fiche(fiche)
-
-    if st.button("Retour"):
-        st.session_state.fiche = None
-        st.session_state.page = "eleve"
-        st.rerun()
 elif st.session_state.page == "lecon":
     fichier_lecon, fichier_quiz = FICHES[st.session_state.fiche]
     afficher_lecon(fichier_lecon)
 
     st.divider()
-    if st.button("Faire le quiz"):
-        st.session_state.page = "quiz"
-        st.rerun()
+    st.button("Faire le quiz", on_click=aller_a, args=("quiz",))
+    st.button("Retour au chapitre", on_click=aller_a, args=(st.session_state.page_chapitre,), kwargs={"fiche": None})
 
-    if st.button("Retour au chapitre"):
-        st.session_state.fiche = None
-        st.session_state.page = st.session_state.page_chapitre
-        st.rerun()
 elif st.session_state.page == "quiz":
     fichier_lecon, fichier_quiz = FICHES[st.session_state.fiche]
     afficher_quiz(fichier_quiz)
 
     if fichier_lecon is not None:
-        if st.button("Retour à la leçon"):
-            st.session_state.page = "lecon"
-            st.rerun()
+        st.button("Retour à la leçon", on_click=aller_a, args=("lecon",))
 
-    if st.button("Retour au chapitre"):
-        st.session_state.fiche = None
-        st.session_state.page = st.session_state.page_chapitre
-        st.rerun()
+    st.button("Retour au chapitre", on_click=aller_a, args=(st.session_state.page_chapitre,), kwargs={"fiche": None})
+
 elif st.session_state.page == "professeur":
     st.title("Espace professeur")
     st.write("Cette fonctionnalité sera disponible prochainement !")
 
-    if st.button("Retour"):
-        st.session_state.page = "accueil"
-        st.rerun()
+    st.button("Retour", on_click=aller_a, args=("accueil",))
