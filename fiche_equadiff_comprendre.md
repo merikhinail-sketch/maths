@@ -64,7 +64,7 @@ On remplace $y$ par $f(x)$ et $y'$ par $f'(x)$:
 - Dérivée : $g'(x) = 2x$.
 - Autre côté : $2g(x) = 2x^2$.
 
-Or  $\forall x \in \mathbb{R}$, $2x \neq 2x^2$, la fonction $g$ n'est donc pas solution.
+Or l'égalité $2x = 2x^2$ n'est pas vraie pour tout réel $x$ : par exemple, pour $x = 3$, on a $6 \neq 18$. La fonction $g$ n'est donc pas solution.
 
 ### Comprendre qu'il peut exister plusieurs solutions
 
