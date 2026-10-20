@@ -7,6 +7,8 @@ import unicodedata
 
 import banque
 
+st.set_page_config(page_title="CapMaths", page_icon="📐")
+
 DOSSIER = os.path.dirname(os.path.abspath(__file__))
 
 # Chaque entrée : identifiant -> (fichier de la leçon, fichier du quiz)
@@ -195,9 +197,9 @@ def calculer_bilan(questions, reponses):
 
 
 def afficher_bilan(bilan):
-    st.write("Ton score est :", bilan["score"], "/", bilan["total"])
+    st.write(f"Ton score est : {bilan['score']} / {bilan['total']}")
     for competence, resultats in bilan["competences"].items():
-        st.write(competence, ":", resultats[0], "/", resultats[1])
+        st.write(f"**{competence}** : {resultats[0]} / {resultats[1]}")
         pourcentage = (resultats[0] / resultats[1]) * 100
 
         if pourcentage == 100:
@@ -209,8 +211,8 @@ def afficher_bilan(bilan):
 
 
 def noter_suivi(titre_quiz, q, choisie):
-    """Met à jour les rubriques « À revoir » / « En voie de maîtrise » après une réponse.
-    erreur -> À revoir ; réussite -> En voie de maîtrise ; 2e réussite -> retirée.
+    """Met à jour les rubriques « À améliorer » / « En voie de maîtrise » après une réponse.
+    erreur -> À améliorer ; réussite -> En voie de maîtrise ; 2e réussite -> retirée.
     La question est reconnue par son id : la même question est suivie de la même
     façon dans un quiz de fiche et dans la banque."""
     suivi = profil()["suivi"].setdefault(profil()["classe"], {})
@@ -236,7 +238,7 @@ def noter_suivi(titre_quiz, q, choisie):
 def afficher_suivi():
     suivi = profil()["suivi"].get(profil()["classe"], {})
     rubriques = [
-        ("a_revoir", "À revoir"),
+        ("a_revoir", "À améliorer"),
         ("en_voie", "En voie de maîtrise"),
     ]
     for statut, titre in rubriques:
@@ -406,12 +408,12 @@ def jouer_quiz(quiz, cle):
     if etat["i"] >= len(questions):
         score = etat["score"]
         pourcentage = round(score / len(questions) * 100)
-        st.write("Ton score est :", score, "/", len(questions), "(", pourcentage, "% )")
+        st.write(f"Ton score est : {score} / {len(questions)} ({pourcentage} %)")
 
         if pourcentage >= quiz["seuil_reussite"]:
             st.write("Bravo, tu as atteint le seuil de réussite !")
         else:
-            st.write("Tu n'as pas encore atteint le seuil de réussite (", quiz["seuil_reussite"], "% ).")
+            st.write(f"Tu n'as pas encore atteint le seuil de réussite ({quiz['seuil_reussite']} %).")
 
         if etat["ratees"]:
             st.write("Parties à revoir :")
@@ -427,7 +429,7 @@ def jouer_quiz(quiz, cle):
         return
 
     q = questions[etat["i"]]
-    st.write("Question", etat["i"] + 1, "/", len(questions))
+    st.write(f"Question {etat['i'] + 1} / {len(questions)}")
     st.markdown(preparer_markdown(q["enonce"]))
 
     if q["figure"]:
@@ -682,7 +684,9 @@ if "page" not in st.session_state:
     st.session_state.page = "accueil"
 
 if st.session_state.page == "accueil":
-    st.title("Mon application de maths")
+    st.title("CapMaths")
+    st.write("Révise les maths du lycée à ton rythme : des leçons claires, des quiz corrigés pas à pas "
+             "et un suivi de ce qu'il te reste à travailler.")
 
     st.button("Je suis élève", on_click=espace_eleve_ou_classe)
     st.button("Je suis professeur", on_click=aller_a, args=("professeur",))
@@ -697,8 +701,8 @@ elif st.session_state.page == "choix_classe":
 
 elif st.session_state.page == "proposition_diagnostic":
     st.title("Diagnostic du niveau")
-    st.write("Pour évaluer ton niveau, tu vas passer un test de",
-             len(questions_diagnostic(profil()["classe"])), "questions, bon courage !")
+    nb_questions = len(questions_diagnostic(profil()["classe"]))
+    st.write(f"Pour évaluer ton niveau, tu vas passer un test de {nb_questions} questions, bon courage !")
 
     st.button("Commencer le diagnostic", type="primary", on_click=commencer_diagnostic)
     st.button("Passer", on_click=aller_a, args=("eleve",))
@@ -708,7 +712,7 @@ elif st.session_state.page == "diagnostic":
 
     questions = questions_diagnostic(profil()["classe"])
     question = questions[st.session_state.question]
-    st.write("Question", st.session_state.question + 1, "/", len(questions))
+    st.write(f"Question {st.session_state.question + 1} / {len(questions)}")
     st.markdown(preparer_markdown(question["enonce"]))
 
     # Une fois la réponse choisie, elle est fixée : les boutons sont désactivés
@@ -725,10 +729,17 @@ elif st.session_state.page == "diagnostic":
         )
 
     if choisie is not None:
-        if any(o["id"] == choisie and o["correcte"] for o in question["options"]):
+        option_choisie = next(o for o in question["options"] if o["id"] == choisie)
+        if option_choisie["correcte"]:
             st.write("Bonne réponse !")
         else:
             st.write("Mauvaise réponse !")
+            if option_choisie["feedback"]:
+                st.markdown(preparer_markdown(option_choisie["feedback"]))
+            bonne = next(o for o in question["options"] if o["correcte"])
+            st.markdown("La bonne réponse était : **" + bonne["id"] + ".** " + preparer_markdown(bonne["texte"]))
+        if question["explication"]:
+            st.markdown(preparer_markdown(question["explication"]))
 
     if st.session_state.question < len(questions) - 1:
         texte_bouton = "Question suivante"
@@ -756,7 +767,7 @@ elif st.session_state.page == "eleve":
     with bouton_classe.popover(classe):
         st.button("Changer de classe ?", on_click=aller_a, args=("choix_classe",))
 
-    lecons, quiz, diagnostic, a_revoir = st.tabs(["Leçons", "Quiz", "Diagnostic", "À revoir"])
+    lecons, quiz, diagnostic, a_revoir = st.tabs(["Leçons", "Quiz", "Diagnostic", "À améliorer"])
 
     with lecons:
         if classe == "Terminale":
