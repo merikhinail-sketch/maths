@@ -9,6 +9,31 @@ import banque
 
 st.set_page_config(page_title="CapMaths", page_icon="📐")
 
+# Streamlit déclare ses pages « en anglais » : le navigateur propose alors de les
+# traduire, ce qui abîme le texte et les formules. On déclare la page en français
+# et on demande aux navigateurs de ne pas la traduire.
+PAS_DE_TRADUCTION = """<script>
+for (const fenetre of [window.parent, window.top]) {
+  try {
+    const doc = fenetre.document;
+    doc.documentElement.lang = "fr";
+    doc.documentElement.setAttribute("translate", "no");
+    doc.documentElement.classList.add("notranslate");
+    if (!doc.querySelector('meta[name="google"]')) {
+      const meta = doc.createElement("meta");
+      meta.name = "google";
+      meta.content = "notranslate";
+      doc.head.appendChild(meta);
+    }
+  } catch (e) {}
+}
+</script>"""
+if hasattr(st, "iframe"):
+    st.iframe(PAS_DE_TRADUCTION, height=1)
+else:  # anciennes versions de Streamlit
+    import streamlit.components.v1 as components
+    components.html(PAS_DE_TRADUCTION, height=0)
+
 DOSSIER = os.path.dirname(os.path.abspath(__file__))
 
 # Chaque entrée : identifiant -> (fichier de la leçon, fichier du quiz)
