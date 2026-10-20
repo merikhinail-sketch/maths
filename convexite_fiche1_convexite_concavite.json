@@ -1,0 +1,245 @@
+{
+  "id": "convexite-fiche1",
+  "titre": "Quiz — Convexité et concavité",
+  "chapitre": "Convexité",
+  "fiche": "Convexité et concavité",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "conv-f1-q1",
+      "chapitre": "Convexité",
+      "fiche": "Convexité et concavité",
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "définition de la convexité (tangentes)",
+      "enonce": "La courbe d'une fonction $f$ est tracée ci-dessous, avec deux de ses tangentes. D'après la figure, quelle affirmation est vraie ?",
+      "figure": "convexite_f1_q1.png",
+      "figure_alt": "Courbe en forme de U avec deux tangentes tracées en pointillés sous la courbe.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ semble concave : la courbe forme un creux, comme une cuvette.",
+          "correcte": false,
+          "erreur": "confusion_vocabulaire_concave_creux",
+          "feedback": "En mathématiques, une courbe en forme de cuvette est convexe. Le mot « concave » décrit la forme de dôme."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ semble concave : la courbe est au-dessus de ses tangentes.",
+          "correcte": false,
+          "erreur": "confusion_convexe_concave",
+          "feedback": "L'observation est bonne (courbe au-dessus des tangentes), mais c'est la définition d'une fonction convexe."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ semble convexe : la courbe est au-dessus de ses tangentes.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Au-dessus de ses tangentes : c'est la définition de la convexité."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ semble convexe : la courbe est au-dessous de ses tangentes.",
+          "correcte": false,
+          "erreur": "position_tangentes_inversee",
+          "feedback": "Le mot est le bon, mais pas l'observation : sur la figure, les tangentes passent sous la courbe."
+        }
+      ],
+      "explication": "Sur la figure, les deux tangentes passent sous la courbe : la courbe est au-dessus de ses tangentes. C'est la définition d'une fonction convexe, dont la courbe a une forme de coupe (« U »).",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Définition",
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Interprétation graphique"
+      ]
+    },
+    {
+      "id": "conv-f1-q2",
+      "chapitre": "Convexité",
+      "fiche": "Convexité et concavité",
+      "type": "vrai_faux_plausible",
+      "niveau": 1,
+      "notion": "tangentes et cordes d'une fonction convexe",
+      "enonce": "Une fonction $f$ est convexe sur un intervalle $I$. Laquelle de ces affirmations est vraie ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La courbe est au-dessus de ses tangentes et au-dessous de ses cordes.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "La courbe est au-dessus de ses tangentes et au-dessus de ses cordes.",
+          "correcte": false,
+          "erreur": "position_cordes_inversee",
+          "feedback": "Pour les cordes, c'est l'inverse : entre deux points de la courbe, la courbe passe sous le segment qui les relie."
+        },
+        {
+          "id": "C",
+          "texte": "La courbe est au-dessous de ses tangentes et au-dessous de ses cordes.",
+          "correcte": false,
+          "erreur": "position_tangentes_inversee",
+          "feedback": "Pour les tangentes, c'est l'inverse : une fonction convexe est au-dessus de ses tangentes."
+        },
+        {
+          "id": "D",
+          "texte": "La courbe est au-dessous de ses tangentes et au-dessus de ses cordes.",
+          "correcte": false,
+          "erreur": "inversion_totale",
+          "feedback": "Tu as décrit une fonction concave : c'est exactement l'inverse pour une fonction convexe."
+        }
+      ],
+      "explication": "Une fonction convexe a sa courbe **au-dessus de ses tangentes** et **au-dessous de ses cordes**. Pour une fonction concave, c'est l'inverse dans les deux cas (voir le tableau « À retenir » de la fiche).",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Définition",
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Position de la courbe par rapport aux cordes",
+        "Fiche « Convexité et concavité » — À retenir"
+      ]
+    },
+    {
+      "id": "conv-f1-q3",
+      "chapitre": "Convexité",
+      "fiche": "Convexité et concavité",
+      "type": "application",
+      "niveau": 2,
+      "notion": "position de la courbe par rapport à une tangente",
+      "enonce": "Soit $f(x) = -x^2$. La tangente à sa courbe au point d'abscisse $3$ a pour équation $y = -6x + 9$. On étudie le signe de $f(x) - (-6x + 9)$. Quelle est la bonne conclusion ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(x) - (-6x+9) = (x-3)^2 \\geq 0$ : la courbe est au-dessus de sa tangente, ce qui correspond à une fonction convexe.",
+          "correcte": false,
+          "erreur": "erreur_signe_developpement",
+          "feedback": "On a $-x^2 + 6x - 9 = -(x^2 - 6x + 9)$ : le signe moins reste devant la parenthèse."
+        },
+        {
+          "id": "B",
+          "texte": "$f(x) - (-6x+9) = -(x-3)^2 \\leq 0$ : la courbe est au-dessus de sa tangente, ce qui correspond à une fonction concave.",
+          "correcte": false,
+          "erreur": "lecture_signe_position",
+          "feedback": "La différence est bien $-(x-3)^2$, mais une différence négative signifie que la courbe est au-dessous de la tangente."
+        },
+        {
+          "id": "C",
+          "texte": "$f(x) - (-6x+9) = -(x+3)^2 \\leq 0$ : la courbe est au-dessous de sa tangente, ce qui correspond à une fonction concave.",
+          "correcte": false,
+          "erreur": "erreur_identite_remarquable",
+          "feedback": "Vérifie l'identité : $x^2 - 6x + 9 = (x-3)^2$ et non $(x+3)^2$ (le double produit est négatif)."
+        },
+        {
+          "id": "D",
+          "texte": "$f(x) - (-6x+9) = -(x-3)^2 \\leq 0$ : la courbe est au-dessous de sa tangente, ce qui correspond à une fonction concave.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "On calcule $-x^2 - (-6x + 9) = -x^2 + 6x - 9 = -(x - 3)^2$, qui est négatif ou nul pour tout $x$. La courbe est donc au-dessous de sa tangente : c'est la propriété d'une fonction concave.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 2. Fonction concave — Définition",
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Définition"
+      ]
+    },
+    {
+      "id": "conv-f1-q4",
+      "chapitre": "Convexité",
+      "fiche": "Convexité et concavité",
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "pente des tangentes et concavité",
+      "enonce": "On a tracé les tangentes à la courbe de $f$ aux points d'abscisses $-1$, $0$ et $1$. Leurs pentes sont respectivement $2$, $0$ et $-2$. Quelle conclusion est cohérente avec la figure ?",
+      "figure": "convexite_f1_q4.png",
+      "figure_alt": "Courbe en forme de dôme avec trois tangentes de pentes 2, 0 et −2.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ semble convexe : la pente des tangentes passe par $0$.",
+          "correcte": false,
+          "erreur": "confusion_pente_nulle_convexite",
+          "feedback": "Une pente nulle ne dit rien sur la convexité. Ce qui compte, c'est la façon dont la pente évolue."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ semble concave : la pente des tangentes diminue de gauche à droite.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Pente qui diminue : la courbe se courbe vers le bas."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ semble décroissante sur tout l'intervalle : la pente des tangentes diminue.",
+          "correcte": false,
+          "erreur": "confusion_pente_diminue_decroissante",
+          "feedback": "Une pente qui diminue ne veut pas dire que la fonction décroît : ici $f$ monte d'abord (pente positive) puis descend."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ semble convexe : les premières pentes sont positives.",
+          "correcte": false,
+          "erreur": "confusion_signe_pente_convexite",
+          "feedback": "Le signe de la pente indique si $f$ monte ou descend, pas si elle est convexe ou concave."
+        }
+      ],
+      "explication": "Quand on parcourt la courbe de gauche à droite, les pentes $2$, $0$, $-2$ **diminuent** : les tangentes « tournent vers le bas ». C'est le comportement d'une fonction concave (courbe en forme de dôme).",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 2. Fonction concave — Interprétation graphique"
+      ]
+    },
+    {
+      "id": "conv-f1-q5",
+      "chapitre": "Convexité",
+      "fiche": "Convexité et concavité",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "position de la courbe par rapport aux cordes (concavité)",
+      "enonce": "Une fonction $f$ est concave sur $[0\\ ;\\ 4]$. Sa courbe passe par $A(0\\ ;\\ 1)$ et $B(4\\ ;\\ 5)$ (voir la figure : on n'a tracé que la corde $[AB]$). Que peut-on affirmer sur $f(2)$ ?",
+      "figure": "convexite_f1_q5.png",
+      "figure_alt": "Deux points A(0 ; 1) et B(4 ; 5) reliés par une corde, avec une droite verticale en x = 2.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(2) \\leq 3$",
+          "correcte": false,
+          "erreur": "position_cordes_inversee",
+          "feedback": "Pour une fonction concave, la courbe est au-dessus de ses cordes, pas au-dessous."
+        },
+        {
+          "id": "B",
+          "texte": "$f(2) = 3$",
+          "correcte": false,
+          "erreur": "confusion_fonction_affine",
+          "feedback": "Ce serait vrai si $f$ était affine, mais une fonction concave n'est pas forcément une droite."
+        },
+        {
+          "id": "C",
+          "texte": "$f(2) \\geq 3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "On ne peut rien affirmer : il manque l'expression de $f$.",
+          "correcte": false,
+          "erreur": "propriete_non_exploitee",
+          "feedback": "La concavité suffit : la courbe est au-dessus de la corde $[AB]$ entre les abscisses $0$ et $4$."
+        }
+      ],
+      "explication": "La corde $[AB]$ a pour pente $\\frac{5 - 1}{4 - 0} = 1$ et pour équation $y = x + 1$ : au point d'abscisse $2$, elle vaut $3$. Comme $f$ est concave, sa courbe est **au-dessus** de la corde : $f(2) \\geq 3$.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 2. Fonction concave — Position de la courbe par rapport aux cordes"
+      ]
+    }
+  ]
+}

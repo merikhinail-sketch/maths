@@ -1,0 +1,568 @@
+{
+  "id": "int-chapitre",
+  "titre": "Quiz de chapitre — Intégrales",
+  "chapitre": "Intégrales",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 12,
+  "questions": [
+    {
+      "id": "int-chapitre-q1",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "intégrale d'un monôme",
+      "enonce": "Calculer $\\displaystyle \\int_0^2 3x^2\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$12$",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_integrale",
+          "feedback": "$12 = f(2)$ est une valeur de la fonction, pas l'intégrale."
+        },
+        {
+          "id": "B",
+          "texte": "$24$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_n_plus_1",
+          "feedback": "Une primitive de $3x^2$ est $x^3$ (et non $3x^3$)."
+        },
+        {
+          "id": "C",
+          "texte": "$6$",
+          "correcte": false,
+          "erreur": "mauvaise_primitive",
+          "feedback": "$6 = 3 \\times 2$ : on a multiplié la valeur par la borne."
+        },
+        {
+          "id": "D",
+          "texte": "$8$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\left[x^3\\right]_0^2 = 8 - 0 = 8$.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 1. Définition — Définition de l'intégrale"
+      ]
+    },
+    {
+      "id": "int-chapitre-q2",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "changement de sens des bornes",
+      "enonce": "Calculer $\\displaystyle \\int_3^0 2x\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$9$",
+          "correcte": false,
+          "erreur": "oubli_changement_de_sens_des_bornes",
+          "feedback": "Les bornes sont dans l'ordre inverse : $F(0) - F(3) = -9$."
+        },
+        {
+          "id": "B",
+          "texte": "$-6$",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_integrale",
+          "feedback": "$-6 = -f(3)$ : ce n'est pas l'intégrale."
+        },
+        {
+          "id": "C",
+          "texte": "$-9$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_borne_nulle",
+          "feedback": "Ce n'est pas parce qu'une borne est $0$ que l'intégrale est nulle."
+        }
+      ],
+      "explication": "$\\displaystyle \\int_3^0 2x\\,dx = -\\int_0^3 2x\\,dx = -\\left[x^2\\right]_0^3 = -9$.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 2. Propriétés — Changement de sens des bornes"
+      ]
+    },
+    {
+      "id": "int-chapitre-q3",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "vrai_faux_plausible",
+      "niveau": 2,
+      "notion": "propriétés de l'intégrale",
+      "enonce": "Laquelle de ces affirmations est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une intégrale peut être négative, par exemple $\\displaystyle \\int_0^2 (x - 3)\\,dx = -4$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Une intégrale est toujours positive, car c'est une aire.",
+          "correcte": false,
+          "erreur": "aire_toujours_positive",
+          "feedback": "C'est une aire **algébrique** : elle est négative quand la fonction est négative."
+        },
+        {
+          "id": "C",
+          "texte": "$\\displaystyle \\int_0^1 x \\times x\\,dx = \\int_0^1 x\\,dx \\times \\int_0^1 x\\,dx$.",
+          "correcte": false,
+          "erreur": "linearite_sur_les_produits",
+          "feedback": "La linéarité ne s'applique pas aux produits : $\\frac{1}{3} \\neq \\frac{1}{4}$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\displaystyle \\int_0^1 f + \\int_2^3 f = \\int_0^3 f$ pour toute fonction continue $f$.",
+          "correcte": false,
+          "erreur": "chasles_sans_enchainement",
+          "feedback": "Les bornes doivent s'enchaîner. Avec $f = 1$ : $1 + 1 = 2 \\neq 3$."
+        }
+      ],
+      "explication": "Pour $x - 3 \\leq 0$ sur $[0\\ ;\\ 2]$, l'intégrale est l'opposé de l'aire géométrique. Les deux autres affirmations sont fausses (linéarité et Chasles mal utilisées).",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 2. Erreurs fréquentes — Oublier qu'une intégrale peut être négative lorsqu'on l'interprète comme une aire algébrique",
+        "Fiche « Calculer une intégrale » — 2. Erreurs fréquentes — Mal utiliser les propriétés de l'intégrale, notamment la linéarité ou la relation de Chasles"
+      ]
+    },
+    {
+      "id": "int-chapitre-q4",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "exponentielle avec coefficient",
+      "enonce": "Calculer $\\displaystyle \\int_0^1 e^{3x}\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$e^3 - 1$",
+          "correcte": false,
+          "erreur": "oubli_du_coefficient",
+          "feedback": "Une primitive de $e^{3x}$ est $\\frac{1}{3}e^{3x}$."
+        },
+        {
+          "id": "B",
+          "texte": "$3\\left(e^3 - 1\\right)$",
+          "correcte": false,
+          "erreur": "multiplier_au_lieu_de_diviser",
+          "feedback": "On divise par le coefficient de $x$, on ne multiplie pas."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{e^3}{3}$",
+          "correcte": false,
+          "erreur": "oubli_de_F_a",
+          "feedback": "On a oublié de soustraire $F(0) = \\frac{1}{3}$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{e^3 - 1}{3}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\left[\\frac{1}{3}e^{3x}\\right]_0^1 = \\frac{e^3}{3} - \\frac{1}{3} = \\frac{e^3 - 1}{3}$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 2. Erreurs fréquentes — Oublier de prendre en compte les coefficients lors du calcul d'une primitive"
+      ]
+    },
+    {
+      "id": "int-chapitre-q5",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "Chasles et sens des bornes",
+      "enonce": "Soit $f$ continue avec $\\displaystyle \\int_0^3 f(x)\\,dx = 4$ et $\\displaystyle \\int_5^3 f(x)\\,dx = 6$. Que vaut $\\displaystyle \\int_0^5 f(x)\\,dx$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$10$",
+          "correcte": false,
+          "erreur": "oubli_changement_de_sens_des_bornes",
+          "feedback": "$\\int_3^5 f = -\\int_5^3 f = -6$ : les bornes sont inversées."
+        },
+        {
+          "id": "B",
+          "texte": "$-2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\int_0^5 f = 4 + (-6) = -2$."
+        },
+        {
+          "id": "D",
+          "texte": "$-10$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "On a additionné $4$ et $6$ puis changé le signe : il faut $4 + (-6) = -2$."
+        }
+      ],
+      "explication": "$\\int_3^5 f = -6$ puis $\\int_0^5 f = \\int_0^3 f + \\int_3^5 f = 4 - 6 = -2$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 1. Grand exemple guidé — Simplifier un calcul avec les propriétés de l'intégrale",
+        "Fiche « Comprendre l'intégrale » — 2. Propriétés — Relation de Chasles"
+      ]
+    },
+    {
+      "id": "int-chapitre-q6",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "interprétation",
+      "niveau": 2,
+      "notion": "aire algébrique avec figure",
+      "enonce": "On donne la courbe de $f(x) = x^2 - 1$ sur $[0\\ ;\\ 2]$. Quelle est la valeur de $\\displaystyle \\int_0^2 \\left(x^2 - 1\\right)dx$ ?",
+      "figure": "int_ch_q6.png",
+      "figure_alt": "Parabole y = x² − 1 sur [0 ; 2] : zone colorée sous l'axe entre 0 et 1, zone colorée au-dessus entre 1 et 2.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "aire_geometrique_au_lieu_d_algebrique",
+          "feedback": "$\\frac{2}{3} + \\frac{4}{3} = 2$ additionne les aires géométriques ; la partie sous l'axe doit compter négativement."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dfrac{2}{3}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{14}{3}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_primitive",
+          "feedback": "Une primitive de $x^2 - 1$ est $\\frac{x^3}{3} - x$ : on a $\\frac{8}{3} - 2 = \\frac{2}{3}$, et non $\\frac{8}{3} + 2$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{4}{3}$",
+          "correcte": false,
+          "erreur": "oubli_partie_sous_l_axe",
+          "feedback": "On n'a compté que la partie située au-dessus de l'axe (sur $[1\\ ;\\ 2]$)."
+        }
+      ],
+      "explication": "$\\left[\\frac{x^3}{3} - x\\right]_0^2 = \\frac{8}{3} - 2 = \\frac{2}{3}$. La partie sous l'axe ($-\\frac{2}{3}$) et la partie au-dessus ($+\\frac{4}{3}$) se compensent partiellement.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 1. Définition — Interprétation comme aire algébrique"
+      ]
+    },
+    {
+      "id": "int-chapitre-q7",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "linéarité",
+      "enonce": "Calculer $\\displaystyle \\int_0^1 \\left(6x^2 + 4x\\right)dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$10$",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_integrale",
+          "feedback": "$10 = f(1)$ est une valeur de la fonction."
+        },
+        {
+          "id": "B",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "oubli_d_un_terme",
+          "feedback": "On n'a primitivé qu'un des deux termes : $F(x) = 2x^3 + 2x^2$."
+        },
+        {
+          "id": "C",
+          "texte": "$8$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_n_plus_1",
+          "feedback": "$6x^2 \\to 2x^3$ et $4x \\to 2x^2$ : on divise par le nouvel exposant."
+        },
+        {
+          "id": "D",
+          "texte": "$4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\left[2x^3 + 2x^2\\right]_0^1 = 4$.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 2. Propriétés — Linéarité"
+      ]
+    },
+    {
+      "id": "int-chapitre-q8",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "primitive de $1/\\sqrt{x}$",
+      "enonce": "Calculer $\\displaystyle \\int_1^4 \\dfrac{1}{\\sqrt{x}}\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\ln(4)$",
+          "correcte": false,
+          "erreur": "mauvaise_primitive",
+          "feedback": "$\\ln$ est une primitive de $\\frac{1}{x}$, pas de $\\frac{1}{\\sqrt{x}}$."
+        },
+        {
+          "id": "C",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "oubli_du_facteur_2",
+          "feedback": "Une primitive de $\\frac{1}{\\sqrt{x}}$ est $2\\sqrt{x}$ (et non $\\sqrt{x}$)."
+        },
+        {
+          "id": "D",
+          "texte": "$4$",
+          "correcte": false,
+          "erreur": "oubli_de_F_a",
+          "feedback": "$4 = F(4)$ : il faut soustraire $F(1) = 2$."
+        }
+      ],
+      "explication": "$\\left[2\\sqrt{x}\\right]_1^4 = 4 - 2 = 2$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 2. Erreurs fréquentes — Utiliser une mauvaise primitive",
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Reconnaître les principales formes et connaître les primitives correspondantes"
+      ]
+    },
+    {
+      "id": "int-chapitre-q9",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "choix de $u$ et $v'$ avec $\\ln$",
+      "enonce": "Pour calculer $\\displaystyle \\int_1^e x^2\\ln(x)\\,dx$ par parties, quel choix convient ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u(x) = x^2$ et $v'(x) = \\ln(x)$",
+          "correcte": false,
+          "erreur": "mauvais_choix_de_u",
+          "feedback": "On ne connaît pas de primitive de $\\ln(x)$ dans le tableau usuel."
+        },
+        {
+          "id": "B",
+          "texte": "$u(x) = \\ln(x)$ et $v(x) = x^2$",
+          "correcte": false,
+          "erreur": "confusion_v_et_v_prime",
+          "feedback": "Le facteur $x^2$ joue le rôle de $v'$ : $v$ est sa primitive $\\frac{x^3}{3}$."
+        },
+        {
+          "id": "C",
+          "texte": "$u(x) = \\ln(x)$ et $v'(x) = x^2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Aucun : une primitive directe existe dans le tableau usuel.",
+          "correcte": false,
+          "erreur": "ipp_non_reconnue",
+          "feedback": "Il n'y a pas de primitive usuelle de $x^2\\ln(x)$ : l'intégration par parties est la bonne méthode."
+        }
+      ],
+      "explication": "$\\ln(x)$ se simplifie en $\\frac{1}{x}$ à la dérivation, et $x^2$ a pour primitive $\\frac{x^3}{3}$.",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 2. Appliquer la méthode — Choisir les fonctions $u$ et $v'$"
+      ]
+    },
+    {
+      "id": "int-chapitre-q10",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "IPP complète",
+      "enonce": "Calculer $\\displaystyle \\int_0^1 (x + 1)\\,e^{x}\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2e - 1$",
+          "correcte": false,
+          "erreur": "oubli_de_la_nouvelle_integrale",
+          "feedback": "On a oublié de retrancher $\\int_0^1 e^x\\,dx = e - 1$."
+        },
+        {
+          "id": "B",
+          "texte": "$3e - 2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_de_la_formule",
+          "feedback": "La formule contient $-\\int u'v$ : on a ajouté l'intégrale au lieu de la retrancher."
+        },
+        {
+          "id": "C",
+          "texte": "$e - 1$",
+          "correcte": false,
+          "erreur": "oubli_du_crochet",
+          "feedback": "On a oublié le terme $[uv]_0^1 = 2e - 1$ de la formule."
+        },
+        {
+          "id": "D",
+          "texte": "$e$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$u = x + 1$, $v' = e^x$, $u' = 1$, $v = e^x$. $I = \\left[(x+1)e^x\\right]_0^1 - \\int_0^1 e^x\\,dx = (2e - 1) - (e - 1) = e$.",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 2. Appliquer la méthode — Appliquer la formule d'intégration par parties",
+        "Fiche « Intégration par parties » — 2. Appliquer la méthode — Calculer et simplifier le résultat"
+      ]
+    },
+    {
+      "id": "int-chapitre-q11",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "IPP avec sinus",
+      "enonce": "Calculer $\\displaystyle \\int_0^{\\pi} x\\sin(x)\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\pi$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Test du signe : $x\\sin(x) \\geq 0$ sur $[0\\ ;\\ \\pi]$, l'intégrale doit être positive. Avec $v = -\\cos(x)$, le crochet vaut $+\\pi$."
+        },
+        {
+          "id": "B",
+          "texte": "$\\pi$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "oubli_du_crochet",
+          "feedback": "Le crochet $\\left[-x\\cos(x)\\right]_0^\\pi$ vaut $\\pi$ : il ne faut pas l'oublier."
+        },
+        {
+          "id": "D",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "oubli_du_facteur_x",
+          "feedback": "$2 = \\int_0^\\pi \\sin(x)\\,dx$ : on a ignoré le facteur $x$."
+        }
+      ],
+      "explication": "$u = x$, $v' = \\sin(x)$, $v = -\\cos(x)$. $I = \\left[-x\\cos(x)\\right]_0^\\pi + \\int_0^\\pi \\cos(x)\\,dx = \\pi + 0 = \\pi$.",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 4. Erreurs fréquentes — Faire une erreur de signe ou mal appliquer la formule"
+      ]
+    },
+    {
+      "id": "int-chapitre-q12",
+      "chapitre": "Intégrales",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "inutile d'intégrer par parties",
+      "enonce": "Quelle est la valeur de $\\displaystyle \\int_0^1 2x\\,e^{x^2}\\,dx$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$e$",
+          "correcte": false,
+          "erreur": "oubli_de_F_a",
+          "feedback": "On a oublié de soustraire $F(0) = e^0 = 1$."
+        },
+        {
+          "id": "B",
+          "texte": "$2(e - 1)$",
+          "correcte": false,
+          "erreur": "coefficient_en_trop",
+          "feedback": "$2x$ est déjà $u'$ pour $u = x^2$ : il n'y a pas de facteur à ajouter."
+        },
+        {
+          "id": "C",
+          "texte": "$e - 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{e - 1}{2}$",
+          "correcte": false,
+          "erreur": "division_a_tort",
+          "feedback": "La division par $2$ servirait si l'on avait $x\\,e^{x^2}$, pas $2x\\,e^{x^2}$."
+        }
+      ],
+      "explication": "$2x\\,e^{x^2}$ est de la forme $u'e^{u}$ avec $u = x^2$ : une primitive est $e^{x^2}$. Donc $\\left[e^{x^2}\\right]_0^1 = e - 1$. L'intégration par parties est inutile ici.",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 4. Erreurs fréquentes — Utiliser l'intégration par parties alors qu'une méthode plus simple suffit",
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Les formes avec une fonction composée"
+      ]
+    }
+  ]
+}

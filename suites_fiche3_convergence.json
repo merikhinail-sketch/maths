@@ -1,0 +1,243 @@
+{
+  "id": "suites-f3",
+  "titre": "Quiz — Convergence des suites",
+  "chapitre": "Suites",
+  "fiche": "Convergence des suites",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "suites-f3-q1",
+      "chapitre": "Suites",
+      "fiche": "Convergence des suites",
+      "type": "reconnaissance",
+      "niveau": 1,
+      "notion": "reconnaître une suite convergente",
+      "enonce": "Laquelle de ces suites converge ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u_n = (-1)^n$",
+          "correcte": false,
+          "erreur": "confusion_bornee_convergente",
+          "feedback": "Elle est bornée mais alterne entre 1 et −1 : elle ne converge pas."
+        },
+        {
+          "id": "B",
+          "texte": "$u_n = 4 + \\dfrac{1}{n+1}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$u_n = n^2$",
+          "correcte": false,
+          "erreur": "tend_vers_infini",
+          "feedback": "Elle tend vers $+\\infty$ : elle diverge."
+        },
+        {
+          "id": "D",
+          "texte": "$u_n = -n$",
+          "correcte": false,
+          "erreur": "tend_vers_infini",
+          "feedback": "Elle tend vers $-\\infty$ : elle diverge."
+        }
+      ],
+      "explication": "$\\frac{1}{n+1}$ tend vers $0$, donc $u_n$ tend vers $4$ : la suite converge.",
+      "a_revoir": [
+        "Fiche « Convergence des suites » — 1. Comprendre la convergence — Différence entre convergence et divergence"
+      ]
+    },
+    {
+      "id": "suites-f3-q2",
+      "chapitre": "Suites",
+      "fiche": "Convergence des suites",
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "conjecturer une limite sur un nuage de points",
+      "enonce": "On a représenté les premiers termes d'une suite $(u_n)$. Que suggère le graphique ?",
+      "figure": "suites_conv_q2.png",
+      "figure_alt": "Nuage de points d'une suite qui alterne autour de la hauteur 3 en s'en rapprochant.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle semble converger vers $4$, car $u_0 = 4$.",
+          "correcte": false,
+          "erreur": "confusion_limite_terme",
+          "feedback": "La limite n'est pas un terme de la suite : les points se rapprochent de la hauteur 3."
+        },
+        {
+          "id": "B",
+          "texte": "Elle semble diverger, car les points alternent.",
+          "correcte": false,
+          "erreur": "alterner_donc_diverger",
+          "feedback": "Les points alternent mais s'approchent de plus en plus de 3 : la suite converge."
+        },
+        {
+          "id": "C",
+          "texte": "Elle semble tendre vers $+\\infty$.",
+          "correcte": false,
+          "erreur": "convergence_non_reperee",
+          "feedback": "Les points restent proches de la hauteur 3."
+        },
+        {
+          "id": "D",
+          "texte": "Elle semble converger vers $3$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Les points passent tantôt au-dessus, tantôt au-dessous de $3$, en s'en rapprochant : $u_n$ semble converger vers $3$.",
+      "a_revoir": [
+        "Fiche « Convergence des suites » — 1. Comprendre la convergence — Interprétation graphique",
+        "Fiche « Convergence des suites » — 1. Comprendre la convergence — Idée intuitive de convergence"
+      ]
+    },
+    {
+      "id": "suites-f3-q3",
+      "chapitre": "Suites",
+      "fiche": "Convergence des suites",
+      "type": "conditions_théorème",
+      "niveau": 2,
+      "notion": "théorème : décroissante et minorée",
+      "enonce": "Une suite $(u_n)$ est décroissante et minorée par $2$. Que peut-on affirmer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle converge vers $2$.",
+          "correcte": false,
+          "erreur": "limite_egale_minorant",
+          "feedback": "Le théorème garantit l'existence de la limite, pas sa valeur : un minorant n'est pas forcément la limite."
+        },
+        {
+          "id": "B",
+          "texte": "Elle diverge vers $-\\infty$.",
+          "correcte": false,
+          "erreur": "oubli_minoration",
+          "feedback": "La suite ne peut pas descendre sous 2."
+        },
+        {
+          "id": "C",
+          "texte": "Elle converge, vers un réel supérieur ou égal à $2$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "On ne peut rien conclure sans connaître l'expression de $u_n$.",
+          "correcte": false,
+          "erreur": "theoreme_non_utilise",
+          "feedback": "Décroissante et minorée : le théorème 2 s'applique."
+        }
+      ],
+      "explication": "Toute suite décroissante et minorée converge. Sa limite $L$ vérifie $L \\geq 2$, mais elle peut être strictement supérieure à $2$.",
+      "a_revoir": [
+        "Fiche « Convergence des suites » — 2. Convergence dans la monotonie et bornes — Théorèmes de convergence associés"
+      ]
+    },
+    {
+      "id": "suites-f3-q4",
+      "chapitre": "Suites",
+      "fiche": "Convergence des suites",
+      "type": "vrai_faux_plausible",
+      "niveau": 2,
+      "notion": "bornée, convergente, monotone",
+      "enonce": "Laquelle de ces affirmations est vraie ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Toute suite convergente est bornée.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Toute suite bornée est convergente.",
+          "correcte": false,
+          "erreur": "confusion_bornee_convergente",
+          "feedback": "$(-1)^n$ est bornée mais ne converge pas."
+        },
+        {
+          "id": "C",
+          "texte": "Toute suite croissante est convergente.",
+          "correcte": false,
+          "erreur": "croissante_donc_converge",
+          "feedback": "$u_n = n$ est croissante et diverge."
+        },
+        {
+          "id": "D",
+          "texte": "Toute suite convergente est monotone.",
+          "correcte": false,
+          "erreur": "convergente_donc_monotone",
+          "feedback": "$3 + \\frac{(-1)^n}{n+1}$ converge sans être monotone."
+        }
+      ],
+      "explication": "À partir d'un certain rang, les termes d'une suite convergente restent près de la limite : elle est bornée. Les réciproques sont fausses.",
+      "a_revoir": [
+        "Fiche « Convergence des suites » — 3. Erreurs fréquentes — Confondre suite bornée et suite convergente",
+        "Fiche « Convergence des suites » — 3. Erreurs fréquentes — Croire qu'une suite qui n'est pas monotone ne peut pas converger"
+      ]
+    },
+    {
+      "id": "suites-f3-q5",
+      "chapitre": "Suites",
+      "fiche": "Convergence des suites",
+      "type": "repérer_erreur",
+      "niveau": 3,
+      "notion": "vérifier les conditions du théorème",
+      "enonce": "Un élève affirme : « $u_n = -n$ est décroissante et majorée (par $0$), donc d'après le théorème, elle converge. » Quelle est son erreur ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La suite n'est pas décroissante.",
+          "correcte": false,
+          "erreur": "verifier_la_monotonie",
+          "feedback": "Elle est bien décroissante : $u_{n+1} - u_n = -1 < 0$."
+        },
+        {
+          "id": "B",
+          "texte": "Pour une suite décroissante, il faut une **minoration** : ici $(u_n)$ n'est pas minorée, et elle diverge.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "La suite n'est pas majorée.",
+          "correcte": false,
+          "erreur": "verifier_la_borne",
+          "feedback": "Elle est bien majorée par $0$, mais ce n'est pas la bonne borne pour ce théorème."
+        },
+        {
+          "id": "D",
+          "texte": "Le théorème ne s'applique qu'aux suites arithmétiques.",
+          "correcte": false,
+          "erreur": "theoreme_mal_connu",
+          "feedback": "Il s'applique à toute suite monotone et bornée du bon côté."
+        }
+      ],
+      "explication": "Le théorème 2 demande « décroissante **et minorée** ». Une suite décroissante est toujours majorée par $u_0$ : cette condition ne prouve rien.",
+      "a_revoir": [
+        "Fiche « Convergence des suites » — 3. Erreurs fréquentes — Utiliser un théorème sans vérifier ses conditions"
+      ]
+    }
+  ]
+}

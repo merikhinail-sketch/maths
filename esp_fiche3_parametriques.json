@@ -1,0 +1,241 @@
+{
+  "id": "esp-f3",
+  "titre": "Quiz — Représentations paramétriques d'une droite",
+  "chapitre": "Géométrie dans l'espace",
+  "fiche": "Représentations paramétriques d'une droite",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "esp-f3-q1",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Représentations paramétriques d'une droite",
+      "type": "application",
+      "niveau": 1,
+      "notion": "représentation paramétrique",
+      "enonce": "Soit $A(2\\ ;\\ -1\\ ;\\ 0)$ et $B(5\\ ;\\ 1\\ ;\\ 3)$. Quelle est une représentation paramétrique de $(AB)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\begin{cases} x = 2 + 3t \\\\ y = 1 + 2t \\\\ z = 3t \\end{cases}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_sur_le_point",
+          "feedback": "L'ordonnée de $A$ est $-1$ : $y = -1 + 2t$."
+        },
+        {
+          "id": "B",
+          "texte": "$\\begin{cases} x = 2 + 5t \\\\ y = -1 + t \\\\ z = 3t \\end{cases}$",
+          "correcte": false,
+          "erreur": "coordonnees_de_B_comme_direction",
+          "feedback": "Le vecteur directeur est $\\overrightarrow{AB} = (3\\ ;\\ 2\\ ;\\ 3)$, pas les coordonnées de $B$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{cases} x = 2 + 3t \\\\ y = -1 + 2t \\\\ z = 3t \\end{cases}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\begin{cases} x = 3t \\\\ y = 2t \\\\ z = 3t \\end{cases}$",
+          "correcte": false,
+          "erreur": "oubli_du_point_de_depart",
+          "feedback": "Cette droite passe par l'origine : il faut partir de $A$."
+        }
+      ],
+      "explication": "$\\overrightarrow{AB}\\begin{pmatrix} 3 \\\\ 2 \\\\ 3 \\end{pmatrix}$, point de départ $A$ : $\\overrightarrow{AM} = t\\overrightarrow{AB}$ donne $x = 2 + 3t$, $y = -1 + 2t$, $z = 3t$.",
+      "a_revoir": [
+        "Fiche « Représentations paramétriques d'une droite » — Grand exemple guidé — Question 1 : écrire une représentation paramétrique"
+      ]
+    },
+    {
+      "id": "esp-f3-q2",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Représentations paramétriques d'une droite",
+      "type": "application",
+      "niveau": 1,
+      "notion": "point sur une droite",
+      "enonce": "La droite $(AB)$ a pour représentation paramétrique $\\begin{cases} x = 2 + 3t \\\\ y = -1 + 2t \\\\ z = 3t \\end{cases}$. Lequel de ces points lui appartient ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(-1\\ ;\\ -3\\ ;\\ -3)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$(-1\\ ;\\ -3\\ ;\\ -2)$",
+          "correcte": false,
+          "erreur": "coordonnee_incoherente",
+          "feedback": "$x = -1$ donne $t = -1$, et alors $z = -3$, pas $-2$."
+        },
+        {
+          "id": "C",
+          "texte": "$(-1\\ ;\\ -2\\ ;\\ -3)$",
+          "correcte": false,
+          "erreur": "coordonnee_incoherente",
+          "feedback": "$x = -1$ donne $t = -1$, et alors $y = -3$, pas $-2$."
+        },
+        {
+          "id": "D",
+          "texte": "$(-1\\ ;\\ 1\\ ;\\ -3)$",
+          "correcte": false,
+          "erreur": "coordonnee_incoherente",
+          "feedback": "$x = -1$ donne $t = -1$, et alors $y = -3$, pas $1$."
+        }
+      ],
+      "explication": "On trouve $t$ avec la première équation : $-1 = 2 + 3t$ donne $t = -1$. On vérifie : $y = -1 - 2 = -3$ ✓ et $z = -3$ ✓.",
+      "a_revoir": [
+        "Fiche « Représentations paramétriques d'une droite » — Grand exemple guidé — Question 2 : un point est-il sur la droite ?"
+      ]
+    },
+    {
+      "id": "esp-f3-q3",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Représentations paramétriques d'une droite",
+      "type": "application",
+      "niveau": 2,
+      "notion": "intersection droite-plan",
+      "enonce": "La droite $(AB)$ de représentation $\\begin{cases} x = 2 + 3t \\\\ y = -1 + 2t \\\\ z = 3t \\end{cases}$ coupe le plan $(P) : x + y - z - 5 = 0$ en un point. Lequel ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(8\\ ;\\ 3\\ ;\\ 6)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$(-4\\ ;\\ -5\\ ;\\ -6)$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_sur_t",
+          "feedback": "L'équation $2t - 4 = 0$ donne $t = +2$, et non $-2$."
+        },
+        {
+          "id": "C",
+          "texte": "$(14\\ ;\\ 7\\ ;\\ 12)$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser",
+          "feedback": "$2t = 4$ donne $t = 2$ : on a pris $t = 4$."
+        },
+        {
+          "id": "D",
+          "texte": "$(2\\ ;\\ -1\\ ;\\ 0)$",
+          "correcte": false,
+          "erreur": "point_de_depart",
+          "feedback": "C'est le point $A$ ($t = 0$) : il ne vérifie pas l'équation du plan ($2 - 1 - 0 - 5 \\neq 0$)."
+        }
+      ],
+      "explication": "$(2 + 3t) + (-1 + 2t) - 3t - 5 = 2t - 4 = 0$, donc $t = 2$ et le point est $(8\\ ;\\ 3\\ ;\\ 6)$. Vérification : $8 + 3 - 6 - 5 = 0$ ✓.",
+      "a_revoir": [
+        "Fiche « Représentations paramétriques d'une droite » — Grand exemple guidé — Question 3 : intersection de la droite et du plan"
+      ]
+    },
+    {
+      "id": "esp-f3-q4",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Représentations paramétriques d'une droite",
+      "type": "application",
+      "niveau": 3,
+      "notion": "projeté orthogonal",
+      "enonce": "Soit $M(6\\ ;\\ 1\\ ;\\ 2)$ et la droite $(AB)$ de représentation $\\begin{cases} x = 2 + 3t \\\\ y = -1 + 2t \\\\ z = 3t \\end{cases}$. Quel est le projeté orthogonal de $M$ sur $(AB)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(2\\ ;\\ -1\\ ;\\ 0)$",
+          "correcte": false,
+          "erreur": "choix_du_point_de_depart",
+          "feedback": "C'est $A$ ($t = 0$). Le projeté est obtenu en imposant $\\overrightarrow{MH} \\cdot \\overrightarrow{AB} = 0$."
+        },
+        {
+          "id": "B",
+          "texte": "$(8\\ ;\\ 3\\ ;\\ 6)$",
+          "correcte": false,
+          "erreur": "erreur_dans_l_equation_en_t",
+          "feedback": "L'équation $\\overrightarrow{MH} \\cdot \\overrightarrow{AB} = 22t - 22 = 0$ donne $t = 1$, et non $2$."
+        },
+        {
+          "id": "C",
+          "texte": "$(5\\ ;\\ 1\\ ;\\ 3)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$(6\\ ;\\ 1\\ ;\\ 2)$",
+          "correcte": false,
+          "erreur": "projete_egal_au_point",
+          "feedback": "C'est $M$ lui-même, qui n'est pas sur la droite."
+        }
+      ],
+      "explication": "$H(2 + 3t\\ ;\\ -1 + 2t\\ ;\\ 3t)$, $\\overrightarrow{MH}\\begin{pmatrix} 3t - 4 \\\\ 2t - 2 \\\\ 3t - 2 \\end{pmatrix}$. $\\overrightarrow{MH} \\cdot \\overrightarrow{AB} = 3(3t - 4) + 2(2t - 2) + 3(3t - 2) = 22t - 22 = 0$ donc $t = 1$ et $H(5\\ ;\\ 1\\ ;\\ 3)$.",
+      "a_revoir": [
+        "Fiche « Représentations paramétriques d'une droite » — Grand exemple guidé — Question 4 : projeté orthogonal et distance"
+      ]
+    },
+    {
+      "id": "esp-f3-q5",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Représentations paramétriques d'une droite",
+      "type": "application",
+      "niveau": 3,
+      "notion": "distance à une droite",
+      "enonce": "Avec le même point $M(6\\ ;\\ 1\\ ;\\ 2)$ et le projeté orthogonal $H(5\\ ;\\ 1\\ ;\\ 3)$ sur la droite $(AB)$, quelle est la distance de $M$ à $(AB)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "oubli_de_la_racine",
+          "feedback": "$2$ est le carré de la distance : il faut prendre la racine."
+        },
+        {
+          "id": "B",
+          "texte": "$\\sqrt{2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\sqrt{24}$",
+          "correcte": false,
+          "erreur": "distance_a_A_et_non_a_la_droite",
+          "feedback": "C'est la distance $MA$ : la distance de $M$ à la droite est la distance $MH$ au **projeté**."
+        },
+        {
+          "id": "D",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_produit_scalaire_nul",
+          "feedback": "$\\overrightarrow{MH} \\cdot \\overrightarrow{AB} = 0$ exprime l'orthogonalité, pas la distance."
+        }
+      ],
+      "explication": "$\\overrightarrow{MH}\\begin{pmatrix} -1 \\\\ 0 \\\\ 1 \\end{pmatrix}$, donc $MH = \\sqrt{1 + 0 + 1} = \\sqrt{2}$.",
+      "a_revoir": [
+        "Fiche « Représentations paramétriques d'une droite » — Grand exemple guidé — Question 4 : projeté orthogonal et distance"
+      ]
+    }
+  ]
+}

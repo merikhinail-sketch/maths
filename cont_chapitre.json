@@ -1,0 +1,570 @@
+{
+  "id": "cont-chapitre",
+  "titre": "Quiz de chapitre — Continuité et théorème des valeurs intermédiaires",
+  "chapitre": "Continuité et théorème des valeurs intermédiaires",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 12,
+  "questions": [
+    {
+      "id": "cont-chapitre-q1",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "définition de la continuité",
+      "enonce": "Soit $f$ une fonction définie en $a$ et autour de $a$. Laquelle de ces conditions exprime la continuité de $f$ en $a$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(a)$ existe.",
+          "correcte": false,
+          "erreur": "confusion_definie_continue",
+          "feedback": "Être défini en $a$ ne suffit pas : un saut est possible."
+        },
+        {
+          "id": "B",
+          "texte": "$\\displaystyle\\lim_{x \\to a} f(x)$ existe, sans condition sur $f(a)$.",
+          "correcte": false,
+          "erreur": "oubli_de_f_de_a",
+          "feedback": "La limite doit aussi être égale à la valeur $f(a)$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\displaystyle\\lim_{x \\to a} f(x) = f(a)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ est dérivable en $a$.",
+          "correcte": false,
+          "erreur": "confusion_continuite_derivabilite",
+          "feedback": "La dérivabilité est une condition plus forte que la continuité."
+        }
+      ],
+      "explication": "$f$ est continue en $a$ lorsque $f(x)$ se rapproche de $f(a)$ quand $x$ se rapproche de $a$ : $\\lim\\limits_{x \\to a} f(x) = f(a)$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 1. Continuité — Définition de la continuité"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q2",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "repérer une discontinuité",
+      "enonce": "Sur la courbe ci-contre (le point creux n'appartient pas à la courbe), en quelle(s) abscisse(s) la fonction n'est-elle pas continue sur $[-3\\ ;\\ 4]$ ?",
+      "figure": "cont_ch_q2.png",
+      "figure_alt": "Courbe formée de deux demi-droites formant un angle en (0 ; 1), avec un point creux en (2 ; 2) et un point plein isolé en (2 ; 0,5).",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Uniquement en $x = 2$ : le point d'ordonnée $0{,}5$ est détaché du reste de la courbe.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Uniquement en $x = 0$ : la courbe y présente un angle.",
+          "correcte": false,
+          "erreur": "confusion_continuite_derivabilite",
+          "feedback": "Un angle (point anguleux) ne rompt pas la courbe : on peut la tracer sans lever le crayon."
+        },
+        {
+          "id": "C",
+          "texte": "En $x = 0$ et en $x = 2$.",
+          "correcte": false,
+          "erreur": "confusion_continuite_derivabilite",
+          "feedback": "En $x = 0$, la fonction est continue (elle n'est simplement pas dérivable)."
+        },
+        {
+          "id": "D",
+          "texte": "En aucun point : la courbe est tracée d'un seul trait.",
+          "correcte": false,
+          "erreur": "point_detache_non_vu",
+          "feedback": "En $x = 2$, la valeur de la fonction ($0{,}5$) est différente de la limite (l'ordonnée $2$) : il faut lever le crayon."
+        }
+      ],
+      "explication": "En $x = 2$, la courbe s'approche de l'ordonnée $2$ des deux côtés, mais $f(2) = 0{,}5$ : c'est un point détaché. En $x = 0$, il y a un angle mais pas de rupture.",
+      "a_revoir": [
+        "Fiche « La continuité » — 1. Continuité — Interprétation graphique",
+        "Fiche « La continuité » — 2. Continuité sur un intervalle — Identifier graphiquement ou à partir d'une expression si une fonction est continue sur un intervalle"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q3",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "fonctions usuelles continues",
+      "enonce": "Laquelle de ces fonctions est continue sur $[0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(x) = \\sqrt{x} + e^{x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f(x) = \\ln(x) + x$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "$\\ln$ n'est pas définie en $0$ : $f$ n'est pas continue sur $[0\\ ;\\ +\\infty[$."
+        },
+        {
+          "id": "C",
+          "texte": "$f(x) = \\dfrac{1}{x - 3}$",
+          "correcte": false,
+          "erreur": "oubli_denominateur_nul",
+          "feedback": "Cette fonction n'est pas définie en $3$, qui appartient à l'intervalle."
+        },
+        {
+          "id": "D",
+          "texte": "$f(x) = \\dfrac{x}{x^2 - 4}$",
+          "correcte": false,
+          "erreur": "oubli_denominateur_nul",
+          "feedback": "Le dénominateur s'annule en $x = 2$, qui appartient à l'intervalle."
+        }
+      ],
+      "explication": "$\\sqrt{x}$ est continue sur $[0\\ ;\\ +\\infty[$ et $e^x$ sur $\\mathbb{R}$ : leur somme est continue sur $[0\\ ;\\ +\\infty[$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 3. Fonctions usuelles continues — Fonctions usuelles",
+        "Fiche « La continuité » — 4. Opérations sur la fonction continue — Somme, différence et produit"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q4",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "continuité d'une fonction par morceaux",
+      "enonce": "Soit $g$ définie par $g(x) = 3x - 1$ si $x < 1$ et $g(x) = x^2 + a$ si $x \\geq 1$. Pour quelle valeur de $a$ la fonction $g$ est-elle continue en $1$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$a = 2$",
+          "correcte": false,
+          "erreur": "limite_non_comparee_a_la_bonne_valeur",
+          "feedback": "$2$ est la limite à gauche : il faut résoudre $1^2 + a = 2$."
+        },
+        {
+          "id": "B",
+          "texte": "$a = 0$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "Avec $a = 0$ : $g(1) = 1 \\neq 2$."
+        },
+        {
+          "id": "C",
+          "texte": "$a = 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$a = 3$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "Avec $a = 3$ : $g(1) = 4 \\neq 2$."
+        }
+      ],
+      "explication": "Limite à gauche : $3 \\times 1 - 1 = 2$. Valeur : $g(1) = 1^2 + a = 1 + a$. La continuité demande $1 + a = 2$, donc $a = 1$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 2. Continuité sur un intervalle — Identifier graphiquement ou à partir d'une expression si une fonction est continue sur un intervalle"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q5",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "continuité d'un quotient avec ln",
+      "enonce": "Sur quel ensemble la fonction $f(x) = \\dfrac{\\ln(x)}{x^2 + 1}$ est-elle continue ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\mathbb{R}$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "$\\ln(x)$ n'est définie que pour $x > 0$ : $f$ n'est pas définie sur $\\mathbb{R}$."
+        },
+        {
+          "id": "B",
+          "texte": "$]0\\ ;\\ +\\infty[$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$[0\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "bornes_non_definies",
+          "feedback": "$\\ln(0)$ n'existe pas : $0$ doit être exclu."
+        },
+        {
+          "id": "D",
+          "texte": "$\\mathbb{R}^*$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "Les réels strictement négatifs sont exclus eux aussi, car $\\ln$ n'y est pas définie."
+        }
+      ],
+      "explication": "$\\ln$ est continue sur $]0\\ ;\\ +\\infty[$ ; $x^2 + 1 > 0$ ne s'annule jamais. Le quotient est donc continu sur $]0\\ ;\\ +\\infty[$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 4. Opérations sur la fonction continue — Déduire la continuité d'une fonction à partir de fonctions déjà connues comme continues",
+        "Fiche « La continuité » — 3. Fonctions usuelles continues — Fonctions usuelles"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q6",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "appliquer le théorème (fonction décroissante)",
+      "enonce": "Soit $g$ une fonction continue et strictement décroissante sur $[1\\ ;\\ 5]$, avec $g(1) = 7$ et $g(5) = -3$. Que peut-on dire de l'équation $g(x) = 0$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle admet au moins une solution, mais éventuellement plusieurs.",
+          "correcte": false,
+          "erreur": "oubli_de_l_unicite",
+          "feedback": "La stricte monotonie garantit l'unicité."
+        },
+        {
+          "id": "B",
+          "texte": "Elle n'a aucune solution, car $g$ est décroissante.",
+          "correcte": false,
+          "erreur": "confusion_croissante_decroissante",
+          "feedback": "Le théorème s'applique aussi aux fonctions strictement décroissantes : ici $0 \\in [-3\\ ;\\ 7]$."
+        },
+        {
+          "id": "C",
+          "texte": "On ne peut pas conclure : le théorème ne concerne que les fonctions croissantes.",
+          "correcte": false,
+          "erreur": "theoreme_reserve_aux_croissantes",
+          "feedback": "Le théorème de la bijection vaut pour toute fonction continue et strictement monotone (croissante ou décroissante)."
+        },
+        {
+          "id": "D",
+          "texte": "Elle admet exactement une solution dans $[1\\ ;\\ 5]$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$g$ est continue et strictement décroissante sur $[1\\ ;\\ 5]$ et $0$ est compris entre $g(5) = -3$ et $g(1) = 7$. D'après le théorème de la bijection, $g(x) = 0$ a une unique solution dans $[1\\ ;\\ 5]$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection — Conditions du théorème",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection — Conclusion sur l'existence et l'unicité d'une solution"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q7",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "encadrer une solution",
+      "enonce": "Soit $f(x) = x^3 - 3$, strictement croissante sur $\\mathbb{R}$, et $\\alpha$ la solution de $f(x) = 0$. On a $f(1{,}44) \\approx -0{,}014$ et $f(1{,}45) \\approx 0{,}049$. Quel est l'encadrement de $\\alpha$ d'amplitude $10^{-2}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-0{,}014 < \\alpha < 0{,}049$",
+          "correcte": false,
+          "erreur": "confusion_image_antecedent",
+          "feedback": "Ces valeurs sont des images par $f$ : l'encadrement porte sur $\\alpha$, un nombre de la forme $1{,}4\\dots$"
+        },
+        {
+          "id": "B",
+          "texte": "$1{,}45 < \\alpha < 1{,}46$",
+          "correcte": false,
+          "erreur": "decalage_de_l_encadrement",
+          "feedback": "$f(1{,}45) > 0$ : la solution est déjà atteinte avant $1{,}45$."
+        },
+        {
+          "id": "C",
+          "texte": "$1{,}44 < \\alpha < 1{,}45$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$1{,}44 < \\alpha < 1{,}46$",
+          "correcte": false,
+          "erreur": "amplitude_trop_grande",
+          "feedback": "Cet encadrement est vrai, mais son amplitude vaut $2 \\times 10^{-2}$ et non $10^{-2}$."
+        }
+      ],
+      "explication": "$f(1{,}44) < 0 < f(1{,}45)$ et $f$ est strictement croissante, donc $1{,}44 < \\alpha < 1{,}45$ : l'amplitude est bien $10^{-2}$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 3. Déterminer et encadrer une solution — Encadrer la solution",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 4. Utilisation de la calculatrice — Respecter la précision demandée"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q8",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "choix_méthode",
+      "niveau": 2,
+      "notion": "transformer une équation",
+      "enonce": "On veut montrer que l'équation $x^2 = 5 - x$ a une unique solution positive. Quelle fonction $f$ et quelle valeur $k$ faut-il choisir pour appliquer le théorème ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(x) = x^2 + x$ et $k = 5$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f(x) = x^2 - x$ et $k = 5$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "En ajoutant $x$ des deux côtés de $x^2 = 5 - x$, on obtient $x^2 + x = 5$."
+        },
+        {
+          "id": "C",
+          "texte": "$f(x) = x^2 + x - 5$ et $k = 5$",
+          "correcte": false,
+          "erreur": "melanger_f_et_k",
+          "feedback": "Si $f(x) = x^2 + x - 5$, la valeur à atteindre est $k = 0$, pas $5$."
+        },
+        {
+          "id": "D",
+          "texte": "$f(x) = x^2 + 5 - x$ et $k = 0$",
+          "correcte": false,
+          "erreur": "mauvaise_transformation",
+          "feedback": "$x^2 + 5 - x = 0$ n'est pas équivalente à $x^2 = 5 - x$."
+        }
+      ],
+      "explication": "$x^2 = 5 - x \\iff x^2 + x = 5$ : on pose $f(x) = x^2 + x$ et $k = 5$ (on aurait aussi pu écrire $f(x) = x^2 + x - 5$ avec $k = 0$).",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 3. Déterminer et encadrer une solution — Transformer une équation pour utiliser le théorème"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q9",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "continuité et limite",
+      "enonce": "Soit $f$ définie par $f(x) = x^2$ si $x \\neq 2$ et $f(2) = 3$. La fonction $f$ est-elle continue en $2$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Oui, car $f$ est définie en $2$.",
+          "correcte": false,
+          "erreur": "confusion_definie_continue",
+          "feedback": "Il faut comparer la limite et la valeur."
+        },
+        {
+          "id": "B",
+          "texte": "Oui, car $f(x)$ a une limite en $2$ (elle vaut $4$).",
+          "correcte": false,
+          "erreur": "oubli_de_f_de_a",
+          "feedback": "La limite doit aussi être égale à $f(2)$ : ici $4 \\neq 3$."
+        },
+        {
+          "id": "C",
+          "texte": "Non, car $f$ n'est pas définie en $2$.",
+          "correcte": false,
+          "erreur": "mauvaise_lecture",
+          "feedback": "$f$ est bien définie en $2$ : $f(2) = 3$."
+        },
+        {
+          "id": "D",
+          "texte": "Non, car $\\lim\\limits_{x \\to 2} f(x) = 4$ alors que $f(2) = 3$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Pour $x$ proche de $2$ (avec $x \\neq 2$), $f(x) = x^2$ se rapproche de $4$. Mais $f(2) = 3 \\neq 4$ : la courbe a un point détaché en $x = 2$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 1. Continuité — Définition de la continuité",
+        "Fiche « La continuité » — 1. Continuité — Interprétation graphique"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q10",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "vrai_faux_plausible",
+      "niveau": 3,
+      "notion": "continuité et dérivabilité",
+      "enonce": "Laquelle de ces affirmations est vraie ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Toute fonction continue sur un intervalle y est dérivable.",
+          "correcte": false,
+          "erreur": "confusion_continuite_derivabilite",
+          "feedback": "La valeur absolue est continue en $0$ mais n'y est pas dérivable."
+        },
+        {
+          "id": "B",
+          "texte": "Toute fonction dérivable sur un intervalle est continue sur cet intervalle, mais la réciproque est fausse.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "La fonction valeur absolue n'est pas continue en $0$, car elle n'y est pas dérivable.",
+          "correcte": false,
+          "erreur": "confusion_continuite_derivabilite",
+          "feedback": "Elle est continue en $0$ : on la trace sans lever le crayon, malgré l'angle."
+        },
+        {
+          "id": "D",
+          "texte": "Une fonction définie en $a$ est toujours continue en $a$.",
+          "correcte": false,
+          "erreur": "confusion_definie_continue",
+          "feedback": "Un saut ou un point détaché est possible même si la fonction est définie."
+        }
+      ],
+      "explication": "Dérivable $\\Rightarrow$ continue. La réciproque est fausse : $|x|$ est continue en $0$ sans y être dérivable.",
+      "a_revoir": [
+        "Fiche « La continuité » — 3. Fonctions usuelles continues — Utiliser ces résultats pour justifier rapidement la continuité d'une fonction"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q11",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "précision d'un encadrement",
+      "enonce": "Soit $f(x) = x^2$ sur $[0\\ ;\\ 2]$ et $\\alpha$ la solution de $f(x) = 2$. On a montré que $1{,}41 < \\alpha < 1{,}42$. Peut-on en déduire la valeur arrondie de $\\alpha$ au centième ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Oui : $1{,}41$, car c'est la borne de gauche.",
+          "correcte": false,
+          "erreur": "arrondi_au_hasard",
+          "feedback": "L'arrondi dépend de la position de $\\alpha$ par rapport à $1{,}415$ : l'encadrement ne le dit pas."
+        },
+        {
+          "id": "B",
+          "texte": "Non : $\\alpha$ pourrait s'arrondir à $1{,}41$ ou à $1{,}42$ ; il faut un encadrement plus fin.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Oui : $1{,}42$, car c'est la borne de droite.",
+          "correcte": false,
+          "erreur": "arrondi_au_hasard",
+          "feedback": "L'arrondi dépend de la position de $\\alpha$ par rapport à $1{,}415$ : l'encadrement ne le dit pas."
+        },
+        {
+          "id": "D",
+          "texte": "Oui : $1{,}415$, le milieu de l'encadrement.",
+          "correcte": false,
+          "erreur": "encadrement_pris_pour_valeur",
+          "feedback": "On ne peut pas choisir le milieu comme valeur de $\\alpha$, et $1{,}415$ n'est pas un arrondi au centième."
+        }
+      ],
+      "explication": "L'intervalle $]1{,}41\\ ;\\ 1{,}42[$ contient $1{,}415$ : $\\alpha$ peut être de part et d'autre. Avec $1{,}414 < \\alpha < 1{,}415$, on pourrait conclure : arrondi $1{,}41$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 4. Utilisation de la calculatrice — Respecter la précision demandée"
+      ]
+    },
+    {
+      "id": "cont-chapitre-q12",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": null,
+      "type": "lecture_graphique",
+      "niveau": 3,
+      "notion": "existence faute de continuité",
+      "enonce": "La fonction $f$ ci-contre est strictement décroissante sur $[0\\ ;\\ 4]$, avec $f(0) = 4$ et $f(4) = 0$ ; elle est formée de deux morceaux, avec un saut en $x = 2$. Que peut-on dire de l'équation $f(x) = 1{,}5$ ?",
+      "figure": "cont_ch_q12.png",
+      "figure_alt": "Courbe décroissante en deux morceaux : de (0 ; 4) au point creux (2 ; 2), puis du point plein (2 ; 1) à (4 ; 0) ; la droite y = 1,5 ne rencontre pas la courbe.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle a une unique solution, car $f$ est strictement décroissante et $1{,}5 \\in [0\\ ;\\ 4]$.",
+          "correcte": false,
+          "erreur": "oubli_continuite",
+          "feedback": "La stricte monotonie ne suffit pas : le saut en $2$ fait « passer à côté » de la valeur $1{,}5$."
+        },
+        {
+          "id": "B",
+          "texte": "Elle a deux solutions, une sur chaque morceau.",
+          "correcte": false,
+          "erreur": "lecture_de_courbe_erronee",
+          "feedback": "Sur $[0\\ ;\\ 2[$, $f$ prend des valeurs dans $]2\\ ;\\ 4]$ ; sur $[2\\ ;\\ 4]$, dans $[0\\ ;\\ 1]$ : aucune ne vaut $1{,}5$."
+        },
+        {
+          "id": "C",
+          "texte": "Elle a une solution dans $[0\\ ;\\ 2]$, car $1{,}5 < 2$.",
+          "correcte": false,
+          "erreur": "lecture_de_courbe_erronee",
+          "feedback": "Sur $[0\\ ;\\ 2[$, les valeurs de $f$ sont strictement supérieures à $2$."
+        },
+        {
+          "id": "D",
+          "texte": "Elle n'a aucune solution : $f$ n'est pas continue en $2$, donc le théorème ne s'applique pas.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Sur $[0\\ ;\\ 2[$, $f(x) \\in ]2\\ ;\\ 4]$ ; sur $[2\\ ;\\ 4]$, $f(x) \\in [0\\ ;\\ 1]$. La valeur $1{,}5$ n'est jamais atteinte : faute de continuité, on ne peut pas conclure à l'existence.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 1. Monotonie et bijection — Lien avec l'existence et l'unicité d'une solution",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection — Continuité et stricte monotonie sur un intervalle"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "id": "ipp-f",
+  "titre": "Quiz — Intégration par parties",
+  "chapitre": "Intégrales",
+  "fiche": "Intégration par parties",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "ipp-f-q1",
+      "chapitre": "Intégrales",
+      "fiche": "Intégration par parties",
+      "type": "reconnaissance",
+      "niveau": 1,
+      "notion": "reconnaître une IPP",
+      "enonce": "Pour laquelle de ces intégrales l'intégration par parties est-elle la méthode adaptée ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\displaystyle \\int_0^1 2x\\,e^{x^2}\\,dx$",
+          "correcte": false,
+          "erreur": "ipp_a_tort_forme_u_prime_e_u",
+          "feedback": "C'est de la forme $u'e^{u}$ avec $u = x^2$ : une primitive directe est $e^{x^2}$."
+        },
+        {
+          "id": "B",
+          "texte": "$\\displaystyle \\int_0^1 (3x^2 + 1)\\,dx$",
+          "correcte": false,
+          "erreur": "ipp_a_tort_somme",
+          "feedback": "Ce n'est pas un produit : on utilise directement les primitives usuelles."
+        },
+        {
+          "id": "C",
+          "texte": "$\\displaystyle \\int_0^1 x\\,e^{x}\\,dx$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\displaystyle \\int_0^1 e^{2x}\\,dx$",
+          "correcte": false,
+          "erreur": "ipp_a_tort_pas_un_produit",
+          "feedback": "Une primitive directe existe : $\\frac{1}{2}e^{2x}$."
+        }
+      ],
+      "explication": "$x\\,e^{x}$ est un produit « polynôme $\\times$ exponentielle » sans primitive dans le tableau usuel.",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 1. Comprendre l'intégration par parties — Reconnaître les situations où elle est utile"
+      ]
+    },
+    {
+      "id": "ipp-f-q2",
+      "chapitre": "Intégrales",
+      "fiche": "Intégration par parties",
+      "type": "application",
+      "niveau": 2,
+      "notion": "choix de $u$ et $v'$",
+      "enonce": "Pour calculer $\\displaystyle \\int_0^{\\pi} x\\cos(x)\\,dx$ par parties, quel choix simplifie le calcul ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u(x) = x$ et $v'(x) = \\cos(x)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$u(x) = \\cos(x)$ et $v'(x) = x$",
+          "correcte": false,
+          "erreur": "mauvais_choix_de_u",
+          "feedback": "Ce choix donne $v = \\frac{x^2}{2}$ et une intégrale plus compliquée."
+        },
+        {
+          "id": "C",
+          "texte": "$u(x) = x$ et $v(x) = \\cos(x)$",
+          "correcte": false,
+          "erreur": "confusion_v_et_v_prime",
+          "feedback": "Le second facteur est $v'$ (on le primitive), pas $v$."
+        },
+        {
+          "id": "D",
+          "texte": "$u(x) = 1$ et $v'(x) = x\\cos(x)$",
+          "correcte": false,
+          "erreur": "choix_non_simplifiant",
+          "feedback": "On ne connaît pas de primitive de $x\\cos(x)$ : c'est justement le problème."
+        }
+      ],
+      "explication": "$u = x$ se simplifie en $u' = 1$ et $v' = \\cos(x)$ a une primitive connue, $v = \\sin(x)$.",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 2. Appliquer la méthode — Choisir les fonctions $u$ et $v'$"
+      ]
+    },
+    {
+      "id": "ipp-f-q3",
+      "chapitre": "Intégrales",
+      "fiche": "Intégration par parties",
+      "type": "application",
+      "niveau": 2,
+      "notion": "calcul de $u'$ et $v$",
+      "enonce": "On calcule $\\displaystyle \\int_0^1 x\\,e^{2x}\\,dx$ avec $u(x) = x$ et $v'(x) = e^{2x}$. Que valent $u'$ et $v$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u'(x) = 1$ et $v(x) = \\dfrac{1}{2}e^{2x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$u'(x) = 1$ et $v(x) = e^{2x}$",
+          "correcte": false,
+          "erreur": "oubli_du_coefficient",
+          "feedback": "Une primitive de $e^{2x}$ est $\\frac{1}{2}e^{2x}$ (le coefficient compte)."
+        },
+        {
+          "id": "C",
+          "texte": "$u'(x) = 1$ et $v(x) = 2e^{2x}$",
+          "correcte": false,
+          "erreur": "multiplier_au_lieu_de_diviser",
+          "feedback": "$2e^{2x}$ est la dérivée de $e^{2x}$, pas sa primitive."
+        },
+        {
+          "id": "D",
+          "texte": "$u'(x) = x$ et $v(x) = \\dfrac{1}{2}e^{2x}$",
+          "correcte": false,
+          "erreur": "confusion_u_et_u_prime",
+          "feedback": "$u' $ est la dérivée de $u(x) = x$, soit $1$."
+        }
+      ],
+      "explication": "$u = x \\Rightarrow u' = 1$. $v' = e^{2x} \\Rightarrow v = \\frac{1}{2}e^{2x}$ (une seule primitive, sans constante).",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 2. Appliquer la méthode — Déterminer $u'$ et $v$",
+        "Fiche « Intégration par parties » — 4. Erreurs fréquentes — Se tromper dans le calcul de $u'$ ou de $v$"
+      ]
+    },
+    {
+      "id": "ipp-f-q4",
+      "chapitre": "Intégrales",
+      "fiche": "Intégration par parties",
+      "type": "application",
+      "niveau": 2,
+      "notion": "appliquer la formule",
+      "enonce": "On calcule $\\displaystyle \\int_0^{\\pi/2} x\\sin(x)\\,dx$ avec $u = x$ et $v' = \\sin(x)$. Quelle écriture est correcte après application de la formule ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\displaystyle \\Big[-x\\cos(x)\\Big]_0^{\\pi/2} - \\int_0^{\\pi/2} \\cos(x)\\,dx$",
+          "correcte": false,
+          "erreur": "oubli_du_signe_de_v",
+          "feedback": "$v = -\\cos(x)$ : il faut garder le signe $-$ dans la nouvelle intégrale."
+        },
+        {
+          "id": "B",
+          "texte": "$\\displaystyle \\Big[x\\cos(x)\\Big]_0^{\\pi/2} - \\int_0^{\\pi/2} \\cos(x)\\,dx$",
+          "correcte": false,
+          "erreur": "mauvaise_primitive_de_sin",
+          "feedback": "Une primitive de $\\sin$ est $-\\cos$, et non $\\cos$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\displaystyle \\Big[-x\\cos(x)\\Big]_0^{\\pi/2} - \\int_0^{\\pi/2} \\big(-\\cos(x)\\big)\\,dx$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\displaystyle \\Big[-x\\cos(x)\\Big]_0^{\\pi/2} + \\int_0^{\\pi/2} \\big(-\\cos(x)\\big)\\,dx$",
+          "correcte": false,
+          "erreur": "signe_de_la_formule",
+          "feedback": "La formule contient un signe **moins** devant l'intégrale $\\int u'v$."
+        }
+      ],
+      "explication": "$\\int_a^b u v' = [uv]_a^b - \\int_a^b u'v$ avec $u' = 1$ et $v = -\\cos(x)$. On obtient $\\left[-x\\cos(x)\\right]_0^{\\pi/2} - \\int_0^{\\pi/2} (-\\cos x)\\,dx = 0 + 1 = 1$.",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 4. Erreurs fréquentes — Faire une erreur de signe ou mal appliquer la formule",
+        "Fiche « Intégration par parties » — 2. Appliquer la méthode — Appliquer la formule d'intégration par parties"
+      ]
+    },
+    {
+      "id": "ipp-f-q5",
+      "chapitre": "Intégrales",
+      "fiche": "Intégration par parties",
+      "type": "application",
+      "niveau": 3,
+      "notion": "IPP complète avec $\\ln$",
+      "enonce": "Calculer $\\displaystyle \\int_1^e x^2\\ln(x)\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{2e^3 - 1}{9}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_aux_bornes",
+          "feedback": "$\\left[\\frac{x^3}{9}\\right]_1^e = \\frac{e^3 - 1}{9}$ : la borne $1$ donne $-\\frac{1}{9}$, qu'on retranche."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dfrac{2e^3 + 1}{9}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{e^3}{3}$",
+          "correcte": false,
+          "erreur": "oubli_de_la_nouvelle_integrale",
+          "feedback": "On a oublié de retrancher l'intégrale $\\int u'v$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{4e^3 - 1}{9}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_de_la_formule",
+          "feedback": "La formule contient $-\\int u'v$ : on a ajouté l'intégrale au lieu de la retrancher."
+        }
+      ],
+      "explication": "$u = \\ln(x)$, $v' = x^2$, donc $u' = \\frac{1}{x}$, $v = \\frac{x^3}{3}$. $I = \\left[\\frac{x^3}{3}\\ln(x)\\right]_1^e - \\int_1^e \\frac{x^2}{3}\\,dx = \\frac{e^3}{3} - \\frac{e^3 - 1}{9} = \\frac{2e^3 + 1}{9}$.",
+      "a_revoir": [
+        "Fiche « Intégration par parties » — 3. Grand exemple guidé — Terminer le calcul",
+        "Fiche « Intégration par parties » — 3. Grand exemple guidé — Appliquer la formule étape par étape"
+      ]
+    }
+  ]
+}

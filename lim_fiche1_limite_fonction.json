@@ -1,0 +1,244 @@
+{
+  "id": "lim-f1",
+  "titre": "Quiz — Limite d'une fonction",
+  "chapitre": "Limites de fonctions",
+  "fiche": "Limite d'une fonction",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "lim-f1-q1",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limite d'une fonction",
+      "type": "application",
+      "niveau": 1,
+      "notion": "différence entre $f(a)$ et la limite",
+      "enonce": "Soit $g$ définie par $g(x) = x^2$ si $x \\neq 2$ et $g(2) = 7$. Que vaut $\\displaystyle\\lim_{x \\to 2} g(x)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$7$",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_limite",
+          "feedback": "$7$ est la valeur $g(2)$ : la limite décrit ce qui se passe **autour** de $2$, pas en $2$."
+        },
+        {
+          "id": "B",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "confusion_x_et_f_x",
+          "feedback": "$2$ est la valeur de $x$ vers laquelle on tend, pas celle de $g(x)$."
+        },
+        {
+          "id": "C",
+          "texte": "$4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "La limite n'existe pas.",
+          "correcte": false,
+          "erreur": "confusion_limite_et_continuite",
+          "feedback": "Quand $x$ s'approche de $2$ (sans valoir $2$), $x^2$ se rapproche de $4$ : la limite existe, même si elle est différente de $g(2)$."
+        }
+      ],
+      "explication": "Pour $x$ proche de $2$ (avec $x \\neq 2$), $g(x) = x^2$ se rapproche de $4$. La valeur $g(2) = 7$ n'intervient pas dans la limite.",
+      "a_revoir": [
+        "Fiche « Limite d'une fonction » — 1. Limite en un point — Différence entre $f(a)$ et $\\displaystyle \\lim_{x \\to a} f(x)$",
+        "Fiche « Limite d'une fonction » — 4. Erreurs fréquentes — Confondre $f(a)$ et $\\displaystyle \\lim_{x \\to a} f(x)$"
+      ]
+    },
+    {
+      "id": "lim-f1-q2",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limite d'une fonction",
+      "type": "application",
+      "niveau": 1,
+      "notion": "limite à gauche",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 0^-} \\dfrac{1}{x}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "confusion_gauche_droite",
+          "feedback": "C'est la limite à **droite** : pour $x < 0$ proche de $0$, $\\frac{1}{x}$ est très grand mais négatif."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_1_sur_x_en_0_et_en_infini",
+          "feedback": "$\\frac{1}{x} \\to 0$ quand $x \\to \\pm\\infty$, pas quand $x \\to 0$."
+        },
+        {
+          "id": "D",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "valeur_inventee",
+          "feedback": "Aucune valeur finie : pour $x$ proche de $0$, $\\frac{1}{x}$ devient très grand en valeur absolue."
+        }
+      ],
+      "explication": "Pour $x < 0$ proche de $0$, $\\dfrac{1}{x}$ est négatif et de plus en plus grand en valeur absolue : $\\displaystyle\\lim_{x \\to 0^-} \\dfrac{1}{x} = -\\infty$.",
+      "a_revoir": [
+        "Fiche « Limite d'une fonction » — 2. Limites à gauche et à droite — Lien avec la limite en $a$",
+        "Fiche « Limite d'une fonction » — 4. Erreurs fréquentes — Confondre limite à droite et limite à gauche"
+      ]
+    },
+    {
+      "id": "lim-f1-q3",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limite d'une fonction",
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "limite en un point à partir d'une courbe",
+      "enonce": "On donne la courbe de $f(x) = \\dfrac{1}{x - 1}$. Que peut-on dire de la limite de $f$ en $x = 1$ ?",
+      "figure": "lim_f1_q3.png",
+      "figure_alt": "Courbe de 1/(x−1) : une branche qui descend vers −∞ à gauche de la droite verticale x = 1, une branche qui monte depuis +∞ à droite.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\displaystyle\\lim_{x \\to 1} f(x) = +\\infty$",
+          "correcte": false,
+          "erreur": "confusion_gauche_droite",
+          "feedback": "La courbe monte à droite de $1$, mais elle descend à gauche : il faut distinguer les deux côtés."
+        },
+        {
+          "id": "B",
+          "texte": "$\\displaystyle\\lim_{x \\to 1} f(x) = -\\infty$",
+          "correcte": false,
+          "erreur": "confusion_gauche_droite",
+          "feedback": "La courbe descend à gauche de $1$, mais elle monte à droite."
+        },
+        {
+          "id": "C",
+          "texte": "$\\displaystyle\\lim_{x \\to 1} f(x) = 0$",
+          "correcte": false,
+          "erreur": "confusion_limite_en_a_et_en_infini",
+          "feedback": "La limite $0$ concerne $x \\to \\pm\\infty$ : au voisinage de $x = 1$, la courbe s'éloigne indéfiniment de l'axe des abscisses."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ n'a pas de limite en $1$ : $-\\infty$ à gauche et $+\\infty$ à droite.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "À droite de $1$, $x - 1 \\to 0^+$ et $f(x) \\to +\\infty$ ; à gauche, $x - 1 \\to 0^-$ et $f(x) \\to -\\infty$. Les deux limites sont différentes : pas de limite en $1$.",
+      "a_revoir": [
+        "Fiche « Limite d'une fonction » — 2. Limites à gauche et à droite — Lien avec la limite en $a$"
+      ]
+    },
+    {
+      "id": "lim-f1-q4",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limite d'une fonction",
+      "type": "application",
+      "niveau": 2,
+      "notion": "limites à gauche et à droite différentes",
+      "enonce": "Soit $f(x) = 2x + 1$ si $x < 3$ et $f(x) = x^2 - 4$ si $x \\geq 3$. Que peut-on dire de la limite de $f$ en $3$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La limite en $3$ vaut $7$.",
+          "correcte": false,
+          "erreur": "oubli_de_la_limite_a_droite",
+          "feedback": "Il faut comparer la limite à gauche **et** la limite à droite : $7$ n'est que la limite à gauche."
+        },
+        {
+          "id": "B",
+          "texte": "Pas de limite en $3$ : la limite à gauche vaut $7$ et la limite à droite vaut $5$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "La limite en $3$ vaut $5$.",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_limite",
+          "feedback": "$5 = f(3)$ est aussi la limite à droite, mais la limite à gauche vaut $7$ : les deux sont différentes."
+        },
+        {
+          "id": "D",
+          "texte": "La limite en $3$ vaut $12$.",
+          "correcte": false,
+          "erreur": "somme_des_limites",
+          "feedback": "On ne fait pas la somme des deux limites : si elles sont différentes, la fonction n'a pas de limite en $3$."
+        }
+      ],
+      "explication": "À gauche : $2 \\times 3 + 1 = 7$. À droite : $3^2 - 4 = 5$. Les limites à gauche et à droite sont différentes : $f$ n'a pas de limite en $3$.",
+      "a_revoir": [
+        "Fiche « Limite d'une fonction » — 2. Limites à gauche et à droite — Lien avec la limite en $a$",
+        "Fiche « Limite d'une fonction » — 2. Limites à gauche et à droite — Limite à gauche"
+      ]
+    },
+    {
+      "id": "lim-f1-q5",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limite d'une fonction",
+      "type": "application",
+      "niveau": 3,
+      "notion": "lever une forme indéterminée en un point",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to -1} \\dfrac{x^2 + x}{x + 1}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "numerateur_nul_donc_limite_nulle",
+          "feedback": "Le numérateur tend vers $0$, mais le dénominateur aussi : c'est une forme $\\frac{0}{0}$, il faut factoriser."
+        },
+        {
+          "id": "B",
+          "texte": "$-1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "La limite n'existe pas, car on divise par $0$ en $-1$.",
+          "correcte": false,
+          "erreur": "forme_indeterminee_prise_pour_impossibilite",
+          "feedback": "On peut simplifier : $\\frac{x(x+1)}{x+1} = x$ pour $x \\neq -1$."
+        },
+        {
+          "id": "D",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Après simplification, on trouve $x$, qui tend vers $-1$ (et non $1$)."
+        }
+      ],
+      "explication": "Remplacer $x$ par $-1$ donne $\\frac{0}{0}$. On factorise : $\\dfrac{x^2 + x}{x + 1} = \\dfrac{x(x + 1)}{x + 1} = x$ pour $x \\neq -1$. Donc la limite vaut $-1$.",
+      "a_revoir": [
+        "Fiche « Limite d'une fonction » — 1. Limite en un point — Différence entre $f(a)$ et $\\displaystyle \\lim_{x \\to a} f(x)$"
+      ]
+    }
+  ]
+}

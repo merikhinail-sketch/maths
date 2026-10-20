@@ -1,0 +1,244 @@
+{
+  "id": "comp-f2",
+  "titre": "Quiz — Dériver une fonction composée",
+  "chapitre": "Fonctions composées",
+  "fiche": "Dériver une fonction composée",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "comp-f2-q1",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "application",
+      "niveau": 1,
+      "notion": "dériver $e^{ax}$",
+      "enonce": "Quelle est la dérivée de $f(x) = e^{2x}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = e^{2x}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "On a oublié de multiplier par la dérivée de la fonction intérieure $u(x) = 2x$, qui vaut $2$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = 2e^{x}$",
+          "correcte": false,
+          "erreur": "mauvais_exposant",
+          "feedback": "L'exponentielle est dérivée **sans toucher à son argument** : $e^{2x}$ reste $e^{2x}$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = 2x\\,e^{2x}$",
+          "correcte": false,
+          "erreur": "mauvaise_derivee_interieure",
+          "feedback": "La dérivée de $2x$ est $2$, et non $2x$."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = 2e^{2x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$f = e^{u}$ avec $u(x) = 2x$ : $f' = u'\\,e^{u}$, soit $f'(x) = 2e^{2x}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes — Oublier de multiplier par la dérivée de la fonction intérieure"
+      ]
+    },
+    {
+      "id": "comp-f2-q2",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "formule de dérivation d'une composée",
+      "enonce": "Soit $f = v \\circ u$, c'est-à-dire $f(x) = v\\big(u(x)\\big)$. Quelle est la formule de $f'(x)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = u'(x) \\times v'\\big(u(x)\\big)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = v'(x) \\times u'(x)$",
+          "correcte": false,
+          "erreur": "oubli_de_remplacer_x_par_u",
+          "feedback": "La dérivée de $v$ s'évalue en $u(x)$, et non en $x$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = v'\\big(u'(x)\\big)$",
+          "correcte": false,
+          "erreur": "composition_des_derivees",
+          "feedback": "On ne compose pas les dérivées : on **multiplie** $u'(x)$ par $v'\\big(u(x)\\big)$."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = u'\\big(v(x)\\big) \\times v'(x)$",
+          "correcte": false,
+          "erreur": "inversion_interieure_exterieure",
+          "feedback": "On a inversé les rôles : la fonction intérieure est $u$."
+        }
+      ],
+      "explication": "On dérive l'extérieure en gardant l'intérieure : $v'\\big(u(x)\\big)$, puis on multiplie par la dérivée de l'intérieure $u'(x)$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Multiplier par la dérivée de la fonction intérieure"
+      ]
+    },
+    {
+      "id": "comp-f2-q3",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $u^n$",
+      "enonce": "Quelle est la dérivée de $f(x) = (2x + 5)^3$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = 3(2x + 5)^2$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "On a oublié de multiplier par $u'(x) = 2$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = 6(2x + 5)^3$",
+          "correcte": false,
+          "erreur": "exposant_non_diminue",
+          "feedback": "Avec $n u' u^{n-1}$, l'exposant diminue de $1$ : $(2x+5)^2$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = 6(2x + 5)^2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = 3(2x + 5)^2 \\times 2x$",
+          "correcte": false,
+          "erreur": "mauvaise_derivee_interieure",
+          "feedback": "La dérivée de $2x + 5$ est $2$, et non $2x$."
+        }
+      ],
+      "explication": "$f = u^3$ avec $u(x) = 2x + 5$, $u'(x) = 2$ : $f'(x) = 3 \\times 2 \\times (2x + 5)^2 = 6(2x + 5)^2$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes — Mal identifier les fonctions intérieure et extérieure et mal appliquer la formule de dérivation"
+      ]
+    },
+    {
+      "id": "comp-f2-q4",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $\\ln(u)$",
+      "enonce": "Quelle est la dérivée de $f(x) = \\ln\\left(x^2 + 3\\right)$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = \\dfrac{1}{x^2 + 3}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "On a oublié le numérateur $u'(x) = 2x$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = \\dfrac{2x}{\\ln\\left(x^2 + 3\\right)}$",
+          "correcte": false,
+          "erreur": "confusion_formule_ln",
+          "feedback": "$\\left(\\ln(u)\\right)' = \\dfrac{u'}{u}$ : on divise par $u$, pas par $\\ln(u)$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = \\dfrac{x^2 + 3}{2x}$",
+          "correcte": false,
+          "erreur": "quotient_inverse",
+          "feedback": "La formule est $\\dfrac{u'}{u}$, et non $\\dfrac{u}{u'}$."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = \\dfrac{2x}{x^2 + 3}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$f = \\ln(u)$ avec $u(x) = x^2 + 3 > 0$ et $u'(x) = 2x$ : $f'(x) = \\dfrac{u'(x)}{u(x)} = \\dfrac{2x}{x^2 + 3}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver"
+      ]
+    },
+    {
+      "id": "comp-f2-q5",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "étudier les variations",
+      "enonce": "Soit $f(x) = e^{x^2 - 4x}$ sur $\\mathbb{R}$. Quelles sont les variations de $f$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est croissante sur $]-\\infty\\ ;\\ 2]$ puis décroissante sur $[2\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "signe_de_la_derivee_inverse",
+          "feedback": "$f'(x) = (2x - 4)e^{x^2 - 4x}$ est **négative** pour $x < 2$ : $f$ décroît d'abord."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est décroissante sur $]-\\infty\\ ;\\ 2]$ puis croissante sur $[2\\ ;\\ +\\infty[$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est croissante sur $\\mathbb{R}$, car l'exponentielle est toujours positive.",
+          "correcte": false,
+          "erreur": "confusion_signe_exponentielle_et_derivee",
+          "feedback": "L'exponentielle est positive, mais $f'$ contient aussi le facteur $2x - 4$, qui change de signe."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ est décroissante sur $]-\\infty\\ ;\\ 4]$ puis croissante sur $[4\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "mauvais_zero_de_la_derivee",
+          "feedback": "$4$ est un zéro de $x^2 - 4x$, pas de la dérivée : $f'(x) = 0 \\iff 2x - 4 = 0 \\iff x = 2$."
+        }
+      ],
+      "explication": "Avec $u(x) = x^2 - 4x$ et $u'(x) = 2x - 4$ : $f'(x) = (2x - 4)\\,e^{x^2 - 4x}$. Comme $e^{x^2 - 4x} > 0$, le signe de $f'$ est celui de $2x - 4$ : négatif pour $x < 2$, positif pour $x > 2$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes — Se tromper dans les dérivées usuelles"
+      ]
+    }
+  ]
+}

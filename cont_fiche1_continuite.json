@@ -1,0 +1,244 @@
+{
+  "id": "cont-f1",
+  "titre": "Quiz — La continuité",
+  "chapitre": "Continuité et théorème des valeurs intermédiaires",
+  "fiche": "La continuité",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "cont-f1-q1",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "La continuité",
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "continuité en un point (graphique)",
+      "enonce": "On donne la courbe d'une fonction $g$ (le point creux n'appartient pas à la courbe). La fonction $g$ est-elle continue en $x = 1$ ?",
+      "figure": "cont_f1_q1.png",
+      "figure_alt": "Courbe : segment de la droite y = x jusqu'au point creux (1 ; 1), puis segment de la droite y = x + 2 à partir du point plein (1 ; 3).",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Oui, car $g$ est définie en $x = 1$.",
+          "correcte": false,
+          "erreur": "confusion_definie_continue",
+          "feedback": "Être définie en $a$ ne suffit pas : il faut aussi que la courbe se prolonge sans saut."
+        },
+        {
+          "id": "B",
+          "texte": "Oui, car la courbe est croissante.",
+          "correcte": false,
+          "erreur": "confusion_monotonie_continuite",
+          "feedback": "Une fonction peut être croissante et présenter un saut."
+        },
+        {
+          "id": "C",
+          "texte": "Non : la courbe présente un saut en $x = 1$ (on arrive vers l'ordonnée $1$ par la gauche, et $g(1) = 3$).",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Non, car $g$ n'est pas définie en $x = 1$.",
+          "correcte": false,
+          "erreur": "mauvaise_lecture_du_point",
+          "feedback": "Le point plein $(1\\ ;\\ 3)$ montre que $g(1) = 3$ existe : c'est le saut qui pose problème."
+        }
+      ],
+      "explication": "Par la gauche, la courbe s'approche de l'ordonnée $1$ ; en $x = 1$, elle est à l'ordonnée $3$. Il faut lever le crayon : $g$ n'est pas continue en $1$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 1. Continuité — Interprétation graphique"
+      ]
+    },
+    {
+      "id": "cont-f1-q2",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "La continuité",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "fonctions usuelles continues",
+      "enonce": "Laquelle de ces fonctions est continue sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(x) = 3x^2 - 5x + 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f(x) = \\dfrac{1}{x}$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "Cette fonction n'est pas définie en $0$ : elle n'est pas continue sur $\\mathbb{R}$."
+        },
+        {
+          "id": "C",
+          "texte": "$f(x) = \\ln(x)$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "Le logarithme n'est défini que sur $]0\\ ;\\ +\\infty[$."
+        },
+        {
+          "id": "D",
+          "texte": "$f(x) = \\sqrt{x}$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "La racine carrée n'est définie que sur $[0\\ ;\\ +\\infty[$."
+        }
+      ],
+      "explication": "Toute fonction polynôme est continue sur $\\mathbb{R}$. Les trois autres fonctions ne sont pas définies sur $\\mathbb{R}$ tout entier.",
+      "a_revoir": [
+        "Fiche « La continuité » — 3. Fonctions usuelles continues — Fonctions polynômes",
+        "Fiche « La continuité » — 3. Fonctions usuelles continues — Fonctions usuelles"
+      ]
+    },
+    {
+      "id": "cont-f1-q3",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "La continuité",
+      "type": "application",
+      "niveau": 2,
+      "notion": "continuité d'une fonction définie par morceaux",
+      "enonce": "Soit $f$ définie par $f(x) = x^2$ si $x < 2$ et $f(x) = x + a$ si $x \\geq 2$, où $a$ est un réel. Pour quelle valeur de $a$ la fonction $f$ est-elle continue en $2$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$a = 4$",
+          "correcte": false,
+          "erreur": "limite_non_comparee_a_la_bonne_valeur",
+          "feedback": "$4$ est la limite à gauche : il faut que $f(2) = 2 + a$ lui soit égal, donc $a = 4 - 2$."
+        },
+        {
+          "id": "B",
+          "texte": "$a = 6$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul_signe",
+          "feedback": "On a additionné $2 + 4$ au lieu de résoudre $2 + a = 4$."
+        },
+        {
+          "id": "C",
+          "texte": "$a = -2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Avec $a = -2$ : $f(2) = 0 \\neq 4$."
+        },
+        {
+          "id": "D",
+          "texte": "$a = 2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Limite à gauche : $\\lim\\limits_{x \\to 2^-} x^2 = 4$. Valeur : $f(2) = 2 + a$. La continuité demande $2 + a = 4$, donc $a = 2$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 2. Continuité sur un intervalle — Identifier graphiquement ou à partir d'une expression si une fonction est continue sur un intervalle"
+      ]
+    },
+    {
+      "id": "cont-f1-q4",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "La continuité",
+      "type": "application",
+      "niveau": 2,
+      "notion": "continuité d'une fonction rationnelle",
+      "enonce": "Sur quel(s) intervalle(s) la fonction $h(x) = \\dfrac{x^2 + 1}{x - 2}$ est-elle continue ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Sur $\\mathbb{R}$ tout entier, car le numérateur et le dénominateur sont des polynômes.",
+          "correcte": false,
+          "erreur": "oubli_denominateur_nul",
+          "feedback": "Le dénominateur s'annule en $x = 2$ : $h$ n'y est pas définie, donc pas continue sur un intervalle contenant $2$."
+        },
+        {
+          "id": "B",
+          "texte": "Sur $]-\\infty\\ ;\\ 2[$ et sur $]2\\ ;\\ +\\infty[$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Uniquement sur $]2\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "intervalle_incomplet",
+          "feedback": "La fonction est aussi continue sur $]-\\infty\\ ;\\ 2[$ : c'est un autre intervalle de son domaine de définition."
+        },
+        {
+          "id": "D",
+          "texte": "Sur aucun intervalle.",
+          "correcte": false,
+          "erreur": "croire_discontinue_partout",
+          "feedback": "Une fonction rationnelle est continue sur chaque intervalle de son domaine de définition."
+        }
+      ],
+      "explication": "Une fonction rationnelle est continue sur chaque intervalle où le dénominateur ne s'annule pas. Ici $x - 2 = 0$ pour $x = 2$ seulement.",
+      "a_revoir": [
+        "Fiche « La continuité » — 3. Fonctions usuelles continues — Fonctions rationnelles sur leur domaine de définition",
+        "Fiche « La continuité » — 4. Opérations sur la fonction continue — Quotient lorsque le dénominateur ne s'annule pas"
+      ]
+    },
+    {
+      "id": "cont-f1-q5",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "La continuité",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "continuité d'un quotient",
+      "enonce": "Sur lequel de ces intervalles la fonction $f(x) = \\dfrac{e^{x}}{x^2 - 1}$ est-elle continue ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$[-1\\ ;\\ 1]$",
+          "correcte": false,
+          "erreur": "bornes_non_definies",
+          "feedback": "Le dénominateur s'annule en $-1$ et en $1$ : $f$ n'y est pas définie."
+        },
+        {
+          "id": "B",
+          "texte": "$]-1\\ ;\\ 1[$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\mathbb{R}$",
+          "correcte": false,
+          "erreur": "oubli_denominateur_nul",
+          "feedback": "$e^x$ est continue sur $\\mathbb{R}$, mais il faut aussi que $x^2 - 1 \\neq 0$."
+        },
+        {
+          "id": "D",
+          "texte": "$]-1\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "oubli_d_une_valeur_interdite",
+          "feedback": "Cet intervalle contient $1$, où le dénominateur s'annule."
+        }
+      ],
+      "explication": "$e^x$ et $x^2 - 1$ sont continues sur $\\mathbb{R}$. Le dénominateur s'annule pour $x = -1$ et $x = 1$ : $f$ est continue sur $]-\\infty\\ ;\\ -1[$, sur $]-1\\ ;\\ 1[$ et sur $]1\\ ;\\ +\\infty[$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 4. Opérations sur la fonction continue — Déduire la continuité d'une fonction à partir de fonctions déjà connues comme continues",
+        "Fiche « La continuité » — 4. Opérations sur la fonction continue — Quotient lorsque le dénominateur ne s'annule pas"
+      ]
+    }
+  ]
+}

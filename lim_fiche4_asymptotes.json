@@ -1,0 +1,245 @@
+{
+  "id": "lim-f4",
+  "titre": "Quiz — Asymptotes",
+  "chapitre": "Limites de fonctions",
+  "fiche": "Asymptotes",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "lim-f4-q1",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Asymptotes",
+      "type": "application",
+      "niveau": 1,
+      "notion": "asymptote verticale",
+      "enonce": "Quelle est l'asymptote verticale de la courbe de $f(x) = \\dfrac{1}{x - 3}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y = 3$",
+          "correcte": false,
+          "erreur": "confusion_verticale_horizontale",
+          "feedback": "Une asymptote verticale a pour équation $x = a$, et non $y = a$."
+        },
+        {
+          "id": "B",
+          "texte": "$x = -3$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$x - 3 = 0 \\iff x = 3$."
+        },
+        {
+          "id": "C",
+          "texte": "$y = 0$",
+          "correcte": false,
+          "erreur": "confusion_verticale_horizontale",
+          "feedback": "$y = 0$ est l'asymptote **horizontale** (limite $0$ en $\\pm\\infty$)."
+        },
+        {
+          "id": "D",
+          "texte": "$x = 3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\displaystyle\\lim_{x \\to 3^+} \\frac{1}{x - 3} = +\\infty$ : la droite d'équation $x = 3$ est asymptote verticale.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 1. Asymptote verticale et horizontale — Asymptote verticale",
+        "Fiche « Asymptotes » — 4. Erreurs fréquentes — Confondre asymptote verticale et horizontale"
+      ]
+    },
+    {
+      "id": "lim-f4-q2",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Asymptotes",
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "lire les asymptotes",
+      "enonce": "Les droites en pointillés sont les asymptotes de la courbe de $f(x) = \\dfrac{2x + 1}{x - 2}$. Quelles sont leurs équations ?",
+      "figure": "asy_f4_q2.png",
+      "figure_alt": "Courbe d'une fonction homographique à deux branches, avec une droite verticale en pointillés en x = 2 et une droite horizontale en pointillés en y = 2.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Asymptote verticale : $y = 2$ ; asymptote horizontale : $x = 2$.",
+          "correcte": false,
+          "erreur": "confusion_verticale_horizontale",
+          "feedback": "Une droite verticale a pour équation $x = \\dots$ et une droite horizontale $y = \\dots$."
+        },
+        {
+          "id": "B",
+          "texte": "Asymptote verticale : $x = -2$ ; asymptote horizontale : $y = 2$.",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "La droite verticale coupe l'axe des abscisses en $2$ (valeur interdite $x - 2 = 0$)."
+        },
+        {
+          "id": "C",
+          "texte": "Asymptote verticale : $x = 2$ ; asymptote horizontale : $y = 2$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Asymptote verticale : $x = 2$ ; asymptote horizontale : $y = 0$.",
+          "correcte": false,
+          "erreur": "confusion_avec_1_sur_x",
+          "feedback": "En $\\pm\\infty$, $f(x) \\to 2$ (et non $0$) : la droite horizontale est à la hauteur $2$."
+        }
+      ],
+      "explication": "La droite verticale passe par $x = 2$ (valeur où le dénominateur s'annule) et la droite horizontale est à la hauteur $y = 2$, limite de $f$ en $\\pm\\infty$.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 1. Asymptote verticale et horizontale — Asymptote verticale",
+        "Fiche « Asymptotes » — 1. Asymptote verticale et horizontale — Asymptote horizontale"
+      ]
+    },
+    {
+      "id": "lim-f4-q3",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Asymptotes",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "valeur interdite sans asymptote",
+      "enonce": "Soit $f(x) = \\dfrac{x^2 - 4}{x - 2}$, définie sur $\\mathbb{R} \\setminus \\{2\\}$. La courbe de $f$ admet-elle une asymptote verticale en $x = 2$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Non : pour $x \\neq 2$, $f(x) = x + 2$, donc $\\displaystyle\\lim_{x \\to 2} f(x) = 4$ est un réel.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Oui, car $2$ est une valeur interdite.",
+          "correcte": false,
+          "erreur": "valeur_interdite_egale_asymptote",
+          "feedback": "Une valeur interdite n'implique pas d'asymptote : il faut calculer la limite."
+        },
+        {
+          "id": "C",
+          "texte": "Oui, car le dénominateur tend vers $0$.",
+          "correcte": false,
+          "erreur": "denominateur_nul_egale_asymptote",
+          "feedback": "Le numérateur tend aussi vers $0$ : c'est une forme $\\frac{0}{0}$, qui se simplifie."
+        },
+        {
+          "id": "D",
+          "texte": "Non, car $f$ n'est pas définie en $2$.",
+          "correcte": false,
+          "erreur": "mauvaise_raison",
+          "feedback": "Ne pas être définie en $2$ n'exclut pas une asymptote (par exemple $\\frac{1}{x-2}$) : c'est la limite qui décide."
+        }
+      ],
+      "explication": "$\\dfrac{x^2 - 4}{x - 2} = \\dfrac{(x - 2)(x + 2)}{x - 2} = x + 2$ pour $x \\neq 2$. La limite en $2$ vaut $4$ : c'est un « trou » dans la courbe, pas une asymptote.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 4. Erreurs fréquentes — Déduire une asymptote verticale d'une simple valeur interdite"
+      ]
+    },
+    {
+      "id": "lim-f4-q4",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Asymptotes",
+      "type": "application",
+      "niveau": 2,
+      "notion": "asymptote oblique",
+      "enonce": "Soit $f(x) = \\dfrac{2x^2 + 3x + 1}{x}$ pour $x \\neq 0$. Quelle droite est asymptote oblique à la courbe de $f$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y = 2x$",
+          "correcte": false,
+          "erreur": "oubli_de_la_constante",
+          "feedback": "$f(x) = 2x + 3 + \\dfrac{1}{x}$ : le terme constant $3$ fait partie de l'équation de l'asymptote."
+        },
+        {
+          "id": "B",
+          "texte": "$y = 3x + 2$",
+          "correcte": false,
+          "erreur": "coefficients_inverses",
+          "feedback": "Le coefficient directeur est celui de $x$ (soit $2$), et l'ordonnée à l'origine est $3$."
+        },
+        {
+          "id": "C",
+          "texte": "$y = 2x + 1$",
+          "correcte": false,
+          "erreur": "mauvais_terme_retenu",
+          "feedback": "$1$ est le numérateur du terme $\\frac{1}{x}$, qui tend vers $0$ : il ne fait pas partie de l'asymptote."
+        },
+        {
+          "id": "D",
+          "texte": "$y = 2x + 3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$f(x) = \\dfrac{2x^2}{x} + \\dfrac{3x}{x} + \\dfrac{1}{x} = 2x + 3 + \\dfrac{1}{x}$. Comme $\\dfrac{1}{x} \\to 0$, $f(x) - (2x + 3) \\to 0$ : la droite $y = 2x + 3$ est asymptote oblique.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 2. Asymptote oblique — Déterminer l'équation $y = ax + b$",
+        "Fiche « Asymptotes » — 2. Asymptote oblique — Le lien avec une expression du type $f(x) - (ax + b) \\to 0$"
+      ]
+    },
+    {
+      "id": "lim-f4-q5",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Asymptotes",
+      "type": "lecture_graphique",
+      "niveau": 3,
+      "notion": "position de la courbe par rapport à l'asymptote",
+      "enonce": "Soit $f(x) = \\dfrac{x^2 - x + 1}{x + 1}$. On peut écrire $f(x) = x - 2 + \\dfrac{3}{x + 1}$. La courbe de $f$ est tracée ci-contre, avec ses asymptotes en pointillés. Quelle affirmation est correcte ?",
+      "figure": "asy_f4_q5.png",
+      "figure_alt": "Courbe à deux branches avec une asymptote verticale en pointillés x = −1 et une asymptote oblique en pointillés y = x − 2 ; la branche de droite est au-dessus de la droite oblique, celle de gauche en dessous.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Les asymptotes sont $x = -1$ et $y = x + 2$ ; la courbe est au-dessus de l'asymptote oblique pour $x > -1$.",
+          "correcte": false,
+          "erreur": "erreur_de_signe_dans_l_asymptote",
+          "feedback": "On a $f(x) = x - 2 + \\dots$ : l'asymptote oblique est $y = x - 2$."
+        },
+        {
+          "id": "B",
+          "texte": "Les asymptotes sont $x = -1$ et $y = x - 2$ ; la courbe est au-dessus de l'asymptote oblique pour $x > -1$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Les asymptotes sont $x = -1$ et $y = x - 2$ ; la courbe est en dessous de l'asymptote oblique pour $x > -1$.",
+          "correcte": false,
+          "erreur": "position_inversee",
+          "feedback": "$f(x) - (x - 2) = \\frac{3}{x + 1} > 0$ pour $x > -1$ : la courbe est au-dessus."
+        },
+        {
+          "id": "D",
+          "texte": "Les asymptotes sont $x = -1$ et $y = 1$.",
+          "correcte": false,
+          "erreur": "confusion_avec_asymptote_horizontale",
+          "feedback": "$f(x) \\to \\pm\\infty$ en $\\pm\\infty$ : il n'y a pas d'asymptote horizontale, mais une asymptote oblique."
+        }
+      ],
+      "explication": "Le terme $\\dfrac{3}{x + 1}$ tend vers $0$ en $\\pm\\infty$, donc $y = x - 2$ est asymptote oblique. La différence $f(x) - (x - 2) = \\dfrac{3}{x + 1}$ est positive pour $x > -1$ (courbe au-dessus) et négative pour $x < -1$ (courbe en dessous).",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 3. Déterminer une asymptote à partir d'une fonction — Éventuellement interpréter graphiquement le résultat",
+        "Fiche « Asymptotes » — 3. Déterminer une asymptote à partir d'une fonction — Déterminer son équation"
+      ]
+    }
+  ]
+}

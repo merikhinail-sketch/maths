@@ -1,0 +1,245 @@
+{
+  "id": "lim-f2",
+  "titre": "Quiz — Limites d'une fonction composée",
+  "chapitre": "Limites de fonctions",
+  "fiche": "Limites d'une fonction composée",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "lim-f2-q1",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limites d'une fonction composée",
+      "type": "application",
+      "niveau": 1,
+      "notion": "composition : deux limites infinies",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\sqrt{x + 3}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_racine_et_inverse",
+          "feedback": "Quand $x + 3 \\to +\\infty$, sa racine carrée tend aussi vers $+\\infty$."
+        },
+        {
+          "id": "B",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "limite_inventee",
+          "feedback": "Aucune valeur finie : $x + 3$ devient arbitrairement grand."
+        },
+        {
+          "id": "C",
+          "texte": "La limite n'existe pas.",
+          "correcte": false,
+          "erreur": "doute_sur_la_composition",
+          "feedback": "On a $u(x) = x + 3 \\to +\\infty$ et $v(X) = \\sqrt{X} \\to +\\infty$ : par composition, la limite est $+\\infty$."
+        },
+        {
+          "id": "D",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Fonction intérieure : $u(x) = x + 3 \\to +\\infty$. Fonction extérieure : $v(X) = \\sqrt{X} \\to +\\infty$ quand $X \\to +\\infty$. Par composition, $\\lim \\sqrt{x + 3} = +\\infty$.",
+      "a_revoir": [
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Variante 1 : deux limites infinies",
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Limites usuelles à savoir"
+      ]
+    },
+    {
+      "id": "lim-f2-q2",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limites d'une fonction composée",
+      "type": "application",
+      "niveau": 1,
+      "notion": "limite de l'intérieur et limite de la composée",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} e^{-3x}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "confusion_limite_interieure_et_composee",
+          "feedback": "$-\\infty$ est la limite de la fonction **intérieure** $-3x$, pas de $e^{-3x}$."
+        },
+        {
+          "id": "C",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "oubli_du_signe",
+          "feedback": "L'exposant $-3x$ tend vers $-\\infty$, et $e^{X} \\to 0$ quand $X \\to -\\infty$."
+        },
+        {
+          "id": "D",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "confusion_exp_0",
+          "feedback": "$e^0 = 1$ concerne un exposant qui vaut $0$ ; ici l'exposant tend vers $-\\infty$."
+        }
+      ],
+      "explication": "$u(x) = -3x \\to -\\infty$ et $\\displaystyle\\lim_{X \\to -\\infty} e^{X} = 0$. Par composition, $\\lim e^{-3x} = 0$.",
+      "a_revoir": [
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Exemple de base",
+        "Fiche « Limites d'une fonction composée » — 2. Erreurs fréquentes — Confondre la limite de l'intérieur avec celle de la composition"
+      ]
+    },
+    {
+      "id": "lim-f2-q3",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limites d'une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "fonction intérieure à étudier",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} e^{x^2 - 5x}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "mauvaise_limite_interieure",
+          "feedback": "On a $x^2 - 5x = x(x - 5) \\to +\\infty$ (et non $-\\infty$) : l'exponentielle tend donc vers $+\\infty$."
+        },
+        {
+          "id": "B",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "limite_de_l_exponentielle_impossible",
+          "feedback": "L'exponentielle est toujours positive : elle ne peut pas tendre vers $-\\infty$."
+        },
+        {
+          "id": "C",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "La limite n'existe pas, car $x^2 - 5x$ est une forme indéterminée $+\\infty - \\infty$.",
+          "correcte": false,
+          "erreur": "forme_indeterminee_non_levee",
+          "feedback": "On lève l'indétermination par factorisation : $x^2 - 5x = x(x - 5) \\to +\\infty$."
+        }
+      ],
+      "explication": "$u(x) = x^2 - 5x = x(x - 5)$ avec $x \\to +\\infty$ et $x - 5 \\to +\\infty$ : par produit, $u(x) \\to +\\infty$. Puis $e^{X} \\to +\\infty$ quand $X \\to +\\infty$ : la limite est $+\\infty$.",
+      "a_revoir": [
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Variante 2 : une fonction intérieure à étudier"
+      ]
+    },
+    {
+      "id": "lim-f2-q4",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limites d'une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "signe à surveiller",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 2} \\dfrac{1}{(x - 2)^2}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "oubli_du_carre",
+          "feedback": "Le carré est toujours positif : $(x - 2)^2 \\to 0^+$, donc $\\frac{1}{(x-2)^2} \\to +\\infty$."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_1_sur_x_en_0_et_en_infini",
+          "feedback": "$\\frac{1}{X} \\to 0$ quand $X \\to \\pm\\infty$, pas quand $X \\to 0$."
+        },
+        {
+          "id": "C",
+          "texte": "La limite n'existe pas.",
+          "correcte": false,
+          "erreur": "confusion_avec_1_sur_x_moins_2",
+          "feedback": "Contrairement à $\\frac{1}{x - 2}$, le dénominateur ne change pas de signe : les deux côtés donnent $+\\infty$."
+        },
+        {
+          "id": "D",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$u(x) = (x - 2)^2 \\to 0$ et $u(x) > 0$ pour $x \\neq 2$, donc $u(x) \\to 0^+$. Comme $\\dfrac{1}{X} \\to +\\infty$ quand $X \\to 0^+$, la limite est $+\\infty$ (des deux côtés).",
+      "a_revoir": [
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Variante 3 : une limite en un point, avec le signe à surveiller",
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Variante 4 : quand la composition ne permet pas de conclure directement"
+      ]
+    },
+    {
+      "id": "lim-f2-q5",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limites d'une fonction composée",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "signe du dénominateur",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 3^+} \\dfrac{1}{3 - x}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "oubli_du_signe",
+          "feedback": "Pour $x > 3$, $3 - x < 0$ : le dénominateur tend vers $0^-$, donc le quotient est négatif."
+        },
+        {
+          "id": "B",
+          "texte": "$-\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_1_sur_x_en_0_et_en_infini",
+          "feedback": "$\\frac{1}{X} \\to 0$ seulement quand $X \\to \\pm\\infty$."
+        },
+        {
+          "id": "D",
+          "texte": "La limite à droite n'existe pas.",
+          "correcte": false,
+          "erreur": "confusion_limite_et_limite_unilaterale",
+          "feedback": "Seule la limite en $3$ (sans précision de côté) n'existe pas. La limite à **droite** existe : elle vaut $-\\infty$."
+        }
+      ],
+      "explication": "Quand $x \\to 3^+$, $x > 3$ donc $3 - x < 0$ : $3 - x \\to 0^-$. Comme $\\dfrac{1}{X} \\to -\\infty$ quand $X \\to 0^-$, la limite à droite est $-\\infty$. (À gauche, on obtiendrait $+\\infty$.)",
+      "a_revoir": [
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Variante 4 : quand la composition ne permet pas de conclure directement",
+        "Fiche « Limites d'une fonction composée » — 2. Erreurs fréquentes — Appliquer la composition sans vérifier les conditions nécessaires"
+      ]
+    }
+  ]
+}

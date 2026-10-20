@@ -1,0 +1,246 @@
+{
+  "id": "cont-banque",
+  "titre": "Banque — Continuité et théorème des valeurs intermédiaires",
+  "chapitre": "Continuité et théorème des valeurs intermédiaires",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "cont-banque-q1",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "La continuité",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "interprétation graphique de la continuité",
+      "enonce": "Une fonction $f$ est continue sur l'intervalle $[0\\ ;\\ 5]$. Que peut-on dire de sa courbe sur cet intervalle ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "On peut la tracer sans lever le crayon.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Elle est forcément croissante ou décroissante.",
+          "correcte": false,
+          "erreur": "confusion_continuite_monotonie",
+          "feedback": "Une fonction continue peut changer plusieurs fois de sens de variation."
+        },
+        {
+          "id": "C",
+          "texte": "Elle admet une tangente en chacun de ses points.",
+          "correcte": false,
+          "erreur": "confusion_continuite_derivabilite",
+          "feedback": "Ça, c'est la dérivabilité. La valeur absolue est continue en $0$ mais n'y a pas de tangente."
+        },
+        {
+          "id": "D",
+          "texte": "Elle ne coupe jamais l'axe des abscisses.",
+          "correcte": false,
+          "erreur": "propriete_inventee",
+          "feedback": "La continuité ne dit rien du signe : $x \\mapsto x - 1$ est continue et s'annule en $1$."
+        }
+      ],
+      "explication": "Intuitivement, une fonction continue sur un intervalle a une courbe « sans saut » : on peut la tracer d'un seul trait, sans lever le crayon.",
+      "a_revoir": [
+        "Fiche « La continuité » — 1. Continuité",
+        "Fiche « La continuité » — 2. Continuité sur un intervalle"
+      ]
+    },
+    {
+      "id": "cont-banque-q2",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "La continuité",
+      "type": "application",
+      "niveau": 2,
+      "notion": "continuité d'une fonction par morceaux avec exponentielle",
+      "enonce": "Soit $f$ définie par $f(x) = e^{x}$ si $x < 0$ et $f(x) = 2x + b$ si $x \\geq 0$. Pour quelle valeur de $b$ la fonction $f$ est-elle continue sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$b = 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$b = 0$",
+          "correcte": false,
+          "erreur": "erreur_valeur_exponentielle",
+          "feedback": "$e^0 = 1$, et non $0$."
+        },
+        {
+          "id": "C",
+          "texte": "$b = e$",
+          "correcte": false,
+          "erreur": "erreur_valeur_exponentielle",
+          "feedback": "Le raccord se fait en $x = 0$ : il faut $e^0$, pas $e^1$."
+        },
+        {
+          "id": "D",
+          "texte": "Aucune valeur : une exponentielle et une droite ne se raccordent pas.",
+          "correcte": false,
+          "erreur": "raccord_juge_impossible",
+          "feedback": "Il suffit que les deux expressions aient la même valeur en $0$ : c'est possible en choisissant $b$."
+        }
+      ],
+      "explication": "Les deux morceaux sont continus. Il faut que $\\displaystyle\\lim_{x \\to 0^-} e^{x} = f(0)$, c'est-à-dire $e^0 = 2 \\times 0 + b$, donc $b = 1$.",
+      "a_revoir": [
+        "Fiche « La continuité » — 1. Continuité",
+        "Fiche « La continuité » — 3. Fonctions usuelles continues"
+      ]
+    },
+    {
+      "id": "cont-banque-q3",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "conditions_théorème",
+      "niveau": 2,
+      "notion": "théorème des valeurs intermédiaires : au moins une solution",
+      "enonce": "Soit $f$ une fonction continue sur $[-2\\ ;\\ 3]$, avec $f(-2) = 5$ et $f(3) = -1$. Que peut-on affirmer avec certitude ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "L'équation $f(x) = 0$ admet au moins une solution dans $[-2\\ ;\\ 3]$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "L'équation $f(x) = 0$ admet exactement une solution dans $[-2\\ ;\\ 3]$.",
+          "correcte": false,
+          "erreur": "oubli_stricte_monotonie",
+          "feedback": "Pour l'unicité, il faudrait que $f$ soit strictement monotone, ce qu'on ne sait pas."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est décroissante sur $[-2\\ ;\\ 3]$.",
+          "correcte": false,
+          "erreur": "monotonie_deduite_des_bornes",
+          "feedback": "Connaître les valeurs aux bornes ne renseigne pas sur les variations entre elles."
+        },
+        {
+          "id": "D",
+          "texte": "$f(0) = 2$.",
+          "correcte": false,
+          "erreur": "interpolation_lineaire",
+          "feedback": "Rien n'impose que $f$ soit affine : on ne peut pas calculer $f(0)$."
+        }
+      ],
+      "explication": "$f$ est continue sur $[-2\\ ;\\ 3]$ et $0$ est compris entre $f(3) = -1$ et $f(-2) = 5$. D'après le théorème des valeurs intermédiaires, $f(x) = 0$ a au moins une solution. Sans stricte monotonie, on ne peut rien dire du nombre exact de solutions.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 1. Monotonie et bijection"
+      ]
+    },
+    {
+      "id": "cont-banque-q4",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "application",
+      "niveau": 2,
+      "notion": "unicité et localisation d'une solution",
+      "enonce": "Soit $f(x) = x^3 + x - 3$ sur $\\mathbb{R}$. On a $f'(x) = 3x^2 + 1$. Combien de solutions l'équation $f(x) = 0$ admet-elle, et où se trouvent-elles ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une unique solution, comprise entre $1$ et $2$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Une unique solution, comprise entre $0$ et $1$.",
+          "correcte": false,
+          "erreur": "mauvais_intervalle",
+          "feedback": "$f(0) = -3$ et $f(1) = -1$ sont tous deux négatifs : la solution n'est pas dans $[0\\ ;\\ 1]$."
+        },
+        {
+          "id": "C",
+          "texte": "Trois solutions, car $f$ est un polynôme de degré $3$.",
+          "correcte": false,
+          "erreur": "degre_egal_nombre_de_solutions",
+          "feedback": "Un polynôme de degré $3$ a **au plus** trois racines ; ici $f$ est strictement croissante."
+        },
+        {
+          "id": "D",
+          "texte": "Aucune solution, car $f(0) < 0$.",
+          "correcte": false,
+          "erreur": "conclusion_sur_une_valeur",
+          "feedback": "Une seule valeur négative ne suffit pas : $f(2) = 7 > 0$."
+        }
+      ],
+      "explication": "$f'(x) = 3x^2 + 1 > 0$ : $f$ est continue et strictement croissante sur $\\mathbb{R}$. Comme $f(1) = -1 < 0$ et $f(2) = 7 > 0$, le théorème de la bijection donne une unique solution, dans $]1\\ ;\\ 2[$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 3. Déterminer et encadrer une solution"
+      ]
+    },
+    {
+      "id": "cont-banque-q5",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "encadrer une solution pour une fonction décroissante",
+      "enonce": "Soit $g$ continue et strictement décroissante sur $[1\\ ;\\ 2]$, et $\\alpha$ l'unique solution de $g(x) = 0$. La calculatrice donne $g(1{,}4) \\approx 0{,}05$ et $g(1{,}5) \\approx -0{,}08$. Quel encadrement de $\\alpha$ peut-on en déduire ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$1{,}4 < \\alpha < 1{,}5$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$-0{,}08 < \\alpha < 0{,}05$",
+          "correcte": false,
+          "erreur": "confusion_images_antecedents",
+          "feedback": "$-0{,}08$ et $0{,}05$ sont des images ; $\\alpha$ est une valeur de $x$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\alpha = 1{,}45$",
+          "correcte": false,
+          "erreur": "milieu_suppose",
+          "feedback": "Rien ne dit que la solution est au milieu : on obtient seulement un encadrement."
+        },
+        {
+          "id": "D",
+          "texte": "$1{,}5 < \\alpha < 1{,}6$",
+          "correcte": false,
+          "erreur": "sens_variation_mal_utilise",
+          "feedback": "$g$ change de signe entre $1{,}4$ et $1{,}5$ : c'est là que se trouve $\\alpha$."
+        }
+      ],
+      "explication": "$g(1{,}4) > 0 > g(1{,}5)$ et $g$ est continue, strictement décroissante : elle s'annule une seule fois, entre $1{,}4$ et $1{,}5$. Donc $1{,}4 < \\alpha < 1{,}5$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 3. Déterminer et encadrer une solution",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 4. Utilisation de la calculatrice"
+      ]
+    }
+  ]
+}

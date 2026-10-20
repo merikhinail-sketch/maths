@@ -1,0 +1,663 @@
+{
+  "id": "suites-chapitre",
+  "titre": "Quiz de chapitre — Suites",
+  "chapitre": "Suites",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 14,
+  "questions": [
+    {
+      "id": "suites-chapitre-q1",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "choix_méthode",
+      "niveau": 1,
+      "notion": "reconnaître le type d'une suite",
+      "enonce": "La suite $80\\ ;\\ 40\\ ;\\ 20\\ ;\\ 10\\ ;\\ \\dots$ est :",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "géométrique de raison $\\dfrac{1}{2}$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "arithmétique de raison $-40$.",
+          "correcte": false,
+          "erreur": "tester_une_seule_difference",
+          "feedback": "Les différences $-40$, $-20$, $-10$ ne sont pas constantes."
+        },
+        {
+          "id": "C",
+          "texte": "géométrique de raison $2$.",
+          "correcte": false,
+          "erreur": "raison_inversee",
+          "feedback": "On passe de $80$ à $40$ : on divise par 2, la raison est $\\frac{1}{2}$."
+        },
+        {
+          "id": "D",
+          "texte": "arithmétique de raison $-20$.",
+          "correcte": false,
+          "erreur": "raison_mal_calculee",
+          "feedback": "Les différences ne sont pas toutes égales à $-20$."
+        }
+      ],
+      "explication": "Les quotients $\\frac{40}{80}$, $\\frac{20}{40}$, $\\frac{10}{20}$ valent tous $\\frac{1}{2}$ : la suite est géométrique de raison $\\frac{1}{2}$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 2. Suites géométriques — Déterminer la raison",
+        "Fiche « Rappels de Première : les suites » — 3. Erreurs fréquentes — Mélanger addition et multiplication"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q2",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "conjecturer variations et limite",
+      "enonce": "On a représenté les premiers termes d'une suite. Que suggère le graphique ?",
+      "figure": "suites_ch_q2.png",
+      "figure_alt": "Nuage de points croissants qui ralentissent en approchant de la hauteur 4.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle semble décroissante et converger vers $4$.",
+          "correcte": false,
+          "erreur": "confusion_sens_variation",
+          "feedback": "Les points montent : la suite est croissante."
+        },
+        {
+          "id": "B",
+          "texte": "Elle semble croissante et tendre vers $+\\infty$.",
+          "correcte": false,
+          "erreur": "convergence_non_reperee",
+          "feedback": "Les points ralentissent et se rapprochent de la hauteur 4."
+        },
+        {
+          "id": "C",
+          "texte": "Elle semble croissante et converger vers $4$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Elle semble converger vers $3{,}99$, valeur du dernier point tracé.",
+          "correcte": false,
+          "erreur": "confusion_limite_dernier_terme",
+          "feedback": "Une limite n'est pas un terme : les points continuent de monter vers 4."
+        }
+      ],
+      "explication": "Les points montent de plus en plus lentement vers la hauteur $4$ : la suite semble croissante et majorée, donc convergente.",
+      "a_revoir": [
+        "Fiche « Convergence des suites » — 1. Comprendre la convergence — Interprétation graphique"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q3",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 1,
+      "notion": "limite de $q^n$",
+      "enonce": "Quelle est la limite de $u_n = 2 + (0{,}9)^n$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "confusion_raison",
+          "feedback": "$(0{,}9)^n$ tend vers $0$ car $-1 < 0{,}9 < 1$."
+        },
+        {
+          "id": "B",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "limite_egale_premier_terme",
+          "feedback": "$3 = u_0$ est le premier terme, pas la limite."
+        },
+        {
+          "id": "C",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "oubli_constante",
+          "feedback": "Il faut garder la constante $2$."
+        }
+      ],
+      "explication": "$(0{,}9)^n \\to 0$ car $-1 < 0{,}9 < 1$, donc $u_n \\to 2$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 2. Limites usuelles — Puissances et expressions classiques"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q4",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 2,
+      "notion": "variations d'une suite quadratique",
+      "enonce": "La suite définie par $u_n = 4n - n^2$ est :",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "strictement croissante.",
+          "correcte": false,
+          "erreur": "extrapolation_terme_dominant",
+          "feedback": "Le terme $-n^2$ domine : les valeurs finissent par diminuer."
+        },
+        {
+          "id": "B",
+          "texte": "croissante jusqu'au rang $2$, puis décroissante à partir du rang $2$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "strictement décroissante.",
+          "correcte": false,
+          "erreur": "conclure_sur_les_premiers_termes",
+          "feedback": "$u_1 = 3 > u_0 = 0$."
+        },
+        {
+          "id": "D",
+          "texte": "croissante jusqu'au rang $3$, puis décroissante.",
+          "correcte": false,
+          "erreur": "rang_de_changement_faux",
+          "feedback": "$u_3 = 3 < u_2 = 4$ : elle redescend dès le rang 2 vers 3."
+        }
+      ],
+      "explication": "$u_{n+1} - u_n = 3 - 2n$ : positif pour $n = 0, 1$ et négatif pour $n \\geq 2$. Les termes sont $0, 3, 4, 3, 0, \\dots$",
+      "a_revoir": [
+        "Fiche « Monotonie et suites bornées » — 1. Monotonie d'une suite — Définition monotonie",
+        "Fiche « Monotonie et suites bornées » — 4. Erreurs fréquentes — Montrer seulement que $u_{n+1} \\geq u_n$ pour quelques valeurs et conclure pour toute la suite"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q5",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 2,
+      "notion": "somme arithmétique",
+      "enonce": "Quelle est la valeur de $7 + 10 + 13 + \\dots + 40$ (raison $3$) ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$564$",
+          "correcte": false,
+          "erreur": "oubli_division_par_2",
+          "feedback": "Il manque la division par 2."
+        },
+        {
+          "id": "B",
+          "texte": "$258{,}5$",
+          "correcte": false,
+          "erreur": "nombre_de_termes_faux",
+          "feedback": "Il y a $\\frac{40-7}{3} + 1 = 12$ termes, et non 11."
+        },
+        {
+          "id": "C",
+          "texte": "$198$",
+          "correcte": false,
+          "erreur": "difference_au_lieu_de_somme",
+          "feedback": "On additionne le premier et le dernier terme : $7 + 40$, pas $40 - 7$."
+        },
+        {
+          "id": "D",
+          "texte": "$282$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$12$ termes : $S = \\frac{12}{2} \\times (7 + 40) = 6 \\times 47 = 282$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 1. Suites arithmétiques — Somme des termes d'une suite arithmétique",
+        "Fiche « Rappels de Première : les suites » — 3. Erreurs fréquentes — Erreurs dans le nombre de termes"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q6",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "vrai_faux_plausible",
+      "niveau": 2,
+      "notion": "suites géométriques et monotonie",
+      "enonce": "Laquelle de ces affirmations est vraie ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une suite géométrique de raison $-2$ et de premier terme non nul n'est pas monotone.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Une suite géométrique de raison $\\frac{1}{2}$ est toujours décroissante.",
+          "correcte": false,
+          "erreur": "oubli_signe_premier_terme",
+          "feedback": "Si le premier terme est négatif, elle est croissante ($-8\\ ;\\ -4\\ ;\\ -2$)."
+        },
+        {
+          "id": "C",
+          "texte": "Une suite arithmétique de raison $0$ est strictement croissante.",
+          "correcte": false,
+          "erreur": "confusion_constante_strictement",
+          "feedback": "Elle est constante."
+        },
+        {
+          "id": "D",
+          "texte": "Une suite géométrique de raison $3$ est toujours croissante.",
+          "correcte": false,
+          "erreur": "oubli_signe_premier_terme",
+          "feedback": "Si $u_0 < 0$, les termes diminuent : $-1\\ ;\\ -3\\ ;\\ -9$."
+        }
+      ],
+      "explication": "Avec $q = -2$ les termes changent de signe à chaque étape : la suite monte puis descend, elle n'est pas monotone.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 2. Suites géométriques — Sens de variation"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q7",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "conditions_théorème",
+      "niveau": 2,
+      "notion": "appliquer le théorème de convergence",
+      "enonce": "Pour laquelle de ces suites le théorème « toute suite croissante et majorée converge » s'applique-t-il ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u_n = (-1)^n$",
+          "correcte": false,
+          "erreur": "majoree_non_croissante",
+          "feedback": "Elle est majorée mais pas croissante."
+        },
+        {
+          "id": "B",
+          "texte": "$u_n = n$",
+          "correcte": false,
+          "erreur": "croissante_non_majoree",
+          "feedback": "Elle est croissante mais pas majorée."
+        },
+        {
+          "id": "C",
+          "texte": "$u_n = 4 - \\dfrac{1}{n+1}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$u_n = -n$",
+          "correcte": false,
+          "erreur": "decroissante_majoree",
+          "feedback": "Elle est décroissante : c'est une minoration qu'il faudrait."
+        }
+      ],
+      "explication": "$u_n = 4 - \\frac{1}{n+1}$ est croissante et majorée par $4$ : elle converge (vers $4$).",
+      "a_revoir": [
+        "Fiche « Convergence des suites » — 2. Convergence dans la monotonie et bornes — Théorèmes de convergence associés",
+        "Fiche « Convergence des suites » — 3. Erreurs fréquentes — Utiliser un théorème sans vérifier ses conditions"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q8",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 2,
+      "notion": "forme indéterminée $\\frac{\\infty}{\\infty}$",
+      "enonce": "Quelle est la limite de $u_n = \\dfrac{4n^2 - 1}{2n^2 + n}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "infini_sur_infini_egal_infini",
+          "feedback": "C'est une forme indéterminée : on factorise par $n^2$."
+        },
+        {
+          "id": "C",
+          "texte": "$4$",
+          "correcte": false,
+          "erreur": "oubli_terme_dominant_du_denominateur",
+          "feedback": "Le dénominateur vaut aussi $2n^2$ : le quotient tend vers $\\frac{4}{2}$."
+        },
+        {
+          "id": "D",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "denominateur_domine",
+          "feedback": "Numérateur et dénominateur sont du même ordre."
+        }
+      ],
+      "explication": "$u_n = \\dfrac{4 - \\frac{1}{n^2}}{2 + \\frac{1}{n}} \\to \\dfrac{4}{2} = 2$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 3. Formes indéterminées — Méthodes pour les traiter"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q9",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 2,
+      "notion": "somme géométrique",
+      "enonce": "Quelle est la valeur de $1 + 3 + 9 + \\dots + 3^6$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$364$",
+          "correcte": false,
+          "erreur": "nombre_de_termes_faux",
+          "feedback": "Il y a $7$ termes (de $3^0$ à $3^6$), et non 6."
+        },
+        {
+          "id": "B",
+          "texte": "$2\\,186$",
+          "correcte": false,
+          "erreur": "oubli_denominateur",
+          "feedback": "Après $1 - 3^7 = -2186$, il faut diviser par $1 - q = -2$."
+        },
+        {
+          "id": "C",
+          "texte": "$729$",
+          "correcte": false,
+          "erreur": "confusion_somme_dernier_terme",
+          "feedback": "$729 = 3^6$ est seulement le dernier terme."
+        },
+        {
+          "id": "D",
+          "texte": "$1\\,093$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$S = \\dfrac{1 - 3^7}{1 - 3} = \\dfrac{-2186}{-2} = 1093$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 2. Suites géométriques — Somme des termes"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q10",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 3,
+      "notion": "forme indéterminée avec racines",
+      "enonce": "Quelle est la limite de $u_n = \\sqrt{n + 1} - \\sqrt{n}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "infini_moins_infini",
+          "feedback": "C'est une forme indéterminée : on multiplie par la quantité conjuguée."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "soustraction_des_equivalents",
+          "feedback": "On trouve $\\frac{1}{\\sqrt{n+1} + \\sqrt{n}}$, qui tend vers $0$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{1}{2}$",
+          "correcte": false,
+          "erreur": "confusion_limite",
+          "feedback": "Le dénominateur $\\sqrt{n+1} + \\sqrt{n}$ tend vers $+\\infty$ : le quotient tend vers $0$."
+        }
+      ],
+      "explication": "$u_n = \\dfrac{(n+1) - n}{\\sqrt{n+1} + \\sqrt{n}} = \\dfrac{1}{\\sqrt{n+1} + \\sqrt{n}} \\to 0$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 3. Formes indéterminées — Méthodes pour les traiter"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q11",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 3,
+      "notion": "gendarmes avec $(-1)^n$",
+      "enonce": "Quelle est la limite de $u_n = \\dfrac{2n + (-1)^n}{n + 1}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle n'a pas de limite, car $(-1)^n$ alterne.",
+          "correcte": false,
+          "erreur": "alterner_donc_diverger",
+          "feedback": "Le terme $(-1)^n$ est négligeable devant $n$."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "infini_sur_infini_egal_infini",
+          "feedback": "Numérateur et dénominateur sont du même ordre : forme indéterminée."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "denominateur_domine",
+          "feedback": "Le numérateur est de l'ordre de $2n$, comme le dénominateur de l'ordre de $n$."
+        },
+        {
+          "id": "D",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "On encadre : $\\dfrac{2n - 1}{n + 1} \\leq u_n \\leq \\dfrac{2n + 1}{n + 1}$. Les deux bornes tendent vers $2$ : par les gendarmes, $u_n \\to 2$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 4. Comparaison — Théorème des gendarmes",
+        "Fiche « Limites de suites » — 4. Comparaison — Utilisation pour déterminer une limite"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q12",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "repérer_erreur",
+      "niveau": 3,
+      "notion": "rédaction d'une récurrence",
+      "enonce": "Pour montrer que $u_n \\geq 4$ avec $u_0 = 5$ et $u_{n+1} = \\dfrac{u_n + 4}{2}$, un élève écrit : « Supposons $u_n \\geq 4$ pour tout $n$. Alors $u_{n+1} \\geq 4$. Donc c'est démontré. » Quelle est son erreur principale ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Il n'y a pas d'erreur : l'hypothèse $u_n \\geq 4$ est la bonne.",
+          "correcte": false,
+          "erreur": "hypothese_trop_forte",
+          "feedback": "Supposer la propriété pour tout $n$, c'est supposer ce qu'on veut démontrer."
+        },
+        {
+          "id": "B",
+          "texte": "L'inégalité $u_{n+1} \\geq 4$ est fausse.",
+          "correcte": false,
+          "erreur": "verite_confondue_avec_rediction",
+          "feedback": "Elle est vraie : l'erreur est dans la rédaction du raisonnement."
+        },
+        {
+          "id": "C",
+          "texte": "Il suppose la propriété pour tout $n$ au lieu du seul rang $n$, et il oublie l'initialisation.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Il aurait dû démontrer $u_{n+1} \\leq 4$.",
+          "correcte": false,
+          "erreur": "mauvais_sens",
+          "feedback": "Le but est bien de démontrer $u_{n+1} \\geq 4$."
+        }
+      ],
+      "explication": "Une récurrence comprend une initialisation ($u_0 = 5 \\geq 4$) et une hérédité où l'on suppose $u_n \\geq 4$ pour **un** $n$ quelconque, puis on démontre $u_{n+1} \\geq 4$ : $u_n + 4 \\geq 8$, donc $u_{n+1} \\geq 4$.",
+      "a_revoir": [
+        "Fiche « Le raisonnement par récurrence » — 3. Erreurs fréquentes — Oublier l'initialisation qui est très importante",
+        "Fiche « Le raisonnement par récurrence » — 3. Erreurs fréquentes — Mal rédiger la conclusion"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q13",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "encadrer la limite d'une suite croissante majorée",
+      "enonce": "Une suite croissante vérifie $u_0 = 1$ et $u_n \\leq 7$ pour tout $n$. Que peut-on affirmer sur sa limite $L$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle converge, et $1 \\leq L \\leq 7$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Elle converge vers $7$.",
+          "correcte": false,
+          "erreur": "limite_egale_majorant",
+          "feedback": "Le théorème ne donne pas la valeur de la limite : $7$ n'est qu'un majorant."
+        },
+        {
+          "id": "C",
+          "texte": "Elle converge vers $1$.",
+          "correcte": false,
+          "erreur": "limite_egale_premier_terme",
+          "feedback": "Rien n'impose que la limite soit le premier terme."
+        },
+        {
+          "id": "D",
+          "texte": "Elle diverge vers $+\\infty$.",
+          "correcte": false,
+          "erreur": "oubli_majoration",
+          "feedback": "Elle est majorée par 7 : elle ne peut pas tendre vers $+\\infty$."
+        }
+      ],
+      "explication": "Croissante et majorée, elle converge. Comme $u_0 = 1 \\leq u_n \\leq 7$ pour tout $n$, la limite vérifie $1 \\leq L \\leq 7$.",
+      "a_revoir": [
+        "Fiche « Convergence des suites » — 2. Convergence dans la monotonie et bornes — Théorèmes de convergence associés",
+        "Fiche « Monotonie et suites bornées » — 3. Lien entre monotonie et bornes — Une suite croissante et majorée"
+      ]
+    },
+    {
+      "id": "suites-chapitre-q14",
+      "chapitre": "Suites",
+      "fiche": "Chapitre",
+      "type": "choix_méthode",
+      "niveau": 3,
+      "notion": "comparaison pour une limite infinie",
+      "enonce": "Quelle est la limite de $u_n = n^2 + 2(-1)^n$, et quel théorème permet de le montrer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle n'a pas de limite, car $(-1)^n$ alterne.",
+          "correcte": false,
+          "erreur": "alterner_donc_diverger",
+          "feedback": "Le terme $n^2$ domine : $u_n \\geq n^2 - 2 \\to +\\infty$."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$, par comparaison : $u_n \\geq n^2 - 2$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$+\\infty$, par le théorème des gendarmes.",
+          "correcte": false,
+          "erreur": "confusion_theoremes",
+          "feedback": "Les gendarmes servent pour une limite finie ; ici, on compare avec une suite qui tend vers $+\\infty$."
+        },
+        {
+          "id": "D",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "limite_inventee",
+          "feedback": "Le terme $2(-1)^n$ ne peut pas compenser $n^2$."
+        }
+      ],
+      "explication": "Comme $(-1)^n \\geq -1$, on a $u_n \\geq n^2 - 2$. Or $n^2 - 2 \\to +\\infty$ : par comparaison, $u_n \\to +\\infty$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 4. Comparaison — Comparaison de suites",
+        "Fiche « Limites de suites » — 4. Comparaison — Utilisation pour déterminer une limite"
+      ]
+    }
+  ]
+}

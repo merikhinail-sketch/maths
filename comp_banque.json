@@ -1,0 +1,244 @@
+{
+  "id": "comp-banque",
+  "titre": "Banque — Fonctions composées",
+  "chapitre": "Fonctions composées",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "comp-banque-q1",
+      "chapitre": "Fonctions composées",
+      "fiche": "Reconnaître une fonction composée",
+      "type": "reconnaissance",
+      "niveau": 1,
+      "notion": "fonction intérieure et extérieure d'une exponentielle",
+      "enonce": "Soit $f(x) = e^{3x + 1}$, écrite sous la forme $f = v \\circ u$. Quelles fonctions $u$ et $v$ conviennent ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u(x) = 3x + 1$ et $v(X) = e^{X}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$u(x) = e^{x}$ et $v(X) = 3X + 1$",
+          "correcte": false,
+          "erreur": "ordre_de_composition_inverse",
+          "feedback": "Avec ces fonctions, $v\\big(u(x)\\big) = 3e^{x} + 1$ : on applique d'abord $3x + 1$, puis l'exponentielle."
+        },
+        {
+          "id": "C",
+          "texte": "$u(x) = 3x + 1$ et $v(X) = e^{3X + 1}$",
+          "correcte": false,
+          "erreur": "double_application",
+          "feedback": "$v\\big(u(x)\\big)$ vaudrait $e^{3(3x+1)+1}$ : la fonction extérieure ne doit contenir que l'exponentielle."
+        },
+        {
+          "id": "D",
+          "texte": "$u(x) = e^{3x}$ et $v(X) = X + 1$",
+          "correcte": false,
+          "erreur": "decomposition_incorrecte",
+          "feedback": "$v\\big(u(x)\\big) = e^{3x} + 1$, ce qui est différent de $e^{3x+1}$."
+        }
+      ],
+      "explication": "On calcule d'abord $3x + 1$ (fonction intérieure $u$), puis on applique l'exponentielle (fonction extérieure $v$) : $v\\big(u(x)\\big) = e^{3x+1}$.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 2. Écrire une fonction sous forme composée"
+      ]
+    },
+    {
+      "id": "comp-banque-q2",
+      "chapitre": "Fonctions composées",
+      "fiche": "Reconnaître une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "ordre de composition",
+      "enonce": "On pose $u(x) = x^2$ et $v(x) = x + 3$. Quelle est l'expression de $(u \\circ v)(x)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(x + 3)^2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$x^2 + 3$",
+          "correcte": false,
+          "erreur": "ordre_de_composition_inverse",
+          "feedback": "$x^2 + 3 = v\\big(u(x)\\big)$ : dans $u \\circ v$, on applique d'abord $v$, puis $u$."
+        },
+        {
+          "id": "C",
+          "texte": "$x^2(x + 3)$",
+          "correcte": false,
+          "erreur": "composition_confondue_avec_produit",
+          "feedback": "$u \\circ v$ n'est pas le produit $u \\times v$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\left(x^2 + 3\\right)^2$",
+          "correcte": false,
+          "erreur": "double_application",
+          "feedback": "On n'applique $u$ qu'une seule fois, au résultat de $v$."
+        }
+      ],
+      "explication": "$(u \\circ v)(x) = u\\big(v(x)\\big) = u(x + 3) = (x + 3)^2$.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 1. Comprendre l'idée de composition",
+        "Fiche « Reconnaître une fonction composée » — 3. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "comp-banque-q3",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $\\sqrt{u}$",
+      "enonce": "Quelle est la dérivée de $f(x) = \\sqrt{x^2 + 4}$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = \\dfrac{x}{\\sqrt{x^2 + 4}}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = \\dfrac{1}{2\\sqrt{x^2 + 4}}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "Il faut multiplier par la dérivée de l'intérieur, $u'(x) = 2x$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = \\dfrac{2x}{\\sqrt{x^2 + 4}}$",
+          "correcte": false,
+          "erreur": "oubli_du_facteur_un_demi",
+          "feedback": "$\\left(\\sqrt{u}\\right)' = \\dfrac{u'}{2\\sqrt{u}}$ : n'oublie pas le $2$ au dénominateur."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = 2x\\sqrt{x^2 + 4}$",
+          "correcte": false,
+          "erreur": "formule_inventee",
+          "feedback": "La dérivée de $\\sqrt{u}$ est $\\dfrac{u'}{2\\sqrt{u}}$, pas $u'\\sqrt{u}$."
+        }
+      ],
+      "explication": "Avec $u(x) = x^2 + 4 > 0$, $u'(x) = 2x$ et $f'(x) = \\dfrac{u'(x)}{2\\sqrt{u(x)}} = \\dfrac{2x}{2\\sqrt{x^2 + 4}} = \\dfrac{x}{\\sqrt{x^2 + 4}}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "comp-banque-q4",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $e^{u}$ avec $u(x) = \\dfrac{1}{x}$",
+      "enonce": "Quelle est la dérivée de $f(x) = e^{1/x}$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = -\\dfrac{1}{x^2}\\,e^{1/x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = e^{1/x}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "$\\left(e^{u}\\right)' = u'e^{u}$ : il faut multiplier par la dérivée de $\\dfrac{1}{x}$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = \\dfrac{1}{x^2}\\,e^{1/x}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "La dérivée de $\\dfrac{1}{x}$ est $-\\dfrac{1}{x^2}$ : attention au signe moins."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = \\dfrac{1}{x}\\,e^{1/x - 1}$",
+          "correcte": false,
+          "erreur": "confusion_exponentielle_puissance",
+          "feedback": "On ne dérive pas $e^{u}$ comme une puissance $X^n$ : l'exposant ne diminue pas de $1$."
+        }
+      ],
+      "explication": "Avec $u(x) = \\dfrac{1}{x}$, $u'(x) = -\\dfrac{1}{x^2}$ et $f'(x) = u'(x)\\,e^{u(x)} = -\\dfrac{1}{x^2}\\,e^{1/x}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "comp-banque-q5",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "variations de $\\ln(u)$",
+      "enonce": "Soit $f(x) = \\ln\\left(x^2 - 2x + 5\\right)$, définie sur $\\mathbb{R}$. Sur quel intervalle $f$ est-elle croissante ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$[1\\ ;\\ +\\infty[$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$]-\\infty\\ ;\\ 1]$",
+          "correcte": false,
+          "erreur": "signe_mal_lu",
+          "feedback": "$f'(x) = \\dfrac{2x - 2}{x^2 - 2x + 5}$ est négatif pour $x < 1$ : $f$ y décroît."
+        },
+        {
+          "id": "C",
+          "texte": "$\\mathbb{R}$, car la fonction $\\ln$ est croissante.",
+          "correcte": false,
+          "erreur": "croissance_de_v_suffisante_a_tort",
+          "feedback": "$\\ln$ est croissante, mais $f$ suit les variations de $u(x) = x^2 - 2x + 5$, qui décroît puis croît."
+        },
+        {
+          "id": "D",
+          "texte": "$[0\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "mauvais_point_de_changement",
+          "feedback": "Le signe de $f'$ change en $x = 1$, là où $2x - 2$ s'annule, pas en $0$."
+        }
+      ],
+      "explication": "$u(x) = x^2 - 2x + 5 = (x - 1)^2 + 4 > 0$. $f'(x) = \\dfrac{u'(x)}{u(x)} = \\dfrac{2x - 2}{x^2 - 2x + 5}$ a le signe de $2x - 2$ : positif pour $x \\geq 1$. Donc $f$ est croissante sur $[1\\ ;\\ +\\infty[$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé"
+      ]
+    }
+  ]
+}

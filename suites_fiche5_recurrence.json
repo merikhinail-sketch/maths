@@ -1,0 +1,242 @@
+{
+  "id": "suites-f5",
+  "titre": "Quiz — Le raisonnement par récurrence",
+  "chapitre": "Suites",
+  "fiche": "Le raisonnement par récurrence",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "suites-f5-q1",
+      "chapitre": "Suites",
+      "fiche": "Le raisonnement par récurrence",
+      "type": "choix_méthode",
+      "niveau": 1,
+      "notion": "quand utiliser une récurrence",
+      "enonce": "Dans quelle situation utilise-t-on naturellement une démonstration par récurrence ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Pour calculer $u_5$ quand on connaît $u_0$ et la relation $u_{n+1} = f(u_n)$.",
+          "correcte": false,
+          "erreur": "confusion_calcul_demonstration",
+          "feedback": "Calculer un terme se fait en enchaînant les calculs : pas besoin de récurrence."
+        },
+        {
+          "id": "B",
+          "texte": "Pour résoudre l'équation $u_n = 3$.",
+          "correcte": false,
+          "erreur": "confusion_methodes",
+          "feedback": "Une récurrence démontre une propriété pour tout $n$, elle ne résout pas d'équation."
+        },
+        {
+          "id": "C",
+          "texte": "Pour démontrer que $u_n \\leq 3$ pour tout $n$, avec $u_{n+1} = \\dfrac{u_n + 3}{2}$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Pour étudier les variations d'une fonction.",
+          "correcte": false,
+          "erreur": "confusion_methodes",
+          "feedback": "Les variations d'une fonction s'étudient avec sa dérivée."
+        }
+      ],
+      "explication": "La récurrence sert à démontrer une propriété vraie pour **tout** entier $n$, quand on connaît le lien entre un terme et le suivant.",
+      "a_revoir": [
+        "Fiche « Le raisonnement par récurrence » — 1. Dans quels cas utiliser une démonstration par récurrence — Démontrer une inégalité pour tout entier naturel"
+      ]
+    },
+    {
+      "id": "suites-f5-q2",
+      "chapitre": "Suites",
+      "fiche": "Le raisonnement par récurrence",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "les étapes d'une récurrence",
+      "enonce": "Quelles étapes comporte une démonstration par récurrence ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Initialisation, hérédité, conclusion.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Vérifier la propriété pour quelques valeurs de $n$, puis généraliser.",
+          "correcte": false,
+          "erreur": "generaliser_exemples",
+          "feedback": "Quelques valeurs ne prouvent rien pour tous les $n$."
+        },
+        {
+          "id": "C",
+          "texte": "Initialisation et conclusion seulement.",
+          "correcte": false,
+          "erreur": "oubli_heredite",
+          "feedback": "Sans hérédité, on ne passe pas de $n$ à $n+1$."
+        },
+        {
+          "id": "D",
+          "texte": "Hérédité seule.",
+          "correcte": false,
+          "erreur": "oubli_initialisation",
+          "feedback": "L'initialisation est le premier domino : sans elle, rien ne tombe."
+        }
+      ],
+      "explication": "Comme pour une rangée de dominos : le premier tombe (initialisation), chacun fait tomber le suivant (hérédité), donc tous tombent (conclusion).",
+      "a_revoir": [
+        "Fiche « Le raisonnement par récurrence » — 1. Dans quels cas utiliser une démonstration par récurrence — Démontrer une inégalité pour tout entier naturel"
+      ]
+    },
+    {
+      "id": "suites-f5-q3",
+      "chapitre": "Suites",
+      "fiche": "Le raisonnement par récurrence",
+      "type": "application",
+      "niveau": 2,
+      "notion": "rédiger le début de l'hérédité",
+      "enonce": "On veut démontrer $u_n \\geq n$ pour tout $n$, avec $u_0 = 1$ et $u_{n+1} = 2u_n + 1$. Quelle phrase ouvre correctement l'hérédité ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "« Supposons $u_{n+1} \\geq n + 1$ pour tout $n$. »",
+          "correcte": false,
+          "erreur": "supposer_ce_quon_veut_demontrer",
+          "feedback": "On suppose la propriété au rang $n$ seulement, et on démontre le rang $n+1$."
+        },
+        {
+          "id": "B",
+          "texte": "« Soit $n$ un entier naturel. Supposons $u_n \\geq n$ ; montrons que $u_{n+1} \\geq n + 1$. »",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "« Pour $n = 0$ : $u_0 = 1 \\geq 0$. »",
+          "correcte": false,
+          "erreur": "confusion_init_heredite",
+          "feedback": "C'est l'initialisation, pas l'hérédité."
+        },
+        {
+          "id": "D",
+          "texte": "« Supposons $u_n \\geq n + 1$. »",
+          "correcte": false,
+          "erreur": "hypothese_modifiee",
+          "feedback": "L'hypothèse de récurrence est $P(n)$ : $u_n \\geq n$."
+        }
+      ],
+      "explication": "L'hérédité part de $P(n)$ (hypothèse de récurrence) pour démontrer $P(n+1)$, avec $n$ entier naturel quelconque.",
+      "a_revoir": [
+        "Fiche « Le raisonnement par récurrence » — 2. Grand exemple de démonstration par récurrence — Étape 2 : Hérédité"
+      ]
+    },
+    {
+      "id": "suites-f5-q4",
+      "chapitre": "Suites",
+      "fiche": "Le raisonnement par récurrence",
+      "type": "application",
+      "niveau": 2,
+      "notion": "utiliser l'hypothèse de récurrence",
+      "enonce": "On veut montrer que $u_n \\leq 3$ pour tout $n$, avec $u_{n+1} = \\dfrac{u_n + 3}{2}$. Dans l'hérédité, on suppose $u_n \\leq 3$. Quelle déduction permet de démontrer $u_{n+1} \\leq 3$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u_n + 3 \\geq 6$, donc $u_{n+1} \\geq 3$.",
+          "correcte": false,
+          "erreur": "sens_inegalite_inverse",
+          "feedback": "Ajouter 3 à $u_n \\leq 3$ garde le sens : $u_n + 3 \\leq 6$."
+        },
+        {
+          "id": "B",
+          "texte": "$u_n + 3 \\leq 6$, donc $u_{n+1} = \\dfrac{u_n + 3}{2} \\leq 3$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{u_n + 3}{2} \\leq 3$, car $u_0 = 0 \\leq 3$.",
+          "correcte": false,
+          "erreur": "hypothese_non_utilisee",
+          "feedback": "Il faut utiliser l'hypothèse de récurrence, pas le premier terme."
+        },
+        {
+          "id": "D",
+          "texte": "$u_n + 3 \\leq 6$, donc $u_{n+1} \\leq 6$.",
+          "correcte": false,
+          "erreur": "conclusion_incomplete",
+          "feedback": "Il faut aussi diviser par 2 : on obtient $u_{n+1} \\leq 3$."
+        }
+      ],
+      "explication": "De $u_n \\leq 3$ on tire $u_n + 3 \\leq 6$, puis en divisant par 2 (positif) : $u_{n+1} \\leq 3$. L'hypothèse de récurrence est bien utilisée.",
+      "a_revoir": [
+        "Fiche « Le raisonnement par récurrence » — 2. Grand exemple de démonstration par récurrence — Étape 2 : Hérédité",
+        "Fiche « Le raisonnement par récurrence » — 3. Erreurs fréquentes — Hypothèse de récurrence non utilisée"
+      ]
+    },
+    {
+      "id": "suites-f5-q5",
+      "chapitre": "Suites",
+      "fiche": "Le raisonnement par récurrence",
+      "type": "repérer_erreur",
+      "niveau": 3,
+      "notion": "importance de l'initialisation",
+      "enonce": "Un élève démontre que, si l'égalité $n = n + 1$ est vraie au rang $n$, elle l'est au rang $n + 1$ (il ajoute $1$ des deux côtés), et il conclut que $n = n + 1$ pour tout entier $n$. D'où vient l'absurdité ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "L'hérédité est fausse : $n = n + 1$ n'entraîne pas $n + 1 = n + 2$.",
+          "correcte": false,
+          "erreur": "heredite_mal_comprise",
+          "feedback": "En ajoutant 1 des deux côtés, on obtient bien $n + 1 = n + 2$ : l'hérédité est correcte."
+        },
+        {
+          "id": "B",
+          "texte": "Une récurrence ne s'applique pas aux égalités.",
+          "correcte": false,
+          "erreur": "limite_methode_inventee",
+          "feedback": "Elle s'applique aussi aux égalités, mais il faut les deux étapes."
+        },
+        {
+          "id": "C",
+          "texte": "Il aurait dû supposer la propriété au rang $n + 1$.",
+          "correcte": false,
+          "erreur": "supposer_au_rang_suivant",
+          "feedback": "On suppose la propriété au rang $n$ et on démontre le rang $n+1$."
+        },
+        {
+          "id": "D",
+          "texte": "Il a oublié l'initialisation : pour $n = 0$, l'égalité $0 = 1$ est fausse.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "L'hérédité seule ne prouve rien : sans premier domino, aucun ne tombe. Ici $P(0)$ est fausse ($0 \\neq 1$), ce qui révèle l'oubli.",
+      "a_revoir": [
+        "Fiche « Le raisonnement par récurrence » — 3. Erreurs fréquentes — Oublier l'initialisation qui est très importante"
+      ]
+    }
+  ]
+}

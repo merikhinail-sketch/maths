@@ -1,0 +1,480 @@
+{
+  "id": "convexite-chapitre",
+  "titre": "Quiz de chapitre — Convexité",
+  "chapitre": "Convexité",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 10,
+  "questions": [
+    {
+      "id": "conv-ch-q1",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "reconnaître une courbe convexe",
+      "enonce": "Laquelle de ces courbes représente une fonction **convexe** sur l'intervalle affiché ?",
+      "figure": "convexite_ch_q1.png",
+      "figure_alt": "Quatre courbes A, B, C, D : un dôme, une courbe en S, une coupe asymétrique et une courbe croissante en forme de racine carrée.",
+      "melanger_options": false,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La courbe A.",
+          "correcte": false,
+          "erreur": "confusion_vocabulaire_concave_creux",
+          "feedback": "La courbe A a une forme de dôme : elle est au-dessous de ses tangentes, donc concave."
+        },
+        {
+          "id": "B",
+          "texte": "La courbe B.",
+          "correcte": false,
+          "erreur": "convexite_partielle",
+          "feedback": "La courbe B est concave sur sa partie gauche et convexe sur sa partie droite : elle n'est pas convexe sur tout l'intervalle."
+        },
+        {
+          "id": "C",
+          "texte": "La courbe C.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Forme de coupe : courbe au-dessus de ses tangentes."
+        },
+        {
+          "id": "D",
+          "texte": "La courbe D.",
+          "correcte": false,
+          "erreur": "confusion_croissante_convexe",
+          "feedback": "La courbe D est croissante mais concave : la pente de ses tangentes diminue."
+        }
+      ],
+      "explication": "Une fonction convexe a une courbe en forme de coupe (« U »), située au-dessus de ses tangentes : c'est la courbe C.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Interprétation graphique",
+        "Fiche « Convexité et concavité » — À retenir"
+      ]
+    },
+    {
+      "id": "conv-ch-q2",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "lien entre f' croissante et convexité",
+      "enonce": "Sur un intervalle $I$, la dérivée $f'$ d'une fonction $f$ est croissante. Que peut-on affirmer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est croissante sur $I$.",
+          "correcte": false,
+          "erreur": "confusion_f_prime_croissante_f_croissante",
+          "feedback": "$f'$ croissante ne dit pas que $f$ est croissante : $f$ est croissante quand $f' \\geq 0$."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est convexe sur $I$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Pente des tangentes qui augmente : la courbe se courbe vers le haut."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est concave sur $I$.",
+          "correcte": false,
+          "erreur": "inversion_signe_convexite",
+          "feedback": "Si la pente des tangentes diminue ($f'$ décroissante), alors $f$ est concave."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ est positive sur $I$.",
+          "correcte": false,
+          "erreur": "confusion_signe_f",
+          "feedback": "Aucun lien avec le signe de $f$ : la convexité décrit la forme de la courbe."
+        }
+      ],
+      "explication": "Si $f'$ est croissante, alors $f'' \\geq 0$ : la pente des tangentes augmente, et $f$ est convexe.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Lien entre le signe de f'' et la convexité/concavité"
+      ]
+    },
+    {
+      "id": "conv-ch-q3",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 2,
+      "notion": "intervalles de convexité d'un polynôme de degré 4",
+      "enonce": "Quels sont les intervalles de convexité de $f(x) = x^4 - 6x^2 + 1$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est convexe sur $[-1\\ ;\\ 1]$, et concave sur $]-\\infty\\ ;\\ -1]$ et sur $[1\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "inversion_signe_convexite",
+          "feedback": "Étudie le signe de $f''(x) = 12x^2 - 12 = 12(x-1)(x+1)$ : il est négatif entre $-1$ et $1$."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est convexe sur $\\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "extrapolation_terme_dominant",
+          "feedback": "Le terme $x^4$ est convexe, mais le terme $-6x^2$ ne l'est pas : il faut étudier $f''$."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est convexe sur $[-\\sqrt{3}\\ ;\\ 0]$ et sur $[\\sqrt{3}\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "confusion_f_prime_convexite",
+          "feedback": "Ce sont les intervalles où $f'(x) = 4x(x^2 - 3) \\geq 0$ : ils décrivent la croissance de $f$, pas sa convexité."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ est convexe sur $]-\\infty\\ ;\\ -1]$ et sur $[1\\ ;\\ +\\infty[$, et concave sur $[-1\\ ;\\ 1]$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$f'(x) = 4x^3 - 12x$ et $f''(x) = 12x^2 - 12 = 12(x - 1)(x + 1)$. Ce trinôme est positif à l'extérieur des racines $-1$ et $1$ et négatif entre elles.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Calcul de la dérivée seconde",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Étude du signe de la dérivée seconde",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Détermination des intervalles de convexité et de concavité"
+      ]
+    },
+    {
+      "id": "conv-ch-q4",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "position par rapport à une tangente (convexité)",
+      "enonce": "Une fonction $f$ est convexe et dérivable sur $\\mathbb{R}$. Sa tangente au point d'abscisse $1$ a pour équation $y = 3x - 2$. Que peut-on affirmer sur $f(2)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(2) \\leq 4$",
+          "correcte": false,
+          "erreur": "position_tangentes_inversee",
+          "feedback": "Pour une fonction convexe, la courbe est au-dessus de ses tangentes, pas au-dessous."
+        },
+        {
+          "id": "B",
+          "texte": "$f(2) = 4$",
+          "correcte": false,
+          "erreur": "confusion_fonction_affine",
+          "feedback": "Ce serait vrai si $f$ était affine, ce qui n'est pas donné."
+        },
+        {
+          "id": "C",
+          "texte": "$f(2) \\geq 4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. La tangente vaut $3 \\times 2 - 2 = 4$ en $x = 2$."
+        },
+        {
+          "id": "D",
+          "texte": "$f(2) \\geq 6$",
+          "correcte": false,
+          "erreur": "pente_multipliee",
+          "feedback": "Tu as multiplié la pente $3$ par $2$ : la tangente vaut $3x - 2$, soit $4$ en $x = 2$."
+        }
+      ],
+      "explication": "La tangente en $x = 1$ vaut $3 \\times 2 - 2 = 4$ au point d'abscisse $2$. La courbe d'une fonction convexe est au-dessus de ses tangentes : $f(2) \\geq 4$.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Définition"
+      ]
+    },
+    {
+      "id": "conv-ch-q5",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "convexité de f déduite de la courbe de f'",
+      "enonce": "On donne la courbe de la **dérivée première** $f'$ d'une fonction $f$. Sur quel intervalle $f$ est-elle convexe ?",
+      "figure": "convexite_ch_q5.png",
+      "figure_alt": "Parabole tournée vers le bas, de sommet en x = 1, coupant l'axe des abscisses en 1 − √2 et 1 + √2.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$]-\\infty\\ ;\\ 1]$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Sur cet intervalle $f'$ est croissante."
+        },
+        {
+          "id": "B",
+          "texte": "$[1\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "inversion_signe_convexite",
+          "feedback": "Sur $[1\\ ;\\ +\\infty[$, $f'$ est décroissante : $f$ y est concave."
+        },
+        {
+          "id": "C",
+          "texte": "$[1 - \\sqrt{2}\\ ;\\ 1 + \\sqrt{2}]$",
+          "correcte": false,
+          "erreur": "confusion_f_prime_convexite",
+          "feedback": "Sur cet intervalle $f' \\geq 0$ : $f$ est croissante. Cela ne dit rien sur la convexité."
+        },
+        {
+          "id": "D",
+          "texte": "$\\mathbb{R}$",
+          "correcte": false,
+          "erreur": "convexite_partielle",
+          "feedback": "$f'$ n'est pas croissante sur tout $\\mathbb{R}$ : elle redescend après $x = 1$."
+        }
+      ],
+      "explication": "$f$ est convexe là où $f'$ est croissante. La courbe de $f'$ monte jusqu'à son sommet en $x = 1$, puis redescend : $f$ est convexe sur $]-\\infty\\ ;\\ 1]$ et concave sur $[1\\ ;\\ +\\infty[$.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Lien entre le signe de f'' et la convexité/concavité",
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Interprétation graphique"
+      ]
+    },
+    {
+      "id": "conv-ch-q6",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "combiner variations et convexité",
+      "enonce": "Laquelle de ces courbes représente une fonction **croissante et concave** sur $[0\\ ;\\ 3]$ ?",
+      "figure": "convexite_ch_q6.png",
+      "figure_alt": "Quatre courbes A, B, C, D sur [0 ; 3] : croissante convexe, décroissante convexe, décroissante concave, croissante concave.",
+      "melanger_options": false,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La courbe A.",
+          "correcte": false,
+          "erreur": "confusion_croissante_convexe",
+          "feedback": "La courbe A est croissante mais convexe : la pente de ses tangentes augmente."
+        },
+        {
+          "id": "B",
+          "texte": "La courbe B.",
+          "correcte": false,
+          "erreur": "confusion_decroissante_convexe",
+          "feedback": "La courbe B est décroissante (et convexe)."
+        },
+        {
+          "id": "C",
+          "texte": "La courbe C.",
+          "correcte": false,
+          "erreur": "confusion_decroissante_concave",
+          "feedback": "La courbe C est concave, mais décroissante."
+        },
+        {
+          "id": "D",
+          "texte": "La courbe D.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Elle monte (croissante) en se courbant vers le bas (concave)."
+        }
+      ],
+      "explication": "Les deux propriétés sont indépendantes : « croissante ou décroissante » se lit sur le sens de la courbe, « convexe ou concave » sur la forme de sa courbure. La courbe D monte en forme de dôme.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 2. Fonction concave — Interprétation graphique",
+        "Fiche « Convexité et concavité » — À retenir"
+      ]
+    },
+    {
+      "id": "conv-ch-q7",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "vrai_faux_plausible",
+      "niveau": 2,
+      "notion": "distinguer variations et convexité",
+      "enonce": "Laquelle de ces affirmations est vraie ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une fonction peut être décroissante et convexe.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Exemple : $x \\mapsto \\frac{1}{x}$ sur $]0\\ ;\\ +\\infty[$."
+        },
+        {
+          "id": "B",
+          "texte": "Une fonction convexe est forcément croissante.",
+          "correcte": false,
+          "erreur": "confusion_convexe_croissante",
+          "feedback": "Contre-exemple : $x \\mapsto x^2$ est convexe sur $\\mathbb{R}$ mais décroissante sur $]-\\infty\\ ;\\ 0]$."
+        },
+        {
+          "id": "C",
+          "texte": "Une fonction concave est forcément décroissante.",
+          "correcte": false,
+          "erreur": "confusion_concave_decroissante",
+          "feedback": "Contre-exemple : $x \\mapsto \\sqrt{x}$ est concave sur $]0\\ ;\\ +\\infty[$ mais croissante."
+        },
+        {
+          "id": "D",
+          "texte": "Si $f'(a) = 0$, alors $f$ est convexe au voisinage de $a$.",
+          "correcte": false,
+          "erreur": "confusion_derivee_nulle_convexite",
+          "feedback": "Contre-exemple : $x \\mapsto -x^2$ a une dérivée nulle en $0$, mais elle est concave."
+        }
+      ],
+      "explication": "Les variations (signe de $f'$) et la convexité (signe de $f''$) sont deux notions indépendantes. Par exemple, $f(x) = \\frac{1}{x}$ sur $]0\\ ;\\ +\\infty[$ vérifie $f'(x) = -\\frac{1}{x^2} < 0$ et $f''(x) = \\frac{2}{x^3} > 0$ : elle est décroissante et convexe.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Lien entre le signe de f'' et la convexité/concavité",
+        "Fiche « Convexité et concavité » — À retenir"
+      ]
+    },
+    {
+      "id": "conv-ch-q8",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "convexité d'une fonction avec logarithme",
+      "enonce": "Que peut-on dire de la convexité de $f(x) = x - \\ln(x)$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est concave sur $]0\\ ;\\ +\\infty[$, car $\\ln$ est concave.",
+          "correcte": false,
+          "erreur": "oubli_du_signe_moins",
+          "feedback": "Le terme $-\\ln(x)$ a un signe moins : il est convexe. Calcule plutôt $f''$."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est convexe sur $]0\\ ;\\ +\\infty[$, car $f''(x) = \\dfrac{1}{x^2} > 0$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est convexe sur $]0\\ ;\\ 1]$ et concave sur $[1\\ ;\\ +\\infty[$, car $f'$ change de signe en $1$.",
+          "correcte": false,
+          "erreur": "confusion_f_prime_convexite",
+          "feedback": "Le changement de signe de $f'$ en $1$ indique un minimum de $f$ (variations), pas un changement de convexité."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ n'est ni convexe ni concave sur $]0\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "ne_pas_calculer_f_seconde",
+          "feedback": "Calcule $f''$ : elle est strictement positive sur $]0\\ ;\\ +\\infty[$."
+        }
+      ],
+      "explication": "$f'(x) = 1 - \\frac{1}{x}$ et $f''(x) = \\frac{1}{x^2}$, qui est strictement positif pour tout $x > 0$. Donc $f$ est convexe sur $]0\\ ;\\ +\\infty[$. Le changement de signe de $f'$ en $1$ correspond à un minimum, pas à un changement de convexité.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Calcul de la dérivée seconde",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Lien entre le signe de f'' et la convexité/concavité"
+      ]
+    },
+    {
+      "id": "conv-ch-q9",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "application",
+      "niveau": 3,
+      "notion": "intervalle où la courbe est au-dessus de ses tangentes",
+      "enonce": "Soit $f(x) = x^3 - 9x^2$. Sur quel intervalle la courbe de $f$ est-elle située au-dessus de chacune de ses tangentes ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$]-\\infty\\ ;\\ 3]$",
+          "correcte": false,
+          "erreur": "inversion_signe_convexite",
+          "feedback": "Sur cet intervalle $f'' \\leq 0$ : la courbe est au-dessous de ses tangentes."
+        },
+        {
+          "id": "B",
+          "texte": "$]-\\infty\\ ;\\ 0] \\cup [6\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "confusion_f_prime_convexite",
+          "feedback": "Ce sont les intervalles où $f'(x) = 3x(x - 6) \\geq 0$ : ils décrivent la croissance de $f$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\mathbb{R}$",
+          "correcte": false,
+          "erreur": "croire_polynome_convexe",
+          "feedback": "$f''(x) = 6x - 18$ change de signe : $f$ n'est pas convexe sur $\\mathbb{R}$."
+        },
+        {
+          "id": "D",
+          "texte": "$[3\\ ;\\ +\\infty[$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "« Au-dessus de ses tangentes » signifie convexe. On a $f''(x) = 6x - 18 = 6(x - 3)$, positif pour $x \\geq 3$ : la courbe est au-dessus de ses tangentes sur $[3\\ ;\\ +\\infty[$.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Définition",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Étude du signe de la dérivée seconde",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Détermination des intervalles de convexité et de concavité"
+      ]
+    },
+    {
+      "id": "conv-ch-q10",
+      "chapitre": "Convexité",
+      "fiche": "Chapitre",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "inégalité déduite de la tangente",
+      "enonce": "Une fonction $f$ est convexe et dérivable sur $\\mathbb{R}$, avec $f(0) = 0$ et $f'(0) = 1$. Que peut-on affirmer à coup sûr à propos de l'équation $f(x) = -1$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Si elle a une solution $x$, alors $x \\geq -1$.",
+          "correcte": false,
+          "erreur": "inversion_inegalite",
+          "feedback": "Par exemple $f(x) = x + \\frac{x^2}{4}$ est convexe, vérifie $f(0) = 0$, $f'(0) = 1$, et $f(-2) = -1$ avec $-2 < -1$."
+        },
+        {
+          "id": "B",
+          "texte": "Si elle a une solution $x$, alors $x \\leq -1$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Elle a pour unique solution $x = -1$.",
+          "correcte": false,
+          "erreur": "confusion_fonction_affine",
+          "feedback": "Ce serait le cas si $f(x) = x$, mais $f$ n'est pas connue : par exemple $f(x) = x + x^2$ n'a aucune solution à $f(x) = -1$."
+        },
+        {
+          "id": "D",
+          "texte": "Elle n'a aucune solution.",
+          "correcte": false,
+          "erreur": "conclusion_non_justifiee",
+          "feedback": "Pour $f(x) = x$ (fonction convexe), l'équation $f(x) = -1$ a pour solution $x = -1$."
+        }
+      ],
+      "explication": "La tangente en $0$ a pour équation $y = f(0) + f'(0)\\,x = x$. Comme $f$ est convexe, sa courbe est au-dessus de cette tangente : $f(x) \\geq x$ pour tout $x$. Si $f(x) = -1$, alors $-1 \\geq x$, soit $x \\leq -1$.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 1. Fonction convexe — Définition"
+      ]
+    }
+  ]
+}

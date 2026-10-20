@@ -1,0 +1,245 @@
+{
+  "id": "ln-banque",
+  "titre": "Banque — Logarithme",
+  "chapitre": "Logarithme",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "ln-banque-q1",
+      "chapitre": "Logarithme",
+      "fiche": "Propriétés du logarithme népérien",
+      "type": "application",
+      "niveau": 1,
+      "notion": "logarithme d'une racine carrée",
+      "enonce": "Que vaut $\\ln\\left(\\sqrt{e}\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{1}{2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\sqrt{e}$",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "$\\ln$ « défait » l'exponentielle : $\\ln\\left(e^{a}\\right) = a$, et $\\sqrt{e} = e^{1/2}$."
+        },
+        {
+          "id": "C",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "erreur_puissance",
+          "feedback": "$\\sqrt{e} = e^{1/2}$, et non $e^{2}$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{e}{2}$",
+          "correcte": false,
+          "erreur": "erreur_regle_calcul",
+          "feedback": "La racine carrée devient une division **de l'exposant** par $2$ : $\\ln\\left(\\sqrt{e}\\right) = \\dfrac{1}{2}\\ln(e)$."
+        }
+      ],
+      "explication": "$\\sqrt{e} = e^{1/2}$, donc $\\ln\\left(\\sqrt{e}\\right) = \\ln\\left(e^{1/2}\\right) = \\dfrac{1}{2}$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 2. Propriétés de la fonction logarithme"
+      ]
+    },
+    {
+      "id": "ln-banque-q2",
+      "chapitre": "Logarithme",
+      "fiche": "Calcul avec la fonction logarithme",
+      "type": "application",
+      "niveau": 2,
+      "notion": "inéquation avec deux logarithmes et domaine",
+      "enonce": "Quel est l'ensemble des solutions de l'inéquation $\\ln(x) < \\ln(5 - x)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\left]0\\ ;\\ \\dfrac{5}{2}\\right[$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\left]-\\infty\\ ;\\ \\dfrac{5}{2}\\right[$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "$\\ln(x)$ n'existe que pour $x > 0$ : il faut d'abord écrire les conditions d'existence."
+        },
+        {
+          "id": "C",
+          "texte": "$\\left]\\dfrac{5}{2}\\ ;\\ 5\\right[$",
+          "correcte": false,
+          "erreur": "inversion_du_sens",
+          "feedback": "$\\ln$ est croissante : $\\ln(a) < \\ln(b) \\iff a < b$, le sens est conservé."
+        },
+        {
+          "id": "D",
+          "texte": "$]0\\ ;\\ 5[$",
+          "correcte": false,
+          "erreur": "domaine_pris_pour_solution",
+          "feedback": "$]0\\ ;\\ 5[$ est le domaine ; il reste à résoudre $x < 5 - x$."
+        }
+      ],
+      "explication": "Conditions : $x > 0$ et $5 - x > 0$, soit $x \\in ]0\\ ;\\ 5[$. Comme $\\ln$ est strictement croissante, $\\ln(x) < \\ln(5 - x) \\iff x < 5 - x \\iff x < \\dfrac{5}{2}$. Solutions : $\\left]0\\ ;\\ \\dfrac{5}{2}\\right[$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 2. Inéquations",
+        "Fiche « Calcul avec la fonction logarithme » — 3. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "ln-banque-q3",
+      "chapitre": "Logarithme",
+      "fiche": "Calcul avec la fonction logarithme",
+      "type": "application",
+      "niveau": 2,
+      "notion": "résoudre $q^n > a$ avec le logarithme",
+      "enonce": "Quel est le plus petit entier $n$ tel que $2^n > 1\\,000$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$n = 10$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$n = 9$",
+          "correcte": false,
+          "erreur": "arrondi_dans_le_mauvais_sens",
+          "feedback": "$2^9 = 512 < 1\\,000$ : il faut arrondir $\\dfrac{\\ln(1\\,000)}{\\ln(2)} \\approx 9{,}97$ à l'entier **supérieur**."
+        },
+        {
+          "id": "C",
+          "texte": "$n = 500$",
+          "correcte": false,
+          "erreur": "confusion_puissance_produit",
+          "feedback": "$2^n$ n'est pas $2n$ : on ne divise pas $1\\,000$ par $2$."
+        },
+        {
+          "id": "D",
+          "texte": "$n = 3$",
+          "correcte": false,
+          "erreur": "confusion_log_decimal",
+          "feedback": "$10^3 = 1\\,000$, mais ici la base est $2$, pas $10$."
+        }
+      ],
+      "explication": "$2^n > 1\\,000 \\iff n\\ln(2) > \\ln(1\\,000) \\iff n > \\dfrac{\\ln(1\\,000)}{\\ln(2)} \\approx 9{,}97$ (car $\\ln(2) > 0$). Le plus petit entier est $n = 10$ : $2^{10} = 1\\,024$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 2. Inéquations",
+        "Fiche « Propriétés du logarithme népérien » — 2. Propriétés de la fonction logarithme"
+      ]
+    },
+    {
+      "id": "ln-banque-q4",
+      "chapitre": "Logarithme",
+      "fiche": "Étude de fonction logarithme",
+      "type": "application",
+      "niveau": 2,
+      "notion": "limite en $+\\infty$ de $\\ln(x) - x$",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\left(\\ln(x) - x\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "terme_dominant_mal_identifie",
+          "feedback": "$x$ grandit beaucoup plus vite que $\\ln(x)$ : c'est $-x$ qui l'emporte."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "infini_moins_infini_vaut_zero",
+          "feedback": "$\\infty - \\infty$ n'est pas égal à $0$ : c'est une forme indéterminée."
+        },
+        {
+          "id": "D",
+          "texte": "Forme indéterminée : la limite n'existe pas.",
+          "correcte": false,
+          "erreur": "indetermine_signifie_pas_de_limite",
+          "feedback": "On lève l'indétermination en factorisant par $x$."
+        }
+      ],
+      "explication": "$\\ln(x) - x = x\\left(\\dfrac{\\ln(x)}{x} - 1\\right)$. Par croissances comparées, $\\dfrac{\\ln(x)}{x} \\to 0$, donc la parenthèse tend vers $-1$ et le produit tend vers $-\\infty$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 3. Variations et limites",
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé"
+      ]
+    },
+    {
+      "id": "ln-banque-q5",
+      "chapitre": "Logarithme",
+      "fiche": "Étude de fonction logarithme",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "maximum d'une fonction avec logarithme",
+      "enonce": "Soit $f(x) = \\dfrac{\\ln(x)}{x}$ sur $]0\\ ;\\ +\\infty[$. On admet que $f'(x) = \\dfrac{1 - \\ln(x)}{x^2}$. Quel est le maximum de $f$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{1}{e}$, atteint en $x = e$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$0$, atteint en $x = 1$.",
+          "correcte": false,
+          "erreur": "confusion_zero_de_f_et_de_f_prime",
+          "feedback": "$f(1) = 0$, mais le maximum est là où $f'$ s'annule en changeant de signe : en $x = e$."
+        },
+        {
+          "id": "C",
+          "texte": "$e$, atteint en $x = \\dfrac{1}{e}$.",
+          "correcte": false,
+          "erreur": "erreur_resolution_ln",
+          "feedback": "$1 - \\ln(x) = 0 \\iff \\ln(x) = 1 \\iff x = e$."
+        },
+        {
+          "id": "D",
+          "texte": "$1$, atteint en $x = e$.",
+          "correcte": false,
+          "erreur": "oubli_du_denominateur",
+          "feedback": "$f(e) = \\dfrac{\\ln(e)}{e} = \\dfrac{1}{e}$ : n'oublie pas de diviser par $e$."
+        }
+      ],
+      "explication": "$x^2 > 0$, donc $f'(x)$ a le signe de $1 - \\ln(x)$ : positif sur $]0\\ ;\\ e]$, négatif sur $[e\\ ;\\ +\\infty[$. $f$ croît puis décroît : son maximum est $f(e) = \\dfrac{\\ln(e)}{e} = \\dfrac{1}{e}$.",
+      "a_revoir": [
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé",
+        "Fiche « Étude de fonction logarithme » — 2. Erreurs fréquentes"
+      ]
+    }
+  ]
+}

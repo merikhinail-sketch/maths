@@ -1,0 +1,573 @@
+{
+  "id": "ln-chapitre",
+  "titre": "Quiz de chapitre — Logarithme",
+  "chapitre": "Logarithme",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 12,
+  "questions": [
+    {
+      "id": "ln-chapitre-q1",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "$\\ln(e^x)=x$",
+      "enonce": "Que vaut $\\ln\\left(e^{-2}\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$e^{-2}$",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "$\\ln$ « retrouve » l'exposant : le résultat est $-2$."
+        },
+        {
+          "id": "B",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "L'exposant de $e$ est $-2$, pas $2$."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_ln_1",
+          "feedback": "Seul $\\ln(1)$ vaut $0$."
+        },
+        {
+          "id": "D",
+          "texte": "$-2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Pour tout réel $x$, $\\ln\\left(e^{x}\\right) = x$ : donc $\\ln\\left(e^{-2}\\right) = -2$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 1. Définition — Lien avec la fonction exponentielle"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q2",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "reconnaître la courbe de $\\ln$",
+      "enonce": "Parmi les courbes ci-contre, laquelle est la courbe de la fonction logarithme népérien ?",
+      "figure": "ln_ch_q2.png",
+      "figure_alt": "Quatre courbes : A (exponentielle, passe par (0 ; 1)), B (passe par (1 ; 0), croissante, asymptote verticale en 0), C (racine carrée) et D (décroissante, passe par (1 ; 0)).",
+      "melanger_options": false,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La courbe A",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "La courbe A passe par $(0\\ ;\\ 1)$ : c'est celle de l'exponentielle."
+        },
+        {
+          "id": "B",
+          "texte": "La courbe B",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "La courbe C",
+          "correcte": false,
+          "erreur": "confusion_ln_racine",
+          "feedback": "La courbe C est celle de la fonction racine carrée ($\\sqrt{1} = 1$) : elle part du point $(0\\ ;\\ 0)$."
+        },
+        {
+          "id": "D",
+          "texte": "La courbe D",
+          "correcte": false,
+          "erreur": "confusion_ln_oppose",
+          "feedback": "La courbe D est décroissante : c'est celle de $-\\ln(x)$. Le logarithme est strictement croissant."
+        }
+      ],
+      "explication": "La courbe de $\\ln$ passe par $(1\\ ;\\ 0)$ et $(e\\ ;\\ 1)$, est strictement croissante et admet l'axe des ordonnées comme asymptote verticale : c'est la courbe B.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 3. Variations et limites — Interprétation graphique",
+        "Fiche « Propriétés du logarithme népérien » — 3. Variations et limites — Fonction strictement croissante"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q3",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "domaine d'une expression avec ln",
+      "enonce": "Pour quelles valeurs de $x$ l'expression $\\ln(2x - 4)$ est-elle définie ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x > 2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$x \\geq 2$",
+          "correcte": false,
+          "erreur": "inegalite_large",
+          "feedback": "En $x = 2$, on aurait $\\ln(0)$, qui n'existe pas."
+        },
+        {
+          "id": "C",
+          "texte": "$x > 4$",
+          "correcte": false,
+          "erreur": "mauvaise_resolution",
+          "feedback": "$2x - 4 > 0 \\iff 2x > 4 \\iff x > 2$."
+        },
+        {
+          "id": "D",
+          "texte": "$x > 0$",
+          "correcte": false,
+          "erreur": "condition_sur_x_au_lieu_de_l_argument",
+          "feedback": "La condition porte sur l'argument $2x - 4$."
+        }
+      ],
+      "explication": "$2x - 4 > 0 \\iff x > 2$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 4. Erreurs fréquentes — Oublier que $\\ln(x)$ n'est défini que pour $x > 0$",
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Vérifier les conditions d'existence"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q4",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "regrouper des logarithmes",
+      "enonce": "Pour $x > 0$, quelle expression est égale à $2\\ln(x) + \\ln(3x)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\ln\\left(6x^{2}\\right)$",
+          "correcte": false,
+          "erreur": "n_ln_a_mal_transforme",
+          "feedback": "$2\\ln(x) = \\ln\\left(x^2\\right)$, et non $\\ln(2x)$."
+        },
+        {
+          "id": "B",
+          "texte": "$\\ln\\left(x^{2} + 3x\\right)$",
+          "correcte": false,
+          "erreur": "somme_de_ln_en_ln_de_somme",
+          "feedback": "Une somme de logarithmes devient le logarithme d'un **produit**."
+        },
+        {
+          "id": "C",
+          "texte": "$\\ln\\left(3x^{2}\\right)$",
+          "correcte": false,
+          "erreur": "erreur_sur_les_exposants",
+          "feedback": "$x^2 \\times x = x^3$ (et non $x^2$)."
+        },
+        {
+          "id": "D",
+          "texte": "$\\ln\\left(3x^{3}\\right)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$2\\ln(x) + \\ln(3x) = \\ln\\left(x^2\\right) + \\ln(3x) = \\ln\\left(x^2 \\times 3x\\right) = \\ln\\left(3x^3\\right)$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 2. Propriétés de la fonction logarithme — Propriétés de calcul",
+        "Fiche « Propriétés du logarithme népérien » — 4. Erreurs fréquentes — Mal utiliser les propriétés du logarithme, notamment pour les produits, quotients et puissances"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q5",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "équation $\\ln(u) = a$",
+      "enonce": "Quelle est la solution de $\\ln(3x + 1) = 2$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x = e^{2} - 1$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser",
+          "feedback": "De $3x + 1 = e^2$, on obtient $3x = e^2 - 1$ : il reste à diviser par $3$."
+        },
+        {
+          "id": "B",
+          "texte": "$x = \\dfrac{e^{2} - 1}{3}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$x = \\dfrac{e^{2} + 1}{3}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$3x + 1 = e^2 \\iff 3x = e^2 - 1$."
+        },
+        {
+          "id": "D",
+          "texte": "$x = \\dfrac{e^{2}}{3} + 1$",
+          "correcte": false,
+          "erreur": "mauvais_ordre_des_operations",
+          "feedback": "On soustrait $1$ avant de diviser par $3$ : $x = \\frac{e^2 - 1}{3}$."
+        }
+      ],
+      "explication": "$\\ln(3x + 1) = 2 \\iff 3x + 1 = e^2 \\iff x = \\dfrac{e^2 - 1}{3} \\approx 2{,}13$, valeur qui vérifie $3x + 1 > 0$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Utiliser le lien entre le logarithme et l'exponentielle"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q6",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "inéquation $\\ln(x) \\leq a$",
+      "enonce": "Quel est l'ensemble des solutions de $\\ln(x) \\leq -1$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\left]-\\infty\\ ;\\ \\dfrac{1}{e}\\right]$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "$\\ln(x)$ n'est défini que pour $x > 0$ : les valeurs négatives sont exclues."
+        },
+        {
+          "id": "B",
+          "texte": "$\\left]0\\ ;\\ \\dfrac{1}{e}\\right]$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\left[\\dfrac{1}{e}\\ ;\\ +\\infty\\right[$",
+          "correcte": false,
+          "erreur": "sens_inverse",
+          "feedback": "$\\ln$ est croissante : $\\ln(x) \\leq \\ln\\left(e^{-1}\\right) \\iff x \\leq e^{-1}$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\left]0\\ ;\\ \\dfrac{1}{e}\\right[$",
+          "correcte": false,
+          "erreur": "inegalite_stricte",
+          "feedback": "L'inégalité est large : $x = \\frac{1}{e}$ convient, car $\\ln\\left(\\frac{1}{e}\\right) = -1$."
+        }
+      ],
+      "explication": "$\\ln(x) \\leq -1 \\iff \\ln(x) \\leq \\ln\\left(e^{-1}\\right) \\iff x \\leq e^{-1}$, avec la condition $x > 0$ : on obtient $\\left]0\\ ;\\ \\frac{1}{e}\\right]$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 2. Inéquations — Ramener une inéquation à une comparaison des nombres",
+        "Fiche « Calcul avec la fonction logarithme » — 3. Erreurs fréquentes — Mal utiliser la croissance stricte du logarithme dans une inéquation"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q7",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver",
+      "enonce": "Quelle est la dérivée de $f(x) = x\\ln(x) - x$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = \\dfrac{1}{x} - 1$",
+          "correcte": false,
+          "erreur": "oubli_de_la_formule_du_produit",
+          "feedback": "$x\\ln(x)$ est un produit : on ne dérive pas seulement le $\\ln$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = \\ln(x) - 1$",
+          "correcte": false,
+          "erreur": "oubli_d_un_terme",
+          "feedback": "La dérivée de $x\\ln(x)$ est $\\ln(x) + 1$ : le $+1$ compense le $-1$ de la dérivée de $-x$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = 0$",
+          "correcte": false,
+          "erreur": "derivee_du_produit_mal_calculee",
+          "feedback": "On a oublié le terme $\\ln(x) \\times 1$ dans la dérivée du produit."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = \\ln(x)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\left(x\\ln(x)\\right)' = 1 \\times \\ln(x) + x \\times \\dfrac{1}{x} = \\ln(x) + 1$. Donc $f'(x) = \\ln(x) + 1 - 1 = \\ln(x)$.",
+      "a_revoir": [
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé — Étape 2 : calculer la dérivée",
+        "Fiche « Étude de fonction logarithme » — 2. Erreurs fréquentes — Se tromper dans le calcul de la dérivée et donc en déduire de mauvaises variations"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q8",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "limite avec ln",
+      "enonce": "Que vaut $\\lim\\limits_{x \\to 0^+} \\left(\\ln(x)\\right)^2$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "oubli_du_carre",
+          "feedback": "$\\ln(x) \\to -\\infty$, mais son carré est positif : $\\left(\\ln(x)\\right)^2 \\to +\\infty$."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_ln_0",
+          "feedback": "$\\ln(0)$ n'existe pas, et $\\ln(x)$ ne tend pas vers $0$ quand $x \\to 0^+$."
+        },
+        {
+          "id": "D",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "confusion_ln_1",
+          "feedback": "$\\ln(x) \\to -\\infty$ en $0^+$ : le carré ne se stabilise pas."
+        }
+      ],
+      "explication": "En $0^+$, $\\ln(x) \\to -\\infty$, donc $\\left(\\ln(x)\\right)^2 \\to +\\infty$ (le carré d'un nombre très négatif est très grand et positif).",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 3. Variations et limites — Limites",
+        "Fiche « Étude de fonction logarithme » — 2. Erreurs fréquentes — Mal calculer les limites impliquant $\\ln(x)$"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q9",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "vrai_faux_plausible",
+      "niveau": 2,
+      "notion": "propriétés de calcul",
+      "enonce": "Parmi ces égalités, valables pour tous réels $a > 0$ et $b > 0$, laquelle est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\ln(a + b) = \\ln(a) + \\ln(b)$",
+          "correcte": false,
+          "erreur": "ln_de_somme",
+          "feedback": "Le logarithme transforme un **produit** en somme : avec $a = b = 1$, $\\ln(2) \\neq 0$."
+        },
+        {
+          "id": "B",
+          "texte": "$\\ln\\left(a^2\\right) = \\left(\\ln(a)\\right)^2$",
+          "correcte": false,
+          "erreur": "ln_puissance_mal_utilise",
+          "feedback": "$\\ln\\left(a^2\\right) = 2\\ln(a)$ : l'exposant devient un facteur."
+        },
+        {
+          "id": "C",
+          "texte": "$\\ln\\left(\\sqrt{a}\\right) = \\dfrac{1}{2}\\ln(a)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\ln\\left(\\dfrac{a}{b}\\right) = \\dfrac{\\ln(a)}{\\ln(b)}$",
+          "correcte": false,
+          "erreur": "ln_quotient_mal_utilise",
+          "feedback": "Un quotient devient une **différence** : $\\ln(a) - \\ln(b)$."
+        }
+      ],
+      "explication": "$\\sqrt{a} = a^{1/2}$ donc $\\ln\\left(\\sqrt{a}\\right) = \\dfrac{1}{2}\\ln(a)$. Les trois autres égalités sont des erreurs classiques.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 2. Propriétés de la fonction logarithme — Propriétés de calcul",
+        "Fiche « Propriétés du logarithme népérien » — 4. Erreurs fréquentes — Confondre $\\ln(a + b)$ avec $\\ln(a) + \\ln(b)$"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q10",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "lecture_graphique",
+      "niveau": 3,
+      "notion": "nombre de solutions et minimum",
+      "enonce": "Soit $f(x) = x - \\ln(x)$ sur $]0\\ ;\\ +\\infty[$. Son tableau de variations est donné ci-contre. Combien de solutions l'équation $f(x) = 1$ admet-elle ?",
+      "figure": "ln_ch_q8.png",
+      "figure_alt": "Tableau de variations : f' négative sur ]0 ; 1[, nulle en 1, positive sur ]1 ; +∞[ ; f passe de +∞ à 1 en 1 puis remonte vers +∞.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Deux solutions.",
+          "correcte": false,
+          "erreur": "habitude_de_deux_solutions",
+          "feedback": "$1$ est exactement la valeur du minimum : elle n'est atteinte qu'en $x = 1$."
+        },
+        {
+          "id": "B",
+          "texte": "Aucune solution.",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_minimum",
+          "feedback": "$f(1) = 1$ : la valeur $1$ est bien atteinte."
+        },
+        {
+          "id": "C",
+          "texte": "Une infinité de solutions.",
+          "correcte": false,
+          "erreur": "mauvaise_lecture_du_tableau",
+          "feedback": "Sur chaque intervalle de monotonie, une valeur est atteinte au plus une fois."
+        },
+        {
+          "id": "D",
+          "texte": "Une seule solution.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Le minimum de $f$ vaut $f(1) = 1 - \\ln(1) = 1$. Pour $x \\neq 1$, $f(x) > 1$ : la valeur $1$ n'est atteinte qu'en $x = 1$.",
+      "a_revoir": [
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé — Étape 5 : dresser le tableau de variations",
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé — Étape 6 : nombre de solutions de $f(x) = 0$"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q11",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "équation avec rejet",
+      "enonce": "Quelle est la solution de $\\ln(x - 1) + \\ln(x + 1) = \\ln(15)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x = 4$ ou $x = -4$",
+          "correcte": false,
+          "erreur": "oubli_de_verifier_les_conditions",
+          "feedback": "Il faut $x - 1 > 0$ : donc $x > 1$. La valeur $-4$ est rejetée."
+        },
+        {
+          "id": "B",
+          "texte": "$x = 4$ seulement",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$x = -4$ seulement",
+          "correcte": false,
+          "erreur": "erreur_de_choix_de_la_racine",
+          "feedback": "$-4$ ne vérifie pas $x > 1$."
+        },
+        {
+          "id": "D",
+          "texte": "$x = \\sqrt{15}$",
+          "correcte": false,
+          "erreur": "erreur_de_resolution",
+          "feedback": "$\\ln\\left((x-1)(x+1)\\right) = \\ln(15)$ donne $x^2 - 1 = 15$, soit $x^2 = 16$."
+        }
+      ],
+      "explication": "Conditions : $x > 1$. L'équation devient $\\ln\\left((x - 1)(x + 1)\\right) = \\ln(15)$, soit $x^2 - 1 = 15$, donc $x = 4$ ou $x = -4$. Seul $4$ vérifie $x > 1$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Transformer une équation pour faire apparaître un même logarithme",
+        "Fiche « Calcul avec la fonction logarithme » — 3. Erreurs fréquentes — Résoudre puis oublier de vérifier que la solution est positive"
+      ]
+    },
+    {
+      "id": "ln-chapitre-q12",
+      "chapitre": "Logarithme",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "domaine et équation",
+      "enonce": "Combien de solutions l'équation $\\ln\\left(x^2 - 1\\right) = 0$ admet-elle ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une seule solution.",
+          "correcte": false,
+          "erreur": "oubli_de_la_racine_negative",
+          "feedback": "$x^2 = 2$ donne $x = \\sqrt{2}$ **ou** $x = -\\sqrt{2}$, et les deux vérifient $x^2 - 1 > 0$."
+        },
+        {
+          "id": "B",
+          "texte": "Aucune solution.",
+          "correcte": false,
+          "erreur": "rejet_excessif",
+          "feedback": "$\\ln(u) = 0$ a une solution : $u = 1$, ici $x^2 - 1 = 1$."
+        },
+        {
+          "id": "C",
+          "texte": "Deux solutions.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Quatre solutions.",
+          "correcte": false,
+          "erreur": "erreur_de_resolution",
+          "feedback": "L'équation $x^2 = 2$ a deux solutions, pas quatre."
+        }
+      ],
+      "explication": "$\\ln\\left(x^2 - 1\\right) = 0 \\iff x^2 - 1 = 1 \\iff x^2 = 2$, soit $x = \\sqrt{2}$ ou $x = -\\sqrt{2}$. Condition $x^2 - 1 > 0$ : elle est vraie pour $x = \\pm\\sqrt{2}$ ($2 - 1 = 1 > 0$). Il y a donc deux solutions.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Utiliser le lien entre le logarithme et l'exponentielle",
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Vérifier les conditions d'existence"
+      ]
+    }
+  ]
+}

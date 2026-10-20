@@ -1,0 +1,244 @@
+{
+  "id": "cont-f2",
+  "titre": "Quiz — Théorème des valeurs intermédiaires et de la bijection",
+  "chapitre": "Continuité et théorème des valeurs intermédiaires",
+  "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "cont-f2-q1",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "conditions du théorème",
+      "enonce": "Quelles sont les hypothèses du théorème de la bijection sur $[a\\ ;\\ b]$ pour affirmer que $f(x) = k$ a une unique solution ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est strictement monotone sur $[a\\ ;\\ b]$ et $k$ est compris entre $f(a)$ et $f(b)$ (la continuité n'est pas nécessaire).",
+          "correcte": false,
+          "erreur": "oubli_continuite",
+          "feedback": "Sans continuité, la courbe peut « sauter » la valeur $k$ : il n'y a alors aucune solution."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est continue sur $[a\\ ;\\ b]$ et $k$ est compris entre $f(a)$ et $f(b)$ (la monotonie n'est pas nécessaire).",
+          "correcte": false,
+          "erreur": "oubli_monotonie",
+          "feedback": "Sans stricte monotonie, la continuité garantit l'existence, pas l'unicité."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est dérivable et positive sur $[a\\ ;\\ b]$.",
+          "correcte": false,
+          "erreur": "hypotheses_inventees",
+          "feedback": "Ce ne sont pas les hypothèses du théorème."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ est continue et strictement monotone sur $[a\\ ;\\ b]$, et $k$ est compris entre $f(a)$ et $f(b)$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Il faut trois conditions : continuité, stricte monotonie, et $k$ compris entre $f(a)$ et $f(b)$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection — Conditions du théorème"
+      ]
+    },
+    {
+      "id": "cont-f2-q2",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "stricte monotonie et unicité",
+      "enonce": "Une fonction $f$ est strictement monotone sur un intervalle $I$. Combien de solutions l'équation $f(x) = k$ peut-elle avoir dans $I$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Au plus une.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Exactement une.",
+          "correcte": false,
+          "erreur": "confusion_unicite_existence",
+          "feedback": "La stricte monotonie garantit l'unicité, pas l'existence : sans continuité, la valeur $k$ peut être « sautée »."
+        },
+        {
+          "id": "C",
+          "texte": "Au moins une.",
+          "correcte": false,
+          "erreur": "confusion_unicite_existence",
+          "feedback": "L'existence demande la continuité. De plus, la stricte monotonie donne **au plus** une solution."
+        },
+        {
+          "id": "D",
+          "texte": "Éventuellement plusieurs.",
+          "correcte": false,
+          "erreur": "oubli_de_l_unicite",
+          "feedback": "Si $x_1 < x_2$, alors $f(x_1) \\neq f(x_2)$ : une même valeur $k$ ne peut pas être atteinte deux fois."
+        }
+      ],
+      "explication": "Si $f$ est strictement monotone, deux valeurs différentes de $x$ ont des images différentes : $k$ est atteinte au plus une fois. Pour l'existence, il faut aussi la continuité.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 1. Monotonie et bijection — Lien entre stricte monotonie et unicité",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 1. Monotonie et bijection — Lien avec l'existence et l'unicité d'une solution"
+      ]
+    },
+    {
+      "id": "cont-f2-q3",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "choisir un intervalle pour appliquer le théorème",
+      "enonce": "On donne la courbe de la fonction $f(x) = x^3 - 3x$, qui est strictement croissante sur $]-\\infty\\ ;\\ -1]$, strictement décroissante sur $[-1\\ ;\\ 1]$ et strictement croissante sur $[1\\ ;\\ +\\infty[$. Sur lequel de ces intervalles le théorème de la bijection permet-il d'affirmer que l'équation $f(x) = 1$ a une **unique** solution ?",
+      "figure": "tvi_f1_q3.png",
+      "figure_alt": "Courbe de x³ − 3x : croissante jusqu'au maximum (−1 ; 2), décroissante jusqu'au minimum (1 ; −2), puis croissante ; la droite horizontale y = 1 la coupe en trois points.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$[-2\\ ;\\ 2]$",
+          "correcte": false,
+          "erreur": "monotonie_non_verifiee",
+          "feedback": "$f$ n'est pas monotone sur $[-2\\ ;\\ 2]$ : la droite $y = 1$ coupe la courbe trois fois."
+        },
+        {
+          "id": "B",
+          "texte": "$[0\\ ;\\ 2]$",
+          "correcte": false,
+          "erreur": "monotonie_non_verifiee",
+          "feedback": "$1$ est compris entre $f(0) = 0$ et $f(2) = 2$, mais $f$ décroît sur $[0\\ ;\\ 1]$ puis croît : elle n'est pas monotone sur $[0\\ ;\\ 2]$."
+        },
+        {
+          "id": "C",
+          "texte": "$[1\\ ;\\ 2]$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$[-1{,}5\\ ;\\ 0]$",
+          "correcte": false,
+          "erreur": "monotonie_non_verifiee",
+          "feedback": "$f$ croît sur $[-1{,}5\\ ;\\ -1]$ puis décroît sur $[-1\\ ;\\ 0]$ : elle n'est pas monotone sur cet intervalle."
+        }
+      ],
+      "explication": "Sur $[1\\ ;\\ 2]$, $f$ est continue et strictement croissante, avec $f(1) = -2$ et $f(2) = 2$. Comme $1 \\in [-2\\ ;\\ 2]$, l'équation $f(x) = 1$ a une unique solution dans $[1\\ ;\\ 2]$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection — Continuité et stricte monotonie sur un intervalle",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection — Conclusion sur l'existence et l'unicité d'une solution"
+      ]
+    },
+    {
+      "id": "cont-f2-q4",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "application",
+      "niveau": 2,
+      "notion": "encadrer une solution",
+      "enonce": "Soit $f(x) = x^3 + 2x$, strictement croissante sur $[0\\ ;\\ 1]$. On sait que $f(0{,}7) = 1{,}743$ et $f(0{,}8) = 2{,}112$. Soit $\\alpha$ la solution de $f(x) = 2$. Quel encadrement peut-on affirmer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$1{,}743 < \\alpha < 2{,}112$",
+          "correcte": false,
+          "erreur": "confusion_image_antecedent",
+          "feedback": "$1{,}743$ et $2{,}112$ sont des valeurs de $f$ (des ordonnées), pas des valeurs de $x$."
+        },
+        {
+          "id": "B",
+          "texte": "$\\alpha = 0{,}75$",
+          "correcte": false,
+          "erreur": "encadrement_pris_pour_valeur",
+          "feedback": "On sait seulement que $\\alpha$ est entre $0{,}7$ et $0{,}8$ : on ne peut pas donner sa valeur exacte."
+        },
+        {
+          "id": "C",
+          "texte": "$\\alpha < 0{,}7$",
+          "correcte": false,
+          "erreur": "inversion_de_l_ordre",
+          "feedback": "$f(0{,}7) < 2 = f(\\alpha)$ et $f$ est croissante : donc $\\alpha > 0{,}7$."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}7 < \\alpha < 0{,}8$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$f(0{,}7) = 1{,}743 < 2 < 2{,}112 = f(0{,}8)$, donc $f(0{,}7) < f(\\alpha) < f(0{,}8)$. Comme $f$ est strictement croissante, l'ordre est conservé : $0{,}7 < \\alpha < 0{,}8$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 3. Déterminer et encadrer une solution — Encadrer la solution"
+      ]
+    },
+    {
+      "id": "cont-f2-q5",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "lecture_graphique",
+      "niveau": 3,
+      "notion": "l'importance de la continuité",
+      "enonce": "La fonction $h$ ci-contre est strictement croissante sur $[0\\ ;\\ 3]$, avec $h(0) = 1$ et $h(3) = 9$. Elle vaut $h(x) = 2x + 1$ sur $[0\\ ;\\ 1[$ et $h(x) = 2x + 3$ sur $[1\\ ;\\ 3]$. Que peut-on dire de l'équation $h(x) = 3$ ?",
+      "figure": "tvi_f1_q5.png",
+      "figure_alt": "Courbe croissante formée de deux segments : de (0 ; 1) au point creux (1 ; 3), puis du point plein (1 ; 5) à (3 ; 9) ; la droite y = 3 ne rencontre pas la courbe.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle a une unique solution, d'après le théorème de la bijection, car $3 \\in [1\\ ;\\ 9]$.",
+          "correcte": false,
+          "erreur": "oubli_continuite",
+          "feedback": "Le théorème exige la continuité : ici la courbe saute de l'ordonnée $3$ (exclue) à l'ordonnée $5$."
+        },
+        {
+          "id": "B",
+          "texte": "Elle n'a aucune solution : $h$ n'est pas continue en $1$, donc le théorème ne s'applique pas.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Elle a pour solution $x = 1$, car $2 \\times 1 + 1 = 3$.",
+          "correcte": false,
+          "erreur": "mauvaise_lecture_du_point",
+          "feedback": "En $x = 1$, la fonction vaut $h(1) = 2 \\times 1 + 3 = 5$ : le point d'ordonnée $3$ est creux, il n'appartient pas à la courbe."
+        },
+        {
+          "id": "D",
+          "texte": "Elle n'a aucune solution, car $h$ n'est pas dérivable en $1$.",
+          "correcte": false,
+          "erreur": "confusion_continuite_derivabilite",
+          "feedback": "Ce n'est pas la dérivabilité qui manque, mais la continuité : un saut empêche d'atteindre toutes les valeurs."
+        }
+      ],
+      "explication": "$h(x) < 3$ pour $x < 1$ et $h(x) \\geq 5$ pour $x \\geq 1$ : la valeur $3$ n'est jamais atteinte. Malgré la stricte monotonie et $3 \\in [h(0)\\ ;\\ h(3)]$, il n'y a pas de solution, faute de continuité.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 1. Monotonie et bijection — Lien avec l'existence et l'unicité d'une solution",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection — Continuité et stricte monotonie sur un intervalle"
+      ]
+    }
+  ]
+}

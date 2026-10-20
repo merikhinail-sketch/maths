@@ -1,0 +1,244 @@
+{
+  "id": "eqd-banque",
+  "titre": "Banque — Équations différentielles",
+  "chapitre": "Équations différentielles",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "eqd-banque-q1",
+      "chapitre": "Équations différentielles",
+      "fiche": "Comprendre ce qu'est une équation différentielle",
+      "type": "application",
+      "niveau": 1,
+      "notion": "vérifier une solution affine",
+      "enonce": "Laquelle de ces fonctions est solution sur $\\mathbb{R}$ de l'équation différentielle $y' = y + x$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y(x) = -x - 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$y(x) = e^{x}$",
+          "correcte": false,
+          "erreur": "solution_d_une_autre_equation",
+          "feedback": "$e^{x}$ est solution de $y' = y$ ; ici $y + x = e^{x} + x \\neq e^{x} = y'$."
+        },
+        {
+          "id": "C",
+          "texte": "$y(x) = x + 1$",
+          "correcte": false,
+          "erreur": "verification_incomplete",
+          "feedback": "$y' = 1$ mais $y + x = 2x + 1$ : les deux membres ne sont pas égaux pour tout $x$."
+        },
+        {
+          "id": "D",
+          "texte": "$y(x) = -x$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "$y' = -1$ mais $y + x = 0$ : l'égalité est fausse."
+        }
+      ],
+      "explication": "Pour $y(x) = -x - 1$ : $y'(x) = -1$ et $y(x) + x = -x - 1 + x = -1$. Les deux membres sont égaux pour tout réel $x$.",
+      "a_revoir": [
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 2. Notion de solution et vérification"
+      ]
+    },
+    {
+      "id": "eqd-banque-q2",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle",
+      "type": "application",
+      "niveau": 1,
+      "notion": "solutions de $y' + ay = 0$",
+      "enonce": "Quelles sont les solutions sur $\\mathbb{R}$ de l'équation $y' + 5y = 0$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Les fonctions $x \\mapsto Ce^{-5x}$, avec $C \\in \\mathbb{R}$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Les fonctions $x \\mapsto Ce^{5x}$, avec $C \\in \\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$y' + 5y = 0$ s'écrit $y' = -5y$ : le coefficient est $-5$."
+        },
+        {
+          "id": "C",
+          "texte": "La seule fonction $x \\mapsto e^{-5x}$.",
+          "correcte": false,
+          "erreur": "oubli_de_la_constante",
+          "feedback": "Il y a une infinité de solutions : toute fonction $Ce^{-5x}$ convient."
+        },
+        {
+          "id": "D",
+          "texte": "Les fonctions $x \\mapsto Ce^{-5x} + 5$, avec $C \\in \\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "constante_ajoutee_a_tort",
+          "feedback": "Il n'y a pas de second membre : aucune constante particulière à ajouter."
+        }
+      ],
+      "explication": "$y' + 5y = 0 \\iff y' = -5y$. C'est la forme $y' = ay$ avec $a = -5$ : les solutions sont $x \\mapsto Ce^{-5x}$, $C \\in \\mathbb{R}$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 1. Équations différentielles de la forme $y' = ay$",
+        "Fiche « Résoudre une équation différentielle » — 4. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "eqd-banque-q3",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle",
+      "type": "application",
+      "niveau": 2,
+      "notion": "solutions de $y' = ay + b$",
+      "enonce": "Quelles sont les solutions sur $\\mathbb{R}$ de l'équation $y' = 4y - 8$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Les fonctions $x \\mapsto Ce^{4x} + 2$, avec $C \\in \\mathbb{R}$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Les fonctions $x \\mapsto Ce^{4x} - 2$, avec $C \\in \\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "erreur_de_signe_constante",
+          "feedback": "La solution constante vérifie $0 = 4k - 8$, donc $k = 2$ : $-\\dfrac{b}{a} = -\\dfrac{-8}{4} = 2$."
+        },
+        {
+          "id": "C",
+          "texte": "Les fonctions $x \\mapsto Ce^{4x} - 8$, avec $C \\in \\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "second_membre_recopie",
+          "feedback": "On n'ajoute pas $b$ : on ajoute la solution constante $-\\dfrac{b}{a}$."
+        },
+        {
+          "id": "D",
+          "texte": "Les fonctions $x \\mapsto Ce^{-4x} + 2$, avec $C \\in \\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "L'exposant est $ax$ avec $a = 4$ : $e^{4x}$, pas $e^{-4x}$."
+        }
+      ],
+      "explication": "Solution constante : $0 = 4k - 8$, donc $k = 2$. Les solutions sont $x \\mapsto Ce^{4x} + 2$, $C \\in \\mathbb{R}$ (car $-\\dfrac{b}{a} = -\\dfrac{-8}{4} = 2$).",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 2. Équations différentielles de la forme $y' = ay + b$"
+      ]
+    },
+    {
+      "id": "eqd-banque-q4",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle avec une condition initiale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "condition initiale pour $y' = ay + b$",
+      "enonce": "Les solutions de $y' = -y + 4$ sont les fonctions $y(x) = Ce^{-x} + 4$. Quelle est la solution qui vérifie $y(0) = 1$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y(x) = -3e^{-x} + 4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$y(x) = e^{-x} + 4$",
+          "correcte": false,
+          "erreur": "C_egal_condition_initiale",
+          "feedback": "$C$ n'est pas égal à $y(0)$ : ici $y(0) = C + 4$."
+        },
+        {
+          "id": "C",
+          "texte": "$y(x) = 5e^{-x} + 4$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$C + 4 = 1$ donne $C = 1 - 4 = -3$, pas $5$."
+        },
+        {
+          "id": "D",
+          "texte": "$y(x) = -3e^{x} + 4$",
+          "correcte": false,
+          "erreur": "erreur_exposant",
+          "feedback": "La forme générale contient $e^{-x}$ : on ne change pas l'exposant en déterminant $C$."
+        }
+      ],
+      "explication": "$y(0) = Ce^{0} + 4 = C + 4$. La condition $y(0) = 1$ donne $C = -3$, donc $y(x) = -3e^{-x} + 4$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle avec une condition initiale » — 1. Utiliser une condition initiale",
+        "Fiche « Résoudre une équation différentielle avec une condition initiale » — 3. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "eqd-banque-q5",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle avec une condition initiale",
+      "type": "interprétation",
+      "niveau": 3,
+      "notion": "temps de demi-vie",
+      "enonce": "La quantité $Q(t)$ d'un médicament dans le sang (en mg, $t$ en heures) vérifie $Q' = -0{,}1\\,Q$ et $Q(0) = 50$. Au bout de combien de temps la quantité aura-t-elle diminué de moitié ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$10\\ln(2) \\approx 6{,}9$ heures",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$5$ heures",
+          "correcte": false,
+          "erreur": "proportionnalite_abusive",
+          "feedback": "La décroissance est exponentielle, pas linéaire : on résout $50e^{-0{,}1t} = 25$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{\\ln(2)}{10} \\approx 0{,}07$ heure",
+          "correcte": false,
+          "erreur": "erreur_resolution",
+          "feedback": "$e^{-0{,}1t} = \\dfrac{1}{2} \\iff -0{,}1t = -\\ln(2) \\iff t = \\dfrac{\\ln(2)}{0{,}1} = 10\\ln(2)$."
+        },
+        {
+          "id": "D",
+          "texte": "$-10\\ln(2)$ heures",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Une durée est positive : $-0{,}1t = -\\ln(2)$ donne $t = 10\\ln(2) > 0$."
+        }
+      ],
+      "explication": "$Q(t) = 50e^{-0{,}1t}$. $Q(t) = 25 \\iff e^{-0{,}1t} = \\dfrac{1}{2} \\iff -0{,}1t = \\ln\\left(\\dfrac{1}{2}\\right) = -\\ln(2) \\iff t = 10\\ln(2) \\approx 6{,}93$ h.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle avec une condition initiale » — 2. Exploiter la solution",
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 3. Interprétation dans un problème"
+      ]
+    }
+  ]
+}

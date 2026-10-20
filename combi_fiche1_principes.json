@@ -1,0 +1,245 @@
+{
+  "id": "combi-f1",
+  "titre": "Quiz — Principes additif et multiplicatif",
+  "chapitre": "Combinatoire",
+  "fiche": "Principes additif et multiplicatif",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "combi-f1-q1",
+      "chapitre": "Combinatoire",
+      "fiche": "Principes additif et multiplicatif",
+      "type": "choix_méthode",
+      "niveau": 1,
+      "notion": "principe additif",
+      "enonce": "Un élève doit choisir **un seul** club : soit parmi $6$ clubs sportifs, soit parmi $4$ clubs artistiques. Combien de choix a-t-il ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$24$",
+          "correcte": false,
+          "erreur": "multiplier_au_lieu_d_additionner",
+          "feedback": "Il ne fait qu'**un** choix : soit un club sportif, soit un club artistique. Les cas sont séparés, on additionne."
+        },
+        {
+          "id": "B",
+          "texte": "$6$",
+          "correcte": false,
+          "erreur": "oubli_d_un_cas",
+          "feedback": "On n'a compté que les clubs sportifs : il faut aussi ajouter les clubs artistiques."
+        },
+        {
+          "id": "C",
+          "texte": "$10$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "compter_les_categories",
+          "feedback": "On a compté les catégories (sport, art) et non les clubs eux-mêmes."
+        }
+      ],
+      "explication": "Les deux cas sont distincts et exclusifs : $6 + 4 = 10$.",
+      "a_revoir": [
+        "Fiche « Principes additif et multiplicatif » — 1. Principe additif — La règle",
+        "Fiche « Principes additif et multiplicatif » — 1. Principe additif — Identifier les différentes situations possibles dans un énoncé"
+      ]
+    },
+    {
+      "id": "combi-f1-q2",
+      "chapitre": "Combinatoire",
+      "fiche": "Principes additif et multiplicatif",
+      "type": "lecture_graphique",
+      "niveau": 1,
+      "notion": "principe multiplicatif",
+      "enonce": "Un menu se compose d'une entrée (salade ou soupe) puis d'un plat (pâtes, poisson ou riz). L'arbre ci-contre représente les choix. Combien de menus différents peut-on composer ?",
+      "figure": "combi_f1_q2.png",
+      "figure_alt": "Arbre à deux niveaux : 2 entrées (salade, soupe), chacune suivie de 3 plats (pâtes, poisson, riz), soit 6 branches.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$6$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$5$",
+          "correcte": false,
+          "erreur": "additionner_au_lieu_de_multiplier",
+          "feedback": "On fait **les deux** choix l'un après l'autre : on multiplie, on n'additionne pas."
+        },
+        {
+          "id": "C",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "oubli_d_une_etape",
+          "feedback": "On n'a compté que les plats : chaque plat peut suivre deux entrées différentes."
+        },
+        {
+          "id": "D",
+          "texte": "$8$",
+          "correcte": false,
+          "erreur": "mauvaise_operation",
+          "feedback": "$8 = 2^3$ : on n'élève pas à une puissance, on multiplie $2$ par $3$."
+        }
+      ],
+      "explication": "Il y a $2$ choix pour l'entrée, puis $3$ choix pour le plat, soit $2 \\times 3 = 6$ branches dans l'arbre, donc $6$ menus.",
+      "a_revoir": [
+        "Fiche « Principes additif et multiplicatif » — 2. Principe multiplicatif — Multiplier les possibilités des différentes étapes"
+      ]
+    },
+    {
+      "id": "combi-f1-q3",
+      "chapitre": "Combinatoire",
+      "fiche": "Principes additif et multiplicatif",
+      "type": "application",
+      "niveau": 2,
+      "notion": "combiner les deux principes",
+      "enonce": "Un restaurant propose $5$ plats. Le dessert est **soit** un gâteau (parmi $4$), **soit** une glace (parmi $3$). Combien de menus « plat + un dessert » peut-on composer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$60$",
+          "correcte": false,
+          "erreur": "tout_multiplier",
+          "feedback": "Le dessert est un gâteau **ou** une glace : on additionne ces deux cas ($4 + 3$) avant de multiplier par les plats."
+        },
+        {
+          "id": "B",
+          "texte": "$12$",
+          "correcte": false,
+          "erreur": "tout_additionner",
+          "feedback": "Choisir un plat **puis** un dessert est une suite d'étapes : on multiplie."
+        },
+        {
+          "id": "C",
+          "texte": "$23$",
+          "correcte": false,
+          "erreur": "oubli_de_distribuer",
+          "feedback": "$5 \\times 4 + 3$ oublie que chaque plat peut aussi être suivi d'une glace."
+        },
+        {
+          "id": "D",
+          "texte": "$35$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Nombre de desserts : $4 + 3 = 7$ (principe additif). Puis, pour le menu complet : $5 \\times 7 = 35$ (principe multiplicatif).",
+      "a_revoir": [
+        "Fiche « Principes additif et multiplicatif » — 1. Principe additif — La règle",
+        "Fiche « Principes additif et multiplicatif » — 2. Principe multiplicatif — Multiplier les possibilités des différentes étapes"
+      ]
+    },
+    {
+      "id": "combi-f1-q4",
+      "chapitre": "Combinatoire",
+      "fiche": "Principes additif et multiplicatif",
+      "type": "choix_méthode",
+      "niveau": 2,
+      "notion": "reconnaître quand additionner",
+      "enonce": "Dans laquelle de ces situations additionne-t-on les nombres de possibilités ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Choisir un haut puis un pantalon pour une tenue.",
+          "correcte": false,
+          "erreur": "etapes_successives_confondues",
+          "feedback": "Deux choix successifs : on multiplie."
+        },
+        {
+          "id": "B",
+          "texte": "Choisir un seul dessert parmi $4$ gâteaux ou $3$ glaces.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Former un code composé d'une lettre puis d'un chiffre.",
+          "correcte": false,
+          "erreur": "etapes_successives_confondues",
+          "feedback": "Deux places à remplir l'une après l'autre : on multiplie."
+        },
+        {
+          "id": "D",
+          "texte": "Choisir une entrée, un plat et un dessert.",
+          "correcte": false,
+          "erreur": "etapes_successives_confondues",
+          "feedback": "Trois choix successifs : on multiplie."
+        }
+      ],
+      "explication": "On additionne quand on se trouve dans **un seul** cas à la fois (« soit... soit... »). Dans les autres situations, on fait plusieurs choix l'un après l'autre.",
+      "a_revoir": [
+        "Fiche « Principes additif et multiplicatif » — 1. Principe additif — Quand l'utiliser",
+        "Fiche « Principes additif et multiplicatif » — 2. Principe multiplicatif — Quand l'utiliser"
+      ]
+    },
+    {
+      "id": "combi-f1-q5",
+      "chapitre": "Combinatoire",
+      "fiche": "Principes additif et multiplicatif",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "additif et multiplicatif ensemble",
+      "enonce": "Un mot de passe est formé de $3$ caractères : **soit** trois chiffres (parmi $0$ à $9$), **soit** trois lettres minuscules (parmi $26$). Les répétitions sont autorisées. Combien de mots de passe sont possibles ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$36^3 = 46\\,656$",
+          "correcte": false,
+          "erreur": "melanger_les_cas",
+          "feedback": "Le mot de passe contient soit que des chiffres, soit que des lettres : on ne mélange pas les deux types dans un même mot."
+        },
+        {
+          "id": "B",
+          "texte": "$10^3 + 26^3 = 18\\,576$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$10^3 \\times 26^3$",
+          "correcte": false,
+          "erreur": "multiplier_au_lieu_d_additionner",
+          "feedback": "Les deux types de mots de passe sont des **cas distincts** : on additionne."
+        },
+        {
+          "id": "D",
+          "texte": "$3 \\times 10 + 3 \\times 26 = 108$",
+          "correcte": false,
+          "erreur": "confusion_places_et_choix",
+          "feedback": "Chaque place offre $10$ (ou $26$) choix et les places se remplissent l'une après l'autre : on multiplie pour chaque cas."
+        }
+      ],
+      "explication": "Cas 1 (trois chiffres) : $10 \\times 10 \\times 10 = 10^3 = 1\\,000$. Cas 2 (trois lettres) : $26^3 = 17\\,576$. Les deux cas sont distincts : $1\\,000 + 17\\,576 = 18\\,576$.",
+      "a_revoir": [
+        "Fiche « Principes additif et multiplicatif » — 1. Principe additif — La règle",
+        "Fiche « Principes additif et multiplicatif » — 2. Principe multiplicatif — Pour chaque étape, déterminer le nombre de choix possibles"
+      ]
+    }
+  ]
+}

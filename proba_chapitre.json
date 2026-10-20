@@ -1,0 +1,568 @@
+{
+  "id": "proba-chapitre",
+  "titre": "Quiz de chapitre — Probabilités",
+  "chapitre": "Probabilités",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 12,
+  "questions": [
+    {
+      "id": "proba-chapitre-q1",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "valeurs d'une variable aléatoire",
+      "enonce": "On lance deux dés équilibrés à $6$ faces et on note $X$ la somme des deux résultats. Quelles valeurs $X$ peut-elle prendre ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Tous les entiers de $1$ à $12$.",
+          "correcte": false,
+          "erreur": "valeur_impossible",
+          "feedback": "La somme minimale est $1 + 1 = 2$ : $X = 1$ est impossible."
+        },
+        {
+          "id": "B",
+          "texte": "Tous les entiers de $2$ à $6$.",
+          "correcte": false,
+          "erreur": "confusion_valeurs_d_un_de",
+          "feedback": "On additionne deux dés : la somme peut dépasser 6."
+        },
+        {
+          "id": "C",
+          "texte": "Tous les entiers de $1$ à $6$.",
+          "correcte": false,
+          "erreur": "confusion_valeurs_d_un_de",
+          "feedback": "Ce sont les valeurs d'un seul dé."
+        },
+        {
+          "id": "D",
+          "texte": "Tous les entiers de $2$ à $12$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "La plus petite somme est $1 + 1 = 2$ et la plus grande $6 + 6 = 12$ ; toutes les valeurs entières intermédiaires sont possibles.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 1. Variable aléatoire — Associer à chaque issue une valeur"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q2",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "calcul d'une probabilité conditionnelle",
+      "enonce": "Pour deux événements $A$ et $B$, on sait que $P(A) = 0{,}3$ et $P(A \\cap B) = 0{,}12$. Que vaut $P_A(B)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}036$",
+          "correcte": false,
+          "erreur": "produit_au_lieu_du_quotient",
+          "feedback": "On divise $P(A \\cap B)$ par $P(A)$ : on ne les multiplie pas."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}18$",
+          "correcte": false,
+          "erreur": "difference_au_lieu_du_quotient",
+          "feedback": "Une probabilité conditionnelle est un quotient, pas une différence."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$2{,}5$",
+          "correcte": false,
+          "erreur": "quotient_inverse",
+          "feedback": "$2{,}5 > 1$ : le quotient est à l'envers, il faut diviser par $P(A)$, pas par $P(A \\cap B)$."
+        }
+      ],
+      "explication": "$P_A(B) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0{,}12}{0{,}3} = 0{,}4$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 1. Probabilité conditionnelle — Calculer une probabilité conditionnelle"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q3",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "espérance d'une loi binomiale",
+      "enonce": "Si $X$ suit la loi binomiale $\\mathcal{B}(5\\,;\\,0{,}3)$, que vaut $E(X)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$1{,}5$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}3$",
+          "correcte": false,
+          "erreur": "confusion_n_p",
+          "feedback": "$0{,}3$ est la probabilité de succès $p$, pas l'espérance."
+        },
+        {
+          "id": "C",
+          "texte": "$5$",
+          "correcte": false,
+          "erreur": "confusion_n_p",
+          "feedback": "$5$ est le nombre d'épreuves $n$."
+        },
+        {
+          "id": "D",
+          "texte": "$3{,}5$",
+          "correcte": false,
+          "erreur": "esperance_des_echecs",
+          "feedback": "$3{,}5 = n(1-p)$ est le nombre moyen d'échecs."
+        }
+      ],
+      "explication": "$E(X) = n \\times p = 5 \\times 0{,}3 = 1{,}5$.",
+      "a_revoir": [
+        "Fiche « La loi binomiale » — Grand exemple guidé — Calculer et interpréter l'espérance"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q4",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "lire une loi sur un diagramme",
+      "enonce": "La loi de probabilité d'une variable $X$ est représentée ci-contre. Quelle est la valeur de $P(X \\geq 3)$ ?",
+      "figure": "proba_ch_q2.png",
+      "figure_alt": "Diagramme en bâtons : P(X=1)=0,1 ; P(X=2)=0,3 ; P(X=3)=0,4 ; P(X=4)=0,2.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}4$",
+          "correcte": false,
+          "erreur": "oubli_une_valeur",
+          "feedback": "C'est $P(X = 3)$ seulement : il faut aussi ajouter $P(X = 4)$."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}2$",
+          "correcte": false,
+          "erreur": "oubli_une_valeur",
+          "feedback": "C'est $P(X = 4)$ seulement : il faut aussi ajouter $P(X = 3)$."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}9$",
+          "correcte": false,
+          "erreur": "mauvaise_borne",
+          "feedback": "C'est $P(X \\geq 2)$ : on a inclus la valeur $2$."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}6$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$P(X \\geq 3) = P(X = 3) + P(X = 4) = 0{,}4 + 0{,}2 = 0{,}6$.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 2. Loi de probabilité — Représenter les probabilités",
+        "Fiche « Variables aléatoires » — 2. Loi de probabilité — Déterminer la loi d'une variable aléatoire"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q5",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "caractériser l'indépendance",
+      "enonce": "Pour deux événements $A$ et $B$, on sait que $P(A) = 0{,}5$, $P(B) = 0{,}4$ et $P(A \\cap B) = 0{,}2$. Que peut-on dire ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$A$ et $B$ ne sont pas indépendants, car $P(A \\cap B) \\neq P(A) + P(B)$.",
+          "correcte": false,
+          "erreur": "critere_inventé",
+          "feedback": "Le critère d'indépendance compare $P(A \\cap B)$ au **produit** $P(A) \\times P(B)$, pas à la somme."
+        },
+        {
+          "id": "B",
+          "texte": "$A$ et $B$ sont indépendants, car $P(A \\cap B) = P(A) \\times P(B)$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$A$ et $B$ ne sont pas indépendants, car ils peuvent se réaliser en même temps.",
+          "correcte": false,
+          "erreur": "confusion_independance_incompatibilite",
+          "feedback": "Pouvoir se réaliser ensemble n'empêche pas l'indépendance."
+        },
+        {
+          "id": "D",
+          "texte": "On ne peut pas conclure sans arbre de probabilités.",
+          "correcte": false,
+          "erreur": "methode_non_necessaire",
+          "feedback": "Le critère numérique suffit : $0{,}5 \\times 0{,}4 = 0{,}2$."
+        }
+      ],
+      "explication": "$P(A) \\times P(B) = 0{,}5 \\times 0{,}4 = 0{,}2 = P(A \\cap B)$ : les deux événements sont indépendants.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 3. Indépendance — Reconnaître deux événements indépendants"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q6",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "probabilités totales",
+      "enonce": "Une machine produit $60\\,\\%$ de pièces de type $A$, dont $2\\,\\%$ sont défectueuses, et $40\\,\\%$ de pièces de type $B$, dont $5\\,\\%$ sont défectueuses. Quelle est la probabilité qu'une pièce prise au hasard soit défectueuse ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}07$",
+          "correcte": false,
+          "erreur": "addition_des_pourcentages",
+          "feedback": "On ne peut pas additionner $2\\,\\%$ et $5\\,\\%$ : il faut pondérer par les proportions de pièces $A$ et $B$."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}032$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}035$",
+          "correcte": false,
+          "erreur": "moyenne_des_probabilites",
+          "feedback": "On a fait la moyenne simple de $2\\,\\%$ et $5\\,\\%$, sans tenir compte des proportions."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}012$",
+          "correcte": false,
+          "erreur": "oubli_un_chemin",
+          "feedback": "C'est seulement le chemin passant par les pièces de type $A$."
+        }
+      ],
+      "explication": "$P(D) = 0{,}6 \\times 0{,}02 + 0{,}4 \\times 0{,}05 = 0{,}012 + 0{,}02 = 0{,}032$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 4. Probabilités totales — Utiliser un arbre pour calculer une probabilité globale"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q7",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "écart-type",
+      "enonce": "Une variable aléatoire $X$ a pour espérance $0{,}6$ et pour variance $3{,}44$. Quel est son écart-type ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$3{,}44$",
+          "correcte": false,
+          "erreur": "confusion_variance_ecart_type",
+          "feedback": "C'est la variance : l'écart-type en est la racine carrée."
+        },
+        {
+          "id": "B",
+          "texte": "$1{,}72$",
+          "correcte": false,
+          "erreur": "variance_divisee_par_2",
+          "feedback": "On ne divise pas par 2 : on prend la racine carrée."
+        },
+        {
+          "id": "C",
+          "texte": "$3{,}44^2 \\approx 11{,}83$",
+          "correcte": false,
+          "erreur": "carre_au_lieu_de_racine",
+          "feedback": "On a élevé au carré : c'est l'opération inverse de celle qu'il faut."
+        },
+        {
+          "id": "D",
+          "texte": "$\\sqrt{3{,}44} \\approx 1{,}85$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\sigma(X) = \\sqrt{V(X)} = \\sqrt{3{,}44} \\approx 1{,}85$.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 3. Espérance, variance et écart-type — Calculer ces indicateurs",
+        "Fiche « Variables aléatoires » — 4. Erreurs fréquentes — Oublier de prendre la racine carrée pour passer de la variance à l'écart-type"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q8",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "loi binomiale : $P(X=1)$",
+      "enonce": "Soit $X \\sim \\mathcal{B}(3\\,;\\,0{,}5)$. Quelle est la valeur de $P(X = 1)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}375$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}125$",
+          "correcte": false,
+          "erreur": "confusion_k",
+          "feedback": "C'est $P(X = 0) = 0{,}5^3$ (ou $P(X = 3)$) : il manque le coefficient binomial pour $k = 1$."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}5$",
+          "correcte": false,
+          "erreur": "confusion_n_p",
+          "feedback": "$0{,}5$ est la probabilité d'un succès : il faut tenir compte des $3$ épreuves."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}25$",
+          "correcte": false,
+          "erreur": "calcul_inventé",
+          "feedback": "$P(X = 1) = \\binom{3}{1} \\times 0{,}5 \\times 0{,}5^2$."
+        }
+      ],
+      "explication": "$P(X = 1) = \\binom{3}{1} \\times 0{,}5^1 \\times 0{,}5^2 = 3 \\times 0{,}125 = 0{,}375$.",
+      "a_revoir": [
+        "Fiche « La loi binomiale » — Grand exemple guidé — Calculer des probabilités"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q9",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "vrai_faux_plausible",
+      "niveau": 2,
+      "notion": "conditions d'un schéma de Bernoulli",
+      "enonce": "Laquelle de ces affirmations sur un schéma de Bernoulli est vraie ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La probabilité de succès change à chaque épreuve selon les résultats précédents.",
+          "correcte": false,
+          "erreur": "oubli_independance",
+          "feedback": "Dans un schéma de Bernoulli, les épreuves sont indépendantes et identiques."
+        },
+        {
+          "id": "B",
+          "texte": "Chaque épreuve peut avoir trois issues.",
+          "correcte": false,
+          "erreur": "oubli_deux_issues",
+          "feedback": "Chaque épreuve n'a que deux issues : succès ou échec."
+        },
+        {
+          "id": "C",
+          "texte": "Les épreuves sont indépendantes et la probabilité de succès est la même à chaque épreuve.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "On répète l'épreuve jusqu'au premier succès.",
+          "correcte": false,
+          "erreur": "nombre_epreuves_non_fixe",
+          "feedback": "Le nombre d'épreuves $n$ est fixé à l'avance."
+        }
+      ],
+      "explication": "Un schéma de Bernoulli répète $n$ fois la même épreuve à deux issues, de façon indépendante : la probabilité de succès $p$ ne change jamais.",
+      "a_revoir": [
+        "Fiche « La loi binomiale » — Erreurs fréquentes — Ne pas vérifier les conditions d'une loi binomiale",
+        "Fiche « La loi binomiale » — Grand exemple guidé — Reconnaître une situation de Bernoulli"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q10",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "probabilité conditionnelle inversée",
+      "enonce": "Une machine produit $60\\,\\%$ de pièces de type $A$ ($2\\,\\%$ défectueuses) et $40\\,\\%$ de pièces de type $B$ ($5\\,\\%$ défectueuses). Une pièce est défectueuse. Quelle est la probabilité qu'elle soit de type $A$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}02$",
+          "correcte": false,
+          "erreur": "confusion_PA_B_et_PB_A",
+          "feedback": "C'est la probabilité d'être défectueuse sachant qu'elle est de type $A$ : ici l'ordre est inversé."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}012$",
+          "correcte": false,
+          "erreur": "confusion_conditionnelle_intersection",
+          "feedback": "C'est $P(A \\cap D)$ : il faut la diviser par $P(D) = 0{,}032$."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}6$",
+          "correcte": false,
+          "erreur": "confusion_conditionnelle_globale",
+          "feedback": "C'est la proportion de pièces $A$ dans la production, pas parmi les pièces défectueuses."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}375$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$P_D(A) = \\dfrac{P(A \\cap D)}{P(D)} = \\dfrac{0{,}012}{0{,}032} = 0{,}375$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 1. Probabilité conditionnelle — Calculer une probabilité conditionnelle",
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 5. Quelques erreurs fréquentes — Confondre $P_A(B)$ et $P_B(A)$"
+      ]
+    },
+    {
+      "id": "proba-chapitre-q11",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "loi binomiale : « au moins un »",
+      "enonce": "On répète $5$ fois, de façon indépendante, une épreuve dont la probabilité de succès est $0{,}2$. Quelle est la probabilité d'obtenir au moins un succès ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}8^5 \\approx 0{,}328$",
+          "correcte": false,
+          "erreur": "confusion_au_moins_un_et_aucun",
+          "feedback": "C'est la probabilité de n'avoir aucun succès."
+        },
+        {
+          "id": "B",
+          "texte": "$1 - 0{,}8^5 \\approx 0{,}672$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$5 \\times 0{,}2 = 1$",
+          "correcte": false,
+          "erreur": "esperance_au_lieu_de_probabilite",
+          "feedback": "C'est l'espérance $E(X)$, pas une probabilité : elle vaut $1$ en moyenne mais la probabilité est inférieure à 1."
+        },
+        {
+          "id": "D",
+          "texte": "$1 - 0{,}2^5 \\approx 1$",
+          "correcte": false,
+          "erreur": "confusion_p_et_q",
+          "feedback": "On a utilisé $p$ à la place de $1 - p$ : « aucun succès » a pour probabilité $0{,}8^5$."
+        }
+      ],
+      "explication": "$P(X \\geq 1) = 1 - P(X = 0) = 1 - 0{,}8^5 \\approx 1 - 0{,}328 = 0{,}672$.",
+      "a_revoir": [
+        "Fiche « La loi binomiale » — Grand exemple guidé — Calculer des probabilités",
+        "Fiche « La loi binomiale » — Erreurs fréquentes — Confondre $P(X = k)$ avec $P(X \\leq k)$, $P(X \\geq k)$, etc."
+      ]
+    },
+    {
+      "id": "proba-chapitre-q12",
+      "chapitre": "Probabilités",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "retrouver $n$",
+      "enonce": "Soit $X \\sim \\mathcal{B}(n\\,;\\,0{,}5)$. Pour quelle valeur de $n$ a-t-on $P(X = 0) = \\dfrac{1}{16}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$n = 16$",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_parametre",
+          "feedback": "$P(X=0) = 0{,}5^{16}$ serait beaucoup plus petit que $\\frac{1}{16}$."
+        },
+        {
+          "id": "B",
+          "texte": "$n = 8$",
+          "correcte": false,
+          "erreur": "calcul_inventé",
+          "feedback": "$0{,}5^8 = \\frac{1}{256}$, pas $\\frac{1}{16}$."
+        },
+        {
+          "id": "C",
+          "texte": "$n = 4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$n = 2$",
+          "correcte": false,
+          "erreur": "calcul_inventé",
+          "feedback": "$0{,}5^2 = \\frac{1}{4}$, pas $\\frac{1}{16}$."
+        }
+      ],
+      "explication": "$P(X = 0) = \\binom{n}{0} \\times 0{,}5^0 \\times 0{,}5^n = 0{,}5^n$. Or $0{,}5^4 = \\frac{1}{16}$, donc $n = 4$.",
+      "a_revoir": [
+        "Fiche « La loi binomiale » — Grand exemple guidé — Identifier la loi binomiale"
+      ]
+    }
+  ]
+}

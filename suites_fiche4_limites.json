@@ -1,0 +1,242 @@
+{
+  "id": "suites-f4",
+  "titre": "Quiz — Limites de suites",
+  "chapitre": "Suites",
+  "fiche": "Limites de suites",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "suites-f4-q1",
+      "chapitre": "Suites",
+      "fiche": "Limites de suites",
+      "type": "application",
+      "niveau": 1,
+      "notion": "limite de $q^n$ avec $-1<q<1$",
+      "enonce": "Quelle est la limite de la suite $u_n = (-0{,}5)^n$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle n'a pas de limite, car elle alterne.",
+          "correcte": false,
+          "erreur": "confusion_q_negatif",
+          "feedback": "Pour $-1 < q < 1$, les termes alternent mais se rapprochent de $0$."
+        },
+        {
+          "id": "B",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "confusion_limite_infinie",
+          "feedback": "La valeur absolue $0{,}5^n$ tend vers $0$."
+        },
+        {
+          "id": "C",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "confusion_limite_infinie",
+          "feedback": "La valeur absolue $0{,}5^n$ tend vers $0$."
+        },
+        {
+          "id": "D",
+          "texte": "$0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Comme $-1 < -0{,}5 < 1$, la suite géométrique $(-0{,}5)^n$ tend vers $0$ (en alternant de signe).",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 2. Limites usuelles — Puissances et expressions classiques"
+      ]
+    },
+    {
+      "id": "suites-f4-q2",
+      "chapitre": "Suites",
+      "fiche": "Limites de suites",
+      "type": "application",
+      "niveau": 1,
+      "notion": "limites usuelles",
+      "enonce": "Quelle est la limite de $u_n = 2 - \\dfrac{1}{\\sqrt{n}}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "confusion_inverse_puissance",
+          "feedback": "$\\frac{1}{\\sqrt{n}}$ tend vers $0$ : l'inverse d'une quantité immense est minuscule."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "oubli_constante",
+          "feedback": "Il ne faut pas oublier la constante $2$."
+        },
+        {
+          "id": "C",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "limite_inventee",
+          "feedback": "$\\frac{1}{\\sqrt{n}}$ ne tend pas vers 1 mais vers 0."
+        }
+      ],
+      "explication": "$\\frac{1}{\\sqrt{n}} \\to 0$, donc $u_n \\to 2 - 0 = 2$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 2. Limites usuelles — Suites de référence à connaître"
+      ]
+    },
+    {
+      "id": "suites-f4-q3",
+      "chapitre": "Suites",
+      "fiche": "Limites de suites",
+      "type": "application",
+      "niveau": 2,
+      "notion": "forme indéterminée $\\frac{\\infty}{\\infty}$",
+      "enonce": "Quelle est la limite de $u_n = \\dfrac{3n^2 + n}{n^2 + 1}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "infini_sur_infini_egal_infini",
+          "feedback": "$\\frac{+\\infty}{+\\infty}$ est une forme indéterminée : il faut factoriser par $n^2$."
+        },
+        {
+          "id": "C",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "infini_sur_infini_egal_1",
+          "feedback": "Une forme indéterminée n'est pas égale à 1 automatiquement."
+        },
+        {
+          "id": "D",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "denominateur_domine",
+          "feedback": "Le numérateur et le dénominateur sont du même ordre : $n^2$."
+        }
+      ],
+      "explication": "On factorise par $n^2$ : $u_n = \\dfrac{3 + \\frac{1}{n}}{1 + \\frac{1}{n^2}} \\to \\dfrac{3}{1} = 3$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 3. Formes indéterminées — Méthodes pour les traiter"
+      ]
+    },
+    {
+      "id": "suites-f4-q4",
+      "chapitre": "Suites",
+      "fiche": "Limites de suites",
+      "type": "application",
+      "niveau": 2,
+      "notion": "forme indéterminée $+\\infty-\\infty$",
+      "enonce": "Quelle est la limite de $u_n = n^2 - 5n$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "infini_moins_infini_egal_0",
+          "feedback": "$+\\infty - \\infty$ n'est pas $0$ : il faut factoriser $n^2\\left(1 - \\frac{5}{n}\\right)$."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "mauvais_terme_dominant",
+          "feedback": "Le terme dominant est $n^2$, pas $-5n$."
+        },
+        {
+          "id": "D",
+          "texte": "$-5$",
+          "correcte": false,
+          "erreur": "limite_inventee",
+          "feedback": "Le terme $-5n$ ne donne pas une limite finie."
+        }
+      ],
+      "explication": "$u_n = n^2\\left(1 - \\frac{5}{n}\\right)$ avec $n^2 \\to +\\infty$ et $1 - \\frac{5}{n} \\to 1$ : par produit, $u_n \\to +\\infty$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 3. Formes indéterminées — Méthodes pour les traiter"
+      ]
+    },
+    {
+      "id": "suites-f4-q5",
+      "chapitre": "Suites",
+      "fiche": "Limites de suites",
+      "type": "choix_méthode",
+      "niveau": 3,
+      "notion": "choisir entre gendarmes et comparaison",
+      "enonce": "Quel théorème permet de déterminer la limite de $u_n = 3 + \\dfrac{(-1)^n}{n}$ (pour $n \\geq 1$), et quelle est cette limite ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La comparaison, avec $u_n \\geq 2$ : la limite est $+\\infty$.",
+          "correcte": false,
+          "erreur": "confusion_theoremes",
+          "feedback": "La comparaison ne sert que pour les limites infinies."
+        },
+        {
+          "id": "B",
+          "texte": "Les gendarmes, avec $3 - \\frac{1}{n} \\leq u_n \\leq 3 + \\frac{1}{n}$ : la limite est $3$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Aucun : $(-1)^n$ alterne, donc la suite n'a pas de limite.",
+          "correcte": false,
+          "erreur": "alterner_donc_diverger",
+          "feedback": "$\\frac{(-1)^n}{n}$ tend vers $0$ : l'alternance est écrasée par la division par $n$."
+        },
+        {
+          "id": "D",
+          "texte": "Les gendarmes, mais la limite est $0$.",
+          "correcte": false,
+          "erreur": "oubli_constante",
+          "feedback": "Il faut garder la constante : les deux bornes tendent vers $3$."
+        }
+      ],
+      "explication": "Comme $-1 \\leq (-1)^n \\leq 1$, on a $3 - \\frac{1}{n} \\leq u_n \\leq 3 + \\frac{1}{n}$. Les deux bornes tendent vers $3$ : par le théorème des gendarmes, $u_n \\to 3$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 4. Comparaison — Théorème des gendarmes",
+        "Fiche « Limites de suites » — 4. Comparaison — Utilisation pour déterminer une limite"
+      ]
+    }
+  ]
+}

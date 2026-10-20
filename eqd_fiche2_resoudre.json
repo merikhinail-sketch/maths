@@ -1,0 +1,244 @@
+{
+  "id": "eqd-f2",
+  "titre": "Quiz — Résoudre une équation différentielle",
+  "chapitre": "Équations différentielles",
+  "fiche": "Résoudre une équation différentielle",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "eqd-f2-q1",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle",
+      "type": "application",
+      "niveau": 1,
+      "notion": "forme générale de $y' = ay$",
+      "enonce": "Quelle est la forme générale des solutions de $y' = 4y$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y(x) = e^{4x}$",
+          "correcte": false,
+          "erreur": "oubli_constante_C",
+          "feedback": "Cette fonction est **une** solution, pas l'ensemble des solutions : il manque la constante $C$."
+        },
+        {
+          "id": "B",
+          "texte": "$y(x) = Ce^{-4x}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Le coefficient $a = 4$ est positif : l'exposant est $4x$."
+        },
+        {
+          "id": "C",
+          "texte": "$y(x) = 4e^{Cx}$",
+          "correcte": false,
+          "erreur": "confusion_C_et_a",
+          "feedback": "Le coefficient $a = 4$ se place dans l'exposant, et $C$ est le facteur devant l'exponentielle."
+        },
+        {
+          "id": "D",
+          "texte": "$y(x) = Ce^{4x}$, avec $C \\in \\mathbb{R}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Pour $y' = ay$, les solutions sont $y(x) = Ce^{ax}$, $C \\in \\mathbb{R}$. Ici $a = 4$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 1. Équations différentielles de la forme $y' = ay$ — Déterminer la forme générale des solutions"
+      ]
+    },
+    {
+      "id": "eqd-f2-q2",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle",
+      "type": "application",
+      "niveau": 1,
+      "notion": "solution constante de $y' = ay + b$",
+      "enonce": "Quelle fonction constante est solution de $y' = 2y + 6$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y(x) = -3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$y(x) = 3$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Pour $y = 3$ : $y' = 0$ mais $2y + 6 = 12$. La constante est $c = -\\frac{b}{a} = -3$."
+        },
+        {
+          "id": "C",
+          "texte": "$y(x) = -12$",
+          "correcte": false,
+          "erreur": "mauvaise_formule",
+          "feedback": "On calcule $c = -\\frac{b}{a}$ (une division), pas $-a \\times b$."
+        },
+        {
+          "id": "D",
+          "texte": "$y(x) = 6$",
+          "correcte": false,
+          "erreur": "confusion_c_et_b",
+          "feedback": "$6$ est le coefficient $b$ : pour $y = 6$, on a $2y + 6 = 18 \\neq 0$."
+        }
+      ],
+      "explication": "Une fonction constante a une dérivée nulle : $0 = 2c + 6$, donc $c = -\\dfrac{6}{2} = -3$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 2. Équations différentielles de la forme $y' = ay + b$ — Trouver une constante qui donne une solution"
+      ]
+    },
+    {
+      "id": "eqd-f2-q3",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle",
+      "type": "application",
+      "niveau": 2,
+      "notion": "forme générale de $y' = ay + b$",
+      "enonce": "Quelles sont les solutions de $y' = -0{,}5\\,y + 3$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y(x) = Ce^{-0{,}5x} - 6$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_constante",
+          "feedback": "La constante est $-\\frac{b}{a} = -\\frac{3}{-0{,}5} = +6$, pas $-6$."
+        },
+        {
+          "id": "B",
+          "texte": "$y(x) = Ce^{0{,}5x} + 6$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_exposant",
+          "feedback": "Avec $a = -0{,}5$, l'exposant est $-0{,}5x$."
+        },
+        {
+          "id": "C",
+          "texte": "$y(x) = Ce^{-0{,}5x} + 6$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$y(x) = Ce^{-0{,}5x} + 3$",
+          "correcte": false,
+          "erreur": "oubli_division_par_a",
+          "feedback": "La constante n'est pas $b$ mais $-\\frac{b}{a}$."
+        }
+      ],
+      "explication": "Ici $a = -0{,}5$ et $b = 3$. Constante : $-\\dfrac{b}{a} = -\\dfrac{3}{-0{,}5} = 6$. Solutions : $y(x) = Ce^{-0{,}5x} + 6$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 2. Équations différentielles de la forme $y' = ay + b$ — Déterminer la forme générale des solutions",
+        "Fiche « Résoudre une équation différentielle » — 4. Erreurs fréquentes — Se tromper dans la forme générale des solutions"
+      ]
+    },
+    {
+      "id": "eqd-f2-q4",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle",
+      "type": "application",
+      "niveau": 2,
+      "notion": "vérifier une solution",
+      "enonce": "Parmi ces fonctions, laquelle est solution de $y' = 3y - 6$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y(x) = 5e^{3x} - 2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_constante",
+          "feedback": "$y' = 15e^{3x}$ mais $3y - 6 = 15e^{3x} - 12$ : les deux côtés ne sont pas égaux."
+        },
+        {
+          "id": "B",
+          "texte": "$y(x) = 5e^{3x}$",
+          "correcte": false,
+          "erreur": "oubli_terme_constant",
+          "feedback": "$y' = 15e^{3x}$ mais $3y - 6 = 15e^{3x} - 6$ : il manque la constante."
+        },
+        {
+          "id": "C",
+          "texte": "$y(x) = 5e^{3x} + 6$",
+          "correcte": false,
+          "erreur": "constante_egale_b_au_signe_pres",
+          "feedback": "$y' = 15e^{3x}$ mais $3y - 6 = 15e^{3x} + 12$ : la constante est $-\\frac{b}{a} = 2$."
+        },
+        {
+          "id": "D",
+          "texte": "$y(x) = 5e^{3x} + 2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Pour $y = 5e^{3x} + 2$ : $y' = 15e^{3x}$ et $3y - 6 = 15e^{3x} + 6 - 6 = 15e^{3x}$. L'égalité est vraie pour tout $x$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 2. Équations différentielles de la forme $y' = ay + b$ — Vérifier la solution obtenue",
+        "Fiche « Résoudre une équation différentielle » — 4. Erreurs fréquentes — Ne pas vérifier que la fonction obtenue satisfait bien l'équation différentielle"
+      ]
+    },
+    {
+      "id": "eqd-f2-q5",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "comportement des solutions en $+\\infty$",
+      "enonce": "La concentration $C(t)$ d'un produit vérifie $C'(t) = -0{,}2\\,C(t) + 1$. Vers quelle valeur $C(t)$ se rapproche-t-elle quand $t$ devient très grand ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "oubli_terme_constant",
+          "feedback": "On a oublié la constante : les solutions sont $Ce^{-0{,}2t} + 5$, et seul le terme $Ce^{-0{,}2t}$ tend vers $0$."
+        },
+        {
+          "id": "B",
+          "texte": "$5$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$-5$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_constante",
+          "feedback": "La constante est $-\\frac{b}{a} = -\\frac{1}{-0{,}2} = +5$."
+        },
+        {
+          "id": "D",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_exposant",
+          "feedback": "Comme $a = -0{,}2 < 0$, l'exponentielle $e^{-0{,}2t}$ tend vers $0$ : elle ne fait pas exploser la solution."
+        }
+      ],
+      "explication": "Les solutions sont $C(t) = Ce^{-0{,}2t} + 5$. Quand $t \\to +\\infty$, $e^{-0{,}2t} \\to 0$, donc $C(t) \\to 5$ quelle que soit la valeur de $C$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 3. Grand exemple guidé — Comparer avec la situation de départ",
+        "Fiche « Résoudre une équation différentielle » — 2. Équations différentielles de la forme $y' = ay + b$ — Déterminer la forme générale des solutions"
+      ]
+    }
+  ]
+}

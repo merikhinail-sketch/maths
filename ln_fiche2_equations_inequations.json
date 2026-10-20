@@ -1,0 +1,244 @@
+{
+  "id": "ln-f2",
+  "titre": "Quiz — Calcul avec la fonction logarithme",
+  "chapitre": "Logarithme",
+  "fiche": "Calcul avec la fonction logarithme",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "ln-f2-q1",
+      "chapitre": "Logarithme",
+      "fiche": "Calcul avec la fonction logarithme",
+      "type": "application",
+      "niveau": 1,
+      "notion": "équation $\\ln(x) = a$",
+      "enonce": "Quelle est la solution de $\\ln(x) = 2$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x = 2e$",
+          "correcte": false,
+          "erreur": "mauvaise_transformation",
+          "feedback": "On applique l'exponentielle aux deux membres : $x = e^{2}$."
+        },
+        {
+          "id": "B",
+          "texte": "$x = \\ln(2)$",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "$\\ln(2)$ est un nombre, mais $\\ln\\left(\\ln(2)\\right) \\neq 2$."
+        },
+        {
+          "id": "C",
+          "texte": "$x = 2$",
+          "correcte": false,
+          "erreur": "oubli_de_l_exponentielle",
+          "feedback": "$\\ln(2) \\neq 2$ : le logarithme de $2$ vaut environ $0{,}69$."
+        },
+        {
+          "id": "D",
+          "texte": "$x = e^{2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\ln(x) = 2 \\iff x = e^{2}$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Résoudre une équation de la forme $\\ln(x) = a$"
+      ]
+    },
+    {
+      "id": "ln-f2-q2",
+      "chapitre": "Logarithme",
+      "fiche": "Calcul avec la fonction logarithme",
+      "type": "application",
+      "niveau": 1,
+      "notion": "conditions d'existence",
+      "enonce": "Avant de résoudre $\\ln(x - 3) = 1$, quelle condition d'existence faut-il écrire ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x > 3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$x \\geq 3$",
+          "correcte": false,
+          "erreur": "inegalite_large",
+          "feedback": "L'argument du logarithme doit être **strictement** positif : $x - 3 > 0$."
+        },
+        {
+          "id": "C",
+          "texte": "$x > -3$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$x - 3 > 0 \\iff x > 3$, et non $x > -3$."
+        },
+        {
+          "id": "D",
+          "texte": "$x > 0$",
+          "correcte": false,
+          "erreur": "condition_sur_x_au_lieu_de_l_argument",
+          "feedback": "La condition porte sur l'**argument** du logarithme ($x - 3$), pas sur $x$."
+        }
+      ],
+      "explication": "Le logarithme n'est défini que pour un argument strictement positif : $x - 3 > 0 \\iff x > 3$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Vérifier les conditions d'existence",
+        "Fiche « Calcul avec la fonction logarithme » — 3. Erreurs fréquentes — Oublier les conditions d'existence avant de résoudre une équation ou une inéquation"
+      ]
+    },
+    {
+      "id": "ln-f2-q3",
+      "chapitre": "Logarithme",
+      "fiche": "Calcul avec la fonction logarithme",
+      "type": "application",
+      "niveau": 2,
+      "notion": "équation $\\ln(u(x)) = a$",
+      "enonce": "Quelle est la solution de $\\ln(x + 1) = 2$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x = e^{2} + 1$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$x + 1 = e^2 \\iff x = e^2 - 1$ : on soustrait $1$."
+        },
+        {
+          "id": "B",
+          "texte": "$x = e^{2}$",
+          "correcte": false,
+          "erreur": "oubli_de_l_argument",
+          "feedback": "On a oublié le $+ 1$ : $x + 1 = e^2$."
+        },
+        {
+          "id": "C",
+          "texte": "$x = e^{2} - 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$x = 1$",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "$\\ln(1 + 1) = \\ln(2) \\neq 2$."
+        }
+      ],
+      "explication": "Condition : $x + 1 > 0$. Puis $\\ln(x + 1) = 2 \\iff x + 1 = e^{2} \\iff x = e^{2} - 1 \\approx 6{,}4$, qui respecte la condition.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Utiliser le lien entre le logarithme et l'exponentielle"
+      ]
+    },
+    {
+      "id": "ln-f2-q4",
+      "chapitre": "Logarithme",
+      "fiche": "Calcul avec la fonction logarithme",
+      "type": "application",
+      "niveau": 2,
+      "notion": "inéquation avec condition d'existence",
+      "enonce": "Quel est l'ensemble des solutions de $\\ln(3x - 6) \\geq 0$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\left]2\\ ;\\ \\dfrac{7}{3}\\right]$",
+          "correcte": false,
+          "erreur": "sens_inverse",
+          "feedback": "$\\ln$ est croissante : le sens de l'inégalité est conservé."
+        },
+        {
+          "id": "B",
+          "texte": "$[2\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "confusion_ln_positif_et_arg_positif",
+          "feedback": "$\\ln(u) \\geq 0 \\iff u \\geq 1$ (car $\\ln(1) = 0$), et non $u \\geq 0$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\left]-\\infty\\ ;\\ \\dfrac{7}{3}\\right]$",
+          "correcte": false,
+          "erreur": "oubli_condition_et_sens",
+          "feedback": "Le sens est inversé, et la condition $x > 2$ est oubliée."
+        },
+        {
+          "id": "D",
+          "texte": "$\\left[\\dfrac{7}{3}\\ ;\\ +\\infty\\right[$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Condition : $3x - 6 > 0 \\iff x > 2$. Puis $\\ln(3x - 6) \\geq \\ln(1) \\iff 3x - 6 \\geq 1 \\iff x \\geq \\dfrac{7}{3}$. Comme $\\dfrac{7}{3} > 2$, l'ensemble des solutions est $\\left[\\dfrac{7}{3}\\ ;\\ +\\infty\\right[$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 2. Inéquations — Ramener une inéquation à une comparaison des nombres",
+        "Fiche « Calcul avec la fonction logarithme » — 2. Inéquations — Vérifier les conditions de définition"
+      ]
+    },
+    {
+      "id": "ln-f2-q5",
+      "chapitre": "Logarithme",
+      "fiche": "Calcul avec la fonction logarithme",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "rejeter une solution parasite",
+      "enonce": "Quelle est la solution de l'équation $\\ln(x) + \\ln(x + 2) = \\ln(8)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x = 2$ ou $x = -4$",
+          "correcte": false,
+          "erreur": "oubli_de_verifier_les_conditions",
+          "feedback": "Les conditions d'existence imposent $x > 0$ : $x = -4$ est rejeté."
+        },
+        {
+          "id": "B",
+          "texte": "$x = 2$ seulement",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$x = -4$ seulement",
+          "correcte": false,
+          "erreur": "erreur_de_choix_de_la_racine",
+          "feedback": "$-4$ ne respecte pas $x > 0$ ; c'est $x = 2$ qui convient."
+        },
+        {
+          "id": "D",
+          "texte": "Aucune solution.",
+          "correcte": false,
+          "erreur": "rejet_excessif",
+          "feedback": "$x = 2$ est bien dans le domaine : $\\ln(2) + \\ln(4) = \\ln(8)$."
+        }
+      ],
+      "explication": "Condition : $x > 0$ (et $x + 2 > 0$). L'équation devient $\\ln\\left(x(x + 2)\\right) = \\ln(8)$, soit $x^2 + 2x - 8 = 0$, donc $(x + 4)(x - 2) = 0$. Les candidats sont $-4$ et $2$ ; seul $2$ vérifie $x > 0$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations — Transformer une équation pour faire apparaître un même logarithme",
+        "Fiche « Calcul avec la fonction logarithme » — 3. Erreurs fréquentes — Résoudre puis oublier de vérifier que la solution est positive"
+      ]
+    }
+  ]
+}

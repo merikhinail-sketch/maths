@@ -1,0 +1,665 @@
+{
+  "id": "lim-chapitre",
+  "titre": "Quiz de chapitre — Limites de fonctions",
+  "chapitre": "Limites de fonctions",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 14,
+  "questions": [
+    {
+      "id": "lim-chapitre-q1",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "limite à gauche",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 0^-} \\dfrac{1}{x^2}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "confusion_avec_1_sur_x",
+          "feedback": "Le carré est toujours positif : même pour $x < 0$, $\\frac{1}{x^2} > 0$."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_1_sur_x_en_0_et_en_infini",
+          "feedback": "$\\frac{1}{x^2} \\to 0$ quand $x \\to \\pm\\infty$, pas quand $x \\to 0$."
+        },
+        {
+          "id": "D",
+          "texte": "La limite n'existe pas.",
+          "correcte": false,
+          "erreur": "confusion_avec_1_sur_x",
+          "feedback": "Contrairement à $\\frac{1}{x}$, les limites à gauche et à droite de $\\frac{1}{x^2}$ en $0$ sont égales."
+        }
+      ],
+      "explication": "Pour $x \\neq 0$ proche de $0$, $x^2 \\to 0^+$ et $\\dfrac{1}{x^2} \\to +\\infty$, des deux côtés.",
+      "a_revoir": [
+        "Fiche « Limite d'une fonction » — 2. Limites à gauche et à droite — Lien avec la limite en $a$",
+        "Fiche « Calculs de limites » — 2. Limites usuelles — $\\dfrac{1}{x}$, racine de $x$, exponentielles, logarithmes"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q2",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "limite d'une puissance impaire",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to -\\infty} x^3$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "parite_de_la_puissance_ignoree",
+          "feedback": "Pour une puissance **impaire**, $x^n \\to -\\infty$ quand $x \\to -\\infty$."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_x_n_et_1_sur_x_n",
+          "feedback": "C'est $\\frac{1}{x^3}$ qui tend vers $0$."
+        },
+        {
+          "id": "C",
+          "texte": "La limite n'existe pas.",
+          "correcte": false,
+          "erreur": "oscillation_prise_pour_absence_de_limite",
+          "feedback": "La fonction est strictement croissante : elle n'oscille pas."
+        },
+        {
+          "id": "D",
+          "texte": "$-\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Pour $n$ impair, $\\lim\\limits_{x \\to -\\infty} x^n = -\\infty$ (et $+\\infty$ pour $n$ pair).",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 2. Limites usuelles — Puissances de $x$",
+        "Fiche « Calculs de limites » — 1. Opérations sur les limites — Puissances"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q3",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "asymptote verticale",
+      "enonce": "Quelle est l'équation de l'asymptote verticale de la courbe de $f(x) = \\dfrac{5}{x + 2}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x = -2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$x = 2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$x + 2 = 0 \\iff x = -2$."
+        },
+        {
+          "id": "C",
+          "texte": "$y = -2$",
+          "correcte": false,
+          "erreur": "confusion_verticale_horizontale",
+          "feedback": "Une asymptote verticale a une équation de la forme $x = a$."
+        },
+        {
+          "id": "D",
+          "texte": "$y = 0$",
+          "correcte": false,
+          "erreur": "confusion_verticale_horizontale",
+          "feedback": "$y = 0$ est l'asymptote horizontale."
+        }
+      ],
+      "explication": "$\\displaystyle\\lim_{x \\to -2^+} \\dfrac{5}{x + 2} = +\\infty$ : la droite d'équation $x = -2$ est asymptote verticale.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 1. Asymptote verticale et horizontale — Asymptote verticale"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q4",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "composée avec limite en $\\pm\\infty$",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} e^{-x^2}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "oubli_du_signe",
+          "feedback": "L'intérieur $-x^2$ tend vers $-\\infty$ : l'exponentielle tend donc vers $0$."
+        },
+        {
+          "id": "B",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "confusion_exp_0",
+          "feedback": "$e^0 = 1$ n'est pas pertinent : l'exposant ne tend pas vers $0$."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "confusion_limite_interieure_et_composee",
+          "feedback": "$-\\infty$ est la limite de l'intérieur, pas de la composée."
+        }
+      ],
+      "explication": "$u(x) = -x^2 \\to -\\infty$ et $e^{X} \\to 0$ quand $X \\to -\\infty$. Par composition, $\\lim e^{-x^2} = 0$.",
+      "a_revoir": [
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Exemple de base",
+        "Fiche « Limites d'une fonction composée » — 2. Erreurs fréquentes — Confondre la limite de l'intérieur avec celle de la composition"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q5",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "quotient de polynômes",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{2x^2 - 3x + 1}{x^2 + 5}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "oubli_de_factoriser",
+          "feedback": "Forme $\\frac{\\infty}{\\infty}$ : on factorise par $x^2$ au numérateur et au dénominateur."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_des_degres",
+          "feedback": "Les deux polynômes ont le même degré : la limite est le quotient des coefficients dominants."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{1}{5}$",
+          "correcte": false,
+          "erreur": "mauvais_terme_retenu",
+          "feedback": "On a gardé les termes constants au lieu des termes dominants."
+        },
+        {
+          "id": "D",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "On factorise par $x^2$ : $\\dfrac{2 - \\frac{3}{x} + \\frac{1}{x^2}}{1 + \\frac{5}{x^2}} \\to \\dfrac{2}{1} = 2$.",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 3. Formes indéterminées — Méthodes pour les faire disparaître"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q6",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "croissances comparées",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} x\\,e^{-x}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "produit_d_infinis_ignorant_l_exp",
+          "feedback": "$e^{-x} \\to 0$ : c'est une forme $+\\infty \\times 0$ indéterminée. En écrivant $\\frac{x}{e^x}$, la croissance comparée donne $0$."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "simplification_abusive",
+          "feedback": "Il n'y a pas de raison que le produit se stabilise en $1$."
+        },
+        {
+          "id": "D",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "oubli_du_signe",
+          "feedback": "$x\\,e^{-x}$ est strictement positif pour $x > 0$ : la limite ne peut pas être $-\\infty$."
+        }
+      ],
+      "explication": "$x\\,e^{-x} = \\dfrac{x}{e^{x}}$. Comme $\\dfrac{e^x}{x} \\to +\\infty$, son inverse $\\dfrac{x}{e^x} \\to 0$.",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 2. Limites usuelles — Croissances comparées",
+        "Fiche « Calculs de limites » — 3. Formes indéterminées — Méthodes pour les faire disparaître"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q7",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "croissance comparée en $0^+$",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 0^+} x\\ln(x)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\infty$",
+          "correcte": false,
+          "erreur": "forme_indeterminee_non_levee",
+          "feedback": "C'est une forme $0 \\times (-\\infty)$ : on ne peut pas conclure sans la croissance comparée."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "forme_indeterminee_non_levee",
+          "feedback": "C'est une forme $0 \\times (-\\infty)$ : on ne peut pas conclure sans la croissance comparée."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "valeur_inventee",
+          "feedback": "Aucun lien avec $1$ : la limite usuelle vaut $0$."
+        }
+      ],
+      "explication": "C'est l'une des limites de croissances comparées : $\\displaystyle\\lim_{x \\to 0^+} x\\ln(x) = 0$ (le facteur $x$ « l'emporte » sur $\\ln(x)$).",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 2. Limites usuelles — Croissances comparées"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q8",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "quotient avec dénominateur tendant vers 0",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 2^-} \\dfrac{x + 1}{x - 2}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "oubli_du_signe_du_denominateur",
+          "feedback": "Pour $x < 2$, $x - 2 < 0$ : le dénominateur tend vers $0^-$, le quotient est négatif."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_numerateur_et_denominateur",
+          "feedback": "C'est le **dénominateur** qui tend vers $0$ : le quotient devient très grand en valeur absolue."
+        },
+        {
+          "id": "D",
+          "texte": "La limite n'existe pas.",
+          "correcte": false,
+          "erreur": "confusion_limite_et_limite_unilaterale",
+          "feedback": "La limite à **gauche** existe (elle vaut $-\\infty$). Seule la limite en $2$ sans précision de côté n'existe pas."
+        }
+      ],
+      "explication": "Numérateur : $x + 1 \\to 3 > 0$. Dénominateur : $x - 2 \\to 0^-$. D'après la règle du quotient, la limite est $-\\infty$.",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 1. Opérations sur les limites — Quotient",
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Variante 4 : quand la composition ne permet pas de conclure directement"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q9",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "limite lue sur une courbe",
+      "enonce": "La courbe ci-contre représente $f(x) = \\dfrac{3x - 1}{x + 2}$, avec ses asymptotes en pointillés. Que vaut $\\displaystyle\\lim_{x \\to -2^+} f(x)$ ?",
+      "figure": "lim_ch_q9.png",
+      "figure_alt": "Courbe de (3x−1)/(x+2) : branche de gauche qui monte vers +∞ le long de x = −2 et se rapproche de y = 3 en −∞ ; branche de droite qui descend vers −∞ le long de x = −2 et se rapproche de y = 3 en +∞.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "confusion_gauche_droite",
+          "feedback": "À droite de $-2$, la courbe descend : c'est à gauche qu'elle monte vers $+\\infty$."
+        },
+        {
+          "id": "C",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "confusion_limite_en_a_et_en_infini",
+          "feedback": "$3$ est la limite en $\\pm\\infty$ (asymptote horizontale), pas en $-2$."
+        },
+        {
+          "id": "D",
+          "texte": "$-2$",
+          "correcte": false,
+          "erreur": "confusion_x_et_f_x",
+          "feedback": "$-2$ est la valeur de $x$ vers laquelle on tend, pas la valeur de $f(x)$."
+        }
+      ],
+      "explication": "Pour $x > -2$ proche de $-2$, le numérateur tend vers $-7 < 0$ et le dénominateur vers $0^+$ : $f(x) \\to -\\infty$. La courbe descend le long de l'asymptote verticale $x = -2$ côté droit.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 1. Asymptote verticale et horizontale — Asymptote verticale",
+        "Fiche « Limite d'une fonction » — 2. Limites à gauche et à droite — Limite à droite"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q10",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "quantité conjuguée",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 1} - x\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "composition_sans_forme_indeterminee",
+          "feedback": "$\\sqrt{x^2+1} \\to +\\infty$ et $x \\to +\\infty$ : c'est une forme $+\\infty - \\infty$, indéterminée."
+        },
+        {
+          "id": "B",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "valeur_inventee",
+          "feedback": "En multipliant par la quantité conjuguée, on obtient $\\frac{1}{\\sqrt{x^2+1}+x}$, qui tend vers $0$."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{1}{2}$",
+          "correcte": false,
+          "erreur": "confusion_avec_un_autre_exemple",
+          "feedback": "$\\frac{1}{2}$ est la limite de $\\sqrt{x^2 + x} - x$ (exemple du cours) : ici le terme sous la racine est $x^2 + 1$."
+        }
+      ],
+      "explication": "On multiplie par la quantité conjuguée : $\\sqrt{x^2 + 1} - x = \\dfrac{(x^2 + 1) - x^2}{\\sqrt{x^2 + 1} + x} = \\dfrac{1}{\\sqrt{x^2 + 1} + x} \\to 0$.",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 3. Formes indéterminées — Méthodes pour les faire disparaître",
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Variante 5 : quand la composition donne une forme indéterminée"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q11",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "comparaison",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\left(x + \\cos(x)\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "mauvaise_limite_de_x",
+          "feedback": "Le terme $x$ tend vers $+\\infty$ : il ne peut pas être compensé par $\\cos(x)$, qui reste entre $-1$ et $1$."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "La limite n'existe pas, car $\\cos(x)$ oscille.",
+          "correcte": false,
+          "erreur": "oscillation_prise_pour_absence_de_limite",
+          "feedback": "Comme $\\cos(x) \\geq -1$, on a $x + \\cos(x) \\geq x - 1$, qui tend vers $+\\infty$."
+        },
+        {
+          "id": "D",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "valeur_inventee",
+          "feedback": "La fonction n'est pas bornée : $x$ devient arbitrairement grand."
+        }
+      ],
+      "explication": "$\\cos(x) \\geq -1$, donc $x + \\cos(x) \\geq x - 1$. Comme $x - 1 \\to +\\infty$, par comparaison $\\lim (x + \\cos(x)) = +\\infty$.",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 4. Théorème des gendarmes — Reconnaître une situation où il peut être utilisé"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q12",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "composée avec signe",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 0} e^{1/x^2}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "confusion_exp_0",
+          "feedback": "$e^{0} = 1$ s'appliquerait à un exposant qui tend vers $0$ ; ici l'exposant $\\frac{1}{x^2}$ tend vers $+\\infty$."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_exp_moins_infini",
+          "feedback": "$e^{X} \\to 0$ quand $X \\to -\\infty$ ; ici $X = \\frac{1}{x^2} \\to +\\infty$."
+        },
+        {
+          "id": "C",
+          "texte": "La limite n'existe pas.",
+          "correcte": false,
+          "erreur": "confusion_avec_1_sur_x",
+          "feedback": "Contrairement à $\\frac{1}{x}$, $\\frac{1}{x^2}$ tend vers $+\\infty$ des deux côtés de $0$."
+        },
+        {
+          "id": "D",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$u(x) = \\dfrac{1}{x^2}$ : $x^2 \\to 0^+$ donc $u(x) \\to +\\infty$. Puis $e^{X} \\to +\\infty$ quand $X \\to +\\infty$ : la limite est $+\\infty$.",
+      "a_revoir": [
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Variante 3 : une limite en un point, avec le signe à surveiller",
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé — Exemple de base"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q13",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "position par rapport à l'asymptote oblique",
+      "enonce": "Soit $f(x) = \\dfrac{x^2 + 3x + 1}{x + 1}$, que l'on peut écrire $f(x) = x + 2 - \\dfrac{1}{x + 1}$. Que peut-on dire de la courbe de $f$ par rapport à la droite $y = x + 2$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle est au-dessus pour $x > -1$ et en dessous pour $x < -1$.",
+          "correcte": false,
+          "erreur": "position_inversee",
+          "feedback": "$f(x) - (x + 2) = -\\frac{1}{x + 1}$ est négatif pour $x > -1$ : la courbe est en dessous."
+        },
+        {
+          "id": "B",
+          "texte": "Elle est toujours au-dessus de la droite.",
+          "correcte": false,
+          "erreur": "position_constante_supposee",
+          "feedback": "Le signe de $-\\frac{1}{x + 1}$ change de part et d'autre de $x = -1$."
+        },
+        {
+          "id": "C",
+          "texte": "Elle est en dessous pour $x > -1$ et au-dessus pour $x < -1$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Elle coupe la droite en $x = -1$.",
+          "correcte": false,
+          "erreur": "confusion_asymptote_verticale_et_croisement",
+          "feedback": "$x = -1$ est une valeur interdite : la courbe n'y est pas définie, et la différence $-\\frac{1}{x+1}$ ne s'annule jamais."
+        }
+      ],
+      "explication": "On étudie le signe de $f(x) - (x + 2) = -\\dfrac{1}{x + 1}$ : négatif pour $x > -1$ (courbe en dessous), positif pour $x < -1$ (courbe au-dessus).",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 3. Déterminer une asymptote à partir d'une fonction — Éventuellement interpréter graphiquement le résultat",
+        "Fiche « Asymptotes » — 2. Asymptote oblique — Le lien avec une expression du type $f(x) - (ax + b) \\to 0$"
+      ]
+    },
+    {
+      "id": "lim-chapitre-q14",
+      "chapitre": "Limites de fonctions",
+      "fiche": null,
+      "type": "vrai_faux_plausible",
+      "niveau": 3,
+      "notion": "asymptotes et idées reçues",
+      "enonce": "Laquelle de ces affirmations est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une courbe peut couper son asymptote horizontale : par exemple $f(x) = 1 + \\dfrac{\\sin(x)}{x}$ coupe la droite $y = 1$ en $x = \\pi$, $2\\pi$, etc.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Si $a$ est une valeur interdite de $f$, alors la droite $x = a$ est toujours asymptote verticale.",
+          "correcte": false,
+          "erreur": "valeur_interdite_egale_asymptote",
+          "feedback": "Il faut calculer la limite : pour $\\frac{x^2-1}{x-1}$, la limite en $1$ est un réel, il n'y a pas d'asymptote."
+        },
+        {
+          "id": "C",
+          "texte": "Une courbe ne peut jamais couper son asymptote.",
+          "correcte": false,
+          "erreur": "asymptote_jamais_coupee",
+          "feedback": "Une asymptote décrit un comportement à l'infini (ou près d'un point), pas l'impossibilité de la couper."
+        },
+        {
+          "id": "D",
+          "texte": "La fonction $e^{x}$ admet $y = 0$ comme asymptote horizontale en $+\\infty$ et en $-\\infty$.",
+          "correcte": false,
+          "erreur": "comportement_different_en_plus_et_moins_infini",
+          "feedback": "En $+\\infty$, $e^x \\to +\\infty$ : il n'y a pas d'asymptote. La droite $y = 0$ n'est asymptote qu'en $-\\infty$."
+        }
+      ],
+      "explication": "Pour $1 + \\dfrac{\\sin(x)}{x}$, la droite $y = 1$ est asymptote en $+\\infty$ (car $\\frac{\\sin x}{x} \\to 0$) et pourtant la courbe la coupe à chaque fois que $\\sin(x) = 0$.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 4. Erreurs fréquentes — Confondre « la courbe se rapproche de la droite » avec « elle ne peut jamais la couper »",
+        "Fiche « Asymptotes » — 4. Erreurs fréquentes — Déduire une asymptote verticale d'une simple valeur interdite"
+      ]
+    }
+  ]
+}

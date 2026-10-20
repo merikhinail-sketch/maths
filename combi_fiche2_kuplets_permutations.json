@@ -1,0 +1,241 @@
+{
+  "id": "combi-f2",
+  "titre": "Quiz — K-uplets et permutations",
+  "chapitre": "Combinatoire",
+  "fiche": "K-uplets et permutations",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "combi-f2-q1",
+      "chapitre": "Combinatoire",
+      "fiche": "K-uplets et permutations",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "définition d'un $k$-uplet",
+      "enonce": "Quelle propriété caractérise un $k$-uplet ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "L'ordre des éléments ne compte pas.",
+          "correcte": false,
+          "erreur": "confusion_avec_combinaison",
+          "feedback": "C'est le contraire : l'ordre ne compte pas pour une combinaison."
+        },
+        {
+          "id": "B",
+          "texte": "Tous les éléments de l'ensemble sont utilisés.",
+          "correcte": false,
+          "erreur": "confusion_avec_permutation",
+          "feedback": "Utiliser **tous** les éléments caractérise une permutation."
+        },
+        {
+          "id": "C",
+          "texte": "Un même élément ne peut jamais apparaître deux fois.",
+          "correcte": false,
+          "erreur": "repetition_toujours_interdite",
+          "feedback": "Selon l'énoncé, les répétitions peuvent être permises (un code à chiffres, par exemple)."
+        },
+        {
+          "id": "D",
+          "texte": "L'ordre des éléments compte : changer l'ordre donne un autre $k$-uplet.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Un $k$-uplet est une liste de $k$ éléments rangés dans un ordre précis : $(1\\ ;\\ 2\\ ;\\ 3)$ et $(3\\ ;\\ 2\\ ;\\ 1)$ sont deux $3$-uplets différents.",
+      "a_revoir": [
+        "Fiche « K-uplets et permutations » — 1. k-uplets — Définition et comprendre ce que c'est"
+      ]
+    },
+    {
+      "id": "combi-f2-q2",
+      "chapitre": "Combinatoire",
+      "fiche": "K-uplets et permutations",
+      "type": "application",
+      "niveau": 1,
+      "notion": "$k$-uplet d'éléments distincts",
+      "enonce": "Combien de codes à $3$ chiffres, tous différents, peut-on former avec les chiffres de $0$ à $9$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$10 \\times 9 \\times 8 = 720$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$10^3 = 1\\,000$",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "Les chiffres doivent être différents : à chaque place, il reste un choix de moins."
+        },
+        {
+          "id": "C",
+          "texte": "$9 \\times 8 \\times 7 = 504$",
+          "correcte": false,
+          "erreur": "premiere_place_oubliee",
+          "feedback": "La première place offre bien $10$ choix : aucun chiffre n'est encore utilisé."
+        },
+        {
+          "id": "D",
+          "texte": "$10 \\times 3 = 30$",
+          "correcte": false,
+          "erreur": "confusion_produit_puissance",
+          "feedback": "Il faut multiplier le nombre de choix **de chaque place**, pas multiplier $10$ par le nombre de places."
+        }
+      ],
+      "explication": "Place par place : $10$ choix, puis $9$, puis $8$. Au total, $10 \\times 9 \\times 8 = 720$ codes.",
+      "a_revoir": [
+        "Fiche « K-uplets et permutations » — 1. k-uplets — Méthode : remplir les places une par une"
+      ]
+    },
+    {
+      "id": "combi-f2-q3",
+      "chapitre": "Combinatoire",
+      "fiche": "K-uplets et permutations",
+      "type": "application",
+      "niveau": 2,
+      "notion": "nombre de permutations",
+      "enonce": "De combien de façons $6$ personnes peuvent-elles s'asseoir sur $6$ chaises alignées ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$6^2 = 36$",
+          "correcte": false,
+          "erreur": "confusion_factorielle_puissance",
+          "feedback": "Le nombre de choix diminue à chaque place : ce n'est pas $6 \\times 6$."
+        },
+        {
+          "id": "B",
+          "texte": "$6$",
+          "correcte": false,
+          "erreur": "oubli_des_autres_places",
+          "feedback": "On n'a compté que les choix pour la première chaise."
+        },
+        {
+          "id": "C",
+          "texte": "$6! = 720$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$5! = 120$",
+          "correcte": false,
+          "erreur": "factorielle_decalee",
+          "feedback": "Pour la première chaise, il y a $6$ choix et non $5$ : on calcule $6!$."
+        }
+      ],
+      "explication": "Pour la 1re chaise : $6$ choix, puis $5$, puis $4$, ..., puis $1$. Au total $6! = 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 720$.",
+      "a_revoir": [
+        "Fiche « K-uplets et permutations » — 2. Permutations — La formule : le nombre de permutations"
+      ]
+    },
+    {
+      "id": "combi-f2-q4",
+      "chapitre": "Combinatoire",
+      "fiche": "K-uplets et permutations",
+      "type": "choix_méthode",
+      "niveau": 2,
+      "notion": "$k$-uplet ou permutation",
+      "enonce": "On dispose de $7$ livres différents. De combien de façons peut-on en ranger $3$ sur une étagère (en les choisissant parmi les $7$) ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$7! = 5\\,040$",
+          "correcte": false,
+          "erreur": "confusion_avec_permutation",
+          "feedback": "On ne range pas les $7$ livres, seulement $3$ d'entre eux : ce n'est pas une permutation."
+        },
+        {
+          "id": "B",
+          "texte": "$7^3 = 343$",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "Un même livre ne peut pas être placé deux fois : les choix diminuent à chaque place."
+        },
+        {
+          "id": "C",
+          "texte": "$7 \\times 3 = 21$",
+          "correcte": false,
+          "erreur": "confusion_produit_puissance",
+          "feedback": "Il faut multiplier les nombres de choix de **chaque place** : $7$, puis $6$, puis $5$."
+        },
+        {
+          "id": "D",
+          "texte": "$7 \\times 6 \\times 5 = 210$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Ranger $3$ livres distincts parmi $7$ est un $3$-uplet d'éléments distincts : $7 \\times 6 \\times 5 = 210$. Ranger les $7$ livres serait une permutation.",
+      "a_revoir": [
+        "Fiche « K-uplets et permutations » — 2. Permutations — Comprendre la différence avec un $k$-uplet"
+      ]
+    },
+    {
+      "id": "combi-f2-q5",
+      "chapitre": "Combinatoire",
+      "fiche": "K-uplets et permutations",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "$k$-uplet avec contrainte",
+      "enonce": "Combien de nombres à $3$ chiffres, tous différents, peut-on écrire avec les chiffres de $0$ à $9$ ? (Le premier chiffre ne peut pas être $0$.)",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$10 \\times 9 \\times 8 = 720$",
+          "correcte": false,
+          "erreur": "contrainte_oubliee",
+          "feedback": "Avec $10$ choix pour la première place, on autorise un nombre qui commencerait par $0$."
+        },
+        {
+          "id": "B",
+          "texte": "$9 \\times 9 \\times 8 = 648$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$9 \\times 8 \\times 7 = 504$",
+          "correcte": false,
+          "erreur": "mauvais_decompte_2e_place",
+          "feedback": "Pour la 2e place, le chiffre $0$ est de nouveau possible : il reste $10 - 1 = 9$ choix."
+        },
+        {
+          "id": "D",
+          "texte": "$9 \\times 10 \\times 10 = 900$",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "Les chiffres doivent être différents : on ne peut pas reprendre un chiffre déjà utilisé."
+        }
+      ],
+      "explication": "1re place : $9$ choix (tout sauf $0$). 2e place : $9$ choix (les $10$ chiffres moins celui déjà placé, $0$ est maintenant autorisé). 3e place : $8$ choix. Au total $9 \\times 9 \\times 8 = 648$.",
+      "a_revoir": [
+        "Fiche « K-uplets et permutations » — 1. k-uplets — Méthode : remplir les places une par une"
+      ]
+    }
+  ]
+}

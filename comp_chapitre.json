@@ -1,0 +1,475 @@
+{
+  "id": "comp-chapitre",
+  "titre": "Quiz de chapitre — Fonctions composées",
+  "chapitre": "Fonctions composées",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 10,
+  "questions": [
+    {
+      "id": "comp-chapitre-q1",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "décomposer une expression",
+      "enonce": "Quelle décomposition $f = v \\circ u$ convient pour $f(x) = \\left(x^2 + 1\\right)^3$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u(x) = x^3$ et $v(X) = X^2 + 1$",
+          "correcte": false,
+          "erreur": "inversion_interieure_exterieure",
+          "feedback": "Cette composée donne $\\left(x^3\\right)^2 + 1 = x^6 + 1$."
+        },
+        {
+          "id": "B",
+          "texte": "$u(x) = x^2$ et $v(X) = X^3 + 1$",
+          "correcte": false,
+          "erreur": "decomposition_fausse",
+          "feedback": "Cette composée donne $\\left(x^2\\right)^3 + 1 = x^6 + 1$."
+        },
+        {
+          "id": "C",
+          "texte": "$u(x) = x^2 + 1$ et $v(X) = X^3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$u(x) = x + 1$ et $v(X) = X^3$",
+          "correcte": false,
+          "erreur": "decomposition_fausse",
+          "feedback": "Cette composée donne $(x + 1)^3$."
+        }
+      ],
+      "explication": "Pour calculer $f(x)$, on calcule d'abord $x^2 + 1$, puis on élève au cube : $u(x) = x^2 + 1$ et $v(X) = X^3$.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 1. Comprendre l'idée de composition — Quelques cas simples"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q2",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "expression d'une composée",
+      "enonce": "On pose $u(x) = x + 1$ et $v(X) = \\sqrt{X}$. Quelle est l'expression de $(v \\circ u)(x)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\sqrt{x + 1}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\sqrt{x} + 1$",
+          "correcte": false,
+          "erreur": "inversion_interieure_exterieure",
+          "feedback": "Cette expression est $u\\big(v(x)\\big)$ : on a appliqué $u$ après $v$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\sqrt{x} \\times (x + 1)$",
+          "correcte": false,
+          "erreur": "produit_au_lieu_de_composition",
+          "feedback": "Une composition applique $v$ au résultat de $u$ : elle ne multiplie pas."
+        },
+        {
+          "id": "D",
+          "texte": "$\\sqrt{x} + (x + 1)$",
+          "correcte": false,
+          "erreur": "somme_au_lieu_de_composition",
+          "feedback": "Une composition n'additionne pas les deux fonctions."
+        }
+      ],
+      "explication": "$(v \\circ u)(x) = v\\big(u(x)\\big) = v(x + 1) = \\sqrt{x + 1}$.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 1. Comprendre l'idée de composition — Fonction intérieure / fonction extérieure"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q3",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "dériver $e^{u}$",
+      "enonce": "Quelle est la dérivée de $f(x) = e^{-x}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = -e^{-x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = e^{-x}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "On a oublié le facteur $u'(x) = -1$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = -x\\,e^{-x}$",
+          "correcte": false,
+          "erreur": "mauvaise_derivee_interieure",
+          "feedback": "La dérivée de $-x$ est $-1$, et non $-x$."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = e^{x}$",
+          "correcte": false,
+          "erreur": "mauvaise_composition",
+          "feedback": "On ne change pas le signe de l'exposant : $f'(x) = -1 \\times e^{-x}$."
+        }
+      ],
+      "explication": "$f = e^{u}$ avec $u(x) = -x$ et $u'(x) = -1$ : $f'(x) = u'(x)\\,e^{u(x)} = -e^{-x}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q4",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $\\sqrt{u}$",
+      "enonce": "Quelle est la dérivée de $f(x) = \\sqrt{3x - 2}$ sur $\\left]\\dfrac{2}{3}\\ ;\\ +\\infty\\right[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = \\dfrac{1}{2\\sqrt{3x - 2}}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "On a oublié le facteur $u'(x) = 3$ au numérateur."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = \\dfrac{3}{\\sqrt{3x - 2}}$",
+          "correcte": false,
+          "erreur": "oubli_du_facteur_2",
+          "feedback": "La dérivée de $\\sqrt{u}$ est $\\dfrac{u'}{2\\sqrt{u}}$ : il y a un $2$ au dénominateur."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = \\dfrac{3}{2\\sqrt{3x - 2}}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = \\dfrac{3}{2(3x - 2)}$",
+          "correcte": false,
+          "erreur": "confusion_formule_ln",
+          "feedback": "C'est la formule de $\\ln(u)$ à moitié : pour $\\sqrt{u}$, le dénominateur est $2\\sqrt{u}$."
+        }
+      ],
+      "explication": "$f = \\sqrt{u}$ avec $u(x) = 3x - 2$ et $u'(x) = 3$ : $f'(x) = \\dfrac{u'(x)}{2\\sqrt{u(x)}} = \\dfrac{3}{2\\sqrt{3x - 2}}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q5",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $\\dfrac{1}{u}$",
+      "enonce": "Quelle est la dérivée de $f(x) = \\dfrac{1}{2x + 3}$ sur $\\left]-\\dfrac{3}{2}\\ ;\\ +\\infty\\right[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = \\dfrac{2}{(2x + 3)^2}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "La dérivée de $\\dfrac{1}{u}$ est $-\\dfrac{u'}{u^2}$ : il y a un signe $-$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = -\\dfrac{2}{(2x + 3)^2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = -\\dfrac{1}{(2x + 3)^2}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "On a oublié le facteur $u'(x) = 2$."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = -\\dfrac{2}{2x + 3}$",
+          "correcte": false,
+          "erreur": "oubli_du_carre",
+          "feedback": "Le dénominateur est $u^2$, pas $u$."
+        }
+      ],
+      "explication": "$f = \\dfrac{1}{u}$ avec $u(x) = 2x + 3$ et $u'(x) = 2$ : $f'(x) = -\\dfrac{u'(x)}{u(x)^2} = -\\dfrac{2}{(2x + 3)^2}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q6",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $u^n$",
+      "enonce": "Quelle est la dérivée de $f(x) = \\left(x^2 + 1\\right)^3$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = 3\\left(x^2 + 1\\right)^2$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "On a oublié de multiplier par $u'(x) = 2x$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = 6x\\left(x^2 + 1\\right)^3$",
+          "correcte": false,
+          "erreur": "exposant_non_diminue",
+          "feedback": "L'exposant diminue de $1$ : on obtient $\\left(x^2 + 1\\right)^2$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = 3 \\times 2x$",
+          "correcte": false,
+          "erreur": "oubli_de_la_puissance",
+          "feedback": "On a oublié le facteur $\\left(x^2 + 1\\right)^2$."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = 6x\\left(x^2 + 1\\right)^2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$f = u^3$ avec $u(x) = x^2 + 1$ et $u'(x) = 2x$ : $f'(x) = 3 \\times 2x \\times \\left(x^2 + 1\\right)^2 = 6x\\left(x^2 + 1\\right)^2$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q7",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $\\ln(u)$ avec $u' < 0$",
+      "enonce": "Quelle est la dérivée de $f(x) = \\ln(2 - x)$ sur $]-\\infty\\ ;\\ 2[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = \\dfrac{1}{2 - x}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "La dérivée de $2 - x$ est $-1$ : le numérateur est $-1$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = \\dfrac{-1}{x}$",
+          "correcte": false,
+          "erreur": "oubli_de_l_argument",
+          "feedback": "Le dénominateur est $u(x) = 2 - x$, pas $x$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = \\dfrac{-1}{2 - x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = \\dfrac{-1}{(2 - x)^2}$",
+          "correcte": false,
+          "erreur": "confusion_ln_et_inverse",
+          "feedback": "Le carré apparaît pour $\\dfrac{1}{u}$, pas pour $\\ln(u)$."
+        }
+      ],
+      "explication": "$u(x) = 2 - x$, $u'(x) = -1$ : $f'(x) = \\dfrac{u'(x)}{u(x)} = \\dfrac{-1}{2 - x}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes — Oublier de multiplier par la dérivée de la fonction intérieure"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q8",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "variations d'une composée",
+      "enonce": "Soit $g(x) = e^{-x^2}$ sur $\\mathbb{R}$. Quelles sont les variations de $g$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$g$ est croissante sur $]-\\infty\\ ;\\ 0]$ puis décroissante sur $[0\\ ;\\ +\\infty[$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$g$ est décroissante sur $]-\\infty\\ ;\\ 0]$ puis croissante sur $[0\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "signe_de_la_derivee_inverse",
+          "feedback": "$g'(x) = -2x\\,e^{-x^2}$ est **positive** pour $x < 0$."
+        },
+        {
+          "id": "C",
+          "texte": "$g$ est croissante sur $\\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "confusion_signe_exponentielle_et_derivee",
+          "feedback": "$g'(x)$ contient le facteur $-2x$, qui change de signe en $0$."
+        },
+        {
+          "id": "D",
+          "texte": "$g$ est décroissante sur $\\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "oubli_du_changement_de_signe",
+          "feedback": "$-2x > 0$ pour $x < 0$ : $g$ ne peut pas être décroissante sur $\\mathbb{R}$."
+        }
+      ],
+      "explication": "$u(x) = -x^2$, $u'(x) = -2x$ : $g'(x) = -2x\\,e^{-x^2}$. Comme $e^{-x^2} > 0$, le signe de $g'$ est celui de $-2x$ : positif pour $x < 0$, négatif pour $x > 0$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver",
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Simplifier"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q9",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "composée avec $\\ln$ à l'intérieur",
+      "enonce": "Quelle est la dérivée de $f(x) = \\left(\\ln(x)\\right)^2$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = \\dfrac{2}{x}$",
+          "correcte": false,
+          "erreur": "oubli_de_la_puissance",
+          "feedback": "Il manque le facteur $u(x) = \\ln(x)$ : $\\left(u^2\\right)' = 2u\\,u'$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = 2\\ln(x)$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "Il manque le facteur $u'(x) = \\dfrac{1}{x}$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = \\dfrac{2\\ln(x)}{x^2}$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "$2\\ln(x) \\times \\dfrac{1}{x} = \\dfrac{2\\ln(x)}{x}$ : il n'y a pas de carré."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = \\dfrac{2\\ln(x)}{x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$f = u^2$ avec $u(x) = \\ln(x)$ et $u'(x) = \\dfrac{1}{x}$ : $f'(x) = 2\\,u'(x)\\,u(x) = \\dfrac{2\\ln(x)}{x}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé — Reconnaître les principales formes à dériver",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes — Mal identifier les fonctions intérieure et extérieure et mal appliquer la formule de dérivation"
+      ]
+    },
+    {
+      "id": "comp-chapitre-q10",
+      "chapitre": "Fonctions composées",
+      "fiche": null,
+      "type": "vrai_faux_plausible",
+      "niveau": 3,
+      "notion": "reconnaître une composée et la dériver",
+      "enonce": "Laquelle de ces affirmations est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$e^{x} + x$ est une fonction composée, car on y applique l'exponentielle.",
+          "correcte": false,
+          "erreur": "somme_prise_pour_une_composee",
+          "feedback": "L'exponentielle n'est pas appliquée au résultat d'une autre fonction : c'est une somme."
+        },
+        {
+          "id": "B",
+          "texte": "$x\\,e^{x}$ est un produit de fonctions : on ne la dérive pas avec la formule des composées.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\left(\\sqrt{x^2 + 1}\\right)' = \\dfrac{1}{2\\sqrt{x^2 + 1}}$, car on dérive seulement la racine.",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "Il faut multiplier par $u'(x) = 2x$ : on obtient $\\dfrac{x}{\\sqrt{x^2 + 1}}$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\left(e^{2x}\\right)' = e^{2x}$, car l'exponentielle est sa propre dérivée.",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "C'est vrai pour $e^x$ seulement : $\\left(e^{2x}\\right)' = 2e^{2x}$."
+        }
+      ],
+      "explication": "Une composition applique une fonction au **résultat** d'une autre. Un produit comme $x\\,e^x$ se dérive avec une autre règle.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 3. Erreurs fréquentes — Croire que toute expression avec plusieurs opérations est une fonction composée",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes — Oublier de multiplier par la dérivée de la fonction intérieure"
+      ]
+    }
+  ]
+}

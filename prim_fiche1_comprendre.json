@@ -1,0 +1,241 @@
+{
+  "id": "prim-f1",
+  "titre": "Quiz — Comprendre les primitives",
+  "chapitre": "Primitives",
+  "fiche": "Comprendre les primitives",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "prim-f1-q1",
+      "chapitre": "Primitives",
+      "fiche": "Comprendre les primitives",
+      "type": "application",
+      "niveau": 1,
+      "notion": "trouver une primitive simple",
+      "enonce": "Quelle est une primitive de $f(x) = 4x$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = 4x^{2}$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_n_plus_1",
+          "feedback": "Pour $x^n$, on divise par le nouvel exposant : $\\dfrac{x^2}{2}$, puis on multiplie par $4$."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = 4$",
+          "correcte": false,
+          "erreur": "confusion_primitive_derivee",
+          "feedback": "$4$ est la dérivée de $4x$ : on cherche l'opération inverse."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = 2x^{2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = 2x$",
+          "correcte": false,
+          "erreur": "mauvais_exposant",
+          "feedback": "$(2x)' = 2$ et non $4x$ : l'exposant de $x$ doit augmenter de $1$."
+        }
+      ],
+      "explication": "Une primitive de $x$ est $\\dfrac{x^2}{2}$ ; donc une primitive de $4x$ est $4 \\times \\dfrac{x^2}{2} = 2x^2$. Vérification : $\\left(2x^2\\right)' = 4x$.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Reconnaître les principales formes et connaître les primitives correspondantes"
+      ]
+    },
+    {
+      "id": "prim-f1-q2",
+      "chapitre": "Primitives",
+      "fiche": "Comprendre les primitives",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "ensemble des primitives",
+      "enonce": "Combien de primitives la fonction $f(x) = 2x$ admet-elle sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une infinité : toutes les fonctions $x^2 + C$, avec $C \\in \\mathbb{R}$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Une seule : $x^2$.",
+          "correcte": false,
+          "erreur": "croire_primitive_unique",
+          "feedback": "$x^2 + 1$ et $x^2 - 5$ sont aussi des primitives de $2x$ : la dérivée d'une constante est nulle."
+        },
+        {
+          "id": "C",
+          "texte": "Deux : $x^2$ et $-x^2$.",
+          "correcte": false,
+          "erreur": "primitive_opposee",
+          "feedback": "$\\left(-x^2\\right)' = -2x \\neq 2x$ : l'opposée n'est pas une primitive."
+        },
+        {
+          "id": "D",
+          "texte": "Aucune, sauf si l'on fixe la valeur de $C$.",
+          "correcte": false,
+          "erreur": "confusion_constante_et_existence",
+          "feedback": "Toute fonction continue admet des primitives ; $C$ ne sert qu'à choisir **laquelle** on garde."
+        }
+      ],
+      "explication": "Si $F$ est une primitive de $f$, alors $F + C$ aussi, pour tout réel $C$. Deux primitives d'une même fonction sur un intervalle diffèrent d'une constante.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 1. Définition — Ajouter une constante $C$"
+      ]
+    },
+    {
+      "id": "prim-f1-q3",
+      "chapitre": "Primitives",
+      "fiche": "Comprendre les primitives",
+      "type": "application",
+      "niveau": 2,
+      "notion": "primitive de $\\dfrac{1}{x^2}$",
+      "enonce": "Quelle est une primitive de $f(x) = \\dfrac{1}{x^2}$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = \\ln(x)$",
+          "correcte": false,
+          "erreur": "confusion_ln_et_inverse_carre",
+          "feedback": "$\\ln(x)$ est une primitive de $\\dfrac{1}{x}$, pas de $\\dfrac{1}{x^2}$."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = \\dfrac{1}{x}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\left(\\dfrac{1}{x}\\right)' = -\\dfrac{1}{x^2}$ : il manque le signe $-$."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = -\\dfrac{1}{x^{2}}$",
+          "correcte": false,
+          "erreur": "confusion_primitive_derivee",
+          "feedback": "$-\\dfrac{1}{x^2}$ n'est pas une primitive de $\\dfrac{1}{x^2}$ : c'est (au signe près) la dérivée de $\\dfrac{1}{x}$ ."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = -\\dfrac{1}{x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Dans le tableau : $\\dfrac{1}{x^2} \\longrightarrow -\\dfrac{1}{x}$. Vérification : $\\left(-\\dfrac{1}{x}\\right)' = \\dfrac{1}{x^2}$.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Reconnaître les principales formes et connaître les primitives correspondantes"
+      ]
+    },
+    {
+      "id": "prim-f1-q4",
+      "chapitre": "Primitives",
+      "fiche": "Comprendre les primitives",
+      "type": "application",
+      "niveau": 2,
+      "notion": "primitive d'une puissance négative",
+      "enonce": "Quelle est une primitive de $f(x) = \\dfrac{1}{x^3}$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = -\\dfrac{1}{x^{2}}$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_n_plus_1",
+          "feedback": "$x^{-3} \\to \\dfrac{x^{-2}}{-2}$ : on divise par le nouvel exposant, $-2$."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = -\\dfrac{1}{2x^{2}}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = -\\dfrac{1}{3x^{2}}$",
+          "correcte": false,
+          "erreur": "mauvais_diviseur",
+          "feedback": "On divise par le **nouvel** exposant ($-2$), pas par l'ancien ($-3$) ni par $3$."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = \\ln\\left(x^{3}\\right)$",
+          "correcte": false,
+          "erreur": "confusion_ln_et_puissance",
+          "feedback": "$\\ln$ intervient uniquement pour $\\dfrac{1}{x}$ (exposant $-1$)."
+        }
+      ],
+      "explication": "$\\dfrac{1}{x^3} = x^{-3}$ et une primitive de $x^n$ est $\\dfrac{x^{n+1}}{n+1}$ : $\\dfrac{x^{-2}}{-2} = -\\dfrac{1}{2x^2}$.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Reconnaître les principales formes et connaître les primitives correspondantes"
+      ]
+    },
+    {
+      "id": "prim-f1-q5",
+      "chapitre": "Primitives",
+      "fiche": "Comprendre les primitives",
+      "type": "application",
+      "niveau": 3,
+      "notion": "forme $u'/\\sqrt{u}$",
+      "enonce": "Quelle est une primitive de $f(x) = \\dfrac{2x}{\\sqrt{x^2 + 1}}$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = \\sqrt{x^2 + 1}$",
+          "correcte": false,
+          "erreur": "oubli_du_facteur_2",
+          "feedback": "La dérivée de $\\sqrt{u}$ est $\\dfrac{u'}{2\\sqrt{u}}$ : pour obtenir $\\dfrac{u'}{\\sqrt{u}}$, il faut un facteur $2$."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = 2\\sqrt{x^2 + 1}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = \\ln\\left(x^2 + 1\\right)$",
+          "correcte": false,
+          "erreur": "confusion_forme_ln",
+          "feedback": "$\\ln(u)$ est une primitive de $\\dfrac{u'}{u}$, pas de $\\dfrac{u'}{\\sqrt{u}}$."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = 4\\sqrt{x^2 + 1}$",
+          "correcte": false,
+          "erreur": "mauvais_coefficient",
+          "feedback": "La dérivée de $4\\sqrt{x^2+1}$ est $\\dfrac{4x}{\\sqrt{x^2+1}}$ : le coefficient est trop grand."
+        }
+      ],
+      "explication": "Avec $u(x) = x^2 + 1$ et $u'(x) = 2x$, $f = \\dfrac{u'}{\\sqrt{u}}$ : une primitive est $2\\sqrt{u} = 2\\sqrt{x^2 + 1}$.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Les formes avec une fonction composée"
+      ]
+    }
+  ]
+}

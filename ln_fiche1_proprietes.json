@@ -1,0 +1,244 @@
+{
+  "id": "ln-f1",
+  "titre": "Quiz — Propriétés du logarithme népérien",
+  "chapitre": "Logarithme",
+  "fiche": "Propriétés du logarithme népérien",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "ln-f1-q1",
+      "chapitre": "Logarithme",
+      "fiche": "Propriétés du logarithme népérien",
+      "type": "application",
+      "niveau": 1,
+      "notion": "$\\ln(e^x)=x$",
+      "enonce": "Que vaut $\\ln\\left(e^{3}\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$e^{3}$",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "$\\ln$ et $\\exp$ s'annulent : $\\ln(e^3) = 3$, et non $e^3$."
+        },
+        {
+          "id": "B",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "confusion_ln_e",
+          "feedback": "$\\ln(e) = 1$, mais ici on a $e^3$ : $\\ln(e^3) = 3\\ln(e) = 3$."
+        },
+        {
+          "id": "C",
+          "texte": "$3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\ln(3)$",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "$\\ln(e^3)$ n'est pas $\\ln(3)$ : le logarithme « retrouve » l'exposant."
+        }
+      ],
+      "explication": "Pour tout réel $x$, $\\ln\\left(e^{x}\\right) = x$. Donc $\\ln\\left(e^{3}\\right) = 3$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 1. Définition — Lien avec la fonction exponentielle",
+        "Fiche « Propriétés du logarithme népérien » — 4. Erreurs fréquentes — Confondre le logarithme et l'exponentielle, notamment dans leur lien réciproque"
+      ]
+    },
+    {
+      "id": "ln-f1-q2",
+      "chapitre": "Logarithme",
+      "fiche": "Propriétés du logarithme népérien",
+      "type": "application",
+      "niveau": 1,
+      "notion": "valeurs particulières",
+      "enonce": "Que vaut $\\ln\\left(\\dfrac{1}{e}\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\frac{1}{e} = e^{-1}$ : l'exposant est $-1$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{1}{e}$",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "Le logarithme ne laisse pas l'expression inchangée : il renvoie l'exposant de $e$."
+        },
+        {
+          "id": "D",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_ln_1",
+          "feedback": "Seul $\\ln(1)$ vaut $0$."
+        }
+      ],
+      "explication": "$\\ln\\left(\\dfrac{1}{e}\\right) = \\ln\\left(e^{-1}\\right) = -1$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 1. Définition — Valeurs particulières"
+      ]
+    },
+    {
+      "id": "ln-f1-q3",
+      "chapitre": "Logarithme",
+      "fiche": "Propriétés du logarithme népérien",
+      "type": "application",
+      "niveau": 2,
+      "notion": "décomposer un logarithme",
+      "enonce": "On pose $a = \\ln(2)$ et $b = \\ln(3)$. Comment s'écrit $\\ln(12)$ en fonction de $a$ et $b$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$a^2 + b$",
+          "correcte": false,
+          "erreur": "ln_puissance_mal_utilise",
+          "feedback": "$\\ln\\left(2^2\\right) = 2\\ln(2)$, et non $(\\ln 2)^2$."
+        },
+        {
+          "id": "B",
+          "texte": "$4a + b$",
+          "correcte": false,
+          "erreur": "exposant_confondu_avec_base",
+          "feedback": "$12 = 2^2 \\times 3$ : l'exposant de $2$ est $2$, pas $4$."
+        },
+        {
+          "id": "C",
+          "texte": "$2ab$",
+          "correcte": false,
+          "erreur": "produit_au_lieu_de_somme",
+          "feedback": "Le logarithme transforme un produit en **somme**, pas en produit."
+        },
+        {
+          "id": "D",
+          "texte": "$2a + b$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$12 = 2^2 \\times 3$, donc $\\ln(12) = \\ln\\left(2^2\\right) + \\ln(3) = 2\\ln(2) + \\ln(3) = 2a + b$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 2. Propriétés de la fonction logarithme — Transformations d'expressions",
+        "Fiche « Propriétés du logarithme népérien » — 4. Erreurs fréquentes — Mal utiliser les propriétés du logarithme, notamment pour les produits, quotients et puissances"
+      ]
+    },
+    {
+      "id": "ln-f1-q4",
+      "chapitre": "Logarithme",
+      "fiche": "Propriétés du logarithme népérien",
+      "type": "application",
+      "niveau": 2,
+      "notion": "simplifier une expression",
+      "enonce": "Simplifier $B = \\ln(8) - 3\\ln(2) + \\ln(5)$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\ln(5) + 6\\ln(2)$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\ln(8) = 3\\ln(2)$ : les deux termes en $\\ln(2)$ s'annulent au lieu de s'additionner."
+        },
+        {
+          "id": "B",
+          "texte": "$\\ln(5)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "oubli_d_un_terme",
+          "feedback": "Il reste le terme $\\ln(5)$ : seuls $\\ln(8)$ et $-3\\ln(2)$ se compensent."
+        },
+        {
+          "id": "D",
+          "texte": "$\\ln\\left(\\dfrac{20}{3}\\right)$",
+          "correcte": false,
+          "erreur": "n_ln_a_mal_transforme",
+          "feedback": "$3\\ln(2) = \\ln\\left(2^3\\right) = \\ln(8)$, et non $\\ln(6)$."
+        }
+      ],
+      "explication": "$8 = 2^3$, donc $\\ln(8) = 3\\ln(2)$. Alors $B = 3\\ln(2) - 3\\ln(2) + \\ln(5) = \\ln(5)$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 2. Propriétés de la fonction logarithme — Transformations d'expressions"
+      ]
+    },
+    {
+      "id": "ln-f1-q5",
+      "chapitre": "Logarithme",
+      "fiche": "Propriétés du logarithme népérien",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "composer exponentielle et logarithme",
+      "enonce": "Que vaut $e^{2\\ln(3)}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$6$",
+          "correcte": false,
+          "erreur": "ln_puissance_mal_utilise",
+          "feedback": "On a calculé $2 \\times 3$ : mais $2\\ln(3) = \\ln\\left(3^2\\right) = \\ln(9)$."
+        },
+        {
+          "id": "B",
+          "texte": "$9$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$2\\ln(3)$",
+          "correcte": false,
+          "erreur": "confusion_ln_exp",
+          "feedback": "L'exponentielle « annule » le logarithme : il ne reste pas de $\\ln$."
+        },
+        {
+          "id": "D",
+          "texte": "$3e^{2}$",
+          "correcte": false,
+          "erreur": "propriete_inventee",
+          "feedback": "$e^{2\\ln(3)}$ n'est pas le produit de $e^2$ par $3$."
+        }
+      ],
+      "explication": "$2\\ln(3) = \\ln\\left(3^2\\right) = \\ln(9)$, donc $e^{2\\ln(3)} = e^{\\ln(9)} = 9$.",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 1. Définition — Lien avec la fonction exponentielle",
+        "Fiche « Propriétés du logarithme népérien » — 2. Propriétés de la fonction logarithme — Propriétés de calcul"
+      ]
+    }
+  ]
+}

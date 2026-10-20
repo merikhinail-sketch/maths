@@ -1,0 +1,244 @@
+{
+  "id": "proba-banque",
+  "titre": "Banque — Probabilités",
+  "chapitre": "Probabilités",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "proba-banque-q1",
+      "chapitre": "Probabilités",
+      "fiche": "Rappels de Première : probabilités conditionnelles",
+      "type": "application",
+      "niveau": 1,
+      "notion": "probabilité conditionnelle dans un jeu de cartes",
+      "enonce": "On tire une carte au hasard dans un jeu de $32$ cartes ($8$ cœurs, dont un as de cœur). Sachant que la carte tirée est un cœur, quelle est la probabilité que ce soit un as ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{1}{8}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dfrac{1}{32}$",
+          "correcte": false,
+          "erreur": "confusion_intersection_conditionnelle",
+          "feedback": "$\\dfrac{1}{32}$ est $P(\\text{as} \\cap \\text{cœur})$ ; sachant « cœur », on divise par $P(\\text{cœur}) = \\dfrac{8}{32}$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{1}{4}$",
+          "correcte": false,
+          "erreur": "probabilite_de_la_condition",
+          "feedback": "$\\dfrac{1}{4}$ est la probabilité de tirer un cœur, pas celle d'un as sachant cœur."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{1}{2}$",
+          "correcte": false,
+          "erreur": "equiprobabilite_inventee",
+          "feedback": "Parmi les $8$ cœurs, un seul est un as : la probabilité n'est pas d'une chance sur deux."
+        }
+      ],
+      "explication": "$P_{\\text{cœur}}(\\text{as}) = \\dfrac{P(\\text{as} \\cap \\text{cœur})}{P(\\text{cœur})} = \\dfrac{1/32}{8/32} = \\dfrac{1}{8}$ : un as parmi les $8$ cœurs.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 1. Probabilité conditionnelle"
+      ]
+    },
+    {
+      "id": "proba-banque-q2",
+      "chapitre": "Probabilités",
+      "fiche": "Variables aléatoires",
+      "type": "application",
+      "niveau": 2,
+      "notion": "espérance d'un gain algébrique",
+      "enonce": "Un jeu coûte $2$ €. On lance un dé équilibré à $6$ faces : si l'on obtient $6$, on reçoit $10$ € ; sinon, on ne reçoit rien. On note $G$ le gain algébrique (somme reçue moins la mise). Que vaut $E(G)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\dfrac{1}{3}$ €",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dfrac{5}{3}$ €",
+          "correcte": false,
+          "erreur": "oubli_de_la_mise",
+          "feedback": "$\\dfrac{10}{6} = \\dfrac{5}{3}$ est l'espérance de la somme reçue ; il faut retirer la mise de $2$ €."
+        },
+        {
+          "id": "C",
+          "texte": "$3$ €",
+          "correcte": false,
+          "erreur": "moyenne_des_valeurs",
+          "feedback": "On ne fait pas la moyenne simple de $8$ et $-2$ : chaque valeur est pondérée par sa probabilité."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{4}{3}$ €",
+          "correcte": false,
+          "erreur": "oubli_des_pertes",
+          "feedback": "$8 \\times \\dfrac{1}{6} = \\dfrac{4}{3}$ ; il faut ajouter $(-2) \\times \\dfrac{5}{6}$ pour les parties perdues."
+        }
+      ],
+      "explication": "$G$ vaut $10 - 2 = 8$ avec probabilité $\\dfrac{1}{6}$, et $-2$ avec probabilité $\\dfrac{5}{6}$. $E(G) = 8 \\times \\dfrac{1}{6} - 2 \\times \\dfrac{5}{6} = \\dfrac{8 - 10}{6} = -\\dfrac{1}{3}$ € : le jeu est défavorable au joueur.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 3. Espérance, variance et écart-type",
+        "Fiche « Variables aléatoires » — 2. Loi de probabilité"
+      ]
+    },
+    {
+      "id": "proba-banque-q3",
+      "chapitre": "Probabilités",
+      "fiche": "Variables aléatoires",
+      "type": "application",
+      "niveau": 2,
+      "notion": "variance d'une variable à deux valeurs",
+      "enonce": "Une variable aléatoire $X$ prend les valeurs $0$ et $2$, chacune avec la probabilité $\\dfrac{1}{2}$. Que vaut sa variance $V(X)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "oubli_soustraire_esperance_au_carre",
+          "feedback": "$E(X^2) = 2$, mais $V(X) = E(X^2) - E(X)^2 = 2 - 1$."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_variance_esperance",
+          "feedback": "Une variance nulle signifierait que $X$ est constante, ce qui n'est pas le cas."
+        },
+        {
+          "id": "D",
+          "texte": "$\\sqrt{2}$",
+          "correcte": false,
+          "erreur": "confusion_variance_ecart_type",
+          "feedback": "La variance se calcule sans racine carrée ; c'est l'écart-type qui en prend une."
+        }
+      ],
+      "explication": "$E(X) = 0 \\times \\dfrac{1}{2} + 2 \\times \\dfrac{1}{2} = 1$. $V(X) = \\dfrac{1}{2}(0 - 1)^2 + \\dfrac{1}{2}(2 - 1)^2 = 1$.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 3. Espérance, variance et écart-type"
+      ]
+    },
+    {
+      "id": "proba-banque-q4",
+      "chapitre": "Probabilités",
+      "fiche": "La loi binomiale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "calcul de $P(X = k)$ avec le coefficient binomial",
+      "enonce": "On lance $10$ fois une pièce équilibrée et on note $X$ le nombre de « pile » obtenus. Que vaut $P(X = 2)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{45}{1\\,024}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dfrac{1}{1\\,024}$",
+          "correcte": false,
+          "erreur": "oubli_coefficient_binomial",
+          "feedback": "$\\left(\\dfrac{1}{2}\\right)^{10}$ est la probabilité d'**un** chemin ; il y a $\\dbinom{10}{2} = 45$ chemins avec $2$ « pile »."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{2}{10}$",
+          "correcte": false,
+          "erreur": "proportion_au_lieu_de_probabilite",
+          "feedback": "$\\dfrac{2}{10}$ est une proportion de lancers, pas la probabilité d'obtenir exactement $2$ « pile »."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{90}{1\\,024}$",
+          "correcte": false,
+          "erreur": "ordre_compte_a_tort",
+          "feedback": "$10 \\times 9 = 90$ tient compte de l'ordre des deux « pile » ; il faut $\\dbinom{10}{2} = 45$."
+        }
+      ],
+      "explication": "$X$ suit la loi binomiale $\\mathcal{B}(10\\,;\\,0{,}5)$. $P(X = 2) = \\dbinom{10}{2}\\,0{,}5^{2}\\,0{,}5^{8} = \\dfrac{45}{2^{10}} = \\dfrac{45}{1\\,024}$.",
+      "a_revoir": [
+        "Fiche « La loi binomiale » — Grand exemple guidé",
+        "Fiche « La loi binomiale » — Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "proba-banque-q5",
+      "chapitre": "Probabilités",
+      "fiche": "La loi binomiale",
+      "type": "application",
+      "niveau": 3,
+      "notion": "probabilité cumulée $P(X \\leq 1)$",
+      "enonce": "Soit $X$ une variable aléatoire suivant la loi binomiale $\\mathcal{B}(4\\,;\\,0{,}2)$. Que vaut $P(X \\leq 1)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}819\\,2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}409\\,6$",
+          "correcte": false,
+          "erreur": "un_seul_terme",
+          "feedback": "$0{,}409\\,6$ est seulement $P(X = 0)$ (ou $P(X = 1)$) : $P(X \\leq 1) = P(X = 0) + P(X = 1)$."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}590\\,4$",
+          "correcte": false,
+          "erreur": "mauvais_evenement_contraire",
+          "feedback": "$1 - P(X = 0) = 0{,}590\\,4$ est $P(X \\geq 1)$, pas $P(X \\leq 1)$."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}180\\,8$",
+          "correcte": false,
+          "erreur": "complementaire_au_lieu_de_l_evenement",
+          "feedback": "$0{,}180\\,8 = 1 - P(X \\leq 1) = P(X \\geq 2)$."
+        }
+      ],
+      "explication": "$P(X = 0) = 0{,}8^4 = 0{,}409\\,6$ et $P(X = 1) = \\dbinom{4}{1} \\times 0{,}2 \\times 0{,}8^3 = 4 \\times 0{,}2 \\times 0{,}512 = 0{,}409\\,6$. Donc $P(X \\leq 1) = 0{,}819\\,2$.",
+      "a_revoir": [
+        "Fiche « La loi binomiale » — Grand exemple guidé",
+        "Fiche « La loi binomiale » — Erreurs fréquentes"
+      ]
+    }
+  ]
+}

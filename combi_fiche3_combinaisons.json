@@ -1,0 +1,242 @@
+{
+  "id": "combi-f3",
+  "titre": "Quiz — Les combinaisons",
+  "chapitre": "Combinatoire",
+  "fiche": "Les combinaisons",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "combi-f3-q1",
+      "chapitre": "Combinatoire",
+      "fiche": "Les combinaisons",
+      "type": "choix_méthode",
+      "niveau": 1,
+      "notion": "reconnaître une combinaison",
+      "enonce": "Dans laquelle de ces situations l'ordre ne compte-t-il **pas** ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Choisir un président et un trésorier parmi les élèves.",
+          "correcte": false,
+          "erreur": "ordre_ignore",
+          "feedback": "Président et trésorier sont deux rôles différents : échanger les deux personnes change le résultat."
+        },
+        {
+          "id": "B",
+          "texte": "Former un code à $4$ chiffres.",
+          "correcte": false,
+          "erreur": "ordre_ignore",
+          "feedback": "Les codes $1234$ et $4321$ sont différents : l'ordre compte."
+        },
+        {
+          "id": "C",
+          "texte": "Choisir $3$ élèves pour former une équipe de volley.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Établir le podium d'une course.",
+          "correcte": false,
+          "erreur": "ordre_ignore",
+          "feedback": "Le 1er n'est pas le 3e : l'ordre compte."
+        }
+      ],
+      "explication": "Test de la fiche : échanger deux éléments change-t-il le résultat ? Pour une équipe, non : c'est une combinaison.",
+      "a_revoir": [
+        "Fiche « Les combinaisons » — 1. Reconnaître une combinaison — Identifier une situation où l'on choisit $k$ éléments parmi $n$"
+      ]
+    },
+    {
+      "id": "combi-f3-q2",
+      "chapitre": "Combinatoire",
+      "fiche": "Les combinaisons",
+      "type": "application",
+      "niveau": 1,
+      "notion": "calcul de $\\binom{n}{k}$",
+      "enonce": "Que vaut $\\dbinom{5}{2}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$10$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$20$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_k_factorielle",
+          "feedback": "$5 \\times 4 = 20$ compte les listes ordonnées : chaque groupe est compté $2! = 2$ fois."
+        },
+        {
+          "id": "C",
+          "texte": "$2{,}5$",
+          "correcte": false,
+          "erreur": "quotient_n_sur_k",
+          "feedback": "$\\dbinom{5}{2}$ n'est pas le quotient $5 \\div 2$."
+        },
+        {
+          "id": "D",
+          "texte": "$7$",
+          "correcte": false,
+          "erreur": "somme_n_plus_k",
+          "feedback": "$\\dbinom{5}{2}$ ne se calcule pas en additionnant $5$ et $2$."
+        }
+      ],
+      "explication": "$\\dbinom{5}{2} = \\dfrac{5 \\times 4}{2 \\times 1} = 10$.",
+      "a_revoir": [
+        "Fiche « Les combinaisons » — 2. Propriétés et calcul — Utiliser la méthode"
+      ]
+    },
+    {
+      "id": "combi-f3-q3",
+      "chapitre": "Combinatoire",
+      "fiche": "Les combinaisons",
+      "type": "application",
+      "niveau": 2,
+      "notion": "symétrie",
+      "enonce": "Que vaut $\\dbinom{12}{10}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$66$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$132$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser",
+          "feedback": "$12 \\times 11 = 132$ : il reste à diviser par $2! = 2$ (on utilise $\\dbinom{12}{10} = \\dbinom{12}{2}$)."
+        },
+        {
+          "id": "C",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "difference_n_moins_k",
+          "feedback": "$12 - 10 = 2$ est le nombre d'éléments laissés de côté, pas le nombre de groupes."
+        },
+        {
+          "id": "D",
+          "texte": "$120$",
+          "correcte": false,
+          "erreur": "produit_n_k",
+          "feedback": "$12 \\times 10$ n'a pas de rapport avec $\\dbinom{12}{10}$."
+        }
+      ],
+      "explication": "Par symétrie, $\\dbinom{12}{10} = \\dbinom{12}{2} = \\dfrac{12 \\times 11}{2} = 66$.",
+      "a_revoir": [
+        "Fiche « Les combinaisons » — 2. Propriétés et calcul — Propriétés"
+      ]
+    },
+    {
+      "id": "combi-f3-q4",
+      "chapitre": "Combinatoire",
+      "fiche": "Les combinaisons",
+      "type": "application",
+      "niveau": 2,
+      "notion": "relation de Pascal",
+      "enonce": "On sait que $\\dbinom{6}{2} = 15$ et $\\dbinom{6}{3} = 20$. Que vaut $\\dbinom{7}{3}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$300$",
+          "correcte": false,
+          "erreur": "produit_au_lieu_de_somme",
+          "feedback": "La relation de Pascal fait intervenir une **somme**, pas un produit."
+        },
+        {
+          "id": "B",
+          "texte": "$5$",
+          "correcte": false,
+          "erreur": "difference_au_lieu_de_somme",
+          "feedback": "La relation de Pascal additionne les deux valeurs voisines."
+        },
+        {
+          "id": "C",
+          "texte": "$35$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$40$",
+          "correcte": false,
+          "erreur": "doubler_une_valeur",
+          "feedback": "$2 \\times 20$ n'utilise pas la bonne relation : $\\dbinom{7}{3} = \\dbinom{6}{2} + \\dbinom{6}{3}$."
+        }
+      ],
+      "explication": "Relation de Pascal : $\\dbinom{6}{2} + \\dbinom{6}{3} = \\dbinom{7}{3}$, donc $15 + 20 = 35$.",
+      "a_revoir": [
+        "Fiche « Les combinaisons » — 2. Propriétés et calcul — Propriétés"
+      ]
+    },
+    {
+      "id": "combi-f3-q5",
+      "chapitre": "Combinatoire",
+      "fiche": "Les combinaisons",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "combinaisons et principe multiplicatif",
+      "enonce": "Dans une classe de $12$ filles et $8$ garçons, on forme un comité de $3$ personnes avec **exactement** $2$ filles et $1$ garçon. Combien de comités différents peut-on former ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dbinom{20}{3} = 1\\,140$",
+          "correcte": false,
+          "erreur": "contrainte_ignoree",
+          "feedback": "Ce nombre compte tous les comités de $3$ personnes, quelle que soit leur composition."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dbinom{12}{2} \\times 8 = 528$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$12 \\times 11 \\times 8 = 1\\,056$",
+          "correcte": false,
+          "erreur": "ordre_pris_en_compte",
+          "feedback": "$12 \\times 11$ compte les paires de filles **ordonnées** : chaque paire est comptée deux fois."
+        },
+        {
+          "id": "D",
+          "texte": "$66 + 8 = 74$",
+          "correcte": false,
+          "erreur": "additionner_au_lieu_de_multiplier",
+          "feedback": "On choisit les filles **et** le garçon : les deux choix se font l'un après l'autre, on multiplie."
+        }
+      ],
+      "explication": "On choisit $2$ filles parmi $12$ : $\\dbinom{12}{2} = 66$ façons ; puis $1$ garçon parmi $8$ : $8$ façons. Principe multiplicatif : $66 \\times 8 = 528$.",
+      "a_revoir": [
+        "Fiche « Les combinaisons » — 1. Reconnaître une combinaison — Comprendre pourquoi l'ordre ne crée pas de nouveau choix",
+        "Fiche « Les combinaisons » — 2. Propriétés et calcul — Utiliser la méthode"
+      ]
+    }
+  ]
+}

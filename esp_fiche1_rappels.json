@@ -1,0 +1,241 @@
+{
+  "id": "esp-f1",
+  "titre": "Quiz — Rappels : vecteurs, colinéarité et produit scalaire",
+  "chapitre": "Géométrie dans l'espace",
+  "fiche": "Rappels : vecteurs, colinéarité et produit scalaire",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "esp-f1-q1",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Rappels : vecteurs, colinéarité et produit scalaire",
+      "type": "application",
+      "niveau": 1,
+      "notion": "coordonnées d'un vecteur",
+      "enonce": "Soit $A(-1\\ ;\\ 3)$ et $B(2\\ ;\\ 7)$. Quelles sont les coordonnées de $\\overrightarrow{AB}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\begin{pmatrix} 1 \\\\ 10 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "somme_au_lieu_de_difference",
+          "feedback": "On a additionné les coordonnées : il faut faire « arrivée moins départ »."
+        },
+        {
+          "id": "B",
+          "texte": "$\\begin{pmatrix} -3 \\\\ -4 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "depart_moins_arrivee",
+          "feedback": "On a calculé $\\overrightarrow{BA}$ : $\\overrightarrow{AB}$ s'obtient avec arrivée $-$ départ."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\begin{pmatrix} 3 \\\\ -4 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_sur_une_coordonnee",
+          "feedback": "$7 - 3 = +4$ : l'ordonnée est $4$."
+        }
+      ],
+      "explication": "$\\overrightarrow{AB}\\begin{pmatrix} 2 - (-1) \\\\ 7 - 3 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$.",
+      "a_revoir": [
+        "Fiche « Rappels : vecteurs, colinéarité et produit scalaire » — 1. Coordonnées et vecteurs — Coordonnées d'un vecteur"
+      ]
+    },
+    {
+      "id": "esp-f1-q2",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Rappels : vecteurs, colinéarité et produit scalaire",
+      "type": "application",
+      "niveau": 1,
+      "notion": "opérations sur les vecteurs",
+      "enonce": "Soit $\\vec{u}\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} -1 \\\\ 4 \\end{pmatrix}$. Quelles sont les coordonnées de $2\\vec{u} - \\vec{v}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "On a calculé $2\\vec{u} + \\vec{v}$ : il faut retrancher $\\vec{v}$, donc $4 - (-1)$ et $6 - 4$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "oubli_du_coefficient",
+          "feedback": "On a calculé $\\vec{u} - \\vec{v}$ : il manque le facteur $2$ sur $\\vec{u}$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\begin{pmatrix} -5 \\\\ -2 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "ordre_inverse",
+          "feedback": "On a calculé $\\vec{v} - 2\\vec{u}$."
+        }
+      ],
+      "explication": "$2\\vec{u}\\begin{pmatrix} 4 \\\\ 6 \\end{pmatrix}$ puis $2\\vec{u} - \\vec{v}\\begin{pmatrix} 4 + 1 \\\\ 6 - 4 \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$.",
+      "a_revoir": [
+        "Fiche « Rappels : vecteurs, colinéarité et produit scalaire » — 1. Coordonnées et vecteurs — Opérations sur les vecteurs"
+      ]
+    },
+    {
+      "id": "esp-f1-q3",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Rappels : vecteurs, colinéarité et produit scalaire",
+      "type": "application",
+      "niveau": 2,
+      "notion": "colinéarité",
+      "enonce": "Pour quelle valeur de $k$ les vecteurs $\\vec{u}\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} -6 \\\\ k \\end{pmatrix}$ sont-ils colinéaires ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$k = -4$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$-6 = -2 \\times 3$ : le coefficient est $-2$, donc $k = -2 \\times (-2) = 4$."
+        },
+        {
+          "id": "B",
+          "texte": "$k = 12$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "$3k - (-6)(-2) = 0$ donne $3k = 12$, soit $k = 4$ : il faut diviser par $3$."
+        },
+        {
+          "id": "C",
+          "texte": "$k = -12$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_et_de_calcul",
+          "feedback": "La condition est $3k - 12 = 0$, donc $k = +4$."
+        },
+        {
+          "id": "D",
+          "texte": "$k = 4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Colinéaires $\\iff x\\,y' - x'\\,y = 0$ : $3k - (-6)(-2) = 3k - 12 = 0$, donc $k = 4$. Avec le coefficient : $\\vec{v} = -2\\vec{u}$.",
+      "a_revoir": [
+        "Fiche « Rappels : vecteurs, colinéarité et produit scalaire » — 2. Colinéarité — Reconnaître deux vecteurs colinéaires"
+      ]
+    },
+    {
+      "id": "esp-f1-q4",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Rappels : vecteurs, colinéarité et produit scalaire",
+      "type": "reconnaissance",
+      "niveau": 2,
+      "notion": "orthogonalité",
+      "enonce": "Lequel de ces couples de vecteurs est orthogonal ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$ et $\\begin{pmatrix} -8 \\\\ 2 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "confusion_colineaire_orthogonal",
+          "feedback": "Ces vecteurs sont **colinéaires** : leur produit scalaire vaut $-34 \\neq 0$."
+        },
+        {
+          "id": "B",
+          "texte": "$\\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$ et $\\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$ et $\\begin{pmatrix} 1 \\\\ -4 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$4 \\times 1 + (-1) \\times (-4) = 8 \\neq 0$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$ et $\\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "vecteur_orthogonal_a_lui_meme",
+          "feedback": "$\\vec{u} \\cdot \\vec{u} = \\|\\vec{u}\\|^2 = 17 \\neq 0$ pour un vecteur non nul."
+        }
+      ],
+      "explication": "$4 \\times 1 + (-1) \\times 4 = 0$ : les vecteurs sont orthogonaux.",
+      "a_revoir": [
+        "Fiche « Rappels : vecteurs, colinéarité et produit scalaire » — 3. Produit scalaire — Reconnaître les vecteurs orthogonaux"
+      ]
+    },
+    {
+      "id": "esp-f1-q5",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Rappels : vecteurs, colinéarité et produit scalaire",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "alignement de points",
+      "enonce": "Soit $A(0\\ ;\\ 1)$, $B(2\\ ;\\ 4)$ et $C(6\\ ;\\ k)$. Pour quelle valeur de $k$ les points $A$, $B$, $C$ sont-ils alignés ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$k = 9$",
+          "correcte": false,
+          "erreur": "oubli_de_la_soustraction_dans_AC",
+          "feedback": "$\\overrightarrow{AC}\\begin{pmatrix} 6 \\\\ k - 1 \\end{pmatrix}$ : il faut soustraire $y_A = 1$."
+        },
+        {
+          "id": "B",
+          "texte": "$k = 10$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$k = 12$",
+          "correcte": false,
+          "erreur": "coordonnees_de_B_prises_pour_AB",
+          "feedback": "On a utilisé les coordonnées de $B$, $(2\\ ;\\ 4)$, au lieu de $\\overrightarrow{AB}(2\\ ;\\ 3)$."
+        },
+        {
+          "id": "D",
+          "texte": "$k = -3$",
+          "correcte": false,
+          "erreur": "confusion_colineaire_orthogonal",
+          "feedback": "On a écrit $\\overrightarrow{AB} \\cdot \\overrightarrow{AC} = 0$ (orthogonalité) au lieu de la colinéarité."
+        }
+      ],
+      "explication": "$\\overrightarrow{AB}\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ et $\\overrightarrow{AC}\\begin{pmatrix} 6 \\\\ k - 1 \\end{pmatrix}$ colinéaires : $2(k - 1) - 18 = 0$, donc $k = 10$.",
+      "a_revoir": [
+        "Fiche « Rappels : vecteurs, colinéarité et produit scalaire » — 2. Colinéarité — Utiliser la colinéarité"
+      ]
+    }
+  ]
+}

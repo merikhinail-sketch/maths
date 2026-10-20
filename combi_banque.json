@@ -1,0 +1,242 @@
+{
+  "id": "combi-banque",
+  "titre": "Banque — Combinatoire",
+  "chapitre": "Combinatoire",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "combi-banque-q1",
+      "chapitre": "Combinatoire",
+      "fiche": "Principes additif et multiplicatif",
+      "type": "application",
+      "niveau": 1,
+      "notion": "principe multiplicatif : aller-retour",
+      "enonce": "Pour aller à un concert, on choisit un trajet aller parmi $4$, puis un trajet retour parmi ces mêmes $4$ trajets (on peut reprendre le même). Combien d'allers-retours différents sont possibles ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$16$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$8$",
+          "correcte": false,
+          "erreur": "additionner_au_lieu_de_multiplier",
+          "feedback": "On fait les deux choix l'un après l'autre : on multiplie, on n'additionne pas."
+        },
+        {
+          "id": "C",
+          "texte": "$12$",
+          "correcte": false,
+          "erreur": "contrainte_inventee",
+          "feedback": "Le retour peut emprunter le même trajet que l'aller : il reste $4$ choix, pas $3$."
+        },
+        {
+          "id": "D",
+          "texte": "$6$",
+          "correcte": false,
+          "erreur": "ordre_ignore",
+          "feedback": "L'aller et le retour sont deux étapes distinctes : l'ordre compte, ce n'est pas une combinaison."
+        }
+      ],
+      "explication": "$4$ choix pour l'aller, puis $4$ choix pour le retour : $4 \\times 4 = 16$ allers-retours.",
+      "a_revoir": [
+        "Fiche « Principes additif et multiplicatif » — 2. Principe multiplicatif"
+      ]
+    },
+    {
+      "id": "combi-banque-q2",
+      "chapitre": "Combinatoire",
+      "fiche": "K-uplets et permutations",
+      "type": "application",
+      "niveau": 2,
+      "notion": "permutations : anagrammes",
+      "enonce": "Combien d'anagrammes (ayant un sens ou non) peut-on former avec les cinq lettres du mot MATHS ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$120$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$3\\,125$",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "$5^5$ compte des mots où une lettre peut revenir ; ici chaque lettre est utilisée une seule fois."
+        },
+        {
+          "id": "C",
+          "texte": "$24$",
+          "correcte": false,
+          "erreur": "oubli_d_une_place",
+          "feedback": "$4! = 24$ : il y a $5$ lettres à placer, donc $5!$."
+        },
+        {
+          "id": "D",
+          "texte": "$25$",
+          "correcte": false,
+          "erreur": "mauvaise_operation",
+          "feedback": "$5 \\times 5$ ne correspond à aucune situation ici : on range $5$ lettres distinctes sur $5$ places."
+        }
+      ],
+      "explication": "Une anagramme est une façon de ranger les $5$ lettres distinctes : c'est une permutation. Il y en a $5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$.",
+      "a_revoir": [
+        "Fiche « K-uplets et permutations » — 2. Permutations"
+      ]
+    },
+    {
+      "id": "combi-banque-q3",
+      "chapitre": "Combinatoire",
+      "fiche": "Les combinaisons",
+      "type": "application",
+      "niveau": 2,
+      "notion": "combinaisons et principe multiplicatif : exactement un as",
+      "enonce": "On tire simultanément $3$ cartes dans un jeu de $32$ cartes (qui contient $4$ as). Combien de tirages contiennent **exactement** un as ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$1\\,512$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$382$",
+          "correcte": false,
+          "erreur": "additionner_au_lieu_de_multiplier",
+          "feedback": "On choisit l'as **et** les deux autres cartes : on multiplie $4$ par $\\dbinom{28}{2}$."
+        },
+        {
+          "id": "C",
+          "texte": "$4\\,960$",
+          "correcte": false,
+          "erreur": "contrainte_oubliee",
+          "feedback": "$\\dbinom{32}{3} = 4\\,960$ compte tous les tirages, avec ou sans as."
+        },
+        {
+          "id": "D",
+          "texte": "$3\\,024$",
+          "correcte": false,
+          "erreur": "ordre_compte_a_tort",
+          "feedback": "$4 \\times 28 \\times 27$ tient compte de l'ordre des deux autres cartes ; dans un tirage simultané, l'ordre ne compte pas."
+        }
+      ],
+      "explication": "On choisit l'as : $\\dbinom{4}{1} = 4$ façons. On choisit les $2$ autres cartes parmi les $28$ qui ne sont pas des as : $\\dbinom{28}{2} = 378$ façons. Total : $4 \\times 378 = 1\\,512$.",
+      "a_revoir": [
+        "Fiche « Les combinaisons » — 2. Propriétés et calcul",
+        "Fiche « Les combinaisons » — 1. Reconnaître une combinaison"
+      ]
+    },
+    {
+      "id": "combi-banque-q4",
+      "chapitre": "Combinatoire",
+      "fiche": "Quelle méthode de dénombrement utiliser ?",
+      "type": "choix_méthode",
+      "niveau": 2,
+      "notion": "choisir la méthode : tiercé dans le désordre",
+      "enonce": "Une course compte $15$ chevaux. Un pari « tiercé dans le désordre » consiste à donner les $3$ premiers chevaux **sans** préciser leur ordre d'arrivée. De quelle situation s'agit-il, et combien de paris différents sont possibles ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une combinaison de $3$ parmi $15$ : $455$ paris.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Un $3$-uplet d'éléments distincts : $2\\,730$ paris.",
+          "correcte": false,
+          "erreur": "ordre_compte_a_tort",
+          "feedback": "$15 \\times 14 \\times 13$ compterait le tiercé **dans l'ordre** ; ici l'ordre ne compte pas."
+        },
+        {
+          "id": "C",
+          "texte": "Un $3$-uplet avec répétition : $3\\,375$ paris.",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "Un même cheval ne peut pas occuper deux places : pas de répétition."
+        },
+        {
+          "id": "D",
+          "texte": "Une permutation de $3$ éléments : $6$ paris.",
+          "correcte": false,
+          "erreur": "mauvais_ensemble",
+          "feedback": "$3! = 6$ compte les ordres possibles de $3$ chevaux déjà choisis, pas le choix des chevaux."
+        }
+      ],
+      "explication": "On choisit $3$ chevaux parmi $15$, sans ordre ni répétition : c'est une combinaison. $\\dbinom{15}{3} = \\dfrac{15 \\times 14 \\times 13}{3 \\times 2 \\times 1} = 455$.",
+      "a_revoir": [
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser"
+      ]
+    },
+    {
+      "id": "combi-banque-q5",
+      "chapitre": "Combinatoire",
+      "fiche": "K-uplets et permutations",
+      "type": "application",
+      "niveau": 3,
+      "notion": "$k$-uplet avec répétition et contrainte sur le premier chiffre",
+      "enonce": "Combien de nombres de $4$ chiffres peut-on écrire (le premier chiffre ne pouvant pas être $0$, les répétitions étant autorisées) ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$9\\,000$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$10\\,000$",
+          "correcte": false,
+          "erreur": "contrainte_oubliee",
+          "feedback": "$10^4$ compte aussi les écritures commençant par $0$, comme $0457$, qui ne sont pas des nombres à $4$ chiffres."
+        },
+        {
+          "id": "C",
+          "texte": "$4\\,536$",
+          "correcte": false,
+          "erreur": "repetitions_interdites_a_tort",
+          "feedback": "$9 \\times 9 \\times 8 \\times 7$ suppose des chiffres tous différents ; ici les répétitions sont permises."
+        },
+        {
+          "id": "D",
+          "texte": "$6\\,561$",
+          "correcte": false,
+          "erreur": "contrainte_appliquee_partout",
+          "feedback": "La contrainte ne porte que sur le premier chiffre : les trois suivants ont $10$ choix chacun."
+        }
+      ],
+      "explication": "On remplit les places une par une : $9$ choix pour le premier chiffre (de $1$ à $9$), puis $10$ choix pour chacun des trois autres. Total : $9 \\times 10^3 = 9\\,000$.",
+      "a_revoir": [
+        "Fiche « K-uplets et permutations » — 1. k-uplets — Méthode : remplir les places une par une"
+      ]
+    }
+  ]
+}

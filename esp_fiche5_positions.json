@@ -1,0 +1,241 @@
+{
+  "id": "esp-f5",
+  "titre": "Quiz — Positions relatives",
+  "chapitre": "Géométrie dans l'espace",
+  "fiche": "Positions relatives",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "esp-f5-q1",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Positions relatives",
+      "type": "application",
+      "niveau": 1,
+      "notion": "deux droites parallèles",
+      "enonce": "Soit $(d)$ passant par $O(0\\ ;\\ 0\\ ;\\ 0)$ de vecteur directeur $\\vec{u}\\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}$ et $(d')$ passant par $B(1\\ ;\\ 1\\ ;\\ 1)$ de vecteur directeur $\\vec{v}\\begin{pmatrix} 4 \\\\ -2 \\\\ 6 \\end{pmatrix}$. Quelle est leur position relative ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Confondues.",
+          "correcte": false,
+          "erreur": "oubli_de_tester_un_point",
+          "feedback": "Directions colinéaires ne suffit pas : $B = t\\vec{u}$ donne $t = \\frac{1}{2}$ puis $y = -\\frac{1}{2} \\neq 1$ : $B \\notin (d)$."
+        },
+        {
+          "id": "B",
+          "texte": "Parallèles distinctes.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Sécantes.",
+          "correcte": false,
+          "erreur": "confusion_colineaire_secant",
+          "feedback": "Des directions colinéaires excluent des droites sécantes en un unique point."
+        },
+        {
+          "id": "D",
+          "texte": "Non coplanaires.",
+          "correcte": false,
+          "erreur": "confusion_colineaire_non_coplanaire",
+          "feedback": "Des droites de même direction sont dans un même plan."
+        }
+      ],
+      "explication": "$\\vec{v} = 2\\vec{u}$ : directions colinéaires. $B \\notin (d)$ car $\\overrightarrow{OB} = (1\\ ;\\ 1\\ ;\\ 1)$ n'est pas colinéaire à $\\vec{u}$. Parallèles distinctes.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 1. Positions relatives de deux droites — Comment déterminer la position de deux droites"
+      ]
+    },
+    {
+      "id": "esp-f5-q2",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Positions relatives",
+      "type": "application",
+      "niveau": 1,
+      "notion": "droite et plan",
+      "enonce": "Soit $(d)$ : $\\begin{cases} x = 1 + t \\\\ y = 2 - t \\\\ z = 1 \\end{cases}$ et $(P) : x + y + z - 3 = 0$. Quelle est leur position relative ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(d)$ est sécante à $(P)$ en un point.",
+          "correcte": false,
+          "erreur": "oubli_de_substituer",
+          "feedback": "En remplaçant : $(1 + t) + (2 - t) + 1 - 3 = 1$, il n'y a pas de $t$ : pas de point d'intersection."
+        },
+        {
+          "id": "B",
+          "texte": "$(d)$ est contenue dans $(P)$.",
+          "correcte": false,
+          "erreur": "confusion_constante_non_nulle",
+          "feedback": "Il faudrait $0 = 0$ : on obtient $1 = 0$, impossible."
+        },
+        {
+          "id": "C",
+          "texte": "$(d)$ est perpendiculaire à $(P)$.",
+          "correcte": false,
+          "erreur": "confusion_avec_orthogonalite",
+          "feedback": "La position relative (sécante, parallèle, contenue) se lit sur l'équation en $t$."
+        },
+        {
+          "id": "D",
+          "texte": "$(d)$ est parallèle à $(P)$ sans y être contenue.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "On remplace : $(1 + t) + (2 - t) + 1 - 3 = 1$. L'équation $1 = 0$ n'a pas de solution : la droite est parallèle au plan, sans y être contenue.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 2. Position relative d'une droite et d'un plan — Comment déterminer la position à partir des équations disponibles"
+      ]
+    },
+    {
+      "id": "esp-f5-q3",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Positions relatives",
+      "type": "application",
+      "niveau": 2,
+      "notion": "deux plans",
+      "enonce": "Soit $(P) : 3x - y + 2z - 4 = 0$ et $(Q) : -6x + 2y - 4z + 8 = 0$. Quelle est leur position relative ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Confondus.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Parallèles distincts.",
+          "correcte": false,
+          "erreur": "oubli_du_terme_constant",
+          "feedback": "Il faut aussi comparer le terme constant : $8 = -2 \\times (-4)$, donc proportionnel."
+        },
+        {
+          "id": "C",
+          "texte": "Sécants selon une droite.",
+          "correcte": false,
+          "erreur": "normaux_pris_pour_non_colineaires",
+          "feedback": "$\\begin{pmatrix} -6 \\\\ 2 \\\\ -4 \\end{pmatrix} = -2\\begin{pmatrix} 3 \\\\ -1 \\\\ 2 \\end{pmatrix}$ : les vecteurs normaux sont colinéaires."
+        },
+        {
+          "id": "D",
+          "texte": "Perpendiculaires.",
+          "correcte": false,
+          "erreur": "confusion_colineaire_orthogonal",
+          "feedback": "Des vecteurs normaux colinéaires donnent des plans parallèles ou confondus, pas perpendiculaires."
+        }
+      ],
+      "explication": "Les vecteurs normaux sont colinéaires ($-2$ fois) et la proportionnalité vaut aussi pour le terme constant : les plans sont confondus.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 3. Positions relatives de deux plans — Comment déterminer leur position relative"
+      ]
+    },
+    {
+      "id": "esp-f5-q4",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Positions relatives",
+      "type": "application",
+      "niveau": 2,
+      "notion": "droites sécantes",
+      "enonce": "Soit $(d)$ : $\\begin{cases} x = t \\\\ y = 1 + t \\\\ z = 2t \\end{cases}$ et $(d')$ : $\\begin{cases} x = 1 + s \\\\ y = 2 - s \\\\ z = 2 + s \\end{cases}$. Que peut-on conclure ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elles sont non coplanaires, car leurs directions ne sont pas colinéaires.",
+          "correcte": false,
+          "erreur": "confusion_direction_non_colineaire_et_non_coplanaire",
+          "feedback": "Des directions non colinéaires donnent sécantes **ou** non coplanaires : il faut chercher un point commun."
+        },
+        {
+          "id": "B",
+          "texte": "Elles sont sécantes au point $(0\\ ;\\ 1\\ ;\\ 0)$.",
+          "correcte": false,
+          "erreur": "point_de_depart",
+          "feedback": "C'est le point de $(d)$ obtenu pour $t = 0$, pas le point commun ($t = 1$)."
+        },
+        {
+          "id": "C",
+          "texte": "Elles sont sécantes au point $(1\\ ;\\ 2\\ ;\\ 2)$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Elles sont parallèles, car elles ont un point commun.",
+          "correcte": false,
+          "erreur": "confusion_parallele_secant",
+          "feedback": "Un point commun avec des directions non colinéaires donne des droites sécantes."
+        }
+      ],
+      "explication": "$t = 1 + s$ et $1 + t = 2 - s$ donnent $s = 0$, $t = 1$. Troisième équation : $2t = 2 = 2 + s$ ✓. Point : $(1\\ ;\\ 2\\ ;\\ 2)$.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 1. Positions relatives de deux droites — Exemples"
+      ]
+    },
+    {
+      "id": "esp-f5-q5",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Positions relatives",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "droites non coplanaires",
+      "enonce": "Soit $(d)$ : $\\begin{cases} x = t \\\\ y = 1 + t \\\\ z = 2t \\end{cases}$ et $(d'')$ : $\\begin{cases} x = 1 + s \\\\ y = 2 - s \\\\ z = 3 + s \\end{cases}$. Les deux premières équations donnent $t = 1$ et $s = 0$. Que conclure ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Les droites sont sécantes au point obtenu pour $t = 1$, car deux équations sont vérifiées.",
+          "correcte": false,
+          "erreur": "oubli_de_verifier_la_troisieme_equation",
+          "feedback": "Il faut que **les trois** équations soient vérifiées par le même couple $(t\\ ;\\ s)$."
+        },
+        {
+          "id": "B",
+          "texte": "Les droites sont parallèles, car elles ne se coupent pas.",
+          "correcte": false,
+          "erreur": "confusion_non_secant_et_parallele",
+          "feedback": "Les directions $(1\\ ;\\ 1\\ ;\\ 2)$ et $(1\\ ;\\ -1\\ ;\\ 1)$ ne sont pas colinéaires."
+        },
+        {
+          "id": "C",
+          "texte": "Les droites sont sécantes, car leurs directions ne sont pas colinéaires.",
+          "correcte": false,
+          "erreur": "confusion_direction_et_secant",
+          "feedback": "Des directions non colinéaires donnent sécantes **ou** non coplanaires."
+        },
+        {
+          "id": "D",
+          "texte": "La troisième équation donne $2 = 3$, impossible : les droites sont non coplanaires.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Avec $t = 1$, $s = 0$ : $z = 2t = 2$ pour $(d)$ et $z = 3 + s = 3$ pour $(d'')$. $2 \\neq 3$ : le système n'a pas de solution.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 1. Positions relatives de deux droites — Exemples"
+      ]
+    }
+  ]
+}

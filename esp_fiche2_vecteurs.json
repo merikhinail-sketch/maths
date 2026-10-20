@@ -1,0 +1,241 @@
+{
+  "id": "esp-f2",
+  "titre": "Quiz — Vecteurs dans l'espace",
+  "chapitre": "Géométrie dans l'espace",
+  "fiche": "Vecteurs dans l'espace",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "esp-f2-q1",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Vecteurs dans l'espace",
+      "type": "application",
+      "niveau": 1,
+      "notion": "vecteur directeur",
+      "enonce": "Soit $A(1\\ ;\\ 0\\ ;\\ 2)$ et $B(3\\ ;\\ 2\\ ;\\ 3)$. Lequel de ces vecteurs est un vecteur directeur de $(AB)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\begin{pmatrix} 3 \\\\ 2 \\\\ 3 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "coordonnees_de_B",
+          "feedback": "Ce sont les coordonnées du **point** $B$, pas d'un vecteur directeur."
+        },
+        {
+          "id": "B",
+          "texte": "$\\begin{pmatrix} 4 \\\\ 2 \\\\ 5 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "somme_au_lieu_de_difference",
+          "feedback": "On a additionné les coordonnées de $A$ et $B$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{pmatrix} 2 \\\\ 2 \\\\ -1 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$z_B - z_A = 3 - 2 = +1$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\begin{pmatrix} 4 \\\\ 4 \\\\ 2 \\end{pmatrix}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\overrightarrow{AB}\\begin{pmatrix} 2 \\\\ 2 \\\\ 1 \\end{pmatrix}$ et $\\begin{pmatrix} 4 \\\\ 4 \\\\ 2 \\end{pmatrix} = 2\\overrightarrow{AB}$ : il est colinéaire, c'est donc aussi un vecteur directeur.",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 1. Vecteurs et directions dans l'espace — Vecteurs directeurs"
+      ]
+    },
+    {
+      "id": "esp-f2-q2",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Vecteurs dans l'espace",
+      "type": "application",
+      "niveau": 1,
+      "notion": "colinéarité dans l'espace",
+      "enonce": "Pour quelle valeur de $k$ les vecteurs $\\vec{u}\\begin{pmatrix} 2 \\\\ -1 \\\\ 4 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} -6 \\\\ 3 \\\\ k \\end{pmatrix}$ sont-ils colinéaires ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$k = -12$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$k = 12$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$-6 = -3 \\times 2$ : le coefficient est $-3$, donc $k = -3 \\times 4 = -12$."
+        },
+        {
+          "id": "C",
+          "texte": "$k = -4$",
+          "correcte": false,
+          "erreur": "relation_additive",
+          "feedback": "La relation est **multiplicative** : on multiplie par $-3$, on n'ajoute pas $-8$."
+        },
+        {
+          "id": "D",
+          "texte": "$k = -3$",
+          "correcte": false,
+          "erreur": "confusion_coefficient_et_coordonnee",
+          "feedback": "$-3$ est le coefficient de proportionnalité, pas la troisième coordonnée."
+        }
+      ],
+      "explication": "$-6 = k' \\times 2$ donne $k' = -3$. Vérification : $3 = -3 \\times (-1)$ ✓. Donc $k = -3 \\times 4 = -12$.",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 1. Vecteurs et directions dans l'espace — Reconnaître des vecteurs colinéaires"
+      ]
+    },
+    {
+      "id": "esp-f2-q3",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Vecteurs dans l'espace",
+      "type": "application",
+      "niveau": 2,
+      "notion": "combinaison linéaire",
+      "enonce": "Soit $\\vec{u}\\begin{pmatrix} 1 \\\\ 2 \\\\ 0 \\end{pmatrix}$, $\\vec{v}\\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$ et $\\vec{w}\\begin{pmatrix} 3 \\\\ 8 \\\\ 2 \\end{pmatrix}$. Quels réels $a$ et $b$ vérifient $\\vec{w} = a\\vec{u} + b\\vec{v}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$a = 2$ et $b = 3$",
+          "correcte": false,
+          "erreur": "inversion_de_a_et_b",
+          "feedback": "$a$ est le coefficient de $\\vec{u}$ (donné par la première coordonnée : $a = 3$) et $b$ celui de $\\vec{v}$ (donné par la troisième : $b = 2$)."
+        },
+        {
+          "id": "B",
+          "texte": "$a = 3$ et $b = 8$",
+          "correcte": false,
+          "erreur": "oubli_du_terme_2a",
+          "feedback": "La deuxième équation est $2a + b = 8$ : avec $a = 3$, $b = 2$."
+        },
+        {
+          "id": "C",
+          "texte": "$a = 3$ et $b = 2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$a = -3$ et $b = 2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "La première équation $a = 3$ donne un coefficient positif."
+        }
+      ],
+      "explication": "Équations : $a = 3$ ; $2a + b = 8$ ; $b = 2$. Les deux équations extrêmes donnent $a = 3$, $b = 2$, et la deuxième est vérifiée : $6 + 2 = 8$ ✓.",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 2. Combinaisons linéaires — Écrire un vecteur comme combinaison de deux autres"
+      ]
+    },
+    {
+      "id": "esp-f2-q4",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Vecteurs dans l'espace",
+      "type": "application",
+      "niveau": 2,
+      "notion": "parallélogramme",
+      "enonce": "Soit $A(1\\ ;\\ 0\\ ;\\ 2)$, $B(3\\ ;\\ 1\\ ;\\ 2)$ et $C(4\\ ;\\ 3\\ ;\\ 5)$. Quelles sont les coordonnées du point $D$ tel que $ABCD$ soit un parallélogramme ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(6\\ ;\\ 4\\ ;\\ 5)$",
+          "correcte": false,
+          "erreur": "mauvaise_relation_vectorielle",
+          "feedback": "$B + C - A$ complète le parallélogramme $ABDC$, pas $ABCD$. Pour $ABCD$, il faut $\\overrightarrow{AB} = \\overrightarrow{DC}$."
+        },
+        {
+          "id": "B",
+          "texte": "$(8\\ ;\\ 4\\ ;\\ 9)$",
+          "correcte": false,
+          "erreur": "somme_de_trois_points",
+          "feedback": "On a additionné les trois points : un parallélogramme se caractérise par une égalité de vecteurs."
+        },
+        {
+          "id": "C",
+          "texte": "$(0\\ ;\\ -2\\ ;\\ -1)$",
+          "correcte": false,
+          "erreur": "relation_inversee",
+          "feedback": "On a calculé $A - C + B$ : la condition est $\\overrightarrow{AB} = \\overrightarrow{DC}$."
+        },
+        {
+          "id": "D",
+          "texte": "$(2\\ ;\\ 2\\ ;\\ 5)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\overrightarrow{AB}\\begin{pmatrix} 2 \\\\ 1 \\\\ 0 \\end{pmatrix}$ et $\\overrightarrow{DC}\\begin{pmatrix} 4 - x_D \\\\ 3 - y_D \\\\ 5 - z_D \\end{pmatrix}$. L'égalité donne $x_D = 2$, $y_D = 2$, $z_D = 5$.",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 1. Vecteurs et directions dans l'espace — Exploiter la colinéarité dans des problèmes géométriques"
+      ]
+    },
+    {
+      "id": "esp-f2-q5",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Vecteurs dans l'espace",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "coplanarité",
+      "enonce": "Soit $\\vec{u}\\begin{pmatrix} 1 \\\\ 0 \\\\ 2 \\end{pmatrix}$, $\\vec{v}\\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ et $\\vec{w}\\begin{pmatrix} 3 \\\\ 2 \\\\ k \\end{pmatrix}$. Pour quelle valeur de $k$ ces trois vecteurs sont-ils coplanaires ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$k = 6$",
+          "correcte": false,
+          "erreur": "oubli_d_une_coordonnee",
+          "feedback": "En posant $a = 3$ (première équation seule), on oublie que $x = a + b$ avec $b = 2$."
+        },
+        {
+          "id": "B",
+          "texte": "$k = 2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$k = 4$",
+          "correcte": false,
+          "erreur": "erreur_sur_a",
+          "feedback": "Il faut $a = 1$ : la deuxième équation donne $b = 2$, puis $a + b = 3$ donne $a = 1$."
+        },
+        {
+          "id": "D",
+          "texte": "$k = 3$",
+          "correcte": false,
+          "erreur": "recopie_de_coordonnee",
+          "feedback": "On a recopié la première coordonnée de $\\vec{w}$ : la troisième équation est $2a = k$."
+        }
+      ],
+      "explication": "$\\vec{w} = a\\vec{u} + b\\vec{v}$ : $a + b = 3$ ; $b = 2$ ; $2a = k$. Donc $b = 2$, $a = 1$, $k = 2$ (et la condition est vérifiée si et seulement si $k = 2$).",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 3. Coplanarité — Démontrer que des vecteurs sont ou ne sont pas coplanaires"
+      ]
+    }
+  ]
+}

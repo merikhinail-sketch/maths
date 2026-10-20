@@ -1,0 +1,245 @@
+{
+  "id": "convexite-fiche2",
+  "titre": "Quiz — Étudier la convexité d'une fonction",
+  "chapitre": "Convexité",
+  "fiche": "Étudier la convexité d'une fonction",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "conv-f2-q1",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "signe de f'' et concavité",
+      "enonce": "Sur un intervalle $I$, une fonction $f$ deux fois dérivable vérifie $f''(x) \\leq 0$ pour tout $x$ de $I$. Que peut-on affirmer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est décroissante sur $I$.",
+          "correcte": false,
+          "erreur": "confusion_f_seconde_variations",
+          "feedback": "Le signe de $f''$ ne donne pas les variations de $f$ (c'est le rôle de $f'$) : il donne la convexité."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est concave sur $I$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Dans ce cas $f'$ est décroissante : la pente des tangentes diminue."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est convexe sur $I$.",
+          "correcte": false,
+          "erreur": "inversion_signe_convexite",
+          "feedback": "C'est quand $f'' \\geq 0$ que $f$ est convexe."
+        },
+        {
+          "id": "D",
+          "texte": "$f'$ est négative sur $I$.",
+          "correcte": false,
+          "erreur": "confusion_f_seconde_f_prime",
+          "feedback": "$f'' \\leq 0$ signifie que $f'$ est décroissante, pas qu'elle est négative."
+        }
+      ],
+      "explication": "Si $f'' \\leq 0$ sur $I$, alors $f'$ est décroissante : la pente des tangentes diminue, la courbe se courbe vers le bas. La fonction $f$ est **concave** sur $I$.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Lien entre le signe de f'' et la convexité/concavité"
+      ]
+    },
+    {
+      "id": "conv-f2-q2",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "application",
+      "niveau": 1,
+      "notion": "calcul de la dérivée seconde",
+      "enonce": "Quelle est la dérivée seconde de $f(x) = x^4 - 2x^3 + x$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f''(x) = 4x^3 - 6x^2 + 1$",
+          "correcte": false,
+          "erreur": "arret_a_la_derivee_premiere",
+          "feedback": "C'est la dérivée première $f'$ : il faut dériver une seconde fois."
+        },
+        {
+          "id": "B",
+          "texte": "$f''(x) = 12x^2 - 12x + 1$",
+          "correcte": false,
+          "erreur": "constante_non_derivee",
+          "feedback": "Le terme constant $1$ de $f'$ a pour dérivée $0$ : il disparaît."
+        },
+        {
+          "id": "C",
+          "texte": "$f''(x) = 24x - 12$",
+          "correcte": false,
+          "erreur": "derivee_troisieme",
+          "feedback": "Tu as dérivé trois fois : c'est $f'''$."
+        },
+        {
+          "id": "D",
+          "texte": "$f''(x) = 12x^2 - 12x$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "On dérive deux fois : $f'(x) = 4x^3 - 6x^2 + 1$, puis $f''(x) = 12x^2 - 12x$.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Calcul de la dérivée seconde"
+      ]
+    },
+    {
+      "id": "conv-f2-q3",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "application",
+      "niveau": 2,
+      "notion": "intervalles de convexité et de concavité",
+      "enonce": "Soit $f(x) = x^3 - 6x^2 + 5$. Quelle est la bonne description de la convexité de $f$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est concave sur $]-\\infty\\ ;\\ 2]$ et convexe sur $[2\\ ;\\ +\\infty[$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est convexe sur $]-\\infty\\ ;\\ 2]$ et concave sur $[2\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "inversion_signe_convexite",
+          "feedback": "Regarde le signe de $f''(x) = 6x - 12$ : il est négatif pour $x < 2$, donc $f$ est concave à gauche de $2$."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est concave sur $]-\\infty\\ ;\\ -2]$ et convexe sur $[-2\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "erreur_resolution_equation",
+          "feedback": "$6x - 12 = 0$ donne $x = 2$, et non $x = -2$."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ est convexe sur $\\mathbb{R}$, car c'est un polynôme.",
+          "correcte": false,
+          "erreur": "croire_polynome_convexe",
+          "feedback": "Un polynôme n'est pas toujours convexe : ici $f''$ change de signe."
+        }
+      ],
+      "explication": "$f'(x) = 3x^2 - 12x$ et $f''(x) = 6x - 12 = 6(x - 2)$. Donc $f'' \\leq 0$ pour $x \\leq 2$ ($f$ concave) et $f'' \\geq 0$ pour $x \\geq 2$ ($f$ convexe).",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Calcul de la dérivée seconde",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Étude du signe de la dérivée seconde",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Détermination des intervalles de convexité et de concavité"
+      ]
+    },
+    {
+      "id": "conv-f2-q4",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "lecture du signe de f'' sur sa courbe",
+      "enonce": "On donne la courbe de la **dérivée seconde** $f''$ d'une fonction $f$. Elle coupe l'axe des abscisses en $-1$ et en $2$. Sur quel intervalle $f$ est-elle concave ?",
+      "figure": "convexite_f2_q4.png",
+      "figure_alt": "Parabole tournée vers le haut, coupant l'axe des abscisses en −1 et en 2.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$]-\\infty\\ ;\\ -1] \\cup [2\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "inversion_signe_convexite",
+          "feedback": "Sur ces intervalles la courbe de $f''$ est au-dessus de l'axe : $f'' \\geq 0$, donc $f$ est convexe."
+        },
+        {
+          "id": "B",
+          "texte": "$\\left]-\\infty\\ ;\\ \\dfrac{1}{2}\\right]$",
+          "correcte": false,
+          "erreur": "confusion_f_seconde_monotone",
+          "feedback": "Tu as repéré où la courbe de $f''$ descend. Ce qui compte pour la convexité de $f$, c'est le signe de $f''$."
+        },
+        {
+          "id": "C",
+          "texte": "$[-1\\ ;\\ 2]$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse. Sur cet intervalle, la courbe de $f''$ est sous l'axe : $f'' \\leq 0$."
+        },
+        {
+          "id": "D",
+          "texte": "$[-1\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "lecture_une_seule_racine",
+          "feedback": "Après $2$, la courbe de $f''$ repasse au-dessus de l'axe : $f$ y est convexe."
+        }
+      ],
+      "explication": "$f$ est concave là où $f'' \\leq 0$, c'est-à-dire là où la courbe de $f''$ est **au-dessous** de l'axe des abscisses : sur $[-1\\ ;\\ 2]$.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Étude du signe de la dérivée seconde",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Détermination des intervalles de convexité et de concavité"
+      ]
+    },
+    {
+      "id": "conv-f2-q5",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "repérer_erreur",
+      "niveau": 3,
+      "notion": "distinguer le signe de f' et le signe de f''",
+      "enonce": "Pour étudier la convexité de $f(x) = x^3 - 12x$, un élève écrit : « $f'(x) = 3x^2 - 12$ ; $f'(x) \\geq 0 \\iff x \\leq -2$ ou $x \\geq 2$ ; donc $f$ est convexe sur $]-\\infty\\ ;\\ -2]$ et sur $[2\\ ;\\ +\\infty[$ ». Quelle est son erreur ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Sa dérivée est fausse : on a $f'(x) = 3x^2 - 12x$.",
+          "correcte": false,
+          "erreur": "faux_la_derivee_est_correcte",
+          "feedback": "La dérivée est correcte : $(x^3)' = 3x^2$ et $(-12x)' = -12$."
+        },
+        {
+          "id": "B",
+          "texte": "Il a étudié le signe de $f'$, qui donne les variations de $f$, au lieu du signe de $f''$, qui donne la convexité.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Il aurait dû étudier le signe de $f'''$.",
+          "correcte": false,
+          "erreur": "derivee_troisieme",
+          "feedback": "Pour la convexité, on étudie le signe de $f''$, pas celui de $f'''$."
+        },
+        {
+          "id": "D",
+          "texte": "Il n'y a pas d'erreur : un polynôme de degré $3$ est convexe là où sa dérivée est positive.",
+          "correcte": false,
+          "erreur": "confusion_f_prime_convexite",
+          "feedback": "Là où $f' \\geq 0$, $f$ est croissante, ce qui n'a rien à voir avec la convexité."
+        }
+      ],
+      "explication": "Le signe de $f'$ donne les **variations** de $f$. Pour la convexité, il faut étudier $f''(x) = 6x$ : négatif pour $x \\leq 0$ ($f$ concave) et positif pour $x \\geq 0$ ($f$ convexe).",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Lien entre le signe de f'' et la convexité/concavité",
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction — Grand exemple guidé de A à Z"
+      ]
+    }
+  ]
+}

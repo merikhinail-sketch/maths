@@ -1,0 +1,657 @@
+{
+  "id": "esp-chapitre",
+  "titre": "Quiz de chapitre — Géométrie dans l'espace",
+  "chapitre": "Géométrie dans l'espace",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 14,
+  "questions": [
+    {
+      "id": "esp-chapitre-q1",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "coordonnées d'un vecteur",
+      "enonce": "Soit $A(1\\ ;\\ -2\\ ;\\ 3)$ et $B(4\\ ;\\ 0\\ ;\\ -1)$. Quelles sont les coordonnées de $\\overrightarrow{AB}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\begin{pmatrix} 5 \\\\ -2 \\\\ 2 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "somme_au_lieu_de_difference",
+          "feedback": "On a additionné les coordonnées : « arrivée moins départ »."
+        },
+        {
+          "id": "B",
+          "texte": "$\\begin{pmatrix} 3 \\\\ 2 \\\\ -4 \\end{pmatrix}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{pmatrix} -3 \\\\ -2 \\\\ 4 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "depart_moins_arrivee",
+          "feedback": "C'est $\\overrightarrow{BA}$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\begin{pmatrix} 3 \\\\ 2 \\\\ 4 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$-1 - 3 = -4$."
+        }
+      ],
+      "explication": "$\\overrightarrow{AB}\\begin{pmatrix} 4 - 1 \\\\ 0 - (-2) \\\\ -1 - 3 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 2 \\\\ -4 \\end{pmatrix}$.",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 1. Vecteurs et directions dans l'espace — Utiliser les coordonnées pour caractériser une direction"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q2",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "norme dans l'espace",
+      "enonce": "Quelle est la norme de $\\vec{u}\\begin{pmatrix} 2 \\\\ -3 \\\\ 6 \\end{pmatrix}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$5$",
+          "correcte": false,
+          "erreur": "somme_des_coordonnees",
+          "feedback": "La norme est $\\sqrt{x^2 + y^2 + z^2}$, pas la somme des coordonnées."
+        },
+        {
+          "id": "B",
+          "texte": "$11$",
+          "correcte": false,
+          "erreur": "somme_des_valeurs_absolues",
+          "feedback": "On a additionné les valeurs absolues : il faut les carrés, puis la racine."
+        },
+        {
+          "id": "C",
+          "texte": "$7$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$49$",
+          "correcte": false,
+          "erreur": "oubli_de_la_racine",
+          "feedback": "$49 = \\|\\vec{u}\\|^2$ : il faut prendre la racine carrée."
+        }
+      ],
+      "explication": "$\\|\\vec{u}\\| = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 1. Produit scalaire dans l'espace — Calcul à partir des coordonnées"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q3",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "colinéarité",
+      "enonce": "Lequel de ces vecteurs est colinéaire à $\\vec{u}\\begin{pmatrix} 2 \\\\ -1 \\\\ 4 \\end{pmatrix}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\begin{pmatrix} -4 \\\\ 2 \\\\ -8 \\end{pmatrix}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\begin{pmatrix} -4 \\\\ 2 \\\\ 8 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "oubli_du_signe_sur_une_coordonnee",
+          "feedback": "Le coefficient est $-2$ : la troisième coordonnée serait $-8$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{pmatrix} 6 \\\\ -3 \\\\ 11 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "verification_incomplete",
+          "feedback": "Le coefficient $3$ convient pour $x$ et $y$, mais $3 \\times 4 = 12 \\neq 11$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\begin{pmatrix} 4 \\\\ 1 \\\\ 8 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "verification_incomplete",
+          "feedback": "Le coefficient $2$ convient pour $x$ et $z$, mais $2 \\times (-1) = -2 \\neq 1$."
+        }
+      ],
+      "explication": "$\\begin{pmatrix} -4 \\\\ 2 \\\\ -8 \\end{pmatrix} = -2\\vec{u}$ : les trois coordonnées sont proportionnelles.",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 1. Vecteurs et directions dans l'espace — Reconnaître des vecteurs colinéaires"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q4",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "coplanarité",
+      "enonce": "Pour quelle valeur de $k$ les vecteurs $\\vec{u}\\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$, $\\vec{v}\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\end{pmatrix}$ et $\\vec{w}\\begin{pmatrix} 2 \\\\ 5 \\\\ k \\end{pmatrix}$ sont-ils coplanaires ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$k = 6$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$k = 3$",
+          "correcte": false,
+          "erreur": "recopie_d_un_coefficient",
+          "feedback": "$3$ est le coefficient $b$ de $\\vec{v}$, pas la valeur de $k$ : la troisième équation est $2b = k$."
+        },
+        {
+          "id": "C",
+          "texte": "$k = 5$",
+          "correcte": false,
+          "erreur": "recopie_de_coordonnee",
+          "feedback": "On a recopié la deuxième coordonnée de $\\vec{w}$."
+        },
+        {
+          "id": "D",
+          "texte": "$k = 10$",
+          "correcte": false,
+          "erreur": "oubli_de_a_dans_la_deuxieme_equation",
+          "feedback": "On a pris $b = 5$ : la deuxième équation est $a + b = 5$ avec $a = 2$, donc $b = 3$."
+        }
+      ],
+      "explication": "$\\vec{w} = a\\vec{u} + b\\vec{v}$ : $a = 2$ ; $a + b = 5$ ; $2b = k$. Donc $a = 2$, $b = 3$ et $k = 6$.",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 3. Coplanarité — Démontrer que des vecteurs sont ou ne sont pas coplanaires"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q5",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "interprétation",
+      "niveau": 2,
+      "notion": "signe du produit scalaire",
+      "enonce": "Soit $\\vec{u}\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} -1 \\\\ 1 \\\\ 3 \\end{pmatrix}$. Que dire de l'angle entre $\\vec{u}$ et $\\vec{v}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Il est aigu, car $\\vec{u} \\cdot \\vec{v} = 2 > 0$.",
+          "correcte": false,
+          "erreur": "erreur_de_signe_dans_le_calcul",
+          "feedback": "$-1 + 2 - 3 = -2$ : le produit scalaire est négatif."
+        },
+        {
+          "id": "B",
+          "texte": "Il est droit, car les vecteurs ne sont pas colinéaires.",
+          "correcte": false,
+          "erreur": "confusion_non_colineaire_orthogonal",
+          "feedback": "L'angle est droit si et seulement si $\\vec{u} \\cdot \\vec{v} = 0$."
+        },
+        {
+          "id": "C",
+          "texte": "Il est obtus, car $\\vec{u} \\cdot \\vec{v} = -2 < 0$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "On ne peut pas conclure sans calculer les normes.",
+          "correcte": false,
+          "erreur": "croire_les_normes_necessaires",
+          "feedback": "Les normes sont positives : le signe du produit scalaire suffit pour savoir si l'angle est aigu ou obtus."
+        }
+      ],
+      "explication": "$\\vec{u} \\cdot \\vec{v} = -1 + 2 - 3 = -2 < 0$ : l'angle est obtus.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 1. Produit scalaire dans l'espace — Interprétation du signe et du résultat"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q6",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "interprétation",
+      "niveau": 2,
+      "notion": "orthogonales ou perpendiculaires (cube)",
+      "enonce": "Dans le cube $ABCDEFGH$ représenté, que peut-on dire des droites $(AB)$ et $(CG)$ ?",
+      "figure": "esp_ch_q6.png",
+      "figure_alt": "Cube ABCDEFGH en perspective cavalière avec les arêtes AB (bleu) et CG (orange) mises en évidence.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elles sont perpendiculaires.",
+          "correcte": false,
+          "erreur": "confusion_orthogonales_perpendiculaires",
+          "feedback": "Elles ne se coupent pas : $(AB)$ est dans le plan du bas, $(CG)$ coupe ce plan en $C$, qui n'est pas sur $(AB)$."
+        },
+        {
+          "id": "B",
+          "texte": "Elles sont orthogonales mais pas perpendiculaires.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Elles sont parallèles.",
+          "correcte": false,
+          "erreur": "confusion_orthogonales_paralleles",
+          "feedback": "$(AB)$ est horizontale et $(CG)$ verticale : les directions ne sont pas colinéaires."
+        },
+        {
+          "id": "D",
+          "texte": "Elles sont sécantes.",
+          "correcte": false,
+          "erreur": "confusion_avec_coplanaires",
+          "feedback": "Elles n'ont aucun point commun."
+        }
+      ],
+      "explication": "Avec $A$ origine : $\\overrightarrow{AB}(1\\ ;\\ 0\\ ;\\ 0)$ et $\\overrightarrow{CG}(0\\ ;\\ 0\\ ;\\ 1)$ ont un produit scalaire nul : orthogonales. Mais $(AB)$ : $y = 0, z = 0$ et $(CG)$ : $x = 1, y = 1$ n'ont aucun point commun : pas perpendiculaires.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 2. Orthogonalité des droites et des vecteurs — Attention à la différence entre orthogonales et perpendiculaires dans l'espace"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q7",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "équation d'un plan",
+      "enonce": "Quelle est une équation du plan passant par $A(1\\ ;\\ 0\\ ;\\ 2)$ de vecteur normal $\\vec{n}\\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2x - y + 3z + 8 = 0$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_constante",
+          "feedback": "$2(x - 1) - y + 3(z - 2) = 2x - y + 3z - 8$ : la constante est $-8$."
+        },
+        {
+          "id": "B",
+          "texte": "$2x - y + 3z - 2 = 0$",
+          "correcte": false,
+          "erreur": "oubli_d_une_coordonnee_de_A",
+          "feedback": "On a oublié le terme $3 \\times 2$ lié à $z_A$."
+        },
+        {
+          "id": "C",
+          "texte": "$x + 2z - 5 = 0$",
+          "correcte": false,
+          "erreur": "coordonnees_de_A_prises_pour_normal",
+          "feedback": "Le vecteur normal est $\\vec{n}$ ; les coordonnées de $A$ servent à calculer la constante."
+        },
+        {
+          "id": "D",
+          "texte": "$2x - y + 3z - 8 = 0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\overrightarrow{AM} \\cdot \\vec{n} = 0$ : $2(x - 1) - y + 3(z - 2) = 0 \\iff 2x - y + 3z - 8 = 0$. Vérification avec $A$ : $2 - 0 + 6 - 8 = 0$ ✓.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 3. Droite et plan — Utilisation des vecteurs normaux"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q8",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "projeté sur une droite",
+      "enonce": "Soit $(d)$ la droite passant par $A(0\\ ;\\ 1\\ ;\\ 2)$ de vecteur directeur $\\vec{u}\\begin{pmatrix} 1 \\\\ 2 \\\\ -2 \\end{pmatrix}$ et $M(3\\ ;\\ 2\\ ;\\ 0)$. Quel est le projeté orthogonal de $M$ sur $(d)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(0\\ ;\\ 1\\ ;\\ 2)$",
+          "correcte": false,
+          "erreur": "choix_du_point_de_depart",
+          "feedback": "C'est $A$ ($t = 0$) : le projeté se trouve avec $\\overrightarrow{MH} \\cdot \\vec{u} = 0$."
+        },
+        {
+          "id": "B",
+          "texte": "$(2\\ ;\\ 5\\ ;\\ -2)$",
+          "correcte": false,
+          "erreur": "erreur_dans_l_equation_en_t",
+          "feedback": "$\\overrightarrow{MH} \\cdot \\vec{u} = 9t - 9 = 0$ donne $t = 1$, et non $2$."
+        },
+        {
+          "id": "C",
+          "texte": "$(1\\ ;\\ 3\\ ;\\ 0)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$(3\\ ;\\ 7\\ ;\\ -4)$",
+          "correcte": false,
+          "erreur": "erreur_dans_l_equation_en_t",
+          "feedback": "$t = 1$, pas $3$."
+        }
+      ],
+      "explication": "$H(t\\ ;\\ 1 + 2t\\ ;\\ 2 - 2t)$, $\\overrightarrow{MH}\\begin{pmatrix} t - 3 \\\\ 2t - 1 \\\\ 2 - 2t \\end{pmatrix}$. $\\overrightarrow{MH} \\cdot \\vec{u} = (t - 3) + 2(2t - 1) - 2(2 - 2t) = 9t - 9 = 0$, donc $t = 1$ et $H(1\\ ;\\ 3\\ ;\\ 0)$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 4. Projection orthogonale — Reconnaître et construire une projection orthogonale",
+        "Fiche « Représentations paramétriques d'une droite » — Grand exemple guidé — Question 4 : projeté orthogonal et distance"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q9",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "distance à une droite",
+      "enonce": "Avec les données précédentes ($M(3\\ ;\\ 2\\ ;\\ 0)$ et $H(1\\ ;\\ 3\\ ;\\ 0)$), quelle est la distance de $M$ à la droite $(d)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\sqrt{5}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$5$",
+          "correcte": false,
+          "erreur": "oubli_de_la_racine",
+          "feedback": "$5 = MH^2$ : il faut la racine carrée."
+        },
+        {
+          "id": "C",
+          "texte": "$\\sqrt{14}$",
+          "correcte": false,
+          "erreur": "distance_a_A_et_non_a_la_droite",
+          "feedback": "C'est la distance $MA$ : on doit mesurer jusqu'au **projeté** $H$."
+        },
+        {
+          "id": "D",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "norme_du_vecteur_directeur",
+          "feedback": "$3 = \\|\\vec{u}\\|$ n'a rien à voir avec la distance."
+        }
+      ],
+      "explication": "$\\overrightarrow{MH}\\begin{pmatrix} -2 \\\\ 1 \\\\ 0 \\end{pmatrix}$, donc $MH = \\sqrt{4 + 1 + 0} = \\sqrt{5}$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 4. Projection orthogonale — Utilisation de la projection pour déterminer des longueurs/distances"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q10",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "droite contenue dans un plan",
+      "enonce": "Soit $(P) : 2x - y + z - 4 = 0$ et $(d) : \\begin{cases} x = 2 + t \\\\ y = 3t \\\\ z = t \\end{cases}$. Quelle est leur position relative ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(d)$ est parallèle à $(P)$ sans y être contenue.",
+          "correcte": false,
+          "erreur": "confusion_zero_egal_zero",
+          "feedback": "On obtient $0 = 0$ pour tout $t$ : tous les points de $(d)$ sont dans $(P)$."
+        },
+        {
+          "id": "B",
+          "texte": "$(d)$ est sécante à $(P)$ en un point.",
+          "correcte": false,
+          "erreur": "oubli_de_substituer_correctement",
+          "feedback": "Les termes en $t$ s'annulent : $2t - 3t + t = 0$, il n'y a pas d'unique solution."
+        },
+        {
+          "id": "C",
+          "texte": "$(d)$ est orthogonale à $(P)$.",
+          "correcte": false,
+          "erreur": "confusion_avec_orthogonalite",
+          "feedback": "Ce serait vrai si $\\vec{u}$ était colinéaire à $\\vec{n}$ ; ici $\\vec{u} \\cdot \\vec{n} = 2 - 3 + 1 = 0$, donc $(d)$ est parallèle à $(P)$."
+        },
+        {
+          "id": "D",
+          "texte": "$(d)$ est contenue dans $(P)$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$2(2 + t) - 3t + t - 4 = 4 + 2t - 3t + t - 4 = 0$ : vrai pour tout $t$. La droite est contenue dans le plan.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 2. Position relative d'une droite et d'un plan — Exemples"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q11",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "droites confondues",
+      "enonce": "Soit $(d)$ passant par $A(1\\ ;\\ 1\\ ;\\ 1)$ de vecteur directeur $\\vec{u}\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}$ et $(d')$ passant par $B(3\\ ;\\ 5\\ ;\\ 7)$ de vecteur directeur $\\vec{v}\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\end{pmatrix}$. Quelle est leur position relative ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Parallèles distinctes.",
+          "correcte": false,
+          "erreur": "oubli_de_tester_un_point",
+          "feedback": "$\\overrightarrow{AB}\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\end{pmatrix} = 2\\vec{u}$ : $B \\in (d)$, donc confondues."
+        },
+        {
+          "id": "B",
+          "texte": "Confondues.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Sécantes en un point.",
+          "correcte": false,
+          "erreur": "confusion_colineaire_secant",
+          "feedback": "Directions colinéaires : pas de point d'intersection unique."
+        },
+        {
+          "id": "D",
+          "texte": "Non coplanaires.",
+          "correcte": false,
+          "erreur": "confusion_colineaire_non_coplanaire",
+          "feedback": "Directions colinéaires : les droites sont dans un même plan."
+        }
+      ],
+      "explication": "$\\vec{v} = 2\\vec{u}$ et $\\overrightarrow{AB} = 2\\vec{u}$ : $B$ appartient à $(d)$. Les droites sont confondues.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 1. Positions relatives de deux droites — Comment déterminer la position de deux droites"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q12",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "intersection de deux plans",
+      "enonce": "Soit $(P) : x + y - z = 2$ et $(Q) : x - y + z = 0$. Quelle est leur intersection ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Le point $(1\\ ;\\ 1\\ ;\\ 0)$ seulement.",
+          "correcte": false,
+          "erreur": "confusion_plans_et_droites",
+          "feedback": "Deux plans non parallèles se coupent selon une **droite**."
+        },
+        {
+          "id": "B",
+          "texte": "La droite $\\begin{cases} x = 1 \\\\ y = 1 + s \\\\ z = s \\end{cases}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "La droite $\\begin{cases} x = 1 \\\\ y = s \\\\ z = 1 + s \\end{cases}$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "Cette droite donne $y - z = -1$, or $(P)$ et $(Q)$ imposent $y - z = 1$."
+        },
+        {
+          "id": "D",
+          "texte": "Rien : les plans sont parallèles.",
+          "correcte": false,
+          "erreur": "normaux_pris_pour_colineaires",
+          "feedback": "$\\begin{pmatrix} 1 \\\\ 1 \\\\ -1 \\end{pmatrix}$ et $\\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\end{pmatrix}$ ne sont pas colinéaires."
+        }
+      ],
+      "explication": "En additionnant : $2x = 2$, donc $x = 1$. Puis $y - z = 1$, soit $y = 1 + z$. Avec $z = s$ : $x = 1$, $y = 1 + s$, $z = s$.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 3. Positions relatives de deux plans — Exemples"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q13",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "vrai_faux_plausible",
+      "niveau": 3,
+      "notion": "orthogonalité et position",
+      "enonce": "Laquelle de ces affirmations est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Deux droites orthogonales sont toujours perpendiculaires.",
+          "correcte": false,
+          "erreur": "confusion_orthogonales_perpendiculaires",
+          "feedback": "Perpendiculaires = orthogonales **et** sécantes."
+        },
+        {
+          "id": "B",
+          "texte": "Deux plans de vecteurs normaux colinéaires sont toujours confondus.",
+          "correcte": false,
+          "erreur": "oubli_du_cas_parallele",
+          "feedback": "Ils peuvent être parallèles distincts : tout dépend du terme constant."
+        },
+        {
+          "id": "C",
+          "texte": "Si $\\vec{u} \\cdot \\vec{v} > 0$, alors $\\vec{u}$ et $\\vec{v}$ sont colinéaires.",
+          "correcte": false,
+          "erreur": "confusion_signe_produit_scalaire_colinearite",
+          "feedback": "Un produit scalaire positif signifie un angle aigu, pas une colinéarité."
+        },
+        {
+          "id": "D",
+          "texte": "Deux droites orthogonales ne sont pas nécessairement sécantes.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$(AB)$ et $(CG)$ dans le cube sont orthogonales sans se couper. Les autres affirmations sont fausses.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 2. Orthogonalité des droites et des vecteurs — Attention à la différence entre orthogonales et perpendiculaires dans l'espace",
+        "Fiche « Positions relatives » — 3. Positions relatives de deux plans — Comment déterminer leur position relative"
+      ]
+    },
+    {
+      "id": "esp-chapitre-q14",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "plans perpendiculaires",
+      "enonce": "Lequel de ces plans est perpendiculaire à $(P) : x + 2y - z = 0$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$3x - y + z - 5 = 0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$-2x - 4y + 2z + 3 = 0$",
+          "correcte": false,
+          "erreur": "confusion_perpendiculaire_parallele",
+          "feedback": "Ses coefficients sont colinéaires à ceux de $(P)$ : c'est un plan **parallèle** à $(P)$."
+        },
+        {
+          "id": "C",
+          "texte": "$x - y + z = 0$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "$1 - 2 - 1 = -2 \\neq 0$ : les vecteurs normaux ne sont pas orthogonaux."
+        },
+        {
+          "id": "D",
+          "texte": "$2x + y + z = 0$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "$2 + 2 - 1 = 3 \\neq 0$."
+        }
+      ],
+      "explication": "$\\vec{n}\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\begin{pmatrix} 3 \\\\ -1 \\\\ 1 \\end{pmatrix} = 3 - 2 - 1 = 0$ : les vecteurs normaux sont orthogonaux, donc les plans sont perpendiculaires.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 3. Droite et plan — Plans perpendiculaires"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "id": "suites-f2",
+  "titre": "Quiz — Monotonie et suites bornées",
+  "chapitre": "Suites",
+  "fiche": "Monotonie et suites bornées",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "suites-f2-q1",
+      "chapitre": "Suites",
+      "fiche": "Monotonie et suites bornées",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "suite constante et monotonie",
+      "enonce": "La suite constante $4\\ ;\\ 4\\ ;\\ 4\\ ;\\ \\dots$ est :",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "strictement croissante.",
+          "correcte": false,
+          "erreur": "confusion_croissante_strictement",
+          "feedback": "Aucun terme n'est strictement plus grand que le précédent."
+        },
+        {
+          "id": "B",
+          "texte": "ni croissante ni décroissante.",
+          "correcte": false,
+          "erreur": "croire_constante_non_monotone",
+          "feedback": "Elle est monotone : $u_{n+1} \\geq u_n$ est bien vérifié pour tout $n$."
+        },
+        {
+          "id": "C",
+          "texte": "strictement décroissante.",
+          "correcte": false,
+          "erreur": "confusion_decroissante_strictement",
+          "feedback": "Aucun terme n'est strictement plus petit que le précédent."
+        },
+        {
+          "id": "D",
+          "texte": "croissante (et aussi décroissante), mais pas strictement.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Pour une suite constante, $u_{n+1} = u_n$. Les inégalités larges $u_{n+1} \\geq u_n$ et $u_{n+1} \\leq u_n$ sont vraies, mais pas les inégalités strictes.",
+      "a_revoir": [
+        "Fiche « Monotonie et suites bornées » — 1. Monotonie d'une suite — Suite croissante",
+        "Fiche « Monotonie et suites bornées » — 4. Erreurs fréquentes — Confondre croissante et strictement croissante"
+      ]
+    },
+    {
+      "id": "suites-f2-q2",
+      "chapitre": "Suites",
+      "fiche": "Monotonie et suites bornées",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "majorée et minorée",
+      "enonce": "La suite définie par $u_n = -n^2 + 5$ est :",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "minorée mais pas majorée.",
+          "correcte": false,
+          "erreur": "confusion_majoree_minoree",
+          "feedback": "On a $u_n \\leq 5$ : $5$ est un plafond (un majorant)."
+        },
+        {
+          "id": "B",
+          "texte": "majorée mais pas minorée.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "bornée.",
+          "correcte": false,
+          "erreur": "croire_bornee",
+          "feedback": "Les termes tendent vers $-\\infty$ : aucun plancher ne convient."
+        },
+        {
+          "id": "D",
+          "texte": "ni majorée ni minorée.",
+          "correcte": false,
+          "erreur": "ne_pas_chercher_de_majorant",
+          "feedback": "Comme $n^2 \\geq 0$, on a $u_n \\leq 5$ pour tout $n$."
+        }
+      ],
+      "explication": "$-n^2 \\leq 0$ donc $u_n \\leq 5$ : la suite est majorée. Mais $u_n$ devient aussi négatif que l'on veut : elle n'est pas minorée.",
+      "a_revoir": [
+        "Fiche « Monotonie et suites bornées » — 2. Suites bornées — Suite majorée",
+        "Fiche « Monotonie et suites bornées » — 2. Suites bornées — Suite minorée"
+      ]
+    },
+    {
+      "id": "suites-f2-q3",
+      "chapitre": "Suites",
+      "fiche": "Monotonie et suites bornées",
+      "type": "application",
+      "niveau": 2,
+      "notion": "monotonie par le signe de $u_{n+1}-u_n$",
+      "enonce": "Soit $u_n = n^2 - 6n$. Que peut-on dire de sa monotonie ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle est strictement croissante, car $n^2$ est croissant.",
+          "correcte": false,
+          "erreur": "extrapolation_terme_dominant",
+          "feedback": "Le terme $-6n$ domine au début : $u_0 = 0$, $u_1 = -5$, $u_2 = -8$."
+        },
+        {
+          "id": "B",
+          "texte": "Elle est strictement décroissante, car $u_1 < u_0$.",
+          "correcte": false,
+          "erreur": "conclure_sur_les_premiers_termes",
+          "feedback": "Quelques termes ne suffisent pas : la suite remonte ensuite."
+        },
+        {
+          "id": "C",
+          "texte": "Elle est croissante à partir du rang $2$.",
+          "correcte": false,
+          "erreur": "rang_de_changement_faux",
+          "feedback": "$u_{n+1} - u_n = 2n - 5$ est négatif pour $n = 2$ : $u_3 = -9 < u_2 = -8$."
+        },
+        {
+          "id": "D",
+          "texte": "Elle n'est pas monotone : elle décroît jusqu'au rang $3$, puis croît.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$u_{n+1} - u_n = (n+1)^2 - 6(n+1) - n^2 + 6n = 2n - 5$. Cette différence est négative pour $n \\leq 2$ et positive pour $n \\geq 3$ : la suite décroît ($0, -5, -8, -9$) puis croît ($-8, -5, \\dots$).",
+      "a_revoir": [
+        "Fiche « Monotonie et suites bornées » — 1. Monotonie d'une suite — Définition monotonie",
+        "Fiche « Monotonie et suites bornées » — 4. Erreurs fréquentes — Montrer seulement que $u_{n+1} \\geq u_n$ pour quelques valeurs et conclure pour toute la suite"
+      ]
+    },
+    {
+      "id": "suites-f2-q4",
+      "chapitre": "Suites",
+      "fiche": "Monotonie et suites bornées",
+      "type": "application",
+      "niveau": 2,
+      "notion": "encadrer à partir de la formule",
+      "enonce": "Quel encadrement est correct pour $u_n = 5 + \\dfrac{2}{n+1}$, avec $n$ entier naturel ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$3 < u_n \\leq 5$",
+          "correcte": false,
+          "erreur": "erreur_signe",
+          "feedback": "On ajoute $\\frac{2}{n+1}$ à $5$ : $u_n$ est au-dessus de $5$."
+        },
+        {
+          "id": "B",
+          "texte": "$5 < u_n \\leq 6$",
+          "correcte": false,
+          "erreur": "oubli_facteur_2",
+          "feedback": "Comme $\\frac{1}{n+1} \\leq 1$, on a $\\frac{2}{n+1} \\leq 2$ et donc $u_n \\leq 7$."
+        },
+        {
+          "id": "C",
+          "texte": "$5 < u_n \\leq 7$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$u_n \\geq 7$",
+          "correcte": false,
+          "erreur": "inversion_encadrement",
+          "feedback": "$u_0 = 7$ est le plus grand terme : ensuite les termes diminuent."
+        }
+      ],
+      "explication": "Pour tout $n \\geq 0$, $0 < \\frac{1}{n+1} \\leq 1$, donc $0 < \\frac{2}{n+1} \\leq 2$ et $5 < u_n \\leq 7$.",
+      "a_revoir": [
+        "Fiche « Monotonie et suites bornées » — 2. Suites bornées — Méthodes pour démontrer majorée/minorée"
+      ]
+    },
+    {
+      "id": "suites-f2-q5",
+      "chapitre": "Suites",
+      "fiche": "Monotonie et suites bornées",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "croissante et minorée : que conclure ?",
+      "enonce": "Une suite $(u_n)$ est croissante et minorée. Que peut-on affirmer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Rien de plus : on ne peut pas conclure qu'elle converge (exemple : $u_n = n$).",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Elle converge.",
+          "correcte": false,
+          "erreur": "theoreme_sans_condition",
+          "feedback": "Il faudrait qu'elle soit majorée : $u_n = n$ est croissante, minorée, et diverge."
+        },
+        {
+          "id": "C",
+          "texte": "Elle est bornée.",
+          "correcte": false,
+          "erreur": "croire_croissante_bornee",
+          "feedback": "$u_n = n$ est croissante et minorée, mais n'est pas majorée."
+        },
+        {
+          "id": "D",
+          "texte": "Elle est majorée.",
+          "correcte": false,
+          "erreur": "croire_croissante_majoree",
+          "feedback": "Rien ne l'empêche de grandir indéfiniment."
+        }
+      ],
+      "explication": "Une suite croissante est toujours minorée par $u_0$ : cette condition n'apporte aucune information. Pour conclure à une convergence, il faut qu'elle soit **majorée**.",
+      "a_revoir": [
+        "Fiche « Monotonie et suites bornées » — 3. Lien entre monotonie et bornes — Une suite croissante et majorée",
+        "Fiche « Monotonie et suites bornées » — 3. Lien entre monotonie et bornes — Pourquoi ces conditions sont importantes"
+      ]
+    }
+  ]
+}

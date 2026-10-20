@@ -1,0 +1,243 @@
+{
+  "id": "esp-banque",
+  "titre": "Banque — Géométrie dans l'espace",
+  "chapitre": "Géométrie dans l'espace",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "esp-banque-q1",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Rappels : vecteurs, colinéarité et produit scalaire",
+      "type": "application",
+      "niveau": 1,
+      "notion": "distance entre deux points de l'espace",
+      "enonce": "Soit $A(0\\ ;\\ 1\\ ;\\ -2)$ et $B(1\\ ;\\ 3\\ ;\\ 0)$. Quelle est la distance $AB$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$9$",
+          "correcte": false,
+          "erreur": "oubli_racine",
+          "feedback": "$1^2 + 2^2 + 2^2 = 9$ est le carré de la distance : il faut prendre la racine carrée."
+        },
+        {
+          "id": "C",
+          "texte": "$5$",
+          "correcte": false,
+          "erreur": "somme_des_coordonnees",
+          "feedback": "On additionne les carrés des coordonnées de $\\overrightarrow{AB}$, pas les coordonnées elles-mêmes."
+        },
+        {
+          "id": "D",
+          "texte": "$\\sqrt{5}$",
+          "correcte": false,
+          "erreur": "oubli_troisieme_coordonnee",
+          "feedback": "Dans l'espace, il y a trois coordonnées : n'oublie pas $z_B - z_A = 2$."
+        }
+      ],
+      "explication": "$\\overrightarrow{AB}\\begin{pmatrix} 1 \\\\ 2 \\\\ 2 \\end{pmatrix}$, donc $AB = \\sqrt{1^2 + 2^2 + 2^2} = \\sqrt{9} = 3$.",
+      "a_revoir": [
+        "Fiche « Rappels : vecteurs, colinéarité et produit scalaire » — 1. Coordonnées et vecteurs"
+      ]
+    },
+    {
+      "id": "esp-banque-q2",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Orthogonalité dans l'espace",
+      "type": "application",
+      "niveau": 2,
+      "notion": "orthogonalité avec un paramètre",
+      "enonce": "Pour quelle valeur de $m$ les vecteurs $\\vec{u}\\begin{pmatrix} 1 \\\\ m \\\\ 2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ -1 \\\\ m \\end{pmatrix}$ sont-ils orthogonaux ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$m = -3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$m = 3$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\vec{u} \\cdot \\vec{v} = 3 - m + 2m = 3 + m$ : il s'annule pour $m = -3$."
+        },
+        {
+          "id": "C",
+          "texte": "$m = -1$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "Pour $m = -1$, $\\vec{u} \\cdot \\vec{v} = 3 + 1 - 2 = 2 \\neq 0$."
+        },
+        {
+          "id": "D",
+          "texte": "Aucune valeur de $m$ ne convient.",
+          "correcte": false,
+          "erreur": "abandon_du_calcul",
+          "feedback": "Le produit scalaire $3 + m$ s'annule bien pour une valeur de $m$."
+        }
+      ],
+      "explication": "$\\vec{u} \\cdot \\vec{v} = 1 \\times 3 + m \\times (-1) + 2 \\times m = 3 + m$. Les vecteurs sont orthogonaux si et seulement si $3 + m = 0$, soit $m = -3$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 1. Produit scalaire dans l'espace",
+        "Fiche « Orthogonalité dans l'espace » — 2. Orthogonalité des droites et des vecteurs"
+      ]
+    },
+    {
+      "id": "esp-banque-q3",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Représentations paramétriques d'une droite",
+      "type": "application",
+      "niveau": 2,
+      "notion": "point appartenant à une droite paramétrée",
+      "enonce": "Soit $(d) : \\begin{cases} x = 1 + 2t \\\\ y = -3 + t \\\\ z = 4 - t \\end{cases}$, $t \\in \\mathbb{R}$. Lequel de ces points appartient à $(d)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(5\\ ;\\ -1\\ ;\\ 2)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$(2\\ ;\\ 1\\ ;\\ -1)$",
+          "correcte": false,
+          "erreur": "vecteur_directeur_pris_pour_point",
+          "feedback": "$(2\\ ;\\ 1\\ ;\\ -1)$ sont les coordonnées du vecteur directeur, pas d'un point de la droite."
+        },
+        {
+          "id": "C",
+          "texte": "$(3\\ ;\\ -2\\ ;\\ 5)$",
+          "correcte": false,
+          "erreur": "verification_incomplete",
+          "feedback": "$x = 3$ donne $t = 1$, $y = -2$ convient aussi, mais $z = 4 - 1 = 3 \\neq 5$ : il faut vérifier les trois coordonnées."
+        },
+        {
+          "id": "D",
+          "texte": "$(1\\ ;\\ 3\\ ;\\ 4)$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Pour $t = 0$, on obtient $(1\\ ;\\ -3\\ ;\\ 4)$ : attention au signe de $y$."
+        }
+      ],
+      "explication": "Pour $(5\\ ;\\ -1\\ ;\\ 2)$ : $1 + 2t = 5$ donne $t = 2$ ; alors $y = -3 + 2 = -1$ et $z = 4 - 2 = 2$. Les trois équations sont vérifiées avec la même valeur $t = 2$.",
+      "a_revoir": [
+        "Fiche « Représentations paramétriques d'une droite » — Grand exemple guidé — Question 2 : un point est-il sur la droite ?"
+      ]
+    },
+    {
+      "id": "esp-banque-q4",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Positions relatives",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "droite incluse dans un plan",
+      "enonce": "Soit le plan $(P) : x + 2y - z + 1 = 0$ et la droite $(d)$ passant par $A(0\\ ;\\ 0\\ ;\\ 1)$, de vecteur directeur $\\vec{u}\\begin{pmatrix} 1 \\\\ 1 \\\\ 3 \\end{pmatrix}$. Quelle est la position relative de $(d)$ et $(P)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(d)$ est incluse dans $(P)$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$(d)$ est strictement parallèle à $(P)$.",
+          "correcte": false,
+          "erreur": "oubli_test_du_point",
+          "feedback": "$\\vec{u} \\cdot \\vec{n} = 0$ ne suffit pas : il faut tester si $A$ appartient à $(P)$. Ici, il y appartient."
+        },
+        {
+          "id": "C",
+          "texte": "$(d)$ et $(P)$ sont sécants en un point.",
+          "correcte": false,
+          "erreur": "erreur_produit_scalaire",
+          "feedback": "$\\vec{u} \\cdot \\vec{n} = 1 + 2 - 3 = 0$ : la droite est parallèle au plan, elle ne le coupe pas en un seul point."
+        },
+        {
+          "id": "D",
+          "texte": "$(d)$ est orthogonale à $(P)$.",
+          "correcte": false,
+          "erreur": "confusion_parallele_orthogonal",
+          "feedback": "$\\vec{u} \\cdot \\vec{n} = 0$ signifie que $\\vec{u}$ est orthogonal au vecteur normal, donc parallèle au plan."
+        }
+      ],
+      "explication": "Un vecteur normal à $(P)$ est $\\vec{n}\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ et $\\vec{u} \\cdot \\vec{n} = 1 + 2 - 3 = 0$ : $(d)$ est parallèle à $(P)$. De plus, $0 + 0 - 1 + 1 = 0$ : $A \\in (P)$. Donc $(d)$ est incluse dans $(P)$.",
+      "a_revoir": [
+        "Fiche « Positions relatives » — 2. Position relative d'une droite et d'un plan"
+      ]
+    },
+    {
+      "id": "esp-banque-q5",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Vecteurs dans l'espace",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "coplanarité de quatre points",
+      "enonce": "Soit $A(1\\ ;\\ 0\\ ;\\ 0)$, $B(0\\ ;\\ 1\\ ;\\ 0)$, $C(0\\ ;\\ 0\\ ;\\ 1)$ et $D(1\\ ;\\ 1\\ ;\\ -1)$. Les points $A$, $B$, $C$ et $D$ sont-ils coplanaires ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Oui, car $\\overrightarrow{AD} = \\overrightarrow{AB} - \\overrightarrow{AC}$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Non, car aucun des vecteurs $\\overrightarrow{AB}$, $\\overrightarrow{AC}$, $\\overrightarrow{AD}$ n'est colinéaire à un autre.",
+          "correcte": false,
+          "erreur": "confusion_colinearite_coplanarite",
+          "feedback": "Trois vecteurs peuvent être coplanaires sans être colinéaires deux à deux."
+        },
+        {
+          "id": "C",
+          "texte": "Oui, car $\\overrightarrow{AD} = \\overrightarrow{AB} + \\overrightarrow{AC}$.",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "$\\overrightarrow{AB} + \\overrightarrow{AC}$ a pour coordonnées $(-2\\ ;\\ 1\\ ;\\ 1)$, pas $(0\\ ;\\ 1\\ ;\\ -1)$."
+        },
+        {
+          "id": "D",
+          "texte": "On ne peut pas conclure sans faire de figure.",
+          "correcte": false,
+          "erreur": "methode_non_identifiee",
+          "feedback": "Les coordonnées suffisent : on cherche si $\\overrightarrow{AD}$ est une combinaison linéaire de $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$."
+        }
+      ],
+      "explication": "$\\overrightarrow{AB}\\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\end{pmatrix}$, $\\overrightarrow{AC}\\begin{pmatrix} -1 \\\\ 0 \\\\ 1 \\end{pmatrix}$, $\\overrightarrow{AD}\\begin{pmatrix} 0 \\\\ 1 \\\\ -1 \\end{pmatrix}$ et $\\overrightarrow{AB} - \\overrightarrow{AC} = \\begin{pmatrix} 0 \\\\ 1 \\\\ -1 \\end{pmatrix} = \\overrightarrow{AD}$. Les vecteurs sont coplanaires, donc les quatre points aussi.",
+      "a_revoir": [
+        "Fiche « Vecteurs dans l'espace » — 2. Combinaisons linéaires",
+        "Fiche « Vecteurs dans l'espace » — 3. Coplanarité"
+      ]
+    }
+  ]
+}

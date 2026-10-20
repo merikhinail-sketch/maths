@@ -1,0 +1,244 @@
+{
+  "id": "comp-f1",
+  "titre": "Quiz — Reconnaître une fonction composée",
+  "chapitre": "Fonctions composées",
+  "fiche": "Reconnaître une fonction composée",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "comp-f1-q1",
+      "chapitre": "Fonctions composées",
+      "fiche": "Reconnaître une fonction composée",
+      "type": "application",
+      "niveau": 1,
+      "notion": "fonction intérieure",
+      "enonce": "Pour la fonction $f(x) = \\sqrt{2x + 1}$, quelle est la fonction intérieure $u$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u(x) = \\sqrt{x}$",
+          "correcte": false,
+          "erreur": "inversion_interieure_exterieure",
+          "feedback": "$\\sqrt{\\ }$ est appliquée en dernier : c'est la fonction **extérieure**."
+        },
+        {
+          "id": "B",
+          "texte": "$u(x) = 2x$",
+          "correcte": false,
+          "erreur": "decomposition_incomplete",
+          "feedback": "Le « $+ 1$ » est calculé avant la racine carrée : il fait partie de la fonction intérieure."
+        },
+        {
+          "id": "C",
+          "texte": "$u(x) = 2x + 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$u(x) = x$",
+          "correcte": false,
+          "erreur": "pas_de_composition_vue",
+          "feedback": "Il y a bien une composition : $u(x) = 2x + 1$ est calculée avant la racine."
+        }
+      ],
+      "explication": "Pour calculer $f(x)$, on calcule d'abord $2x + 1$ (fonction intérieure $u$), puis on prend la racine carrée (fonction extérieure $v(X) = \\sqrt{X}$).",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 1. Comprendre l'idée de composition — Fonction intérieure / fonction extérieure",
+        "Fiche « Reconnaître une fonction composée » — 1. Comprendre l'idée de composition — Quelques cas simples"
+      ]
+    },
+    {
+      "id": "comp-f1-q2",
+      "chapitre": "Fonctions composées",
+      "fiche": "Reconnaître une fonction composée",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "distinguer composition et produit",
+      "enonce": "Laquelle de ces fonctions n'est **pas** une fonction composée ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(x) = x\\,e^{x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f(x) = e^{3x}$",
+          "correcte": false,
+          "erreur": "composition_non_reconnue",
+          "feedback": "C'est une composée : $u(x) = 3x$, puis $v(X) = e^{X}$."
+        },
+        {
+          "id": "C",
+          "texte": "$f(x) = \\sqrt{x + 4}$",
+          "correcte": false,
+          "erreur": "composition_non_reconnue",
+          "feedback": "C'est une composée : $u(x) = x + 4$, puis $v(X) = \\sqrt{X}$."
+        },
+        {
+          "id": "D",
+          "texte": "$f(x) = \\ln\\left(x^2 + 1\\right)$",
+          "correcte": false,
+          "erreur": "composition_non_reconnue",
+          "feedback": "C'est une composée : $u(x) = x^2 + 1$, puis $v(X) = \\ln(X)$."
+        }
+      ],
+      "explication": "$x\\,e^{x}$ est un **produit** de deux fonctions ($x$ et $e^x$) : aucune fonction n'est appliquée au résultat de l'autre.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 3. Erreurs fréquentes — Croire que toute expression avec plusieurs opérations est une fonction composée"
+      ]
+    },
+    {
+      "id": "comp-f1-q3",
+      "chapitre": "Fonctions composées",
+      "fiche": "Reconnaître une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "décomposer une expression",
+      "enonce": "Quelle décomposition $f = v \\circ u$ convient pour $f(x) = \\ln\\left(x^2 + 1\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u(x) = \\ln(x)$ et $v(X) = X^2 + 1$",
+          "correcte": false,
+          "erreur": "inversion_interieure_exterieure",
+          "feedback": "Cette composée donne $\\left(\\ln(x)\\right)^2 + 1$, qui n'est pas $f(x)$."
+        },
+        {
+          "id": "B",
+          "texte": "$u(x) = x^2$ et $v(X) = \\ln(X) + 1$",
+          "correcte": false,
+          "erreur": "decomposition_fausse",
+          "feedback": "Cette composée donne $\\ln\\left(x^2\\right) + 1$, qui n'est pas $f(x)$."
+        },
+        {
+          "id": "C",
+          "texte": "$u(x) = x^2 + 1$ et $v(X) = e^{X}$",
+          "correcte": false,
+          "erreur": "mauvaise_fonction_exterieure",
+          "feedback": "Cette composée donne $e^{x^2 + 1}$ : la fonction extérieure de $f$ est $\\ln$."
+        },
+        {
+          "id": "D",
+          "texte": "$u(x) = x^2 + 1$ et $v(X) = \\ln(X)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Pour calculer $f(x)$ : d'abord $x^2 + 1$ (fonction intérieure), puis $\\ln$ (fonction extérieure). Vérification : $v\\big(u(x)\\big) = \\ln\\left(x^2 + 1\\right) = f(x)$.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 2. Écrire une fonction sous forme composée — Décomposer une expression",
+        "Fiche « Reconnaître une fonction composée » — 2. Écrire une fonction sous forme composée — Identifier les deux fonctions"
+      ]
+    },
+    {
+      "id": "comp-f1-q4",
+      "chapitre": "Fonctions composées",
+      "fiche": "Reconnaître une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "calculer $(v \\circ u)(x)$",
+      "enonce": "On pose $u(x) = 3x - 1$ et $v(X) = X^2$. Que vaut $(v \\circ u)(2)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$11$",
+          "correcte": false,
+          "erreur": "inversion_interieure_exterieure",
+          "feedback": "$11 = u\\big(v(2)\\big) = 3 \\times 4 - 1$ : on a appliqué $v$ avant $u$, alors que $u$ est la fonction intérieure."
+        },
+        {
+          "id": "B",
+          "texte": "$25$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$20$",
+          "correcte": false,
+          "erreur": "produit_au_lieu_de_composition",
+          "feedback": "$20 = v(2) \\times u(2)$ : une composition applique $v$ **au résultat** de $u$, elle ne multiplie pas."
+        },
+        {
+          "id": "D",
+          "texte": "$9$",
+          "correcte": false,
+          "erreur": "somme_au_lieu_de_composition",
+          "feedback": "$9 = v(2) + u(2)$ : une composition n'additionne pas."
+        }
+      ],
+      "explication": "$(v \\circ u)(2) = v\\big(u(2)\\big)$. D'abord $u(2) = 3 \\times 2 - 1 = 5$, puis $v(5) = 5^2 = 25$.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 1. Comprendre l'idée de composition — Fonction intérieure / fonction extérieure"
+      ]
+    },
+    {
+      "id": "comp-f1-q5",
+      "chapitre": "Fonctions composées",
+      "fiche": "Reconnaître une fonction composée",
+      "type": "interprétation",
+      "niveau": 3,
+      "notion": "composée cachée",
+      "enonce": "Parmi ces fonctions, laquelle est une fonction composée ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(x) = x^2 + 3x$",
+          "correcte": false,
+          "erreur": "somme_prise_pour_une_composee",
+          "feedback": "C'est une somme de deux fonctions : aucune n'est appliquée au résultat de l'autre."
+        },
+        {
+          "id": "B",
+          "texte": "$f(x) = \\dfrac{1}{2x + 3}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$f(x) = (x + 1)(x - 2)$",
+          "correcte": false,
+          "erreur": "produit_pris_pour_une_composee",
+          "feedback": "C'est un produit de deux fonctions."
+        },
+        {
+          "id": "D",
+          "texte": "$f(x) = e^{x} + x$",
+          "correcte": false,
+          "erreur": "somme_prise_pour_une_composee",
+          "feedback": "C'est une somme de deux fonctions : aucune n'est appliquée au résultat de l'autre."
+        }
+      ],
+      "explication": "$\\dfrac{1}{2x + 3}$ est composée : $u(x) = 2x + 3$ suivie de $v(X) = \\dfrac{1}{X}$. Les autres expressions sont des sommes ou des produits.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 3. Erreurs fréquentes — Ne pas reconnaître une fonction composée présentée sous une forme moins évidente",
+        "Fiche « Reconnaître une fonction composée » — 3. Erreurs fréquentes — Croire que toute expression avec plusieurs opérations est une fonction composée"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "id": "lim-banque",
+  "titre": "Banque — Limites de fonctions",
+  "chapitre": "Limites de fonctions",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "lim-banque-q1",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limite d'une fonction",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "sens d'une limite finie en $+\\infty$",
+      "enonce": "On sait que $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 3$. Que signifie cette égalité ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Pour $x$ assez grand, $f(x)$ est aussi proche de $3$ que l'on veut.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Pour $x$ assez grand, $f(x) = 3$.",
+          "correcte": false,
+          "erreur": "limite_atteinte",
+          "feedback": "Une limite décrit un rapprochement : $f(x)$ peut ne jamais valoir exactement $3$."
+        },
+        {
+          "id": "C",
+          "texte": "$f(x) < 3$ pour tout réel $x$.",
+          "correcte": false,
+          "erreur": "limite_comme_majorant",
+          "feedback": "$f(x)$ peut s'approcher de $3$ par au-dessus, ou en oscillant autour."
+        },
+        {
+          "id": "D",
+          "texte": "$f(3) = +\\infty$.",
+          "correcte": false,
+          "erreur": "confusion_variable_et_limite",
+          "feedback": "Le $3$ est la valeur limite de $f(x)$, pas une valeur de $x$."
+        }
+      ],
+      "explication": "$\\displaystyle\\lim_{x \\to +\\infty} f(x) = 3$ signifie que tout intervalle ouvert contenant $3$ contient toutes les valeurs $f(x)$ pour $x$ assez grand : $f(x)$ se rapproche autant qu'on veut de $3$.",
+      "a_revoir": [
+        "Fiche « Limite d'une fonction » — 3. Limites à l'infini"
+      ]
+    },
+    {
+      "id": "lim-banque-q2",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Calculs de limites",
+      "type": "application",
+      "niveau": 2,
+      "notion": "croissances comparées : exponentielle et puissance",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{e^x}{x^3}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$+\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "croissances_comparees_inversees",
+          "feedback": "C'est l'exponentielle qui l'emporte sur toute puissance de $x$ : le quotient devient très grand."
+        },
+        {
+          "id": "C",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "infini_sur_infini_vaut_un",
+          "feedback": "$\\dfrac{\\infty}{\\infty}$ n'est pas égal à $1$ : c'est une forme indéterminée."
+        },
+        {
+          "id": "D",
+          "texte": "Forme indéterminée : la limite n'existe pas.",
+          "correcte": false,
+          "erreur": "indetermine_signifie_pas_de_limite",
+          "feedback": "Une forme indéterminée se lève : ici, le théorème des croissances comparées donne la limite."
+        }
+      ],
+      "explication": "D'après les croissances comparées, pour tout entier $n$, $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{e^x}{x^n} = +\\infty$. Avec $n = 3$, la limite vaut $+\\infty$.",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 3. Formes indéterminées",
+        "Fiche « Calculs de limites » — 2. Limites usuelles"
+      ]
+    },
+    {
+      "id": "lim-banque-q3",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Limites d'une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "limite d'une composée avec le logarithme",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\ln\\left(\\dfrac{1}{x}\\right)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$-\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "oubli_fonction_exterieure",
+          "feedback": "$\\dfrac{1}{x} \\to 0^+$, mais il faut ensuite appliquer $\\ln$ : $\\ln(X) \\to -\\infty$ quand $X \\to 0^+$."
+        },
+        {
+          "id": "C",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\ln(X)$ est négatif pour $0 < X < 1$ et tend vers $-\\infty$ en $0^+$."
+        },
+        {
+          "id": "D",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "confusion_ln_valeurs",
+          "feedback": "$\\ln(X) \\to 0$ quand $X \\to 1$, pas quand $X \\to 0$."
+        }
+      ],
+      "explication": "On pose $X = \\dfrac{1}{x}$. Quand $x \\to +\\infty$, $X \\to 0^+$, et $\\displaystyle\\lim_{X \\to 0^+} \\ln(X) = -\\infty$. Donc la limite vaut $-\\infty$ (on peut aussi écrire $\\ln\\left(\\dfrac{1}{x}\\right) = -\\ln(x)$).",
+      "a_revoir": [
+        "Fiche « Limites d'une fonction composée » — 1. Grand exemple guidé",
+        "Fiche « Limites d'une fonction composée » — 2. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "lim-banque-q4",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Asymptotes",
+      "type": "application",
+      "niveau": 2,
+      "notion": "asymptotes d'une fonction homographique",
+      "enonce": "Quelles sont les asymptotes à la courbe de $f(x) = \\dfrac{4x - 1}{2x + 6}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La droite $x = -3$ (verticale) et la droite $y = 2$ (horizontale).",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "La droite $x = 3$ et la droite $y = 2$.",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Le dénominateur s'annule pour $2x + 6 = 0$, c'est-à-dire $x = -3$."
+        },
+        {
+          "id": "C",
+          "texte": "La droite $x = -3$ et la droite $y = 4$.",
+          "correcte": false,
+          "erreur": "oubli_coefficient_denominateur",
+          "feedback": "En $+\\infty$, $f(x)$ se comporte comme $\\dfrac{4x}{2x} = 2$ : il faut diviser par le coefficient du dénominateur."
+        },
+        {
+          "id": "D",
+          "texte": "La droite $x = -3$ et la droite $y = -\\dfrac{1}{6}$.",
+          "correcte": false,
+          "erreur": "rapport_des_constantes",
+          "feedback": "$-\\dfrac{1}{6} = f(0)$ : c'est l'ordonnée à l'origine, pas une limite à l'infini."
+        }
+      ],
+      "explication": "$2x + 6 = 0 \\iff x = -3$ et le numérateur ne s'annule pas en $-3$ : asymptote verticale $x = -3$. En $\\pm\\infty$, $f(x) = \\dfrac{4 - \\frac{1}{x}}{2 + \\frac{6}{x}} \\to 2$ : asymptote horizontale $y = 2$.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 1. Asymptote verticale et horizontale",
+        "Fiche « Asymptotes » — 3. Déterminer une asymptote à partir d'une fonction"
+      ]
+    },
+    {
+      "id": "lim-banque-q5",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Calculs de limites",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "théorème des gendarmes avec un cosinus",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{x\\cos(x)}{x^2 + 1}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Elle n'existe pas, car $\\cos(x)$ n'a pas de limite en $+\\infty$.",
+          "correcte": false,
+          "erreur": "conclusion_hative_oscillation",
+          "feedback": "Le facteur $\\cos(x)$ est borné : l'encadrement permet quand même de conclure."
+        },
+        {
+          "id": "C",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "simplification_abusive",
+          "feedback": "On ne simplifie pas $\\cos(x)$ : il reste compris entre $-1$ et $1$."
+        },
+        {
+          "id": "D",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "terme_dominant_mal_identifie",
+          "feedback": "Le dénominateur $x^2 + 1$ grandit plus vite que $x$ : le quotient devient petit."
+        }
+      ],
+      "explication": "Pour $x > 0$, $-\\dfrac{x}{x^2 + 1} \\leq \\dfrac{x\\cos(x)}{x^2 + 1} \\leq \\dfrac{x}{x^2 + 1}$, et $\\dfrac{x}{x^2 + 1} \\to 0$. D'après le théorème des gendarmes, la limite vaut $0$.",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 4. Théorème des gendarmes"
+      ]
+    }
+  ]
+}

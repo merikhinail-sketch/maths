@@ -1,0 +1,243 @@
+{
+  "id": "proba-f1",
+  "titre": "Quiz — Probabilités conditionnelles",
+  "chapitre": "Probabilités",
+  "fiche": "Rappels de Première : probabilités conditionnelles",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "proba-f1-q1",
+      "chapitre": "Probabilités",
+      "fiche": "Rappels de Première : probabilités conditionnelles",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "signification de $P_A(B)$",
+      "enonce": "Dans une entreprise, on note $C$ : « l'employé est cadre » et $T$ : « l'employé télétravaille ». Que signifie $P_C(T) = 0{,}7$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$70\\,\\%$ des employés télétravaillent.",
+          "correcte": false,
+          "erreur": "confusion_conditionnelle_globale",
+          "feedback": "La condition « parmi les cadres » restreint la population : ce n'est pas la proportion dans toute l'entreprise."
+        },
+        {
+          "id": "B",
+          "texte": "Parmi les télétravailleurs, $70\\,\\%$ sont cadres.",
+          "correcte": false,
+          "erreur": "confusion_PA_B_et_PB_A",
+          "feedback": "Ce serait $P_T(C)$ : l'événement qui est en indice est celui que l'on sait réalisé."
+        },
+        {
+          "id": "C",
+          "texte": "Parmi les cadres, $70\\,\\%$ télétravaillent.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$70\\,\\%$ des employés sont des cadres qui télétravaillent.",
+          "correcte": false,
+          "erreur": "confusion_intersection",
+          "feedback": "Ce serait $P(C \\cap T)$ : ici on ne regarde que les cadres."
+        }
+      ],
+      "explication": "$P_C(T)$ est la probabilité de $T$ sachant $C$ : on se restreint aux cadres, et $70\\,\\%$ d'entre eux télétravaillent.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 1. Probabilité conditionnelle — Comprendre ce que signifie $P_A(B)$"
+      ]
+    },
+    {
+      "id": "proba-f1-q2",
+      "chapitre": "Probabilités",
+      "fiche": "Rappels de Première : probabilités conditionnelles",
+      "type": "application",
+      "niveau": 1,
+      "notion": "calculer un chemin d'un arbre",
+      "enonce": "Dans une entreprise, $40\\,\\%$ des employés sont des cadres (événement $C$). Parmi les cadres, $70\\,\\%$ télétravaillent (événement $T$) ; parmi les non-cadres, $30\\,\\%$ télétravaillent. Sur l'arbre ci-contre, quelle est la valeur de $P(C \\cap T)$ ?",
+      "figure": "proba_f1_q2.png",
+      "figure_alt": "Arbre pondéré : C (0,4) puis T (0,7) ou non T (0,3) ; non C (0,6) puis T (0,3) ou non T (0,7).",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}28$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$1{,}1$",
+          "correcte": false,
+          "erreur": "addition_au_lieu_de_multiplication",
+          "feedback": "Le long d'un chemin, on multiplie les probabilités : $0{,}4 \\times 0{,}7$."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}7$",
+          "correcte": false,
+          "erreur": "confusion_PA_B_intersection",
+          "feedback": "$0{,}7$ est $P_C(T)$ : il manque la probabilité d'être cadre."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}18$",
+          "correcte": false,
+          "erreur": "mauvais_chemin",
+          "feedback": "$0{,}18 = 0{,}6 \\times 0{,}3$ est le chemin « non cadre puis télétravail »."
+        }
+      ],
+      "explication": "Le chemin $C \\to T$ a pour probabilité $P(C) \\times P_C(T) = 0{,}4 \\times 0{,}7 = 0{,}28$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 2. Arbres de probabilités — Calculer une probabilité en suivant un chemin"
+      ]
+    },
+    {
+      "id": "proba-f1-q3",
+      "chapitre": "Probabilités",
+      "fiche": "Rappels de Première : probabilités conditionnelles",
+      "type": "application",
+      "niveau": 2,
+      "notion": "probabilités totales",
+      "enonce": "Dans une entreprise, $40\\,\\%$ des employés sont des cadres (événement $C$). Parmi les cadres, $70\\,\\%$ télétravaillent (événement $T$) ; parmi les non-cadres, $30\\,\\%$ télétravaillent. Quelle est la probabilité qu'un employé pris au hasard télétravaille ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}28$",
+          "correcte": false,
+          "erreur": "oubli_un_chemin",
+          "feedback": "On n'a compté que le chemin passant par les cadres : il faut aussi celui des non-cadres."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}5$",
+          "correcte": false,
+          "erreur": "moyenne_des_probabilites",
+          "feedback": "On ne fait pas la moyenne de $0{,}7$ et $0{,}3$ : il faut tenir compte des proportions de cadres et de non-cadres."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}54$",
+          "correcte": false,
+          "erreur": "poids_inverses",
+          "feedback": "Les poids sont inversés : c'est $0{,}4 \\times 0{,}7 + 0{,}6 \\times 0{,}3$, et non $0{,}4 \\times 0{,}3 + 0{,}6 \\times 0{,}7$."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}46$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$P(T) = P(C \\cap T) + P(\\overline{C} \\cap T) = 0{,}4 \\times 0{,}7 + 0{,}6 \\times 0{,}3 = 0{,}28 + 0{,}18 = 0{,}46$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 4. Probabilités totales — Utiliser un arbre pour calculer une probabilité globale"
+      ]
+    },
+    {
+      "id": "proba-f1-q4",
+      "chapitre": "Probabilités",
+      "fiche": "Rappels de Première : probabilités conditionnelles",
+      "type": "application",
+      "niveau": 2,
+      "notion": "calculer $P_B(A)$",
+      "enonce": "Dans une entreprise, $40\\,\\%$ des employés sont des cadres (événement $C$). Parmi les cadres, $70\\,\\%$ télétravaillent (événement $T$) ; parmi les non-cadres, $30\\,\\%$ télétravaillent. On choisit un employé parmi ceux qui télétravaillent. Quelle est la probabilité qu'il soit cadre ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}7$",
+          "correcte": false,
+          "erreur": "confusion_PA_B_et_PB_A",
+          "feedback": "$0{,}7$ est la probabilité de télétravailler sachant qu'on est cadre : ici, l'ordre est inversé."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dfrac{0{,}28}{0{,}46} \\approx 0{,}61$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}28$",
+          "correcte": false,
+          "erreur": "confusion_conditionnelle_intersection",
+          "feedback": "$0{,}28$ est $P(C \\cap T)$ : on ne l'a pas divisée par $P(T)$."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}4$",
+          "correcte": false,
+          "erreur": "confusion_conditionnelle_globale",
+          "feedback": "$0{,}4$ est la proportion de cadres dans toute l'entreprise, pas parmi les télétravailleurs."
+        }
+      ],
+      "explication": "On cherche $P_T(C) = \\dfrac{P(C \\cap T)}{P(T)} = \\dfrac{0{,}28}{0{,}46} \\approx 0{,}61$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 1. Probabilité conditionnelle — Calculer une probabilité conditionnelle",
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 5. Quelques erreurs fréquentes — Confondre $P_A(B)$ et $P_B(A)$"
+      ]
+    },
+    {
+      "id": "proba-f1-q5",
+      "chapitre": "Probabilités",
+      "fiche": "Rappels de Première : probabilités conditionnelles",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "indépendance et probabilité conditionnelle",
+      "enonce": "Dans une entreprise, $40\\,\\%$ des employés sont des cadres (événement $C$). Parmi les cadres, $70\\,\\%$ télétravaillent (événement $T$) ; parmi les non-cadres, $30\\,\\%$ télétravaillent. Les événements $C$ et $T$ sont-ils indépendants ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Oui, car $P(C \\cap T) = 0{,}28 \\neq 0$ : les deux événements peuvent se réaliser ensemble.",
+          "correcte": false,
+          "erreur": "confusion_independance_incompatibilite",
+          "feedback": "Ne pas être incompatibles ne suffit pas pour être indépendants."
+        },
+        {
+          "id": "B",
+          "texte": "Non, car $P_C(T) = 0{,}7$ alors que $P(T) = 0{,}46$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Oui, car $P_C(T)$ et $P_{\\overline{C}}(T)$ sont toutes les deux strictement positives.",
+          "correcte": false,
+          "erreur": "critere_inventé",
+          "feedback": "L'indépendance demande $P_C(T) = P(T)$ : connaître le signe ne suffit pas."
+        },
+        {
+          "id": "D",
+          "texte": "Non, car $P(C) + P(T) \\neq 1$.",
+          "correcte": false,
+          "erreur": "critere_inventé",
+          "feedback": "Ce n'est pas le critère : on compare $P(C \\cap T)$ à $P(C) \\times P(T)$, ou $P_C(T)$ à $P(T)$."
+        }
+      ],
+      "explication": "Deux événements sont indépendants si $P_C(T) = P(T)$. Ici $0{,}7 \\neq 0{,}46$ : savoir que l'employé est cadre change la probabilité qu'il télétravaille.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 3. Indépendance — Lien avec les probabilités conditionnelles",
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 5. Quelques erreurs fréquentes — Confondre événements indépendants et événements incompatibles"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "id": "combi-f4",
+  "titre": "Quiz — Quelle méthode de dénombrement utiliser ?",
+  "chapitre": "Combinatoire",
+  "fiche": "Quelle méthode de dénombrement utiliser ?",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "combi-f4-q1",
+      "chapitre": "Combinatoire",
+      "fiche": "Quelle méthode de dénombrement utiliser ?",
+      "type": "choix_méthode",
+      "niveau": 1,
+      "notion": "podium : $k$-uplet distinct",
+      "enonce": "Dix coureurs participent à une course. Combien de podiums (1er, 2e, 3e) sont possibles ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dbinom{10}{3} = 120$",
+          "correcte": false,
+          "erreur": "confusion_avec_combinaison",
+          "feedback": "Un podium est ordonné : le 1er n'est pas le 3e. L'ordre compte, ce n'est donc pas une combinaison."
+        },
+        {
+          "id": "B",
+          "texte": "$10^3 = 1\\,000$",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "Un coureur ne peut pas occuper deux places du podium."
+        },
+        {
+          "id": "C",
+          "texte": "$10 \\times 3 = 30$",
+          "correcte": false,
+          "erreur": "confusion_produit_puissance",
+          "feedback": "Il faut multiplier les choix de chaque place : $10$, puis $9$, puis $8$."
+        },
+        {
+          "id": "D",
+          "texte": "$10 \\times 9 \\times 8 = 720$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Question 1 : l'ordre compte. Question 2 : on n'utilise pas tous les coureurs. Question 3 : un coureur ne peut pas être deux fois sur le podium. C'est un $3$-uplet d'éléments distincts.",
+      "a_revoir": [
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Les questions à se poser",
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Un exemple pour chaque situation"
+      ]
+    },
+    {
+      "id": "combi-f4-q2",
+      "chapitre": "Combinatoire",
+      "fiche": "Quelle méthode de dénombrement utiliser ?",
+      "type": "choix_méthode",
+      "niveau": 1,
+      "notion": "reconnaître la situation",
+      "enonce": "On tire simultanément $4$ cartes dans un jeu de $32$ cartes. De quelle situation s'agit-il ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "D'un $4$-uplet d'éléments distincts, car on choisit $4$ cartes.",
+          "correcte": false,
+          "erreur": "ordre_ignore",
+          "feedback": "Tirer les cartes **en même temps** forme une main : échanger deux cartes ne change rien."
+        },
+        {
+          "id": "B",
+          "texte": "D'une permutation, car on utilise des cartes différentes.",
+          "correcte": false,
+          "erreur": "confusion_avec_permutation",
+          "feedback": "Une permutation utilise **tous** les éléments : ici on n'en choisit que $4$ sur $32$."
+        },
+        {
+          "id": "C",
+          "texte": "D'une combinaison, car l'ordre des cartes tirées ne compte pas.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "D'un $4$-uplet avec répétition, car on tire plusieurs cartes.",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "Une même carte ne peut pas être tirée deux fois."
+        }
+      ],
+      "explication": "Question 1 : échanger deux cartes ne change pas la main, l'ordre ne compte pas. C'est donc une combinaison : $\\dbinom{32}{4}$.",
+      "a_revoir": [
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Les 4 situations à reconnaître",
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Les questions à se poser"
+      ]
+    },
+    {
+      "id": "combi-f4-q3",
+      "chapitre": "Combinatoire",
+      "fiche": "Quelle méthode de dénombrement utiliser ?",
+      "type": "choix_méthode",
+      "niveau": 2,
+      "notion": "$k$-uplet avec répétition",
+      "enonce": "Un mot de passe est formé de $5$ lettres choisies parmi les $26$ lettres de l'alphabet, les répétitions étant autorisées. Combien de mots de passe sont possibles ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$26^5$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$26 \\times 25 \\times 24 \\times 23 \\times 22$",
+          "correcte": false,
+          "erreur": "repetitions_interdites_a_tort",
+          "feedback": "Les répétitions sont autorisées : à chaque place, les $26$ lettres restent disponibles."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dbinom{26}{5}$",
+          "correcte": false,
+          "erreur": "confusion_avec_combinaison",
+          "feedback": "Un mot de passe est ordonné : l'ordre compte, ce n'est pas une combinaison."
+        },
+        {
+          "id": "D",
+          "texte": "$5^{26}$",
+          "correcte": false,
+          "erreur": "inversion_base_exposant",
+          "feedback": "Le nombre de choix par place ($26$) est la base, le nombre de places ($5$) est l'exposant."
+        }
+      ],
+      "explication": "L'ordre compte, on n'utilise pas tout, et une lettre peut se répéter : $k$-uplet avec répétition, $n^k = 26^5$.",
+      "a_revoir": [
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Les questions à se poser",
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Résumé : la méthode à utiliser"
+      ]
+    },
+    {
+      "id": "combi-f4-q4",
+      "chapitre": "Combinatoire",
+      "fiche": "Quelle méthode de dénombrement utiliser ?",
+      "type": "choix_méthode",
+      "niveau": 2,
+      "notion": "ordre qui compte ou non",
+      "enonce": "Dans une classe de $25$ élèves, on choisit un président **et** un secrétaire (deux rôles distincts). Combien de choix y a-t-il ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dbinom{25}{2} = 300$",
+          "correcte": false,
+          "erreur": "ordre_ignore",
+          "feedback": "Président et secrétaire sont deux rôles différents : échanger les deux élèves change le résultat."
+        },
+        {
+          "id": "B",
+          "texte": "$25^2 = 625$",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "Un même élève ne peut pas occuper les deux rôles."
+        },
+        {
+          "id": "C",
+          "texte": "$25 \\times 2 = 50$",
+          "correcte": false,
+          "erreur": "confusion_produit_puissance",
+          "feedback": "Pour le président, il y a $25$ choix, puis $24$ pour le secrétaire."
+        },
+        {
+          "id": "D",
+          "texte": "$25 \\times 24 = 600$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "L'ordre compte (échanger les deux change le résultat) : $2$-uplet d'éléments distincts, $25 \\times 24 = 600$. Pour deux délégués sans rôle, on aurait $\\dbinom{25}{2} = 300$.",
+      "a_revoir": [
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Un exemple pour chaque situation"
+      ]
+    },
+    {
+      "id": "combi-f4-q5",
+      "chapitre": "Combinatoire",
+      "fiche": "Quelle méthode de dénombrement utiliser ?",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "combiner deux méthodes",
+      "enonce": "Un jury de $5$ personnes est choisi parmi $9$ candidats, puis l'un des $5$ jurés est désigné président. Combien de jurys avec président peut-on former ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dbinom{9}{5} = 126$",
+          "correcte": false,
+          "erreur": "etape_oubliee",
+          "feedback": "Ce nombre ne compte que les jurys, sans le choix du président."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dbinom{9}{5} \\times 5 = 630$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$9 \\times 8 \\times 7 \\times 6 \\times 5 = 15\\,120$",
+          "correcte": false,
+          "erreur": "ordre_ignore_a_tort",
+          "feedback": "Ce nombre ordonne tous les jurés : seul le président se distingue des autres."
+        },
+        {
+          "id": "D",
+          "texte": "$9 \\times 5 = 45$",
+          "correcte": false,
+          "erreur": "mauvais_decompte",
+          "feedback": "Le choix des $5$ jurés parmi $9$ n'est pas $9$ : c'est $\\dbinom{9}{5}$."
+        }
+      ],
+      "explication": "Étape 1 : choisir les $5$ jurés (l'ordre ne compte pas), $\\dbinom{9}{5} = 126$. Étape 2 : désigner le président parmi eux, $5$ choix. Principe multiplicatif : $126 \\times 5 = 630$.",
+      "a_revoir": [
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Les questions à se poser",
+        "Fiche « Quelle méthode de dénombrement utiliser ? » — 1. Comprendre ce qu'on cherche et questions à se poser — Résumé : la méthode à utiliser"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "id": "proba-f2",
+  "titre": "Quiz — Variables aléatoires",
+  "chapitre": "Probabilités",
+  "fiche": "Variables aléatoires",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "proba-f2-q1",
+      "chapitre": "Probabilités",
+      "fiche": "Variables aléatoires",
+      "type": "application",
+      "niveau": 1,
+      "notion": "somme des probabilités",
+      "enonce": "Les valeurs $-1$, $2$ et $5$ d'une variable aléatoire $X$ ont pour probabilités $0{,}3$, $0{,}5$ et $p$. Que vaut $p$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}8$",
+          "correcte": false,
+          "erreur": "somme_non_retranchee_de_1",
+          "feedback": "$0{,}3 + 0{,}5 = 0{,}8$ est la somme des probabilités connues : $p = 1 - 0{,}8$."
+        },
+        {
+          "id": "B",
+          "texte": "$5$",
+          "correcte": false,
+          "erreur": "confusion_valeur_probabilite",
+          "feedback": "$5$ est une valeur de $X$, pas une probabilité."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}15$",
+          "correcte": false,
+          "erreur": "calcul_inventé",
+          "feedback": "La somme des trois probabilités doit valoir exactement 1."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "La somme des probabilités vaut $1$ : $0{,}3 + 0{,}5 + p = 1$, donc $p = 0{,}2$.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 2. Loi de probabilité — Déterminer la loi d'une variable aléatoire",
+        "Fiche « Variables aléatoires » — 4. Erreurs fréquentes — Oublier que la somme des probabilités vaut 1"
+      ]
+    },
+    {
+      "id": "proba-f2-q2",
+      "chapitre": "Probabilités",
+      "fiche": "Variables aléatoires",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "définition d'une variable aléatoire",
+      "enonce": "Une variable aléatoire $X$ est :",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "une fonction qui associe un nombre réel à chaque issue de l'expérience.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "un nombre choisi au hasard par l'expérimentateur.",
+          "correcte": false,
+          "erreur": "definition_inventee",
+          "feedback": "Ce n'est pas un nombre choisi : c'est une règle qui transforme chaque issue en un nombre."
+        },
+        {
+          "id": "C",
+          "texte": "la probabilité d'une issue.",
+          "correcte": false,
+          "erreur": "confusion_valeur_probabilite",
+          "feedback": "Une variable aléatoire prend des valeurs (des gains, des points...) ; leurs probabilités se calculent ensuite."
+        },
+        {
+          "id": "D",
+          "texte": "l'ensemble de toutes les issues possibles.",
+          "correcte": false,
+          "erreur": "confusion_univers",
+          "feedback": "L'ensemble des issues est l'univers, pas la variable aléatoire."
+        }
+      ],
+      "explication": "Une variable aléatoire associe un nombre réel (un gain, un score...) à chaque issue : par exemple, une boule rouge donne $X = 2$.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 1. Variable aléatoire — Définition"
+      ]
+    },
+    {
+      "id": "proba-f2-q3",
+      "chapitre": "Probabilités",
+      "fiche": "Variables aléatoires",
+      "type": "application",
+      "niveau": 2,
+      "notion": "déterminer la loi",
+      "enonce": "Une urne contient $5$ boules : $2$ rouges, $2$ vertes et $1$ noire. On tire une boule. On gagne $2$ € si elle est rouge, $1$ € si elle est verte, et on perd $3$ € si elle est noire. Soit $X$ le gain (en euros). Quelle est la loi de probabilité de $X$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$P(X=2) = 0{,}4$ ; $P(X=1) = 0{,}2$ ; $P(X=-3) = 0{,}4$",
+          "correcte": false,
+          "erreur": "valeurs_et_probabilites_melangees",
+          "feedback": "Les boules noires sont 1 sur 5 : $P(X = -3) = 0{,}2$."
+        },
+        {
+          "id": "B",
+          "texte": "$P(X=2) = 2$ ; $P(X=1) = 2$ ; $P(X=-3) = 1$",
+          "correcte": false,
+          "erreur": "effectifs_au_lieu_de_probabilites",
+          "feedback": "Ce sont des effectifs : il faut diviser par 5."
+        },
+        {
+          "id": "C",
+          "texte": "$P(X=2) = 0{,}4$ ; $P(X=1) = 0{,}4$ ; $P(X=-3) = 0{,}2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$P(X=2) = 0{,}4$ ; $P(X=1) = 0{,}4$ ; $P(X=-3) = 0{,}1$",
+          "correcte": false,
+          "erreur": "somme_differente_de_1",
+          "feedback": "La somme vaut $0{,}9$ : elle doit valoir 1."
+        }
+      ],
+      "explication": "Chaque boule a une probabilité $\\frac{1}{5}$ : $P(X=2) = \\frac{2}{5}$, $P(X=1) = \\frac{2}{5}$, $P(X=-3) = \\frac{1}{5}$. La somme vaut bien $1$.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 2. Loi de probabilité — Déterminer la loi d'une variable aléatoire"
+      ]
+    },
+    {
+      "id": "proba-f2-q4",
+      "chapitre": "Probabilités",
+      "fiche": "Variables aléatoires",
+      "type": "application",
+      "niveau": 2,
+      "notion": "calcul de l'espérance",
+      "enonce": "Une urne contient $5$ boules : $2$ rouges, $2$ vertes et $1$ noire. On tire une boule. On gagne $2$ € si elle est rouge, $1$ € si elle est verte, et on perd $3$ € si elle est noire. Soit $X$ le gain (en euros). Quelle est l'espérance $E(X)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "oubli_ponderation",
+          "feedback": "On a additionné les valeurs ($2 + 1 - 3$) sans les multiplier par leur probabilité."
+        },
+        {
+          "id": "B",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "effectifs_au_lieu_de_probabilites",
+          "feedback": "On a utilisé les effectifs ($2, 2, 1$) à la place des probabilités."
+        },
+        {
+          "id": "C",
+          "texte": "$1{,}8$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Le gain $-3$ est négatif : $(-3) \\times 0{,}2 = -0{,}6$, et non $+0{,}6$."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}6$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$E(X) = 2 \\times 0{,}4 + 1 \\times 0{,}4 + (-3) \\times 0{,}2 = 0{,}8 + 0{,}4 - 0{,}6 = 0{,}6$.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 3. Espérance, variance et écart-type — Calculer ces indicateurs",
+        "Fiche « Variables aléatoires » — 4. Erreurs fréquentes — Mal calculer l'espérance"
+      ]
+    },
+    {
+      "id": "proba-f2-q5",
+      "chapitre": "Probabilités",
+      "fiche": "Variables aléatoires",
+      "type": "interprétation",
+      "niveau": 3,
+      "notion": "interpréter l'espérance",
+      "enonce": "Une urne contient $5$ boules : $2$ rouges, $2$ vertes et $1$ noire. On tire une boule. On gagne $2$ € si elle est rouge, $1$ € si elle est verte, et on perd $3$ € si elle est noire. Soit $X$ le gain (en euros). On trouve $E(X) = 0{,}6$. Quelle interprétation est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "À chaque tirage, on gagne exactement $0{,}60$ €.",
+          "correcte": false,
+          "erreur": "esperance_valeur_possible",
+          "feedback": "Les gains possibles sont $2$, $1$ et $-3$ : $0{,}6$ n'est jamais obtenu en un seul tirage."
+        },
+        {
+          "id": "B",
+          "texte": "Sur un très grand nombre de tirages, le gain moyen par tirage est proche de $0{,}60$ €.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Le gain le plus probable est $0{,}60$ €.",
+          "correcte": false,
+          "erreur": "confusion_esperance_mode",
+          "feedback": "L'espérance est une moyenne, pas la valeur la plus probable."
+        },
+        {
+          "id": "D",
+          "texte": "Le jeu est défavorable au joueur, car on peut perdre $3$ €.",
+          "correcte": false,
+          "erreur": "confusion_esperance_risque",
+          "feedback": "Une perte possible ne suffit pas : l'espérance est positive, le jeu est favorable en moyenne."
+        }
+      ],
+      "explication": "L'espérance est la valeur moyenne de $X$ si l'on répète l'expérience un très grand nombre de fois. Ici, $E(X) = 0{,}6 > 0$ : le jeu est favorable au joueur en moyenne.",
+      "a_revoir": [
+        "Fiche « Variables aléatoires » — 3. Espérance, variance et écart-type — Interpréter les résultats",
+        "Fiche « Variables aléatoires » — 4. Erreurs fréquentes — Mal interpréter l'espérance"
+      ]
+    }
+  ]
+}

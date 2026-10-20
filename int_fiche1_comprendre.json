@@ -1,0 +1,241 @@
+{
+  "id": "int-f1",
+  "titre": "Quiz — Comprendre l'intégrale",
+  "chapitre": "Intégrales",
+  "fiche": "Comprendre l'intégrale",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "int-f1-q1",
+      "chapitre": "Intégrales",
+      "fiche": "Comprendre l'intégrale",
+      "type": "application",
+      "niveau": 1,
+      "notion": "définition de l'intégrale",
+      "enonce": "Calculer $\\displaystyle \\int_1^3 2x\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$9$",
+          "correcte": false,
+          "erreur": "oubli_de_F_a",
+          "feedback": "On a calculé $F(3)$ seulement : il faut soustraire $F(1)$."
+        },
+        {
+          "id": "B",
+          "texte": "$4$",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_integrale",
+          "feedback": "$4 = f(3) - f(1)$ : on a calculé la différence des valeurs de $f$ et non d'une primitive."
+        },
+        {
+          "id": "C",
+          "texte": "$8$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$10$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_F_a_F_b",
+          "feedback": "Il faut **soustraire** : $F(b) - F(a)$, et non additionner."
+        }
+      ],
+      "explication": "$F(x) = x^2$, donc $\\displaystyle \\int_1^3 2x\\,dx = \\left[x^2\\right]_1^3 = 9 - 1 = 8$.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 1. Définition — Définition de l'intégrale"
+      ]
+    },
+    {
+      "id": "int-f1-q2",
+      "chapitre": "Intégrales",
+      "fiche": "Comprendre l'intégrale",
+      "type": "application",
+      "niveau": 1,
+      "notion": "indépendance de la primitive choisie",
+      "enonce": "On calcule $\\displaystyle \\int_0^2 x\\,dx$ avec la primitive $F(x) = \\dfrac{x^2}{2} + 5$. Quel résultat obtient-on ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$7$",
+          "correcte": false,
+          "erreur": "oubli_de_F_a",
+          "feedback": "$7 = F(2)$ : il faut soustraire $F(0) = 5$."
+        },
+        {
+          "id": "C",
+          "texte": "$5$",
+          "correcte": false,
+          "erreur": "confusion_constante_et_resultat",
+          "feedback": "La constante s'annule dans $F(b) - F(a)$ : elle n'est pas le résultat."
+        },
+        {
+          "id": "D",
+          "texte": "$12$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_F_a_F_b",
+          "feedback": "On a additionné $F(2) + F(0)$ au lieu de soustraire."
+        }
+      ],
+      "explication": "$F(2) - F(0) = (2 + 5) - (0 + 5) = 2$ : la constante disparaît, on trouve le même résultat qu'avec $F(x) = \\dfrac{x^2}{2}$.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 1. Définition — Lien avec une primitive"
+      ]
+    },
+    {
+      "id": "int-f1-q3",
+      "chapitre": "Intégrales",
+      "fiche": "Comprendre l'intégrale",
+      "type": "interprétation",
+      "niveau": 2,
+      "notion": "aire algébrique",
+      "enonce": "On donne la représentation graphique de $f(x) = x - 1$ sur $[0\\ ;\\ 3]$. Quelle est la valeur de $\\displaystyle \\int_0^3 (x - 1)\\,dx$ ?",
+      "figure": "int_f1_q3.png",
+      "figure_alt": "Droite d'équation y = x - 1 sur [0 ; 3] : un triangle coloré sous l'axe des abscisses entre 0 et 1, un triangle coloré au-dessus entre 1 et 3.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{5}{2}$",
+          "correcte": false,
+          "erreur": "aire_geometrique_au_lieu_d_algebrique",
+          "feedback": "$\\frac{1}{2} + 2 = \\frac{5}{2}$ additionne les aires géométriques : la partie sous l'axe doit compter négativement."
+        },
+        {
+          "id": "B",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "oubli_partie_sous_l_axe",
+          "feedback": "On n'a compté que la partie au-dessus de l'axe (triangle d'aire $2$)."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "confusion_avec_l_exemple_0_2",
+          "feedback": "L'intégrale vaut $0$ sur $[0\\ ;\\ 2]$, mais ici on va jusqu'à $3$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{3}{2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Sous l'axe sur $[0\\ ;\\ 1]$ : triangle d'aire $\\frac{1}{2}$, compté $-\\frac{1}{2}$. Au-dessus sur $[1\\ ;\\ 3]$ : triangle d'aire $\\frac{2 \\times 2}{2} = 2$. Total : $-\\frac{1}{2} + 2 = \\frac{3}{2}$. Par calcul : $\\left[\\frac{x^2}{2} - x\\right]_0^3 = \\frac{9}{2} - 3 = \\frac{3}{2}$.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 1. Définition — Interprétation comme aire algébrique"
+      ]
+    },
+    {
+      "id": "int-f1-q4",
+      "chapitre": "Intégrales",
+      "fiche": "Comprendre l'intégrale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "relation de Chasles",
+      "enonce": "Soit $f$ continue sur $\\mathbb{R}$ avec $\\displaystyle \\int_0^4 f(x)\\,dx = 5$ et $\\displaystyle \\int_2^4 f(x)\\,dx = 3$. Que vaut $\\displaystyle \\int_0^2 f(x)\\,dx$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$8$",
+          "correcte": false,
+          "erreur": "mauvaise_relation_de_Chasles",
+          "feedback": "On a additionné au lieu de soustraire : $\\int_0^4 = \\int_0^2 + \\int_2^4$."
+        },
+        {
+          "id": "B",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$-2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\int_0^2 f = \\int_0^4 f - \\int_2^4 f = 5 - 3 = 2$, et non $3 - 5$."
+        },
+        {
+          "id": "D",
+          "texte": "$15$",
+          "correcte": false,
+          "erreur": "mauvaise_propriete",
+          "feedback": "Les intégrales ne se multiplient pas."
+        }
+      ],
+      "explication": "Chasles : $\\displaystyle \\int_0^2 f + \\int_2^4 f = \\int_0^4 f$. Donc $\\displaystyle \\int_0^2 f = 5 - 3 = 2$.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 2. Propriétés — Relation de Chasles"
+      ]
+    },
+    {
+      "id": "int-f1-q5",
+      "chapitre": "Intégrales",
+      "fiche": "Comprendre l'intégrale",
+      "type": "interprétation",
+      "niveau": 3,
+      "notion": "intégrale négative",
+      "enonce": "Quelle est la valeur de $\\displaystyle \\int_0^3 (x - 3)\\,dx$ et que signifie son signe ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{9}{2}$ : une aire est toujours positive.",
+          "correcte": false,
+          "erreur": "aire_toujours_positive",
+          "feedback": "Une intégrale est une aire **algébrique** : si $f$ est négative, elle est négative."
+        },
+        {
+          "id": "B",
+          "texte": "$-\\dfrac{9}{2}$ : la fonction est négative sur $[0\\ ;\\ 3]$, donc l'intégrale est négative.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$0$ : la fonction s'annule en $x = 3$.",
+          "correcte": false,
+          "erreur": "confusion_annulation_et_integrale",
+          "feedback": "Que $f(3) = 0$ ne rend pas l'intégrale nulle : $f$ est strictement négative sur $[0\\ ;\\ 3[$."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{3}{2}$ : on a oublié le terme $-3x$ de la primitive.",
+          "correcte": false,
+          "erreur": "primitive_incomplete",
+          "feedback": "Une primitive de $x - 3$ est $\\frac{x^2}{2} - 3x$, et non $\\frac{x^2}{2}$."
+        }
+      ],
+      "explication": "$\\left[\\frac{x^2}{2} - 3x\\right]_0^3 = \\frac{9}{2} - 9 = -\\frac{9}{2}$. Sur $[0\\ ;\\ 3]$, $x - 3 \\leq 0$ : l'intégrale est l'opposé de l'aire géométrique.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 1. Définition — Interprétation comme aire algébrique"
+      ]
+    }
+  ]
+}

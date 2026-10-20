@@ -1,0 +1,243 @@
+{
+  "id": "eqd-f1",
+  "titre": "Quiz — Comprendre ce qu'est une équation différentielle",
+  "chapitre": "Équations différentielles",
+  "fiche": "Comprendre ce qu'est une équation différentielle",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "eqd-f1-q1",
+      "chapitre": "Équations différentielles",
+      "fiche": "Comprendre ce qu'est une équation différentielle",
+      "type": "interprétation",
+      "niveau": 1,
+      "notion": "reconnaître une équation différentielle",
+      "enonce": "Laquelle de ces équations est une équation différentielle ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2x + 1 = 5$",
+          "correcte": false,
+          "erreur": "inconnue_nombre",
+          "feedback": "Ici l'inconnue est un nombre $x$ : il n'y a ni fonction inconnue ni dérivée."
+        },
+        {
+          "id": "B",
+          "texte": "$y^2 = 4$",
+          "correcte": false,
+          "erreur": "pas_de_derivee",
+          "feedback": "Il n'y a aucune dérivée dans cette équation : ce n'est pas une équation différentielle."
+        },
+        {
+          "id": "C",
+          "texte": "$y' = 3y - 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$x^2 - 3x + 2 = 0$",
+          "correcte": false,
+          "erreur": "inconnue_nombre",
+          "feedback": "C'est une équation du second degré dont l'inconnue est un nombre."
+        }
+      ],
+      "explication": "Une équation différentielle a pour inconnue une **fonction** $y$ et relie $y$ à sa dérivée $y'$ : c'est le cas de $y' = 3y - 1$.",
+      "a_revoir": [
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 1. Définition — Reconnaître une équation différentielle"
+      ]
+    },
+    {
+      "id": "eqd-f1-q2",
+      "chapitre": "Équations différentielles",
+      "fiche": "Comprendre ce qu'est une équation différentielle",
+      "type": "application",
+      "niveau": 1,
+      "notion": "vérifier qu'une fonction est solution",
+      "enonce": "La fonction $f(x) = e^{3x}$ est-elle solution de l'équation différentielle $y' = 3y$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Oui, car $f'(x) = 3e^{3x} = 3f(x)$ pour tout $x$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Non, car $f(x) = e^{3x}$ n'est pas égal à $3f(x) = 3e^{3x}$.",
+          "correcte": false,
+          "erreur": "oubli_de_deriver",
+          "feedback": "On compare $f'(x)$ et $3f(x)$, pas $f(x)$ et $3f(x)$ : il faut calculer la dérivée."
+        },
+        {
+          "id": "C",
+          "texte": "Non, car la dérivée de $e^{3x}$ est $e^{3x}$.",
+          "correcte": false,
+          "erreur": "mauvaise_derivee",
+          "feedback": "La dérivée de $e^{3x}$ est $3e^{3x}$ (il y a le facteur $3$)."
+        },
+        {
+          "id": "D",
+          "texte": "Oui, car $e^{3x}$ est toujours strictement positive.",
+          "correcte": false,
+          "erreur": "critere_inventé",
+          "feedback": "Le signe de $f$ ne dit rien : il faut vérifier l'égalité $f' = 3f$."
+        }
+      ],
+      "explication": "Dérivée : $f'(x) = 3e^{3x}$. Autre côté : $3f(x) = 3e^{3x}$. Les deux sont égaux pour tout $x$ : $f$ est solution.",
+      "a_revoir": [
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 2. Notion de solution et vérification — Vérifier qu'une fonction est solution"
+      ]
+    },
+    {
+      "id": "eqd-f1-q3",
+      "chapitre": "Équations différentielles",
+      "fiche": "Comprendre ce qu'est une équation différentielle",
+      "type": "application",
+      "niveau": 2,
+      "notion": "vérifier une solution",
+      "enonce": "Parmi ces fonctions, laquelle est solution de $y' = -2y$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f(x) = e^{2x}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$f'(x) = 2e^{2x}$ alors que $-2f(x) = -2e^{2x}$ : le signe de l'exposant ne convient pas."
+        },
+        {
+          "id": "B",
+          "texte": "$f(x) = e^{-x}$",
+          "correcte": false,
+          "erreur": "mauvais_coefficient",
+          "feedback": "$f'(x) = -e^{-x}$ alors que $-2f(x) = -2e^{-x}$ : il manque le facteur $2$."
+        },
+        {
+          "id": "C",
+          "texte": "$f(x) = -2x$",
+          "correcte": false,
+          "erreur": "confusion_fonction_derivee",
+          "feedback": "$f'(x) = -2$ alors que $-2f(x) = 4x$ : les deux ne sont pas égaux pour tout $x$."
+        },
+        {
+          "id": "D",
+          "texte": "$f(x) = e^{-2x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Pour $f(x) = e^{-2x}$ : $f'(x) = -2e^{-2x} = -2f(x)$. Les trois autres fonctions ne vérifient pas l'égalité pour tout $x$.",
+      "a_revoir": [
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 2. Notion de solution et vérification — Vérifier qu'une fonction est solution"
+      ]
+    },
+    {
+      "id": "eqd-f1-q4",
+      "chapitre": "Équations différentielles",
+      "fiche": "Comprendre ce qu'est une équation différentielle",
+      "type": "interprétation",
+      "niveau": 2,
+      "notion": "interpréter la dérivée",
+      "enonce": "Le nombre de bactéries $y(t)$, en milliers, au bout de $t$ heures vérifie $y'(t) = 0{,}5\\,y(t)$. Que signifie $y'(2) = 3$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Au bout de $2$ h, il y a $3$ milliers de bactéries.",
+          "correcte": false,
+          "erreur": "confusion_fonction_derivee",
+          "feedback": "$3$ est la valeur de la **dérivée** $y'(2)$, pas celle de la quantité $y(2)$."
+        },
+        {
+          "id": "B",
+          "texte": "À l'instant $t = 2$ h, la population augmente de $3$ milliers de bactéries par heure.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Pendant les $2$ premières heures, la population a augmenté de $3$ milliers.",
+          "correcte": false,
+          "erreur": "confusion_vitesse_variation_totale",
+          "feedback": "$y'(2)$ est une vitesse **à l'instant** $t = 2$, pas une variation totale sur un intervalle."
+        },
+        {
+          "id": "D",
+          "texte": "La population diminue de $3$ milliers de bactéries par heure.",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$y'(2) = 3 > 0$ : la quantité augmente."
+        }
+      ],
+      "explication": "$y'(t)$ est la vitesse de variation de la quantité à l'instant $t$. Comme $y'(2) = 3 > 0$, la population augmente de $3$ milliers de bactéries par heure à cet instant.",
+      "a_revoir": [
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 3. Interprétation dans un problème — Ce que représente sa dérivée",
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 4. Erreurs fréquentes — Mal interpréter ce que représentent la fonction et sa dérivée dans un problème"
+      ]
+    },
+    {
+      "id": "eqd-f1-q5",
+      "chapitre": "Équations différentielles",
+      "fiche": "Comprendre ce qu'est une équation différentielle",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "famille de solutions",
+      "enonce": "On a vérifié que $f(x) = e^{2x}$ est solution de $y' = 2y$. Quelle affirmation est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est l'unique solution de l'équation.",
+          "correcte": false,
+          "erreur": "croire_solution_unique",
+          "feedback": "Une équation différentielle a en général une infinité de solutions."
+        },
+        {
+          "id": "B",
+          "texte": "Pour tout réel $C$, la fonction $Ce^{2x}$ est aussi solution : l'équation a une infinité de solutions.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Les seules solutions sont $f$ et la fonction nulle.",
+          "correcte": false,
+          "erreur": "solutions_en_nombre_fini",
+          "feedback": "$3e^{2x}$ et $-e^{2x}$ sont aussi solutions : toutes les fonctions $Ce^{2x}$ conviennent."
+        },
+        {
+          "id": "D",
+          "texte": "$e^{2x} + 1$ est aussi solution.",
+          "correcte": false,
+          "erreur": "ajout_constante",
+          "feedback": "Pour $g(x) = e^{2x} + 1$ : $g'(x) = 2e^{2x}$ alors que $2g(x) = 2e^{2x} + 2$. Ce n'est pas égal."
+        }
+      ],
+      "explication": "Chaque valeur de $C$ donne une solution particulière : $C = 3$ donne $3e^{2x}$, $C = 0$ donne la fonction nulle, etc. Trouver une solution ne revient pas à les avoir toutes trouvées.",
+      "a_revoir": [
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 2. Notion de solution et vérification — Comprendre qu'il peut exister plusieurs solutions",
+        "Fiche « Comprendre ce qu'est une équation différentielle » — 2. Notion de solution et vérification — Distinguer solution particulière et famille de solutions"
+      ]
+    }
+  ]
+}

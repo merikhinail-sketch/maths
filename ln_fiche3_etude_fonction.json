@@ -1,0 +1,246 @@
+{
+  "id": "ln-f3",
+  "titre": "Quiz — Étude de fonction logarithme",
+  "chapitre": "Logarithme",
+  "fiche": "Étude de fonction logarithme",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "ln-f3-q1",
+      "chapitre": "Logarithme",
+      "fiche": "Étude de fonction logarithme",
+      "type": "application",
+      "niveau": 1,
+      "notion": "domaine de définition",
+      "enonce": "Quel est le domaine de définition de $f(x) = \\ln(x - 3) + 1$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\mathbb{R}$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "Le logarithme impose $x - 3 > 0$."
+        },
+        {
+          "id": "B",
+          "texte": "$[3\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "inegalite_large",
+          "feedback": "En $x = 3$, on aurait $\\ln(0)$, qui n'existe pas : la borne est exclue."
+        },
+        {
+          "id": "C",
+          "texte": "$]3\\ ;\\ +\\infty[$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$]0\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "condition_sur_x_au_lieu_de_l_argument",
+          "feedback": "La condition porte sur $x - 3$, pas sur $x$."
+        }
+      ],
+      "explication": "$\\ln(x - 3)$ existe si et seulement si $x - 3 > 0$, soit $x > 3$.",
+      "a_revoir": [
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé — Étape 1 : vérifier le domaine de définition",
+        "Fiche « Étude de fonction logarithme » — 2. Erreurs fréquentes — Oublier le domaine de définition de la fonction et donc étudier la fonction sur un mauvais intervalle"
+      ]
+    },
+    {
+      "id": "ln-f3-q2",
+      "chapitre": "Logarithme",
+      "fiche": "Étude de fonction logarithme",
+      "type": "application",
+      "niveau": 1,
+      "notion": "dériver un logarithme au carré",
+      "enonce": "Quelle est la dérivée de $f(x) = \\left(\\ln(x)\\right)^2$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = \\dfrac{2\\ln(x)}{x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = 2\\ln(x)$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "Il manque le facteur $\\frac{1}{x}$, dérivée de $\\ln(x)$ : $\\left(u^2\\right)' = 2u\\,u'$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = \\dfrac{2}{x}$",
+          "correcte": false,
+          "erreur": "oubli_de_u",
+          "feedback": "Il manque le facteur $u = \\ln(x)$ : $\\left(u^2\\right)' = 2u\\,u'$."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = \\dfrac{1}{x^2}$",
+          "correcte": false,
+          "erreur": "derivee_inventee",
+          "feedback": "On utilise $\\left(u^2\\right)' = 2u\\,u'$ avec $u = \\ln(x)$."
+        }
+      ],
+      "explication": "$\\left(u^2\\right)' = 2u\\,u'$ avec $u = \\ln(x)$ et $u' = \\dfrac{1}{x}$, donc $f'(x) = 2\\ln(x) \\times \\dfrac{1}{x} = \\dfrac{2\\ln(x)}{x}$.",
+      "a_revoir": [
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé — Étape 2 : calculer la dérivée",
+        "Fiche « Étude de fonction logarithme » — 2. Erreurs fréquentes — Se tromper dans le calcul de la dérivée et donc en déduire de mauvaises variations"
+      ]
+    },
+    {
+      "id": "ln-f3-q3",
+      "chapitre": "Logarithme",
+      "fiche": "Étude de fonction logarithme",
+      "type": "lecture_graphique",
+      "niveau": 2,
+      "notion": "lire un tableau de variations",
+      "enonce": "Voici le tableau de variations de la fonction $f(x) = 2 - \\left(\\ln(x)\\right)^2$ sur $]0\\ ;\\ +\\infty[$. Que peut-on dire de son extremum ?",
+      "figure": "ln_f3_q3.png",
+      "figure_alt": "Tableau de variations : f' positive sur ]0 ; 1[, nulle en 1, négative sur ]1 ; +∞[ ; f passe de −∞ à 2 en 1 puis redescend vers −∞.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ admet un maximum égal à $2$, atteint en $x = 1$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ admet un maximum égal à $1$, atteint en $x = 2$.",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_point",
+          "feedback": "On a échangé la valeur de l'extremum et l'abscisse où il est atteint."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ admet un minimum égal à $2$, atteint en $x = 1$.",
+          "correcte": false,
+          "erreur": "confusion_max_min",
+          "feedback": "La fonction croît puis décroît : l'extremum est un maximum."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ n'a pas de maximum, car elle tend vers $-\\infty$ aux bornes.",
+          "correcte": false,
+          "erreur": "confusion_limites_extremum",
+          "feedback": "Les limites en $-\\infty$ n'empêchent pas un maximum : ici $f(1) = 2$ est la plus grande valeur."
+        }
+      ],
+      "explication": "$f$ est croissante sur $]0\\ ;\\ 1]$ puis décroissante sur $[1\\ ;\\ +\\infty[$ : elle admet un **maximum égal à $2$, atteint en $x = 1$**.",
+      "a_revoir": [
+        "Fiche « Étude de fonction logarithme » — 2. Erreurs fréquentes — Lire incorrectement un tableau de variations, notamment pour déterminer les extrêmes",
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé — Étape 5 : dresser le tableau de variations"
+      ]
+    },
+    {
+      "id": "ln-f3-q4",
+      "chapitre": "Logarithme",
+      "fiche": "Étude de fonction logarithme",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "signe de la dérivée et variations",
+      "enonce": "Soit $f(x) = \\ln(x) - x + 1$ sur $]0\\ ;\\ +\\infty[$. On a $f'(x) = \\dfrac{1 - x}{x}$. Que peut-on en déduire ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est strictement décroissante sur $]0\\ ;\\ 1]$, puis strictement croissante sur $[1\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "signe_de_la_derivee_inverse",
+          "feedback": "Pour $0 < x < 1$, $1 - x > 0$ et $x > 0$ : $f'(x) > 0$, donc $f$ croît."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est strictement croissante sur $]0\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "ignorer_le_changement_de_signe",
+          "feedback": "$1 - x$ devient négatif pour $x > 1$ : $f'$ change de signe."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est strictement croissante sur $]0\\ ;\\ 1]$, puis strictement décroissante sur $[1\\ ;\\ +\\infty[$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ est positive sur $]0\\ ;\\ 1]$ et négative sur $[1\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "confusion_signe_derivee_signe_fonction",
+          "feedback": "Le signe de $f'$ donne les variations de $f$, pas le signe de $f$."
+        }
+      ],
+      "explication": "Sur $]0\\ ;\\ +\\infty[$, $x > 0$ : le signe de $f'(x)$ est celui de $1 - x$. Il est positif pour $x < 1$ et négatif pour $x > 1$.",
+      "a_revoir": [
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé — Étape 3 : étudier le signe de la dérivée",
+        "Fiche « Étude de fonction logarithme » — 2. Erreurs fréquentes — Confondre le signe de $f'(x)$ avec les variations de $f$"
+      ]
+    },
+    {
+      "id": "ln-f3-q5",
+      "chapitre": "Logarithme",
+      "fiche": "Étude de fonction logarithme",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "nombre de solutions",
+      "enonce": "Soit $f(x) = 2 - \\left(\\ln(x)\\right)^2$, dont le tableau de variations est donné ci-contre. Combien de solutions l'équation $f(x) = 1$ admet-elle sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": "ln_f3_q3.png",
+      "figure_alt": "Tableau de variations : f' positive sur ]0 ; 1[, nulle en 1, négative sur ]1 ; +∞[ ; f passe de −∞ à 2 en 1 puis redescend vers −∞.",
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une seule solution.",
+          "correcte": false,
+          "erreur": "oubli_d_une_branche",
+          "feedback": "$1 \\in\\ ]-\\infty\\ ;\\ 2]$ : il y a une solution sur $]0\\ ;\\ 1]$ **et** une sur $[1\\ ;\\ +\\infty[$."
+        },
+        {
+          "id": "B",
+          "texte": "Deux solutions.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Aucune solution.",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_maximum",
+          "feedback": "$1 < 2 = f(1)$ : la valeur $1$ est atteinte, car $f$ prend toutes les valeurs de $]-\\infty\\ ;\\ 2]$."
+        },
+        {
+          "id": "D",
+          "texte": "Trois solutions.",
+          "correcte": false,
+          "erreur": "mauvaise_lecture_du_tableau",
+          "feedback": "Sur chaque intervalle de monotonie, il y a au plus une solution : deux intervalles donnent au plus deux solutions."
+        }
+      ],
+      "explication": "Sur $]0\\ ;\\ 1]$, $f$ est continue, strictement croissante, avec des valeurs dans $]-\\infty\\ ;\\ 2]$ qui contiennent $1$ : une solution. Même raisonnement sur $[1\\ ;\\ +\\infty[$ : une autre. Au total, deux solutions (on retrouve $x = \\frac{1}{e}$ et $x = e$).",
+      "a_revoir": [
+        "Fiche « Étude de fonction logarithme » — 1. Grand exemple guidé — Étape 6 : nombre de solutions de $f(x) = 0$",
+        "Fiche « Étude de fonction logarithme » — 2. Erreurs fréquentes — Conclure sur le nombre de solutions sans justifier avec les variations et les limites"
+      ]
+    }
+  ]
+}

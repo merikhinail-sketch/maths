@@ -1,0 +1,241 @@
+{
+  "id": "esp-f4",
+  "titre": "Quiz — Orthogonalité dans l'espace",
+  "chapitre": "Géométrie dans l'espace",
+  "fiche": "Orthogonalité dans l'espace",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "esp-f4-q1",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Orthogonalité dans l'espace",
+      "type": "application",
+      "niveau": 1,
+      "notion": "produit scalaire dans l'espace",
+      "enonce": "Soit $\\vec{u}\\begin{pmatrix} 2 \\\\ 1 \\\\ 3 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 1 \\\\ -4 \\\\ 2 \\end{pmatrix}$. Que vaut $\\vec{u} \\cdot \\vec{v}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$12$",
+          "correcte": false,
+          "erreur": "valeurs_absolues",
+          "feedback": "$2 + 4 + 6 = 12$ : on a oublié le signe de $1 \\times (-4) = -4$."
+        },
+        {
+          "id": "B",
+          "texte": "$8$",
+          "correcte": false,
+          "erreur": "oubli_d_une_coordonnee",
+          "feedback": "$2 + 6 = 8$ : on a oublié la deuxième coordonnée, $1 \\times (-4)$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{pmatrix} 2 \\\\ -4 \\\\ 6 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "produit_scalaire_vecteur",
+          "feedback": "Le produit scalaire est un **nombre** : on additionne les produits de coordonnées."
+        },
+        {
+          "id": "D",
+          "texte": "$4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\vec{u} \\cdot \\vec{v} = 2 \\times 1 + 1 \\times (-4) + 3 \\times 2 = 2 - 4 + 6 = 4$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 1. Produit scalaire dans l'espace — Calcul à partir des coordonnées"
+      ]
+    },
+    {
+      "id": "esp-f4-q2",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Orthogonalité dans l'espace",
+      "type": "application",
+      "niveau": 1,
+      "notion": "vecteur normal",
+      "enonce": "Un vecteur normal au plan $(P) : 2x - y + 3z + 5 = 0$ est :",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\begin{pmatrix} 2 \\\\ -1 \\\\ 5 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "terme_constant_pris_pour_coordonnee",
+          "feedback": "Le terme constant $5$ ne fait pas partie du vecteur normal."
+        },
+        {
+          "id": "B",
+          "texte": "$\\begin{pmatrix} -2 \\\\ 1 \\\\ 3 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Les coefficients de $x$, $y$, $z$ sont $2$, $-1$, $3$ : les signes se recopient tels quels."
+        },
+        {
+          "id": "C",
+          "texte": "$\\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\begin{pmatrix} 2 \\\\ 1 \\\\ 3 \\end{pmatrix}$",
+          "correcte": false,
+          "erreur": "oubli_du_signe_moins",
+          "feedback": "Le coefficient de $y$ est $-1$."
+        }
+      ],
+      "explication": "Pour $ax + by + cz + d = 0$, le vecteur $\\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix}$ est normal : ici $\\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 3. Droite et plan — Utilisation des vecteurs normaux"
+      ]
+    },
+    {
+      "id": "esp-f4-q3",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Orthogonalité dans l'espace",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "orthogonales ou perpendiculaires",
+      "enonce": "Soit $(d)$ : $\\begin{cases} x = t \\\\ y = 0 \\\\ z = 0 \\end{cases}$ et $(d')$ : $\\begin{cases} x = 1 \\\\ y = 1 \\\\ z = s \\end{cases}$. Quelle affirmation est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Les droites sont orthogonales mais pas perpendiculaires.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Les droites sont perpendiculaires.",
+          "correcte": false,
+          "erreur": "confusion_orthogonales_perpendiculaires",
+          "feedback": "Pour être perpendiculaires, les droites doivent aussi se couper : ici $y = 0$ et $y = 1$ sont incompatibles."
+        },
+        {
+          "id": "C",
+          "texte": "Les droites sont parallèles.",
+          "correcte": false,
+          "erreur": "confusion_orthogonales_paralleles",
+          "feedback": "Les vecteurs directeurs $\\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix}$ et $\\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\end{pmatrix}$ ne sont pas colinéaires."
+        },
+        {
+          "id": "D",
+          "texte": "Les droites ne sont pas orthogonales car elles ne se coupent pas.",
+          "correcte": false,
+          "erreur": "orthogonalite_exige_une_intersection",
+          "feedback": "L'orthogonalité ne demande pas que les droites se coupent : seulement que les vecteurs directeurs soient orthogonaux."
+        }
+      ],
+      "explication": "$\\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\cdot \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\end{pmatrix} = 0$ : orthogonales. Elles n'ont aucun point commun : pas perpendiculaires.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 2. Orthogonalité des droites et des vecteurs — Attention à la différence entre orthogonales et perpendiculaires dans l'espace"
+      ]
+    },
+    {
+      "id": "esp-f4-q4",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Orthogonalité dans l'espace",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "critère d'orthogonalité droite-plan",
+      "enonce": "Soit $(d)$ de vecteur directeur $\\vec{u}\\begin{pmatrix} 2 \\\\ 1 \\\\ -1 \\end{pmatrix}$ et $(P)$ dirigé par $\\vec{v_1}\\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\end{pmatrix}$ et $\\vec{v_2}\\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$. Que peut-on affirmer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "On ne peut rien dire : il faudrait vérifier avec tous les vecteurs du plan.",
+          "correcte": false,
+          "erreur": "ignorer_le_critere",
+          "feedback": "Deux directions non colinéaires du plan suffisent."
+        },
+        {
+          "id": "B",
+          "texte": "$(d)$ est contenue dans $(P)$.",
+          "correcte": false,
+          "erreur": "confusion_orthogonale_contenue",
+          "feedback": "Un produit scalaire nul avec les vecteurs du plan donne l'orthogonalité, pas l'appartenance."
+        },
+        {
+          "id": "C",
+          "texte": "$(d)$ est parallèle à $(P)$, car les produits scalaires sont nuls.",
+          "correcte": false,
+          "erreur": "confusion_orthogonale_parallele",
+          "feedback": "Parallèle à $(P)$ signifierait $\\vec{u}$ orthogonal à un vecteur **normal**, pas à des vecteurs directeurs du plan."
+        },
+        {
+          "id": "D",
+          "texte": "$(d)$ est orthogonale à $(P)$, car $\\vec{u} \\cdot \\vec{v_1} = 0$ et $\\vec{u} \\cdot \\vec{v_2} = 0$ avec $\\vec{v_1}$ et $\\vec{v_2}$ non colinéaires.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\vec{u} \\cdot \\vec{v_1} = 2 - 1 - 1 = 0$ et $\\vec{u} \\cdot \\vec{v_2} = 0 + 1 - 1 = 0$. $\\vec{v_1}$ et $\\vec{v_2}$ ne sont pas colinéaires : $(d)$ est orthogonale à $(P)$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 3. Droite et plan — Critère permettant de montrer qu'une droite est orthogonale à un plan"
+      ]
+    },
+    {
+      "id": "esp-f4-q5",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Orthogonalité dans l'espace",
+      "type": "application",
+      "niveau": 3,
+      "notion": "projeté sur un plan",
+      "enonce": "Soit $(P) : x - 2y + 2z - 12 = 0$ et $M(1\\ ;\\ 0\\ ;\\ 1)$. Quel est le projeté orthogonal de $M$ sur $(P)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$(10\\ ;\\ 9\\ ;\\ 10)$",
+          "correcte": false,
+          "erreur": "mauvaise_direction",
+          "feedback": "On a pris la direction $(1\\ ;\\ 1\\ ;\\ 1)$ : le projeté se construit avec le **vecteur normal** $\\vec{n}(1\\ ;\\ -2\\ ;\\ 2)$."
+        },
+        {
+          "id": "B",
+          "texte": "$(2\\ ;\\ -2\\ ;\\ 3)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$(0\\ ;\\ 2\\ ;\\ -1)$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_sur_k",
+          "feedback": "$9k + 3 - 12 = 0$ donne $k = +1$."
+        },
+        {
+          "id": "D",
+          "texte": "$(4\\ ;\\ -6\\ ;\\ 7)$",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "$9k - 9 = 0$ donne $k = 1$, et non $3$."
+        }
+      ],
+      "explication": "$H = M + k\\vec{n}$ : $H(1 + k\\ ;\\ -2k\\ ;\\ 1 + 2k)$. Dans l'équation : $(1 + k) + 4k + 2(1 + 2k) - 12 = 9k - 9 = 0$, donc $k = 1$ et $H(2\\ ;\\ -2\\ ;\\ 3)$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 4. Projection orthogonale — Reconnaître et construire une projection orthogonale"
+      ]
+    }
+  ]
+}

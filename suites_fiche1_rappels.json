@@ -1,0 +1,244 @@
+{
+  "id": "suites-f1",
+  "titre": "Quiz — Rappels de Première : les suites",
+  "chapitre": "Suites",
+  "fiche": "Rappels de Première : les suites",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "suites-f1-q1",
+      "chapitre": "Suites",
+      "fiche": "Rappels de Première : les suites",
+      "type": "reconnaissance",
+      "niveau": 1,
+      "notion": "reconnaître une suite arithmétique",
+      "enonce": "Laquelle de ces suites est arithmétique ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$2\\ ;\\ 5\\ ;\\ 8\\ ;\\ 11\\ ;\\ \\dots$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$3\\ ;\\ 6\\ ;\\ 12\\ ;\\ 24\\ ;\\ \\dots$",
+          "correcte": false,
+          "erreur": "confusion_arithmetique_geometrique",
+          "feedback": "Ici on multiplie par 2 à chaque étape : c'est une suite géométrique."
+        },
+        {
+          "id": "C",
+          "texte": "$1\\ ;\\ 2\\ ;\\ 4\\ ;\\ 7\\ ;\\ \\dots$",
+          "correcte": false,
+          "erreur": "differences_non_constantes",
+          "feedback": "Les différences valent 1, 2, 3 : elles ne sont pas constantes."
+        },
+        {
+          "id": "D",
+          "texte": "$1\\ ;\\ 4\\ ;\\ 9\\ ;\\ 16\\ ;\\ \\dots$",
+          "correcte": false,
+          "erreur": "differences_non_constantes",
+          "feedback": "Les différences valent 3, 5, 7 : elles ne sont pas constantes."
+        }
+      ],
+      "explication": "On additionne toujours 3 pour passer d'un terme au suivant : les différences sont constantes, c'est une suite arithmétique de raison 3.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 1. Suites arithmétiques — Définition",
+        "Fiche « Rappels de Première : les suites » — 3. Erreurs fréquentes — Mélanger addition et multiplication"
+      ]
+    },
+    {
+      "id": "suites-f1-q2",
+      "chapitre": "Suites",
+      "fiche": "Rappels de Première : les suites",
+      "type": "application",
+      "niveau": 2,
+      "notion": "sens de variation d'une suite géométrique",
+      "enonce": "Une suite géométrique a pour premier terme $u_0 = -8$ et pour raison $q = \\dfrac{1}{2}$. Quel est son sens de variation ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle est décroissante, car $0 < q < 1$.",
+          "correcte": false,
+          "erreur": "oubli_signe_premier_terme",
+          "feedback": "Le premier terme est négatif : les variations s'inversent ($-8\\ ;\\ -4\\ ;\\ -2\\ ;\\ \\dots$)."
+        },
+        {
+          "id": "B",
+          "texte": "Elle est constante.",
+          "correcte": false,
+          "erreur": "confusion_raison",
+          "feedback": "Elle ne serait constante que pour $q = 1$."
+        },
+        {
+          "id": "C",
+          "texte": "Elle n'est pas monotone.",
+          "correcte": false,
+          "erreur": "confusion_raison_negative",
+          "feedback": "Les termes ne changent pas de signe : la raison est positive."
+        },
+        {
+          "id": "D",
+          "texte": "Elle est croissante.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Les termes $-8\\ ;\\ -4\\ ;\\ -2\\ ;\\ -1\\ ;\\ \\dots$ augmentent. Pour un premier terme négatif et $0 < q < 1$, la suite est croissante.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 2. Suites géométriques — Sens de variation"
+      ]
+    },
+    {
+      "id": "suites-f1-q3",
+      "chapitre": "Suites",
+      "fiche": "Rappels de Première : les suites",
+      "type": "application",
+      "niveau": 2,
+      "notion": "somme de termes d'une suite arithmétique",
+      "enonce": "Quelle est la valeur de $5 + 8 + 11 + \\dots + 32$ (suite arithmétique de raison $3$) ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$370$",
+          "correcte": false,
+          "erreur": "oubli_division_par_2",
+          "feedback": "Il manque la division par 2 dans la formule."
+        },
+        {
+          "id": "B",
+          "texte": "$185$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$166{,}5$",
+          "correcte": false,
+          "erreur": "nombre_de_termes_faux",
+          "feedback": "Il y a $\\frac{32-5}{3} + 1 = 10$ termes, et non 9."
+        },
+        {
+          "id": "D",
+          "texte": "$135$",
+          "correcte": false,
+          "erreur": "difference_au_lieu_de_somme",
+          "feedback": "On additionne le premier et le dernier terme ($5 + 32$), on ne les soustrait pas."
+        }
+      ],
+      "explication": "Il y a $\\frac{32 - 5}{3} + 1 = 10$ termes. Donc $S = \\frac{10}{2} \\times (5 + 32) = 5 \\times 37 = 185$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 1. Suites arithmétiques — Somme des termes d'une suite arithmétique",
+        "Fiche « Rappels de Première : les suites » — 3. Erreurs fréquentes — Erreurs dans le nombre de termes"
+      ]
+    },
+    {
+      "id": "suites-f1-q4",
+      "chapitre": "Suites",
+      "fiche": "Rappels de Première : les suites",
+      "type": "application",
+      "niveau": 2,
+      "notion": "somme de termes d'une suite géométrique",
+      "enonce": "Quelle est la valeur de $3 + 6 + 12 + \\dots + 384$ (suite géométrique de raison $2$, de $8$ termes) ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$381$",
+          "correcte": false,
+          "erreur": "nombre_de_termes_faux",
+          "feedback": "Il y a 8 termes, pas 7."
+        },
+        {
+          "id": "B",
+          "texte": "$768$",
+          "correcte": false,
+          "erreur": "formule_mal_appliquee",
+          "feedback": "On a oublié de retrancher 1 : $3 \\times (2^8 - 1)$, pas $3 \\times 2^8$."
+        },
+        {
+          "id": "C",
+          "texte": "$-255$",
+          "correcte": false,
+          "erreur": "erreur_signe_denominateur",
+          "feedback": "Le dénominateur est $1 - q = 1 - 2 = -1$, et non $1 + 2$."
+        },
+        {
+          "id": "D",
+          "texte": "$765$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$S = 3 \\times \\dfrac{1 - 2^8}{1 - 2} = 3 \\times \\dfrac{-255}{-1} = 765$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 2. Suites géométriques — Somme des termes",
+        "Fiche « Rappels de Première : les suites » — 3. Erreurs fréquentes — Utilisation de la mauvaise formule"
+      ]
+    },
+    {
+      "id": "suites-f1-q5",
+      "chapitre": "Suites",
+      "fiche": "Rappels de Première : les suites",
+      "type": "repérer_erreur",
+      "niveau": 3,
+      "notion": "limite de la technique $\\frac{n(n+1)}{2}$",
+      "enonce": "Un élève calcule $2 + 4 + 6 + 8 + 10$ avec la formule $\\dfrac{n(n+1)}{2}$ en prenant $n = 5$ et trouve $15$. Quelle est la bonne analyse ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "La somme vaut bien $15$ : la formule s'applique à tous les termes consécutifs.",
+          "correcte": false,
+          "erreur": "formule_hors_cadre",
+          "feedback": "Elle ne s'applique qu'aux entiers $1, 2, \\dots, n$. Ici les termes avancent de 2 en 2."
+        },
+        {
+          "id": "B",
+          "texte": "Il fallait prendre $n = 10$, ce qui donne $55$.",
+          "correcte": false,
+          "erreur": "formule_hors_cadre",
+          "feedback": "$55$ est la somme de $1$ à $10$, pas de $2 + 4 + \\dots + 10$."
+        },
+        {
+          "id": "C",
+          "texte": "Cette formule ne vaut que pour $1 + 2 + \\dots + n$ ; ici il faut la méthode des paires : $\\frac{5}{2} \\times (2 + 10) = 30$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Il a mal calculé : $\\frac{5 \\times 6}{2}$ vaut $30$.",
+          "correcte": false,
+          "erreur": "erreur_de_calcul_inventee",
+          "feedback": "$\\frac{5 \\times 6}{2} = 15$ : le calcul est juste, c'est la formule qui ne convient pas."
+        }
+      ],
+      "explication": "$\\frac{n(n+1)}{2}$ n'est valable que pour la somme $1 + 2 + \\dots + n$. Pour $2 + 4 + 6 + 8 + 10$, on a 5 termes, un premier de 2 et un dernier de 10 : $S = \\frac{5}{2} \\times 12 = 30$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 1. Suites arithmétiques — Somme des termes d'une suite arithmétique"
+      ]
+    }
+  ]
+}

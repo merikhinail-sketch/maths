@@ -1,0 +1,241 @@
+{
+  "id": "int-f2",
+  "titre": "Quiz — Calculer une intégrale",
+  "chapitre": "Intégrales",
+  "fiche": "Calculer une intégrale",
+  "type_quiz": "fiche",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "int-f2-q1",
+      "chapitre": "Intégrales",
+      "fiche": "Calculer une intégrale",
+      "type": "application",
+      "niveau": 1,
+      "notion": "calcul d'une intégrale polynomiale",
+      "enonce": "Calculer $\\displaystyle \\int_0^1 (2x + 1)\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "confusion_valeur_et_integrale",
+          "feedback": "$3 = f(1)$ est la **valeur** de la fonction, pas son intégrale."
+        },
+        {
+          "id": "B",
+          "texte": "$1$",
+          "correcte": false,
+          "erreur": "oubli_d_un_terme",
+          "feedback": "On a oublié le terme $+1$ : une primitive est $x^2 + x$."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "oubli_de_F_b",
+          "feedback": "$0 = F(0)$ : on a calculé la mauvaise borne, il faut $F(1) - F(0)$."
+        },
+        {
+          "id": "D",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$F(x) = x^2 + x$ et $F(1) - F(0) = 2 - 0 = 2$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 1. Grand exemple guidé — Calculer l'intégrale à partir de celle-ci"
+      ]
+    },
+    {
+      "id": "int-f2-q2",
+      "chapitre": "Intégrales",
+      "fiche": "Calculer une intégrale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "primitive de $1/x^2$",
+      "enonce": "Calculer $\\displaystyle \\int_1^2 \\dfrac{1}{x^2}\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{1}{2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\ln(2)$",
+          "correcte": false,
+          "erreur": "mauvaise_primitive",
+          "feedback": "$\\ln$ est une primitive de $\\frac{1}{x}$ ; pour $\\frac{1}{x^2}$ c'est $-\\frac{1}{x}$."
+        },
+        {
+          "id": "C",
+          "texte": "$-\\dfrac{1}{2}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_primitive",
+          "feedback": "$\\frac{1}{x}$ n'est pas une primitive de $\\frac{1}{x^2}$ : il y a un signe $-$."
+        },
+        {
+          "id": "D",
+          "texte": "$-\\dfrac{3}{2}$",
+          "correcte": false,
+          "erreur": "erreur_de_parentheses",
+          "feedback": "$-\\frac{1}{2} - (-1) = \\frac{1}{2}$ : il faut mettre $F(a)$ entre parenthèses."
+        }
+      ],
+      "explication": "$\\left[-\\frac{1}{x}\\right]_1^2 = -\\frac{1}{2} - (-1) = \\frac{1}{2}$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 2. Erreurs fréquentes — Utiliser une mauvaise primitive"
+      ]
+    },
+    {
+      "id": "int-f2-q3",
+      "chapitre": "Intégrales",
+      "fiche": "Calculer une intégrale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "coefficient dans l'exponentielle",
+      "enonce": "Calculer $\\displaystyle \\int_0^1 e^{2x}\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$e^2 - 1$",
+          "correcte": false,
+          "erreur": "oubli_du_coefficient",
+          "feedback": "Une primitive de $e^{2x}$ est $\\frac{1}{2}e^{2x}$ : le facteur $\\frac{1}{2}$ est indispensable."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dfrac{e^2}{2}$",
+          "correcte": false,
+          "erreur": "oubli_de_F_a",
+          "feedback": "On a oublié de soustraire $F(0) = \\frac{1}{2}$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{e^2 - 1}{2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{e^2 + 1}{2}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_F_a",
+          "feedback": "$F(0) = +\\frac{1}{2}$, que l'on soustrait : on obtient $\\frac{e^2 - 1}{2}$."
+        }
+      ],
+      "explication": "$\\left[\\frac{1}{2}e^{2x}\\right]_0^1 = \\frac{e^2}{2} - \\frac{1}{2} = \\frac{e^2 - 1}{2}$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 2. Erreurs fréquentes — Oublier de prendre en compte les coefficients lors du calcul d'une primitive"
+      ]
+    },
+    {
+      "id": "int-f2-q4",
+      "chapitre": "Intégrales",
+      "fiche": "Calculer une intégrale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "bornes négatives",
+      "enonce": "Calculer $\\displaystyle \\int_{-1}^{2} x^2\\,dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{7}{3}$",
+          "correcte": false,
+          "erreur": "erreur_de_parentheses",
+          "feedback": "$\\frac{8}{3} - \\left(-\\frac{1}{3}\\right) = 3$ : on a soustrait $\\frac{1}{3}$ au lieu de le retrancher avec son signe."
+        },
+        {
+          "id": "B",
+          "texte": "$\\dfrac{8}{3}$",
+          "correcte": false,
+          "erreur": "oubli_de_F_a",
+          "feedback": "On a oublié de soustraire $F(-1)$."
+        },
+        {
+          "id": "C",
+          "texte": "$\\dfrac{3}{2}$",
+          "correcte": false,
+          "erreur": "mauvaise_primitive",
+          "feedback": "Une primitive de $x^2$ est $\\frac{x^3}{3}$, pas $\\frac{x^2}{2}$."
+        },
+        {
+          "id": "D",
+          "texte": "$3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\left[\\frac{x^3}{3}\\right]_{-1}^{2} = \\frac{8}{3} - \\left(-\\frac{1}{3}\\right) = \\frac{9}{3} = 3$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 2. Erreurs fréquentes — Se tromper dans le calcul de $F(b) - F(a)$"
+      ]
+    },
+    {
+      "id": "int-f2-q5",
+      "chapitre": "Intégrales",
+      "fiche": "Calculer une intégrale",
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "propriétés sans primitive",
+      "enonce": "Soit $g$ continue telle que $\\displaystyle \\int_0^2 g(x)\\,dx = 3$ et $\\displaystyle \\int_5^2 g(x)\\,dx = -4$. Que vaut $\\displaystyle \\int_0^5 \\big(2g(x) + 1\\big)\\,dx$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "oubli_changement_de_sens_des_bornes",
+          "feedback": "$3 = 2 \\times (3 - 4) + 5$ : il faut d'abord retourner les bornes, $\\int_2^5 g = +4$."
+        },
+        {
+          "id": "B",
+          "texte": "$19$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$14$",
+          "correcte": false,
+          "erreur": "oubli_de_l_integrale_de_la_constante",
+          "feedback": "$\\int_0^5 1\\,dx = 5$ : il manque ce terme."
+        },
+        {
+          "id": "D",
+          "texte": "$15$",
+          "correcte": false,
+          "erreur": "mauvaise_integrale_de_la_constante",
+          "feedback": "$\\int_0^5 1\\,dx = 5$, et non $1$."
+        }
+      ],
+      "explication": "$\\int_2^5 g = 4$, donc $\\int_0^5 g = 3 + 4 = 7$. Par linéarité : $\\int_0^5 (2g + 1) = 2 \\times 7 + \\int_0^5 1\\,dx = 14 + 5 = 19$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 1. Grand exemple guidé — Simplifier un calcul avec les propriétés de l'intégrale"
+      ]
+    }
+  ]
+}

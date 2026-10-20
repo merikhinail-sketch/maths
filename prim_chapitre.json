@@ -1,0 +1,475 @@
+{
+  "id": "prim-chapitre",
+  "titre": "Quiz de chapitre — Primitives",
+  "chapitre": "Primitives",
+  "fiche": null,
+  "type_quiz": "chapitre",
+  "seuil_reussite": 70,
+  "nb_questions": 10,
+  "questions": [
+    {
+      "id": "prim-chapitre-q1",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "reconnaître une primitive",
+      "enonce": "Laquelle de ces fonctions est une primitive de $f(x) = 3x^2$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = 6x$",
+          "correcte": false,
+          "erreur": "confusion_primitive_derivee",
+          "feedback": "$6x$ est la **dérivée** de $3x^2$."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = 3x^3$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_n_plus_1",
+          "feedback": "$\\left(3x^3\\right)' = 9x^2$ : il faut diviser par le nouvel exposant."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = x^3 + 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = x^2$",
+          "correcte": false,
+          "erreur": "mauvais_exposant",
+          "feedback": "$\\left(x^2\\right)' = 2x \\neq 3x^2$."
+        }
+      ],
+      "explication": "$\\left(x^3 + 1\\right)' = 3x^2 = f(x)$ : c'est bien une primitive.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 1. Définition — Reconnaître une primitive"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q2",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "primitive de $\\dfrac{1}{x}$",
+      "enonce": "Quelle est une primitive de $f(x) = \\dfrac{1}{x}$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = \\ln(x)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = -\\dfrac{1}{x^2}$",
+          "correcte": false,
+          "erreur": "confusion_primitive_derivee",
+          "feedback": "$-\\dfrac{1}{x^2}$ est la **dérivée** de $\\dfrac{1}{x}$."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = \\ln\\left(x^2\\right)$",
+          "correcte": false,
+          "erreur": "mauvais_coefficient",
+          "feedback": "$\\left(\\ln\\left(x^2\\right)\\right)' = \\dfrac{2}{x}$ : le coefficient est trop grand."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = x$",
+          "correcte": false,
+          "erreur": "confusion_primitive_de_1",
+          "feedback": "$x$ est une primitive de la fonction constante $1$, pas de $\\dfrac{1}{x}$."
+        }
+      ],
+      "explication": "Dans le tableau des primitives usuelles : $\\dfrac{1}{x} \\longrightarrow \\ln(x)$ sur $]0\\ ;\\ +\\infty[$.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Reconnaître les principales formes et connaître les primitives correspondantes"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q3",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "application",
+      "niveau": 1,
+      "notion": "primitive de $e^{ax}$",
+      "enonce": "Quelle est une primitive de $f(x) = e^{3x}$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = \\dfrac{1}{3}e^{3x}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = e^{3x}$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_a",
+          "feedback": "$\\left(e^{3x}\\right)' = 3e^{3x}$ : il faut diviser par $3$."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = 3e^{3x}$",
+          "correcte": false,
+          "erreur": "multiplier_au_lieu_de_diviser",
+          "feedback": "C'est la dérivée de $e^{3x}$."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = \\dfrac{e^{x}}{3}$",
+          "correcte": false,
+          "erreur": "mauvaise_forme",
+          "feedback": "L'exposant reste $3x$ : on ne le change pas."
+        }
+      ],
+      "explication": "Si $f(x) = g(ax + b)$, une primitive est $\\dfrac{1}{a}G(ax + b)$ : ici $\\dfrac{1}{3}e^{3x}$.",
+      "a_revoir": [
+        "Fiche « Déterminer une primitive » — 1. Calculer une primitive — Gérer les constantes multiplicatives"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q4",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "primitive d'une somme",
+      "enonce": "Quelle est une primitive de $f(x) = x^3 - \\dfrac{2}{x^2} + 4$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = \\dfrac{x^4}{4} - \\dfrac{2}{x} + 4x$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Une primitive de $\\dfrac{1}{x^2}$ est $-\\dfrac{1}{x}$ : donc $-\\dfrac{2}{x^2} \\to -2 \\times \\left(-\\dfrac{1}{x}\\right) = +\\dfrac{2}{x}$."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = x^4 + \\dfrac{2}{x} + 4x$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_n_plus_1",
+          "feedback": "Pour $x^3$, la primitive est $\\dfrac{x^4}{4}$."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = \\dfrac{x^4}{4} + \\dfrac{2}{x} + 4x$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = \\dfrac{x^4}{4} + 2\\ln(x) + 4x$",
+          "correcte": false,
+          "erreur": "confusion_ln_et_inverse_carre",
+          "feedback": "$\\ln(x)$ est une primitive de $\\dfrac{1}{x}$, pas de $\\dfrac{1}{x^2}$."
+        }
+      ],
+      "explication": "Terme par terme : $x^3 \\to \\dfrac{x^4}{4}$ ; $-\\dfrac{2}{x^2} \\to +\\dfrac{2}{x}$ ; $4 \\to 4x$.",
+      "a_revoir": [
+        "Fiche « Déterminer une primitive » — 1. Calculer une primitive — Décomposer une expression en plusieurs termes",
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Reconnaître les principales formes et connaître les primitives correspondantes"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q5",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "fonction de $ax + b$ (sinus)",
+      "enonce": "Quelle est une primitive de $f(x) = \\sin(3x)$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = \\dfrac{1}{3}\\cos(3x)$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\left(\\cos(3x)\\right)' = -3\\sin(3x)$ : le signe $-$ est nécessaire."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = -\\dfrac{1}{3}\\cos(3x)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = -\\cos(3x)$",
+          "correcte": false,
+          "erreur": "oubli_de_diviser_par_a",
+          "feedback": "Il faut aussi diviser par $3$."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = 3\\cos(3x)$",
+          "correcte": false,
+          "erreur": "mauvaise_primitive",
+          "feedback": "La primitive de $\\sin$ fait intervenir $-\\cos$, et on divise par le coefficient $3$."
+        }
+      ],
+      "explication": "Une primitive de $\\sin(X)$ est $-\\cos(X)$ ; avec $3x$ à l'intérieur, on divise par $3$ : $-\\dfrac{1}{3}\\cos(3x)$.",
+      "a_revoir": [
+        "Fiche « Déterminer une primitive » — 1. Calculer une primitive — Gérer les constantes multiplicatives",
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Reconnaître les principales formes et connaître les primitives correspondantes"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q6",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "application",
+      "niveau": 2,
+      "notion": "primitive avec condition initiale",
+      "enonce": "Quelle est la primitive $F$ de $f(x) = e^{2x} + 1$ telle que $F(0) = 1$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = \\dfrac{1}{2}e^{2x} + x + 1$",
+          "correcte": false,
+          "erreur": "confusion_C_et_F_de_0",
+          "feedback": "$C$ n'est pas égal à $F(0)$ : $F(0) = \\frac{1}{2} + C = 1$ donne $C = \\frac{1}{2}$."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = e^{2x} + x$",
+          "correcte": false,
+          "erreur": "oubli_du_coefficient_et_de_C",
+          "feedback": "Il manque le facteur $\\frac{1}{2}$ devant l'exponentielle, et la constante $C$."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = \\dfrac{1}{2}e^{2x} + x - \\dfrac{1}{2}$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_sur_C",
+          "feedback": "$F(0) = \\frac{1}{2} + C = 1$ donne $C = +\\frac{1}{2}$."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = \\dfrac{1}{2}e^{2x} + x + \\dfrac{1}{2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Primitives : $\\dfrac{1}{2}e^{2x} + x + C$. Condition : $F(0) = \\dfrac{1}{2} + C = 1$, donc $C = \\dfrac{1}{2}$.",
+      "a_revoir": [
+        "Fiche « Déterminer une primitive » — 2. Déterminer une primitive avec une condition — Déterminer $C$"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q7",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "forme $u'\\,e^{u}$ à un coefficient près",
+      "enonce": "Quelle est une primitive de $f(x) = x\\,e^{x^2}$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = e^{x^2}$",
+          "correcte": false,
+          "erreur": "oubli_du_coefficient",
+          "feedback": "$\\left(e^{x^2}\\right)' = 2x\\,e^{x^2}$ : il manque le facteur $\\frac{1}{2}$ pour obtenir $x\\,e^{x^2}$."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = 2e^{x^2}$",
+          "correcte": false,
+          "erreur": "multiplier_au_lieu_de_diviser",
+          "feedback": "$\\left(2e^{x^2}\\right)' = 4x\\,e^{x^2}$."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = \\dfrac{1}{2}e^{x^2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = \\dfrac{x^{2}}{2}e^{x^{2}}$",
+          "correcte": false,
+          "erreur": "regle_du_produit_a_tort",
+          "feedback": "On n'intègre pas un produit « facteur par facteur »."
+        }
+      ],
+      "explication": "$x\\,e^{x^2} = \\dfrac{1}{2} \\times 2x\\,e^{x^2} = \\dfrac{1}{2}u'\\,e^{u}$ avec $u(x) = x^2$ : une primitive est $\\dfrac{1}{2}e^{x^2}$.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Les formes avec une fonction composée"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q8",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "application",
+      "niveau": 3,
+      "notion": "forme $u'/u$",
+      "enonce": "Quelle est une primitive de $f(x) = \\dfrac{3x^2}{x^3 + 1}$ sur $]-1\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = \\ln\\left(x^3 + 1\\right)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = \\ln\\left(3x^2\\right)$",
+          "correcte": false,
+          "erreur": "mauvais_argument",
+          "feedback": "L'argument du logarithme est le **dénominateur** $u(x) = x^3 + 1$."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = 3\\ln\\left(x^3 + 1\\right)$",
+          "correcte": false,
+          "erreur": "mauvais_coefficient",
+          "feedback": "Le numérateur $3x^2$ est exactement $u'(x)$ : il n'y a pas de coefficient à ajouter."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = -\\dfrac{1}{x^3 + 1}$",
+          "correcte": false,
+          "erreur": "confusion_ln_et_inverse",
+          "feedback": "$\\left(-\\dfrac{1}{x^3+1}\\right)' = \\dfrac{3x^2}{(x^3+1)^2}$ : ce n'est pas $f$."
+        }
+      ],
+      "explication": "$f = \\dfrac{u'}{u}$ avec $u(x) = x^3 + 1 > 0$ sur $]-1\\ ;\\ +\\infty[$ : une primitive est $\\ln(u) = \\ln\\left(x^3 + 1\\right)$.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 2. Primitives usuelles — Les formes avec une fonction composée"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q9",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "vrai_faux_plausible",
+      "niveau": 2,
+      "notion": "propriétés des primitives",
+      "enonce": "Laquelle de ces affirmations est correcte ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Une fonction continue sur un intervalle n'admet qu'une seule primitive.",
+          "correcte": false,
+          "erreur": "croire_primitive_unique",
+          "feedback": "Une fonction a une infinité de primitives : on peut toujours ajouter une constante."
+        },
+        {
+          "id": "B",
+          "texte": "Si $F$ est une primitive de $f$, alors $F' = F$.",
+          "correcte": false,
+          "erreur": "confusion_F_prime_et_F",
+          "feedback": "La définition est $F' = f$ : la dérivée de $F$ est $f$."
+        },
+        {
+          "id": "C",
+          "texte": "Pour trouver la primitive d'une somme, on peut multiplier les primitives de chaque terme.",
+          "correcte": false,
+          "erreur": "mauvaise_regle",
+          "feedback": "Une primitive d'une somme est la **somme** des primitives."
+        },
+        {
+          "id": "D",
+          "texte": "Si $F$ est une primitive de $f$ sur un intervalle, toute autre primitive de $f$ s'écrit $F + C$ avec $C$ réel.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Deux primitives d'une même fonction sur un intervalle diffèrent d'une constante. L'ensemble des primitives de $f$ est $\\{F + C \\ ;\\ C \\in \\mathbb{R}\\}$.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 1. Définition — Ajouter une constante $C$",
+        "Fiche « Comprendre les primitives » — 1. Définition — Lien entre fonction et dérivée"
+      ]
+    },
+    {
+      "id": "prim-chapitre-q10",
+      "chapitre": "Primitives",
+      "fiche": null,
+      "type": "raisonnement",
+      "niveau": 3,
+      "notion": "problème avec primitive",
+      "enonce": "Le coût marginal d'une entreprise (en euros par unité) est donné par $c(q) = 2q + 5$, où $q$ est la quantité produite. Les coûts fixes (pour $q = 0$) valent $100$ €. Le coût total $C(q)$ est une primitive de $c$. Quel est le coût total pour $q = 10$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$150$ €",
+          "correcte": false,
+          "erreur": "oubli_de_la_constante",
+          "feedback": "On a oublié les coûts fixes : $C(q) = q^2 + 5q + C_0$ avec $C_0 = C(0) = 100$."
+        },
+        {
+          "id": "B",
+          "texte": "$250$ €",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$25$ €",
+          "correcte": false,
+          "erreur": "confusion_cout_marginal_et_total",
+          "feedback": "$25 = c(10)$ est le coût **marginal** en $q = 10$, pas le coût total."
+        },
+        {
+          "id": "D",
+          "texte": "$350$ €",
+          "correcte": false,
+          "erreur": "erreur_de_calcul",
+          "feedback": "On a compté deux fois le terme en $q$ : $10^2 + 5 \\times 10 + 100 = 250$."
+        }
+      ],
+      "explication": "$C(q) = q^2 + 5q + C_0$ avec $C(0) = C_0 = 100$. Donc $C(10) = 100 + 50 + 100 = 250$ €.",
+      "a_revoir": [
+        "Fiche « Déterminer une primitive » — 3. Exploiter une primitive — Utiliser une primitive dans un problème",
+        "Fiche « Déterminer une primitive » — 2. Déterminer une primitive avec une condition — Déterminer $C$"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "id": "convexite-banque",
+  "titre": "Banque — Convexité",
+  "chapitre": "Convexité",
+  "fiche": null,
+  "type_quiz": "banque",
+  "seuil_reussite": 70,
+  "nb_questions": 5,
+  "questions": [
+    {
+      "id": "convexite-banque-q1",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "application",
+      "niveau": 1,
+      "notion": "convexité de l'exponentielle",
+      "enonce": "Que peut-on dire de la convexité de la fonction exponentielle $f(x) = e^{x}$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle est convexe sur $\\mathbb{R}$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "Elle est concave sur $\\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "signe_derivee_seconde",
+          "feedback": "$f''(x) = e^{x} > 0$ : une dérivée seconde positive donne une fonction convexe."
+        },
+        {
+          "id": "C",
+          "texte": "Elle est concave sur $]-\\infty\\ ;\\ 0]$ et convexe sur $[0\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "confusion_signe_de_x",
+          "feedback": "$e^{x}$ est strictement positif pour **tout** réel $x$, même négatif."
+        },
+        {
+          "id": "D",
+          "texte": "Elle n'est ni convexe ni concave.",
+          "correcte": false,
+          "erreur": "conclusion_sans_calcul",
+          "feedback": "Il suffit d'étudier le signe de $f''$ : il est constant."
+        }
+      ],
+      "explication": "$f'(x) = e^{x}$ et $f''(x) = e^{x} > 0$ pour tout réel $x$. Donc $f$ est convexe sur $\\mathbb{R}$.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction"
+      ]
+    },
+    {
+      "id": "convexite-banque-q2",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "application",
+      "niveau": 2,
+      "notion": "intervalle de concavité d'un polynôme de degré 3",
+      "enonce": "Sur quel intervalle la fonction $f(x) = x^3 - 3x^2 + 2$ est-elle concave ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$]-\\infty\\ ;\\ 1]$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$[1\\ ;\\ +\\infty[$",
+          "correcte": false,
+          "erreur": "signe_derivee_seconde",
+          "feedback": "Sur $[1\\ ;\\ +\\infty[$, $f''(x) = 6x - 6 \\geq 0$ : la fonction y est convexe."
+        },
+        {
+          "id": "C",
+          "texte": "$[0\\ ;\\ 2]$",
+          "correcte": false,
+          "erreur": "confusion_derivee_premiere_seconde",
+          "feedback": "$[0\\ ;\\ 2]$ est l'intervalle où $f'(x) = 3x^2 - 6x \\leq 0$, c'est-à-dire où $f$ décroît."
+        },
+        {
+          "id": "D",
+          "texte": "$\\mathbb{R}$",
+          "correcte": false,
+          "erreur": "conclusion_sans_calcul",
+          "feedback": "$f''$ change de signe en $1$ : $f$ n'est pas concave partout."
+        }
+      ],
+      "explication": "$f'(x) = 3x^2 - 6x$ et $f''(x) = 6x - 6$. $f''(x) \\leq 0 \\iff x \\leq 1$. Donc $f$ est concave sur $]-\\infty\\ ;\\ 1]$ (et convexe sur $[1\\ ;\\ +\\infty[$).",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction"
+      ]
+    },
+    {
+      "id": "convexite-banque-q3",
+      "chapitre": "Convexité",
+      "fiche": "Convexité et concavité",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "inégalité tangente pour une fonction concave",
+      "enonce": "La fonction $\\ln$ est concave sur $]0\\ ;\\ +\\infty[$ et sa tangente au point d'abscisse $1$ a pour équation $y = x - 1$. Quelle inégalité peut-on en déduire ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\ln(x) \\leq x - 1$ pour tout $x > 0$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$\\ln(x) \\geq x - 1$ pour tout $x > 0$.",
+          "correcte": false,
+          "erreur": "inversion_convexe_concave",
+          "feedback": "La courbe d'une fonction concave est **en dessous** de ses tangentes."
+        },
+        {
+          "id": "C",
+          "texte": "$\\ln(x) \\leq x - 1$ seulement pour $x \\geq 1$.",
+          "correcte": false,
+          "erreur": "inegalite_restreinte_a_tort",
+          "feedback": "La position par rapport à la tangente vaut sur tout l'intervalle où $\\ln$ est concave."
+        },
+        {
+          "id": "D",
+          "texte": "$\\ln(x) = x - 1$ pour tout $x > 0$.",
+          "correcte": false,
+          "erreur": "confusion_courbe_tangente",
+          "feedback": "La courbe et la tangente ne se touchent qu'au point d'abscisse $1$."
+        }
+      ],
+      "explication": "Une fonction concave a sa courbe en dessous de chacune de ses tangentes. Avec la tangente en $1$, on obtient $\\ln(x) \\leq x - 1$ pour tout $x > 0$.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 2. Fonction concave",
+        "Fiche « Convexité et concavité » — À retenir"
+      ]
+    },
+    {
+      "id": "convexite-banque-q4",
+      "chapitre": "Convexité",
+      "fiche": "Convexité et concavité",
+      "type": "interprétation",
+      "niveau": 2,
+      "notion": "lire la convexité dans le signe de f''",
+      "enonce": "Une fonction $f$ deux fois dérivable vérifie $f''(x) < 0$ sur $]-\\infty\\ ;\\ 2[$ et $f''(x) > 0$ sur $]2\\ ;\\ +\\infty[$. Que peut-on affirmer ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est concave sur $]-\\infty\\ ;\\ 2]$ puis convexe sur $[2\\ ;\\ +\\infty[$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est décroissante puis croissante, avec un minimum en $2$.",
+          "correcte": false,
+          "erreur": "confusion_derivee_premiere_seconde",
+          "feedback": "Le signe de $f''$ renseigne sur la convexité de $f$, pas sur ses variations."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est convexe sur $]-\\infty\\ ;\\ 2]$ puis concave sur $[2\\ ;\\ +\\infty[$.",
+          "correcte": false,
+          "erreur": "inversion_convexe_concave",
+          "feedback": "$f'' \\leq 0$ correspond à concave, $f'' \\geq 0$ à convexe."
+        },
+        {
+          "id": "D",
+          "texte": "$f'$ est croissante sur $\\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "signe_mal_lu",
+          "feedback": "$f'' < 0$ sur $]-\\infty\\ ;\\ 2[$ : $f'$ y est décroissante."
+        }
+      ],
+      "explication": "$f$ est concave là où $f'' \\leq 0$ et convexe là où $f'' \\geq 0$. Donc $f$ est concave sur $]-\\infty\\ ;\\ 2]$ et convexe sur $[2\\ ;\\ +\\infty[$ : sa convexité change en $2$.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 1. Fonction convexe",
+        "Fiche « Convexité et concavité » — 2. Fonction concave"
+      ]
+    },
+    {
+      "id": "convexite-banque-q5",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "application",
+      "niveau": 3,
+      "notion": "convexité d'une fonction produit avec logarithme",
+      "enonce": "Soit $f(x) = x\\ln(x)$ sur $]0\\ ;\\ +\\infty[$. Que peut-on dire de sa convexité ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f$ est convexe sur $]0\\ ;\\ +\\infty[$, car $f''(x) = \\dfrac{1}{x} > 0$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f$ est concave, car $f''(x) = -\\dfrac{1}{x^2} < 0$.",
+          "correcte": false,
+          "erreur": "derivee_de_trop",
+          "feedback": "$f'(x) = \\ln(x) + 1$, donc $f''(x) = \\dfrac{1}{x}$ : $-\\dfrac{1}{x^2}$ serait la dérivée de $\\dfrac{1}{x}$, une étape de trop."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ est convexe seulement sur $[1\\ ;\\ +\\infty[$, là où $\\ln(x) \\geq 0$.",
+          "correcte": false,
+          "erreur": "signe_de_f_au_lieu_de_f_seconde",
+          "feedback": "La convexité se lit sur le signe de $f''$, pas sur celui de $\\ln(x)$."
+        },
+        {
+          "id": "D",
+          "texte": "$f$ change de convexité en $x = \\dfrac{1}{e}$.",
+          "correcte": false,
+          "erreur": "confusion_derivee_premiere_seconde",
+          "feedback": "$\\dfrac{1}{e}$ est le point où $f'$ s'annule (un minimum de $f$), pas un changement de convexité."
+        }
+      ],
+      "explication": "$f'(x) = 1 \\times \\ln(x) + x \\times \\dfrac{1}{x} = \\ln(x) + 1$ et $f''(x) = \\dfrac{1}{x} > 0$ sur $]0\\ ;\\ +\\infty[$. Donc $f$ est convexe sur cet intervalle.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction"
+      ]
+    }
+  ]
+}
