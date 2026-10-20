@@ -58,6 +58,8 @@ def charger_banque(dossier):
                 continue
             if not isinstance(contenu, dict) or "questions" not in contenu:
                 continue
+            if contenu.get("type_quiz") == "diagnostic":
+                continue   # les questions du diagnostic ne vont pas dans la banque
 
             for q in contenu["questions"]:
                 identifiant = q.get("id")

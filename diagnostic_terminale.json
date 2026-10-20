@@ -1,0 +1,1131 @@
+{
+  "id": "diagnostic-terminale",
+  "titre": "Diagnostic de niveau — Terminale",
+  "classe": "Terminale",
+  "chapitre": null,
+  "fiche": null,
+  "type_quiz": "diagnostic",
+  "seuil_reussite": 70,
+  "nb_questions": 24,
+  "questions": [
+    {
+      "id": "diag-terminale-q1",
+      "chapitre": "Suites",
+      "fiche": "Rappels de Première : les suites",
+      "type": "application",
+      "niveau": 1,
+      "notion": "terme général d'une suite géométrique",
+      "enonce": "Soit $(u_n)$ la suite géométrique de premier terme $u_0 = 3$ et de raison $q = 2$. Quelle est l'expression de $u_n$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u_n = 3 \\times 2^n$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$u_n = 2 \\times 3^n$",
+          "correcte": false,
+          "erreur": "confusion_raison_premier_terme",
+          "feedback": "On a inversé le premier terme et la raison : $u_n = u_0 \\times q^n$."
+        },
+        {
+          "id": "C",
+          "texte": "$u_n = 3 + 2n$",
+          "correcte": false,
+          "erreur": "confusion_arithmetique_geometrique",
+          "feedback": "$3 + 2n$ est le terme d'une suite **arithmétique** ; ici on multiplie par $2$ à chaque étape."
+        },
+        {
+          "id": "D",
+          "texte": "$u_n = 3 \\times 2^{n-1}$",
+          "correcte": false,
+          "erreur": "decalage_d_indice",
+          "feedback": "La formule $u_1 \\times q^{n-1}$ sert quand on part de $u_1$ ; ici on part de $u_0$, donc l'exposant est $n$."
+        }
+      ],
+      "explication": "Pour une suite géométrique, $u_n = u_0 \\times q^n$, donc $u_n = 3 \\times 2^n$. Vérification : $u_0 = 3$, $u_1 = 6$, $u_2 = 12$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : les suites » — 2. Suites géométriques",
+        "Fiche « Rappels de Première : les suites » — 3. Erreurs fréquentes — Confondre raison et premier terme"
+      ]
+    },
+    {
+      "id": "diag-terminale-q2",
+      "chapitre": "Suites",
+      "fiche": "Limites de suites",
+      "type": "application",
+      "niveau": 2,
+      "notion": "forme indéterminée $\\frac{\\infty}{\\infty}$",
+      "enonce": "Quelle est la limite de la suite $u_n = \\dfrac{2n + 1}{n + 3}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\dfrac{1}{3}$",
+          "correcte": false,
+          "erreur": "valeur_en_zero",
+          "feedback": "$\\dfrac{1}{3} = u_0$ : c'est le premier terme, pas la limite."
+        },
+        {
+          "id": "B",
+          "texte": "$2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "forme_indeterminee_non_levee",
+          "feedback": "Numérateur et dénominateur tendent vers $+\\infty$ : c'est une forme indéterminée, il faut factoriser."
+        },
+        {
+          "id": "D",
+          "texte": "$\\dfrac{3}{4}$",
+          "correcte": false,
+          "erreur": "simplification_abusive",
+          "feedback": "On ne « simplifie » pas les $n$ ainsi : on factorise numérateur et dénominateur par $n$."
+        }
+      ],
+      "explication": "$u_n = \\dfrac{n\\left(2 + \\frac{1}{n}\\right)}{n\\left(1 + \\frac{3}{n}\\right)} = \\dfrac{2 + \\frac{1}{n}}{1 + \\frac{3}{n}}$. Comme $\\dfrac{1}{n} \\to 0$ et $\\dfrac{3}{n} \\to 0$, $u_n \\to 2$.",
+      "a_revoir": [
+        "Fiche « Limites de suites » — 3. Formes indéterminées"
+      ]
+    },
+    {
+      "id": "diag-terminale-q3",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Calculs de limites",
+      "type": "application",
+      "niveau": 2,
+      "notion": "limite d'un produit en $0^+$ (pas une forme indéterminée)",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 0^+} \\dfrac{\\ln(x)}{x}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "croissances_comparees_mal_appliquees",
+          "feedback": "Le résultat $\\dfrac{\\ln(x)}{x} \\to 0$ vaut en $+\\infty$, pas en $0^+$."
+        },
+        {
+          "id": "B",
+          "texte": "$+\\infty$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "$\\ln(x) \\to -\\infty$ en $0^+$ : le quotient est négatif."
+        },
+        {
+          "id": "C",
+          "texte": "$-\\infty$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "Forme indéterminée : la limite n'existe pas.",
+          "correcte": false,
+          "erreur": "forme_indeterminee_inventee",
+          "feedback": "$\\dfrac{-\\infty}{0^+}$ n'est pas une forme indéterminée : c'est $(-\\infty) \\times (+\\infty)$."
+        }
+      ],
+      "explication": "En $0^+$, $\\ln(x) \\to -\\infty$ et $\\dfrac{1}{x} \\to +\\infty$. Par produit, $\\dfrac{\\ln(x)}{x} = \\ln(x) \\times \\dfrac{1}{x} \\to -\\infty$.",
+      "a_revoir": [
+        "Fiche « Calculs de limites » — 1. Opérations sur les limites",
+        "Fiche « Calculs de limites » — 2. Limites usuelles"
+      ]
+    },
+    {
+      "id": "diag-terminale-q4",
+      "chapitre": "Limites de fonctions",
+      "fiche": "Asymptotes",
+      "type": "application",
+      "niveau": 2,
+      "notion": "asymptotes de $a + \\frac{b}{x - c}$",
+      "enonce": "Soit $f(x) = 3 + \\dfrac{2}{x - 1}$ pour $x \\neq 1$. Quelles sont les asymptotes à la courbe de $f$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x = -1$ et $y = 3$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Le dénominateur s'annule pour $x - 1 = 0$, soit $x = 1$."
+        },
+        {
+          "id": "B",
+          "texte": "$x = 1$ et $y = 2$",
+          "correcte": false,
+          "erreur": "mauvais_terme_retenu",
+          "feedback": "En $\\pm\\infty$, $\\dfrac{2}{x-1} \\to 0$, donc $f(x) \\to 3$ : c'est $3$ qui reste."
+        },
+        {
+          "id": "C",
+          "texte": "$x = 3$ et $y = 1$",
+          "correcte": false,
+          "erreur": "inversion_des_roles",
+          "feedback": "On a échangé les rôles : la valeur interdite donne l'asymptote verticale, la limite à l'infini l'horizontale."
+        },
+        {
+          "id": "D",
+          "texte": "$x = 1$ et $y = 3$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Quand $x \\to 1$, $\\dfrac{2}{x - 1} \\to \\pm\\infty$ : asymptote verticale $x = 1$. Quand $x \\to \\pm\\infty$, $\\dfrac{2}{x-1} \\to 0$, donc $f(x) \\to 3$ : asymptote horizontale $y = 3$.",
+      "a_revoir": [
+        "Fiche « Asymptotes » — 1. Asymptote verticale et horizontale"
+      ]
+    },
+    {
+      "id": "diag-terminale-q5",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Orthogonalité dans l'espace",
+      "type": "application",
+      "niveau": 2,
+      "notion": "équation cartésienne d'un plan",
+      "enonce": "Le plan $(P)$ passe par $A(1\\ ;\\ 2\\ ;\\ 0)$ et admet $\\vec{n}\\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}$ comme vecteur normal. Quelle est une équation de $(P)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x + 2y - 5 = 0$",
+          "correcte": false,
+          "erreur": "coordonnees_du_point_comme_normal",
+          "feedback": "Les coefficients de $x$, $y$, $z$ viennent du vecteur normal, pas des coordonnées de $A$."
+        },
+        {
+          "id": "B",
+          "texte": "$2x - y + 3z = 0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$2x - y + 3z + 4 = 0$",
+          "correcte": false,
+          "erreur": "erreur_calcul_de_d",
+          "feedback": "En remplaçant par $A$ : $2 \\times 1 - 2 + 0 + d = 0$ donne $d = 0$."
+        },
+        {
+          "id": "D",
+          "texte": "$2x - y + 3z - 1 = 0$",
+          "correcte": false,
+          "erreur": "erreur_calcul_de_d",
+          "feedback": "Avec $A(1\\ ;\\ 2\\ ;\\ 0)$ : $2 - 2 + 0 - 1 = -1 \\neq 0$, donc $A$ n'est pas dans ce plan."
+        }
+      ],
+      "explication": "$(P)$ a une équation de la forme $2x - y + 3z + d = 0$. Comme $A \\in (P)$ : $2 \\times 1 - 2 + 3 \\times 0 + d = 0$, donc $d = 0$. Une équation est $2x - y + 3z = 0$.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 3. Droite et plan"
+      ]
+    },
+    {
+      "id": "diag-terminale-q6",
+      "chapitre": "Géométrie dans l'espace",
+      "fiche": "Orthogonalité dans l'espace",
+      "type": "application",
+      "niveau": 2,
+      "notion": "orthogonalité de deux vecteurs par le produit scalaire",
+      "enonce": "Les vecteurs $\\vec{u}\\begin{pmatrix} 1 \\\\ -2 \\\\ 2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 4 \\\\ 1 \\\\ -1 \\end{pmatrix}$ sont-ils orthogonaux ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Non, car $\\vec{u} \\cdot \\vec{v} = 8$.",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Attention aux signes : $1 \\times 4 + (-2) \\times 1 + 2 \\times (-1) = 4 - 2 - 2$."
+        },
+        {
+          "id": "B",
+          "texte": "Non, car ils ne sont pas colinéaires.",
+          "correcte": false,
+          "erreur": "confusion_colinearite_orthogonalite",
+          "feedback": "Ne pas être colinéaires ne dit rien sur l'orthogonalité : il faut calculer le produit scalaire."
+        },
+        {
+          "id": "C",
+          "texte": "Oui, car ils ont la même norme.",
+          "correcte": false,
+          "erreur": "critere_invente",
+          "feedback": "La norme ne permet pas de conclure (d'ailleurs $\\|\\vec{u}\\| = 3$ et $\\|\\vec{v}\\| = \\sqrt{18}$)."
+        },
+        {
+          "id": "D",
+          "texte": "Oui, car $\\vec{u} \\cdot \\vec{v} = 0$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\vec{u} \\cdot \\vec{v} = 1 \\times 4 + (-2) \\times 1 + 2 \\times (-1) = 4 - 2 - 2 = 0$. Le produit scalaire est nul : les vecteurs sont orthogonaux.",
+      "a_revoir": [
+        "Fiche « Orthogonalité dans l'espace » — 1. Produit scalaire dans l'espace",
+        "Fiche « Orthogonalité dans l'espace » — 2. Orthogonalité des droites et des vecteurs"
+      ]
+    },
+    {
+      "id": "diag-terminale-q7",
+      "chapitre": "Combinatoire",
+      "fiche": "Les combinaisons",
+      "type": "application",
+      "niveau": 2,
+      "notion": "combinaison : choisir sans ordre",
+      "enonce": "Dans une classe de $30$ élèves, on choisit $2$ délégués (sans distinguer leurs rôles). Combien de choix sont possibles ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$870$",
+          "correcte": false,
+          "erreur": "ordre_compte_a_tort",
+          "feedback": "$30 \\times 29 = 870$ compte chaque paire deux fois : choisir Léa puis Tom ou Tom puis Léa, c'est le même choix."
+        },
+        {
+          "id": "B",
+          "texte": "$900$",
+          "correcte": false,
+          "erreur": "repetitions_autorisees_a_tort",
+          "feedback": "$30^2$ permettrait de choisir deux fois le même élève."
+        },
+        {
+          "id": "C",
+          "texte": "$435$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$60$",
+          "correcte": false,
+          "erreur": "mauvaise_operation",
+          "feedback": "$30 \\times 2$ ne correspond à aucun dénombrement ici."
+        }
+      ],
+      "explication": "On choisit $2$ élèves parmi $30$, sans ordre et sans répétition : $\\dbinom{30}{2} = \\dfrac{30 \\times 29}{2} = 435$.",
+      "a_revoir": [
+        "Fiche « Les combinaisons » — 1. Reconnaître une combinaison",
+        "Fiche « Les combinaisons » — 2. Propriétés et calcul"
+      ]
+    },
+    {
+      "id": "diag-terminale-q8",
+      "chapitre": "Combinatoire",
+      "fiche": "K-uplets et permutations",
+      "type": "application",
+      "niveau": 2,
+      "notion": "$k$-uplet avec répétition",
+      "enonce": "Un code est formé de $3$ lettres choisies parmi les $26$ lettres de l'alphabet, une lettre pouvant être répétée. Combien de codes sont possibles ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$17\\,576$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$15\\,600$",
+          "correcte": false,
+          "erreur": "repetitions_interdites_a_tort",
+          "feedback": "$26 \\times 25 \\times 24$ interdit les répétitions, alors qu'elles sont permises ici."
+        },
+        {
+          "id": "C",
+          "texte": "$2\\,600$",
+          "correcte": false,
+          "erreur": "ordre_ignore",
+          "feedback": "$\\dbinom{26}{3}$ ignore l'ordre et les répétitions ; dans un code, « ABC » et « CBA » sont différents."
+        },
+        {
+          "id": "D",
+          "texte": "$78$",
+          "correcte": false,
+          "erreur": "additionner_au_lieu_de_multiplier",
+          "feedback": "$26 \\times 3$ : on ne multiplie pas par le nombre de places, on multiplie les choix de chaque place."
+        }
+      ],
+      "explication": "Chaque place a $26$ choix possibles, indépendamment des autres : $26 \\times 26 \\times 26 = 26^3 = 17\\,576$ codes.",
+      "a_revoir": [
+        "Fiche « K-uplets et permutations » — 1. k-uplets — Méthode : remplir les places une par une"
+      ]
+    },
+    {
+      "id": "diag-terminale-q9",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "Le théorème des valeurs intermédiaires et de la bijection",
+      "type": "conditions_théorème",
+      "niveau": 2,
+      "notion": "théorème de la bijection : exactement une solution",
+      "enonce": "Soit $f$ une fonction continue et strictement croissante sur $[0\\ ;\\ 2]$, avec $f(0) = -1$ et $f(2) = 3$. Combien de solutions l'équation $f(x) = 1$ admet-elle dans $[0\\ ;\\ 2]$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Au moins une, mais on ne peut pas savoir combien.",
+          "correcte": false,
+          "erreur": "oubli_stricte_monotonie",
+          "feedback": "La stricte monotonie garantit l'unicité : il y en a exactement une."
+        },
+        {
+          "id": "B",
+          "texte": "Exactement une.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "Aucune, car $1$ n'est égal ni à $f(0)$ ni à $f(2)$.",
+          "correcte": false,
+          "erreur": "confusion_bornes_et_valeurs",
+          "feedback": "$f$ prend **toutes** les valeurs entre $-1$ et $3$, pas seulement celles des bornes."
+        },
+        {
+          "id": "D",
+          "texte": "Deux.",
+          "correcte": false,
+          "erreur": "nombre_de_solutions_invente",
+          "feedback": "Une fonction strictement croissante ne peut pas prendre deux fois la même valeur."
+        }
+      ],
+      "explication": "$f$ est continue et strictement croissante sur $[0\\ ;\\ 2]$, et $1$ est compris entre $f(0) = -1$ et $f(2) = 3$. D'après le théorème de la bijection, $f(x) = 1$ a exactement une solution dans $[0\\ ;\\ 2]$.",
+      "a_revoir": [
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 2. Théorème de la bijection",
+        "Fiche « Le théorème des valeurs intermédiaires et de la bijection » — 1. Monotonie et bijection"
+      ]
+    },
+    {
+      "id": "diag-terminale-q10",
+      "chapitre": "Continuité et théorème des valeurs intermédiaires",
+      "fiche": "La continuité",
+      "type": "reconnaissance",
+      "niveau": 2,
+      "notion": "repérer une fonction discontinue en un point",
+      "enonce": "Laquelle de ces fonctions n'est **pas** continue en $0$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x \\mapsto |x|$",
+          "correcte": false,
+          "erreur": "confusion_continuite_derivabilite",
+          "feedback": "La valeur absolue est continue en $0$ (elle n'y est simplement pas dérivable)."
+        },
+        {
+          "id": "B",
+          "texte": "$x \\mapsto x^2 + 1$",
+          "correcte": false,
+          "erreur": "fonction_usuelle_continue",
+          "feedback": "Un polynôme est continu sur $\\mathbb{R}$."
+        },
+        {
+          "id": "C",
+          "texte": "$f$ définie par $f(x) = \\dfrac{1}{x}$ si $x \\neq 0$ et $f(0) = 0$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$x \\mapsto e^{x}$",
+          "correcte": false,
+          "erreur": "fonction_usuelle_continue",
+          "feedback": "L'exponentielle est continue sur $\\mathbb{R}$."
+        }
+      ],
+      "explication": "Quand $x \\to 0^+$, $\\dfrac{1}{x} \\to +\\infty$ : la limite en $0$ n'est pas égale à $f(0) = 0$. Cette fonction n'est donc pas continue en $0$, même si elle y est définie.",
+      "a_revoir": [
+        "Fiche « La continuité » — 1. Continuité",
+        "Fiche « La continuité » — 3. Fonctions usuelles continues"
+      ]
+    },
+    {
+      "id": "diag-terminale-q11",
+      "chapitre": "Convexité",
+      "fiche": "Étudier la convexité d'une fonction",
+      "type": "application",
+      "niveau": 2,
+      "notion": "intervalle de convexité par le signe de f''",
+      "enonce": "Sur quel intervalle la fonction $f(x) = x^3 + 3x^2$ est-elle convexe ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$]-\\infty\\ ;\\ -1]$",
+          "correcte": false,
+          "erreur": "signe_derivee_seconde",
+          "feedback": "Sur $]-\\infty\\ ;\\ -1]$, $f''(x) = 6x + 6 \\leq 0$ : $f$ y est concave."
+        },
+        {
+          "id": "B",
+          "texte": "$[-2\\ ;\\ 0]$",
+          "correcte": false,
+          "erreur": "confusion_derivee_premiere_seconde",
+          "feedback": "$[-2\\ ;\\ 0]$ est l'intervalle où $f'(x) = 3x^2 + 6x \\leq 0$, c'est-à-dire où $f$ décroît."
+        },
+        {
+          "id": "C",
+          "texte": "$\\mathbb{R}$",
+          "correcte": false,
+          "erreur": "conclusion_sans_calcul",
+          "feedback": "$f''$ change de signe en $-1$ : $f$ n'est pas convexe partout."
+        },
+        {
+          "id": "D",
+          "texte": "$[-1\\ ;\\ +\\infty[$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$f'(x) = 3x^2 + 6x$ et $f''(x) = 6x + 6$. $f''(x) \\geq 0 \\iff x \\geq -1$ : $f$ est convexe sur $[-1\\ ;\\ +\\infty[$.",
+      "a_revoir": [
+        "Fiche « Étudier la convexité d'une fonction » — 1. Étudier la convexité d'une fonction"
+      ]
+    },
+    {
+      "id": "diag-terminale-q12",
+      "chapitre": "Convexité",
+      "fiche": "Convexité et concavité",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "convexité et sens de variation de f'",
+      "enonce": "Une fonction $f$ dérivable est convexe sur un intervalle $I$. Que peut-on en déduire pour sa dérivée $f'$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'$ est croissante sur $I$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$f'$ est décroissante sur $I$.",
+          "correcte": false,
+          "erreur": "inversion_convexe_concave",
+          "feedback": "Une dérivée décroissante correspond à une fonction **concave**."
+        },
+        {
+          "id": "C",
+          "texte": "$f'$ est positive sur $I$.",
+          "correcte": false,
+          "erreur": "confusion_signe_et_variations",
+          "feedback": "La convexité concerne les variations de $f'$, pas son signe : $x^2$ est convexe et $f'(x) = 2x$ est négative pour $x < 0$."
+        },
+        {
+          "id": "D",
+          "texte": "$f'$ est constante sur $I$.",
+          "correcte": false,
+          "erreur": "cas_particulier_generalise",
+          "feedback": "$f'$ constante correspond à une fonction affine, qui n'est qu'un cas particulier."
+        }
+      ],
+      "explication": "Pour une fonction dérivable, $f$ est convexe sur $I$ si et seulement si $f'$ est croissante sur $I$ : les pentes des tangentes augmentent.",
+      "a_revoir": [
+        "Fiche « Convexité et concavité » — 1. Fonction convexe",
+        "Fiche « Convexité et concavité » — À retenir"
+      ]
+    },
+    {
+      "id": "diag-terminale-q13",
+      "chapitre": "Logarithme",
+      "fiche": "Calcul avec la fonction logarithme",
+      "type": "application",
+      "niveau": 2,
+      "notion": "équation $\\ln(u(x)) = 0$",
+      "enonce": "Quelle est la solution de l'équation $\\ln(2x - 1) = 0$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$x = \\dfrac{1}{2}$",
+          "correcte": false,
+          "erreur": "confusion_ln_1_et_ln_0",
+          "feedback": "$\\ln(X) = 0 \\iff X = 1$ (et non $X = 0$) : il faut $2x - 1 = 1$."
+        },
+        {
+          "id": "B",
+          "texte": "$x = 1$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$x = \\dfrac{e + 1}{2}$",
+          "correcte": false,
+          "erreur": "confusion_0_et_1",
+          "feedback": "Cette valeur résout $\\ln(2x - 1) = 1$, pas $\\ln(2x - 1) = 0$."
+        },
+        {
+          "id": "D",
+          "texte": "$x = 0$",
+          "correcte": false,
+          "erreur": "oubli_du_domaine",
+          "feedback": "Pour $x = 0$, $2x - 1 = -1 < 0$ : $\\ln(-1)$ n'existe pas."
+        }
+      ],
+      "explication": "Condition : $2x - 1 > 0$, soit $x > \\dfrac{1}{2}$. $\\ln(2x - 1) = 0 = \\ln(1) \\iff 2x - 1 = 1 \\iff x = 1$, qui vérifie bien $x > \\dfrac{1}{2}$.",
+      "a_revoir": [
+        "Fiche « Calcul avec la fonction logarithme » — 1. Équations"
+      ]
+    },
+    {
+      "id": "diag-terminale-q14",
+      "chapitre": "Logarithme",
+      "fiche": "Propriétés du logarithme népérien",
+      "type": "application",
+      "niveau": 2,
+      "notion": "propriétés algébriques du logarithme",
+      "enonce": "Pour tout réel $x > 0$, à quoi est égal $\\ln\\left(x^3\\right) - \\ln(x)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$\\ln\\left(x^3 - x\\right)$",
+          "correcte": false,
+          "erreur": "ln_de_difference",
+          "feedback": "$\\ln(a) - \\ln(b) = \\ln\\left(\\dfrac{a}{b}\\right)$, et non $\\ln(a - b)$."
+        },
+        {
+          "id": "B",
+          "texte": "$3$",
+          "correcte": false,
+          "erreur": "quotient_des_logarithmes",
+          "feedback": "On ne divise pas $\\ln\\left(x^3\\right)$ par $\\ln(x)$ : on soustrait."
+        },
+        {
+          "id": "C",
+          "texte": "$\\ln(2x)$",
+          "correcte": false,
+          "erreur": "erreur_puissance",
+          "feedback": "$\\dfrac{x^3}{x} = x^2$, et $\\ln\\left(x^2\\right) = 2\\ln(x)$, pas $\\ln(2x)$."
+        },
+        {
+          "id": "D",
+          "texte": "$2\\ln(x)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$\\ln\\left(x^3\\right) - \\ln(x) = 3\\ln(x) - \\ln(x) = 2\\ln(x)$ (ou encore $\\ln\\left(\\dfrac{x^3}{x}\\right) = \\ln\\left(x^2\\right) = 2\\ln(x)$).",
+      "a_revoir": [
+        "Fiche « Propriétés du logarithme népérien » — 2. Propriétés de la fonction logarithme",
+        "Fiche « Propriétés du logarithme népérien » — 4. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "diag-terminale-q15",
+      "chapitre": "Primitives",
+      "fiche": "Déterminer une primitive",
+      "type": "application",
+      "niveau": 2,
+      "notion": "primitive d'une somme avec $\\frac{1}{x}$",
+      "enonce": "Quelle est une primitive de $f(x) = 3x^2 - \\dfrac{1}{x}$ sur $]0\\ ;\\ +\\infty[$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F(x) = x^3 - \\ln(x)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$F(x) = 6x + \\dfrac{1}{x^2}$",
+          "correcte": false,
+          "erreur": "derivee_au_lieu_de_primitive",
+          "feedback": "C'est la **dérivée** de $f$ ; on cherche une fonction dont la dérivée est $f$."
+        },
+        {
+          "id": "C",
+          "texte": "$F(x) = x^3 + \\ln(x)$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "La dérivée de $x^3 + \\ln(x)$ est $3x^2 + \\dfrac{1}{x}$ : le signe ne va pas."
+        },
+        {
+          "id": "D",
+          "texte": "$F(x) = x^3 - \\dfrac{1}{x^2}$",
+          "correcte": false,
+          "erreur": "primitive_de_inverse_fausse",
+          "feedback": "Une primitive de $\\dfrac{1}{x}$ est $\\ln(x)$, pas une puissance de $x$."
+        }
+      ],
+      "explication": "Une primitive de $3x^2$ est $x^3$ et une primitive de $\\dfrac{1}{x}$ sur $]0\\ ;\\ +\\infty[$ est $\\ln(x)$. Donc $F(x) = x^3 - \\ln(x)$ convient. Vérification : $F'(x) = 3x^2 - \\dfrac{1}{x}$.",
+      "a_revoir": [
+        "Fiche « Déterminer une primitive » — 1. Calculer une primitive"
+      ]
+    },
+    {
+      "id": "diag-terminale-q16",
+      "chapitre": "Primitives",
+      "fiche": "Comprendre les primitives",
+      "type": "raisonnement",
+      "niveau": 2,
+      "notion": "deux primitives diffèrent d'une constante",
+      "enonce": "$F$ et $G$ sont deux primitives d'une même fonction $f$ sur un intervalle $I$. Que peut-on dire de $F - G$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$F - G$ est nulle : une fonction n'a qu'une primitive.",
+          "correcte": false,
+          "erreur": "unicite_de_la_primitive",
+          "feedback": "Une fonction admet une infinité de primitives : $x^2$ et $x^2 + 5$ sont deux primitives de $2x$."
+        },
+        {
+          "id": "B",
+          "texte": "$F - G$ est constante sur $I$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$F - G = f$.",
+          "correcte": false,
+          "erreur": "confusion_f_et_primitive",
+          "feedback": "$(F - G)' = f - f = 0$ : la différence a une dérivée nulle, elle n'est pas égale à $f$."
+        },
+        {
+          "id": "D",
+          "texte": "On ne peut rien dire.",
+          "correcte": false,
+          "erreur": "abandon_du_raisonnement",
+          "feedback": "On peut dériver $F - G$ pour conclure."
+        }
+      ],
+      "explication": "$(F - G)' = F' - G' = f - f = 0$ sur l'intervalle $I$, donc $F - G$ est constante : deux primitives d'une même fonction diffèrent d'une constante.",
+      "a_revoir": [
+        "Fiche « Comprendre les primitives » — 1. Définition"
+      ]
+    },
+    {
+      "id": "diag-terminale-q17",
+      "chapitre": "Fonctions composées",
+      "fiche": "Dériver une fonction composée",
+      "type": "application",
+      "niveau": 2,
+      "notion": "dériver $e^{u}$",
+      "enonce": "Quelle est la dérivée de $f(x) = e^{x^2}$ sur $\\mathbb{R}$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$f'(x) = e^{x^2}$",
+          "correcte": false,
+          "erreur": "oubli_de_u_prime",
+          "feedback": "$\\left(e^{u}\\right)' = u'e^{u}$ : il faut multiplier par la dérivée de $x^2$."
+        },
+        {
+          "id": "B",
+          "texte": "$f'(x) = x^2\\,e^{x^2 - 1}$",
+          "correcte": false,
+          "erreur": "confusion_exponentielle_puissance",
+          "feedback": "On ne dérive pas $e^{u}$ comme une puissance : l'exposant ne diminue pas de $1$."
+        },
+        {
+          "id": "C",
+          "texte": "$f'(x) = 2x\\,e^{x^2}$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "$f'(x) = e^{2x}$",
+          "correcte": false,
+          "erreur": "deriver_seulement_l_interieur",
+          "feedback": "On ne remplace pas $x^2$ par sa dérivée dans l'exposant : on multiplie $e^{x^2}$ par $2x$."
+        }
+      ],
+      "explication": "Avec $u(x) = x^2$, $u'(x) = 2x$ et $f'(x) = u'(x)\\,e^{u(x)} = 2x\\,e^{x^2}$.",
+      "a_revoir": [
+        "Fiche « Dériver une fonction composée » — 1. Grand exemple guidé",
+        "Fiche « Dériver une fonction composée » — 2. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "diag-terminale-q18",
+      "chapitre": "Fonctions composées",
+      "fiche": "Reconnaître une fonction composée",
+      "type": "reconnaissance",
+      "niveau": 2,
+      "notion": "décomposer une composée de deux fonctions usuelles",
+      "enonce": "On écrit $f(x) = \\ln\\left(\\sqrt{x}\\right)$, pour $x > 0$, sous la forme $f = v \\circ u$. Quelles fonctions conviennent ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$u(x) = \\ln(x)$ et $v(X) = \\sqrt{X}$",
+          "correcte": false,
+          "erreur": "ordre_de_composition_inverse",
+          "feedback": "Avec ces fonctions, $v\\big(u(x)\\big) = \\sqrt{\\ln(x)}$ : on applique d'abord la racine, puis $\\ln$."
+        },
+        {
+          "id": "B",
+          "texte": "$u(x) = \\sqrt{x}$ et $v(X) = \\ln(X)$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$u(x) = \\dfrac{x}{2}$ et $v(X) = \\ln(X)$",
+          "correcte": false,
+          "erreur": "confusion_racine_et_moitie",
+          "feedback": "$\\sqrt{x}$ n'est pas $\\dfrac{x}{2}$ (c'est $\\ln\\left(\\sqrt{x}\\right) = \\dfrac{1}{2}\\ln(x)$ qui fait apparaître un $\\dfrac{1}{2}$)."
+        },
+        {
+          "id": "D",
+          "texte": "$u(x) = \\sqrt{x}$ et $v(X) = \\sqrt{\\ln(X)}$",
+          "correcte": false,
+          "erreur": "double_application",
+          "feedback": "$v\\big(u(x)\\big)$ vaudrait $\\sqrt{\\ln\\left(\\sqrt{x}\\right)}$ : la racine serait appliquée deux fois."
+        }
+      ],
+      "explication": "On calcule d'abord $\\sqrt{x}$ (fonction intérieure $u$), puis on applique $\\ln$ (fonction extérieure $v$) : $v\\big(u(x)\\big) = \\ln\\left(\\sqrt{x}\\right)$.",
+      "a_revoir": [
+        "Fiche « Reconnaître une fonction composée » — 2. Écrire une fonction sous forme composée",
+        "Fiche « Reconnaître une fonction composée » — 3. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "diag-terminale-q19",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle",
+      "type": "application",
+      "niveau": 1,
+      "notion": "solutions de $y' = ay$",
+      "enonce": "Quelles sont les solutions sur $\\mathbb{R}$ de l'équation différentielle $y' = 3y$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Les fonctions $x \\mapsto e^{3x} + C$, avec $C \\in \\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "constante_mal_placee",
+          "feedback": "La constante multiplie l'exponentielle : $e^{3x} + C$ n'est pas solution (sa dérivée vaut $3e^{3x} \\neq 3(e^{3x} + C)$)."
+        },
+        {
+          "id": "B",
+          "texte": "Les fonctions $x \\mapsto Ce^{x/3}$, avec $C \\in \\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "coefficient_inverse",
+          "feedback": "Pour $y' = ay$, l'exposant est $ax$, ici $3x$."
+        },
+        {
+          "id": "C",
+          "texte": "Les fonctions $x \\mapsto 3Ce^{x}$, avec $C \\in \\mathbb{R}$.",
+          "correcte": false,
+          "erreur": "coefficient_mal_place",
+          "feedback": "$\\left(3Ce^{x}\\right)' = 3Ce^{x}$, qui n'est pas égal à $3 \\times 3Ce^{x}$."
+        },
+        {
+          "id": "D",
+          "texte": "Les fonctions $x \\mapsto Ce^{3x}$, avec $C \\in \\mathbb{R}$.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "Les solutions de $y' = ay$ sont les fonctions $x \\mapsto Ce^{ax}$, $C \\in \\mathbb{R}$. Avec $a = 3$ : $x \\mapsto Ce^{3x}$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 1. Équations différentielles de la forme $y' = ay$"
+      ]
+    },
+    {
+      "id": "diag-terminale-q20",
+      "chapitre": "Équations différentielles",
+      "fiche": "Résoudre une équation différentielle avec une condition initiale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "condition initiale pour $y' = ay + b$",
+      "enonce": "Quelle est la solution de $y' = 2y + 4$ qui vérifie $y(0) = 1$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$y(x) = 3e^{2x} - 2$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$y(x) = e^{2x} - 2$",
+          "correcte": false,
+          "erreur": "C_egal_condition_initiale",
+          "feedback": "$C$ n'est pas égal à $y(0)$ : ici $y(0) = C - 2$, donc $C = 3$."
+        },
+        {
+          "id": "C",
+          "texte": "$y(x) = 3e^{2x} + 2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_constante",
+          "feedback": "La solution constante vérifie $0 = 2k + 4$, donc $k = -2$, et non $+2$."
+        },
+        {
+          "id": "D",
+          "texte": "$y(x) = -e^{2x} + 2$",
+          "correcte": false,
+          "erreur": "erreur_de_signe_constante",
+          "feedback": "Cette fonction vérifie $y(0) = 1$, mais pas l'équation : $y' = -2e^{2x}$ alors que $2y + 4 = -2e^{2x} + 8$."
+        }
+      ],
+      "explication": "Solution constante : $0 = 2k + 4$, donc $k = -2$. Les solutions sont $y(x) = Ce^{2x} - 2$. $y(0) = C - 2 = 1$ donne $C = 3$, d'où $y(x) = 3e^{2x} - 2$.",
+      "a_revoir": [
+        "Fiche « Résoudre une équation différentielle » — 2. Équations différentielles de la forme $y' = ay + b$",
+        "Fiche « Résoudre une équation différentielle avec une condition initiale » — 1. Utiliser une condition initiale"
+      ]
+    },
+    {
+      "id": "diag-terminale-q21",
+      "chapitre": "Intégrales",
+      "fiche": "Calculer une intégrale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "calcul d'une intégrale de polynôme",
+      "enonce": "Calculer $\\displaystyle\\int_0^2 \\left(3x^2 - 2x\\right)dx$.",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$8$",
+          "correcte": false,
+          "erreur": "valeur_de_f_au_lieu_d_integrale",
+          "feedback": "$8 = f(2)$ : on n'évalue pas $f$, on calcule $F(2) - F(0)$ avec une primitive $F$."
+        },
+        {
+          "id": "B",
+          "texte": "$4$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "C",
+          "texte": "$12$",
+          "correcte": false,
+          "erreur": "erreur_de_signe",
+          "feedback": "Une primitive de $-2x$ est $-x^2$ (et non $+x^2$)."
+        },
+        {
+          "id": "D",
+          "texte": "$2$",
+          "correcte": false,
+          "erreur": "division_inventee",
+          "feedback": "On ne divise pas par la longueur de l'intervalle : l'intégrale vaut $F(2) - F(0)$."
+        }
+      ],
+      "explication": "Une primitive est $F(x) = x^3 - x^2$. $\\displaystyle\\int_0^2 \\left(3x^2 - 2x\\right)dx = F(2) - F(0) = (8 - 4) - 0 = 4$.",
+      "a_revoir": [
+        "Fiche « Calculer une intégrale » — 1. Grand exemple guidé",
+        "Fiche « Calculer une intégrale » — 2. Erreurs fréquentes"
+      ]
+    },
+    {
+      "id": "diag-terminale-q22",
+      "chapitre": "Intégrales",
+      "fiche": "Comprendre l'intégrale",
+      "type": "interprétation",
+      "niveau": 2,
+      "notion": "signe de l'intégrale d'une fonction négative",
+      "enonce": "Soit $f$ une fonction continue et **négative** sur $[a\\ ;\\ b]$, avec $a < b$. Que peut-on dire de $\\displaystyle\\int_a^b f(x)\\,dx$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "Elle est positive, car une intégrale est une aire.",
+          "correcte": false,
+          "erreur": "integrale_toujours_positive",
+          "feedback": "L'intégrale est une aire **algébrique** : elle est négative quand la courbe est sous l'axe des abscisses."
+        },
+        {
+          "id": "B",
+          "texte": "Elle est nulle.",
+          "correcte": false,
+          "erreur": "confusion_signe_et_valeur",
+          "feedback": "Elle n'est nulle que si $f$ est nulle sur $[a\\ ;\\ b]$."
+        },
+        {
+          "id": "C",
+          "texte": "Elle est négative : c'est l'opposé de l'aire entre la courbe et l'axe des abscisses.",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "D",
+          "texte": "On ne peut rien dire sans connaître $f$.",
+          "correcte": false,
+          "erreur": "abandon_du_raisonnement",
+          "feedback": "Le signe de $f$ suffit pour connaître le signe de l'intégrale (positivité)."
+        }
+      ],
+      "explication": "Si $f \\leq 0$ sur $[a\\ ;\\ b]$ avec $a < b$, alors $\\displaystyle\\int_a^b f(x)\\,dx \\leq 0$. En valeur absolue, c'est l'aire du domaine compris entre la courbe et l'axe des abscisses.",
+      "a_revoir": [
+        "Fiche « Comprendre l'intégrale » — 1. Définition",
+        "Fiche « Comprendre l'intégrale » — 2. Propriétés"
+      ]
+    },
+    {
+      "id": "diag-terminale-q23",
+      "chapitre": "Probabilités",
+      "fiche": "Rappels de Première : probabilités conditionnelles",
+      "type": "application",
+      "niveau": 2,
+      "notion": "formule des probabilités totales",
+      "enonce": "On a $P(A) = 0{,}3$, $P_A(B) = 0{,}6$ et $P_{\\overline{A}}(B) = 0{,}2$. Que vaut $P(B)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}18$",
+          "correcte": false,
+          "erreur": "une_seule_branche",
+          "feedback": "$0{,}18 = P(A \\cap B)$ : il faut ajouter la branche passant par $\\overline{A}$."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}8$",
+          "correcte": false,
+          "erreur": "additionner_les_conditionnelles",
+          "feedback": "On n'additionne pas directement $P_A(B)$ et $P_{\\overline{A}}(B)$ : chacune doit être pondérée."
+        },
+        {
+          "id": "C",
+          "texte": "$0{,}12$",
+          "correcte": false,
+          "erreur": "mauvaise_operation",
+          "feedback": "$0{,}6 \\times 0{,}2$ ne correspond à aucun chemin de l'arbre."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}32$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        }
+      ],
+      "explication": "$P(B) = P(A)\\,P_A(B) + P\\left(\\overline{A}\\right)P_{\\overline{A}}(B) = 0{,}3 \\times 0{,}6 + 0{,}7 \\times 0{,}2 = 0{,}18 + 0{,}14 = 0{,}32$.",
+      "a_revoir": [
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 4. Probabilités totales",
+        "Fiche « Rappels de Première : probabilités conditionnelles » — 2. Arbres de probabilités"
+      ]
+    },
+    {
+      "id": "diag-terminale-q24",
+      "chapitre": "Probabilités",
+      "fiche": "La loi binomiale",
+      "type": "application",
+      "niveau": 2,
+      "notion": "loi binomiale : $P(X = 0)$",
+      "enonce": "Soit $X$ une variable aléatoire suivant la loi binomiale $\\mathcal{B}(3\\,;\\,0{,}4)$. Que vaut $P(X = 0)$ ?",
+      "figure": null,
+      "figure_alt": null,
+      "melanger_options": true,
+      "options": [
+        {
+          "id": "A",
+          "texte": "$0{,}216$",
+          "correcte": true,
+          "erreur": null,
+          "feedback": "Bonne réponse."
+        },
+        {
+          "id": "B",
+          "texte": "$0{,}064$",
+          "correcte": false,
+          "erreur": "confusion_succes_echec",
+          "feedback": "$0{,}4^3 = 0{,}064$ est la probabilité de $3$ succès, c'est-à-dire $P(X = 3)$."
+        },
+        {
+          "id": "C",
+          "texte": "$0$",
+          "correcte": false,
+          "erreur": "zero_succes_impossible",
+          "feedback": "Obtenir $0$ succès est tout à fait possible : il suffit de $3$ échecs."
+        },
+        {
+          "id": "D",
+          "texte": "$0{,}6$",
+          "correcte": false,
+          "erreur": "un_seul_echec",
+          "feedback": "$0{,}6$ est la probabilité d'**un** échec ; il en faut trois, indépendants."
+        }
+      ],
+      "explication": "$X = 0$ correspond à $3$ échecs indépendants : $P(X = 0) = (1 - 0{,}4)^3 = 0{,}6^3 = 0{,}216$.",
+      "a_revoir": [
+        "Fiche « La loi binomiale » — Grand exemple guidé",
+        "Fiche « La loi binomiale » — Erreurs fréquentes"
+      ]
+    }
+  ]
+}

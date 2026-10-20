@@ -80,9 +80,12 @@ CHAPITRES_TERMINALE = [
     "Probabilités",
 ]
 
-# Classes proposées, et celles qui ont déjà un diagnostic
+# Classes proposées, et le fichier JSON du diagnostic de chacune (quand il existe)
 CLASSES = ["Seconde", "Première", "Terminale"]
-CLASSES_AVEC_DIAGNOSTIC = ["Terminale"]
+DIAGNOSTICS = {
+    "Terminale": "diagnostic_terminale.json",
+}
+CLASSES_AVEC_DIAGNOSTIC = list(DIAGNOSTICS)
 
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
         "août", "septembre", "octobre", "novembre", "décembre"]
@@ -150,11 +153,18 @@ def commencer_diagnostic():
     aller_a("diagnostic", question=0, reponses={}, diagnostic_alerte=False)
 
 
-def repondre_diagnostic(reponse):
-    st.session_state.reponses[st.session_state.question] = reponse
+@st.cache_data
+def questions_diagnostic(classe):
+    """Questions du diagnostic de la classe, lues dans son fichier JSON (même format que les quiz)."""
+    return charger_quiz(DIAGNOSTICS[classe])["questions"]
+
+
+def repondre_diagnostic(identifiant_option):
+    st.session_state.reponses[st.session_state.question] = identifiant_option
 
 
 def diagnostic_suivant():
+    questions = questions_diagnostic(profil()["classe"])
     if st.session_state.question not in st.session_state.reponses:
         st.session_state.diagnostic_alerte = True
     elif st.session_state.question < len(questions) - 1:
@@ -163,20 +173,22 @@ def diagnostic_suivant():
     else:
         profil()["diagnostics"][profil()["classe"]] = {
             "date": datetime.date.today().isoformat(),
-            "bilan": calculer_bilan(st.session_state.reponses),
+            "bilan": calculer_bilan(questions, st.session_state.reponses),
         }
         aller_a("resultats")
 
 
-def calculer_bilan(reponses):
+def calculer_bilan(questions, reponses):
+    """Score global et score par chapitre (le chapitre est lu dans chaque question)."""
     score = 0
     competences = {}
     for numero, reponse in reponses.items():
-        competence = questions[numero]["competence"]
+        q = questions[numero]
+        competence = q["chapitre"] or "Autre"
         if competence not in competences:
             competences[competence] = [0, 0]
         competences[competence][1] += 1
-        if reponse == questions[numero]["bonne_reponse"]:
+        if any(o["id"] == reponse and o["correcte"] for o in q["options"]):
             score += 1
             competences[competence][0] += 1
     return {"score": score, "total": len(questions), "competences": competences}
@@ -586,163 +598,6 @@ def afficher_choix_quiz():
     if st.session_state.get("banque_alerte") and not selection:
         st.warning("Choisis au moins un chapitre.")
 
-questions = [
-    {
-        "question": "Déterminer la limite de (3x² - 2) / x quand x → +∞.",
-        "reponses": ["A. 0", "B. +∞", "C. 3", "D. −∞"],
-        "bonne_reponse": "B. +∞",
-        "competence": "Limites"
-    },
-    {
-        "question": "Déterminer la limite de 1 / x quand x → 0⁺.",
-        "reponses": ["A. 0", "B. +∞", "C. −∞", "D. 1"],
-        "bonne_reponse": "B. +∞",
-        "competence": "Limites"
-    },
-    {
-        "question": "Déterminer la limite de eˣ quand x → −∞.",
-        "reponses": ["A. 0", "B. 1", "C. +∞", "D. −∞"],
-        "bonne_reponse": "A. 0",
-        "competence": "Limites"
-    },
-    {
-        "question": "Donner la dérivée de ln(x).",
-        "reponses": ["A. x", "B. 1/x", "C. x²", "D. −1/x²"],
-        "bonne_reponse": "B. 1/x",
-        "competence": "Dérivation"
-    },
-    {
-        "question": "Donner la dérivée de x³.",
-        "reponses": ["A. 3x²", "B. x²", "C. 3x", "D. x³"],
-        "bonne_reponse": "A. 3x²",
-        "competence": "Dérivation"
-    },
-    {
-        "question": "P(A ∩ B) =",
-        "reponses": [
-            "A. P(A) + P(B)",
-            "B. P(A)P(B)",
-            "C. P(A|B)P(B)",
-            "D. P(A|B) + P(B)"
-        ],
-        "bonne_reponse": "C. P(A|B)P(B)",
-        "competence": "Probabilités"
-    },
-    {
-        "question": "Si P(A) = 0,4, P(B) = 0,5 et P(A ∩ B) = 0,2, alors P(A|B) =",
-        "reponses": ["A. 0,4", "B. 0,5", "C. 0,2", "D. 0,8"],
-        "bonne_reponse": "A. 0,4",
-        "competence": "Probabilités"
-    },
-    {
-        "question": "ln(e³) =",
-        "reponses": ["A. 3", "B. e³", "C. ln(3)", "D. 1"],
-        "bonne_reponse": "A. 3",
-        "competence": "Logarithme"
-    },
-    {
-        "question": "ln(ab) =",
-        "reponses": [
-            "A. ln(a) + ln(b)",
-            "B. ln(a)ln(b)",
-            "C. ln(a − b)",
-            "D. ln(a) + b"
-        ],
-        "bonne_reponse": "A. ln(a) + ln(b)",
-        "competence": "Logarithme"
-    },
-    {
-        "question": "ln(1/x) =",
-        "reponses": ["A. ln(x)", "B. −ln(x)", "C. 1/ln(x)", "D. x ln(x)"],
-        "bonne_reponse": "B. −ln(x)",
-        "competence": "Logarithme"
-    },
-    {
-        "question": "e⁰ =",
-        "reponses": ["A. 0", "B. 1", "C. e", "D. −1"],
-        "bonne_reponse": "B. 1",
-        "competence": "Exponentielle"
-    },
-    {
-        "question": "e^(a+b) =",
-        "reponses": ["A. e^a + e^b", "B. e^a e^b", "C. e^(ab)", "D. a + b"],
-        "bonne_reponse": "B. e^a e^b",
-        "competence": "Exponentielle"
-    },
-    {
-        "question": "La fonction eˣ est :",
-        "reponses": ["A. décroissante", "B. constante", "C. croissante", "D. périodique"],
-        "bonne_reponse": "C. croissante",
-        "competence": "Exponentielle"
-    },
-    {
-        "question": "Une fonction est convexe si :",
-        "reponses": [
-            "A. Sa dérivée est négative",
-            "B. Sa dérivée seconde est positive",
-            "C. Elle est bornée",
-            "D. Elle est continue"
-        ],
-        "bonne_reponse": "B. Sa dérivée seconde est positive",
-        "competence": "Convexité"
-    },
-    {
-        "question": "Une fonction convexe vérifie :",
-        "reponses": [
-            "A. La courbe est au-dessus des tangentes",
-            "B. La courbe est en dessous des tangentes",
-            "C. Elle est toujours croissante",
-            "D. Elle est toujours décroissante"
-        ],
-        "bonne_reponse": "A. La courbe est au-dessus des tangentes",
-        "competence": "Convexité"
-    },
-    {
-        "question": "Un vecteur normal au plan ax + by + cz + d = 0 est :",
-        "reponses": [
-            "A. (a,b,c)",
-            "B. (b,a,c)",
-            "C. (c,b,a)",
-            "D. (a,c,b)"
-        ],
-        "bonne_reponse": "A. (a,b,c)",
-        "competence": "Géométrie dans l'espace"
-    },
-    {
-        "question": "La distance d’un point à un plan est :",
-        "reponses": [
-            "A. Une longueur",
-            "B. Un angle",
-            "C. Un vecteur",
-            "D. Une aire"
-        ],
-        "bonne_reponse": "A. Une longueur",
-        "competence": "Géométrie dans l'espace"
-    },
-    {
-        "question": "Deux droites sont parallèles si :",
-        "reponses": [
-            "A. Elles ont le même point",
-            "B. Leurs vecteurs directeurs sont colinéaires",
-            "C. Leurs vecteurs directeurs sont orthogonaux",
-            "D. Elles n’ont aucun point commun"
-        ],
-        "bonne_reponse": "B. Leurs vecteurs directeurs sont colinéaires",
-        "competence": "Géométrie dans l'espace"
-    },
-    {
-        "question": "∫₀¹ x dx =",
-        "reponses": ["A. 1", "B. 0", "C. 1/2", "D. 1/3"],
-        "bonne_reponse": "C. 1/2",
-        "competence": "Intégration"
-    },
-    {
-        "question": "Une primitive de 2x est :",
-        "reponses": ["A. x²", "B. 2x²", "C. x³", "D. x²/2"],
-        "bonne_reponse": "A. x²",
-        "competence": "Primitives"
-    }
-]
 
 # Boutons de chaque page de chapitre : (texte du bouton, identifiant dans FICHES)
 LECONS_PAR_CHAPITRE = {
@@ -842,7 +697,8 @@ elif st.session_state.page == "choix_classe":
 
 elif st.session_state.page == "proposition_diagnostic":
     st.title("Diagnostic du niveau")
-    st.write("Pour évaluer ton niveau, tu vas passer un test de", len(questions), "questions, bon courage !")
+    st.write("Pour évaluer ton niveau, tu vas passer un test de",
+             len(questions_diagnostic(profil()["classe"])), "questions, bon courage !")
 
     st.button("Commencer le diagnostic", type="primary", on_click=commencer_diagnostic)
     st.button("Passer", on_click=aller_a, args=("eleve",))
@@ -850,24 +706,26 @@ elif st.session_state.page == "proposition_diagnostic":
 elif st.session_state.page == "diagnostic":
     st.title("Diagnostic du niveau")
 
+    questions = questions_diagnostic(profil()["classe"])
     question = questions[st.session_state.question]
     st.write("Question", st.session_state.question + 1, "/", len(questions))
-    st.write(question["question"])
+    st.markdown(preparer_markdown(question["enonce"]))
 
     # Une fois la réponse choisie, elle est fixée : les boutons sont désactivés
     choisie = st.session_state.reponses.get(st.session_state.question)
 
-    for reponse in question["reponses"]:
+    for option in question["options"]:
         st.button(
-            reponse,
+            option["id"] + ". " + preparer_markdown(option["texte"]),
+            key="diagnostic_" + str(st.session_state.question) + "_" + option["id"],
             disabled=choisie is not None,
-            type="primary" if reponse == choisie else "secondary",
+            type="primary" if option["id"] == choisie else "secondary",
             on_click=repondre_diagnostic,
-            args=(reponse,),
+            args=(option["id"],),
         )
 
     if choisie is not None:
-        if choisie == question["bonne_reponse"]:
+        if any(o["id"] == choisie and o["correcte"] for o in question["options"]):
             st.write("Bonne réponse !")
         else:
             st.write("Mauvaise réponse !")
